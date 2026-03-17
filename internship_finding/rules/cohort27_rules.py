@@ -36,9 +36,9 @@ def classify_27_cohort(signals: Dict[str, Any]) -> Dict[str, Any]:
         if _contains_any(text, ["2027", "27届"]):
             triggered_rules.append("RULE_HIGH_BYTEDANCE_DIRECT")
 
-    if _contains_any(text, ["2026暑期实习", "summer intern"]) and _contains_any(text, ["留用", "转正", "return offer"]):
+    if _contains_any(text, ["2026暑期实习", "暑期实习", "summer intern"]) and _contains_any(text, ["留用", "转正", "return offer"]):
         triggered_rules.append("RULE_MED_SUMMER_RETURN")
-    if _contains_any(text, ["2026暑期实习", "summer intern"]) and _contains_any(text, ["数据", "算法", "开发", "工程", "分析", "技术"]):
+    if _contains_any(text, ["2026暑期实习", "暑期实习", "summer intern"]) and _contains_any(text, ["数据", "算法", "开发", "工程", "分析", "技术"]):
         triggered_rules.append("RULE_MED_SUMMER_TECH")
     if _contains_any(text, ["应届", "校园", "校招"]) and crawl_time.startswith(("2026-07", "2026-08", "2026-09", "2026-10", "2026-11", "2026-12")):
         triggered_rules.append("RULE_MED_FRESHMAN_TIMING")

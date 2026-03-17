@@ -1,4 +1,5 @@
 import glob
+import asyncio
 import os
 import re
 from collections import Counter
@@ -7,10 +8,15 @@ from datetime import datetime
 import pandas as pd
 from rules.cohort27_rules import classify_27_cohort
 from rules.location_normalizer import normalize_city
+from utils.link_checker import check_links_batch
 
 shixiseng_path = r"C:\jz_code\internship_finding\archive\history\shixiseng\实习僧公司要求大全"
 bytedance_output_path = r"C:\jz_code\internship_finding\real-useful-resume\output"
 official_raw_file = r"C:\jz_code\internship_finding\official_jobs_raw.csv"
+BASE_DIR = r"C:\jz_code\internship_finding"
+OUTPUT_REPORT_DIR = os.path.join(BASE_DIR, "outputs", "reports")
+OUTPUT_DASHBOARD_DIR = os.path.join(BASE_DIR, "outputs", "dashboard")
+OUTPUT_HEALTH_DIR = os.path.join(BASE_DIR, "outputs", "health")
 
 big_company_keywords = [
     "字节跳动", "阿里", "腾讯", "美团", "京东", "哔哩哔哩", "小红书", "拼多多", "快手", "华为", "米哈游",
@@ -37,6 +43,25 @@ dashboard_skill_keywords = [
 ]
 priority_skill_keywords = ["python", "sql", "spark", "hadoop", "hive", "tableau", "power bi", "机器学习", "统计", "数据分析"]
 TARGET_CITY = "上海"
+TARGET_COMPANIES = ["快手", "腾讯", "字节跳动", "小红书", "美团", "阿里", "京东"]
+
+
+def ensure_output_dirs():
+    os.makedirs(OUTPUT_REPORT_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_DASHBOARD_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_HEALTH_DIR, exist_ok=True)
+
+
+def report_path(file_name: str) -> str:
+    return os.path.join(OUTPUT_REPORT_DIR, file_name)
+
+
+def dashboard_path(file_name: str) -> str:
+    return os.path.join(OUTPUT_DASHBOARD_DIR, file_name)
+
+
+def health_path(file_name: str) -> str:
+    return os.path.join(OUTPUT_HEALTH_DIR, file_name)
 
 
 def normalize_text(x):
@@ -105,6 +130,8 @@ def map_shixiseng(df):
             "deadline": "",
             "collect_time": "",
             "source": "shixiseng",
+            "publish_time_source": "unknown",
+            "deadline_source": "unknown",
         }
     )
     return mapped
@@ -133,9 +160,13 @@ def map_bytedance(df):
             "duration": "",
             "academic": "",
             "publish_time": pub,
+            "publish_time_estimated": pub,
+            "publish_time_estimated_source": "real_import",
             "deadline": ddl,
             "collect_time": ctime,
             "source": "bytedance",
+            "publish_time_source": "real_import",
+            "deadline_source": "real_import",
         }
     )
     return mapped
@@ -154,9 +185,13 @@ def map_official(df):
             "duration": df.get("duration", ""),
             "academic": df.get("academic", ""),
             "publish_time": df.get("publish_time", ""),
+            "publish_time_estimated": df.get("publish_time_estimated", ""),
+            "publish_time_estimated_source": df.get("publish_time_estimated_source", ""),
             "deadline": df.get("deadline", ""),
             "collect_time": df.get("collect_time", ""),
             "source": df.get("source", "official"),
+            "publish_time_source": df.get("publish_time_source", ""),
+            "deadline_source": df.get("deadline_source", ""),
             "recruit_type": df.get("recruit_type", ""),
             "raw_tags": df.get("raw_tags", ""),
             "external_job_id": df.get("external_job_id", ""),
@@ -254,14 +289,36 @@ def infer_27_from_context(row):
 def build_quality_report(df):
     rows = []
     key_cols = ["company", "name", "city", "url", "jd_raw", "requirement"]
+    unknown_marker = "不知道发布时间"
     for src, g in df.groupby("source"):
         item = {"source": src, "rows": len(g)}
         for col in key_cols:
             item[f"{col}_完整率"] = round((g[col].astype(str).str.strip() != "").mean() * 100, 2)
+        p = g["publish_time"].fillna("").astype(str).str.strip()
+        pe = g.get("publish_time_estimated", pd.Series([""] * len(g))).fillna("").astype(str).str.strip()
+        ps = g.get("publish_time_source", pd.Series([""] * len(g))).fillna("").astype(str).str.strip()
+        item["publish_time_可用率"] = round(((p != "") & (p != unknown_marker)).mean() * 100, 2)
+        item["publish_time_估算可用率"] = round((pe != "").mean() * 100, 2)
+        item["publish_time_真实率"] = round(ps.str.startswith("real").mean() * 100, 2)
+        item["publish_time_代理率"] = round((ps == "official_update_proxy").mean() * 100, 2)
         rows.append(item)
     overall = {"source": "all", "rows": len(df)}
     for col in key_cols:
         overall[f"{col}_完整率"] = round((df[col].astype(str).str.strip() != "").mean() * 100, 2)
+    p = df["publish_time"].fillna("").astype(str).str.strip()
+    pe = df.get("publish_time_estimated", pd.Series([""] * len(df))).fillna("").astype(str).str.strip()
+    ps = df.get("publish_time_source", pd.Series([""] * len(df))).fillna("").astype(str).str.strip()
+    overall["publish_time_可用率"] = round(((p != "") & (p != unknown_marker)).mean() * 100, 2)
+    overall["publish_time_估算可用率"] = round((pe != "").mean() * 100, 2)
+    overall["publish_time_真实率"] = round(ps.str.startswith("real").mean() * 100, 2)
+    overall["publish_time_代理率"] = round((ps == "official_update_proxy").mean() * 100, 2)
+    official_scope = df[df["source"].astype(str).str.contains("official|bytedance", case=False, regex=True)]
+    if not official_scope.empty:
+        osp = official_scope.get("publish_time_source", pd.Series([""] * len(official_scope))).fillna("").astype(str).str.strip()
+        ope = official_scope.get("publish_time_estimated", pd.Series([""] * len(official_scope))).fillna("").astype(str).str.strip()
+        overall["大厂发布时间真实覆盖率"] = round(osp.str.startswith("real").mean() * 100, 2)
+        overall["大厂发布时间有效覆盖率"] = round((osp.str.startswith("real") | (osp == "official_update_proxy")).mean() * 100, 2)
+        overall["大厂发布时间估算可用率"] = round((ope != "").mean() * 100, 2)
     rows.append(overall)
     return pd.DataFrame(rows)
 
@@ -310,25 +367,91 @@ def _load_csv_if_exists(path):
     return pd.DataFrame()
 
 
-def generate_kuaishou_dashboard(df_all):
-    df_ks = df_all[df_all["company"] == "快手"].copy()
+def compute_priority_score(row):
+    if normalize_text(row.get("cohort27_confidence", "")) != "high":
+        return 0
+    text = normalize_text(f"{row.get('name', '')} {row.get('jd_raw', '')} {row.get('requirement', '')}").lower()
+    score = 0
+    if "python" in text and "sql" in text:
+        score += 20
+    if "spark" in text or "hadoop" in text:
+        score += 15
+    if TARGET_CITY in normalize_text(row.get("city", "")):
+        score += 10
+    if normalize_text(row.get("company", "")) in {"快手", "腾讯"}:
+        score += 10
+    return score
+
+
+def attach_link_health(frame, companies=None, max_concurrent=12, timeout=6):
+    if companies is None:
+        companies = ["快手", "腾讯"]
+    check_df = frame[frame["company"].isin(companies)][["company", "name", "url"]].copy()
+    check_df["url"] = check_df["url"].map(normalize_text)
+    check_df = check_df[check_df["url"] != ""]
+    check_df = check_df.drop_duplicates(subset=["url"], keep="first")
+    if check_df.empty:
+        frame["link_status"] = frame.get("link_status", "UNKNOWN")
+        frame["link_reason"] = frame.get("link_reason", "")
+        return frame, pd.DataFrame(columns=["company", "url", "status", "reason"])
+    urls = check_df["url"].tolist()
+    results = asyncio.run(check_links_batch(urls, max_concurrent=max_concurrent, timeout=timeout))
+    result_df = pd.DataFrame(results)
+    if result_df.empty:
+        frame["link_status"] = frame.get("link_status", "UNKNOWN")
+        frame["link_reason"] = frame.get("link_reason", "")
+        return frame, pd.DataFrame(columns=["company", "url", "status", "reason"])
+    link_health_file = health_path("link_health_latest.csv")
+    broken_report_file = health_path("broken_links_report.csv")
+    if os.path.exists(link_health_file):
+        prev = _load_csv_if_exists(link_health_file)
+        if not prev.empty and {"url", "status"}.issubset(set(prev.columns)):
+            prev = prev[["url", "status"]].rename(columns={"status": "prev_status"})
+            result_df = result_df.merge(prev, on="url", how="left")
+            result_df.loc[(result_df["status"] == "RISKY") & (result_df["prev_status"] == "RISKY"), "status"] = "BROKEN"
+            result_df.loc[(result_df["reason"] == "") & (result_df["status"] == "BROKEN"), "reason"] = "RISKY two days"
+    result_df.to_csv(link_health_file, index=False, encoding="utf-8-sig")
+    report_df = check_df.merge(result_df, on="url", how="left")
+    report_df["status"] = report_df["status"].fillna("UNKNOWN")
+    report_df["reason"] = report_df["reason"].fillna("")
+    report_df = report_df.sort_values(["status", "company", "name"], ascending=[True, True, True])
+    report_df.to_csv(broken_report_file, index=False, encoding="utf-8-sig")
+    link_map = result_df[["url", "status", "reason"]].rename(columns={"status": "link_status", "reason": "link_reason"})
+    frame = frame.merge(link_map, on="url", how="left")
+    frame["link_status"] = frame["link_status"].fillna("UNKNOWN")
+    frame["link_reason"] = frame["link_reason"].fillna("")
+    return frame, report_df
+
+
+def generate_company_dashboard(df_all, company_name):
+    df_ks = df_all[df_all["company"] == company_name].copy()
     if df_ks.empty:
-        print("[Dashboard] 快手看板跳过：当前无快手数据")
+        print(f"[Dashboard] {company_name}看板跳过：当前无数据")
         return {}
 
+    company_slug_map = {
+        "快手": "kuaishou",
+        "腾讯": "tencent",
+        "字节跳动": "bytedance",
+        "小红书": "xiaohongshu",
+        "美团": "meituan",
+        "阿里": "alibaba",
+        "京东": "jd",
+    }
+    slug = company_slug_map.get(company_name, normalize_text(company_name).lower())
     today = datetime.now().strftime("%Y-%m-%d")
-    dashboard_latest_path = "dashboard_kuaishou_latest.csv"
-    summary_path = "dashboard_kuaishou_summary.csv"
-    role_path = "dashboard_kuaishou_role_distribution.csv"
-    keyword_path = "dashboard_kuaishou_keyword_top10.csv"
-    new_high_path = "dashboard_kuaishou_new_high_sh_data.csv"
-    close_warn_path = "dashboard_kuaishou_close_warning.csv"
-    daily_trend_path = "dashboard_kuaishou_daily_trend.csv"
-    history_path = "dashboard_kuaishou_history.csv"
-    strict_snap_prev = "dashboard_kuaishou_strict27_snapshot_prev.csv"
-    strict_snap_latest = "dashboard_kuaishou_strict27_snapshot_latest.csv"
-    core_snap_prev = "dashboard_kuaishou_core_snapshot_prev.csv"
-    core_snap_latest = "dashboard_kuaishou_core_snapshot_latest.csv"
+    dashboard_latest_path = dashboard_path(f"dashboard_{slug}_latest.csv")
+    summary_path = dashboard_path(f"dashboard_{slug}_summary.csv")
+    role_path = dashboard_path(f"dashboard_{slug}_role_distribution.csv")
+    keyword_path = dashboard_path(f"dashboard_{slug}_keyword_top10.csv")
+    new_high_path = dashboard_path(f"dashboard_{slug}_new_high_sh_data.csv")
+    close_warn_path = dashboard_path(f"dashboard_{slug}_close_warning.csv")
+    daily_trend_path = dashboard_path(f"dashboard_{slug}_daily_trend.csv")
+    history_path = dashboard_path(f"dashboard_{slug}_history.csv")
+    strict_snap_prev = dashboard_path(f"dashboard_{slug}_strict27_snapshot_prev.csv")
+    strict_snap_latest = dashboard_path(f"dashboard_{slug}_strict27_snapshot_latest.csv")
+    core_snap_prev = dashboard_path(f"dashboard_{slug}_core_snapshot_prev.csv")
+    core_snap_latest = dashboard_path(f"dashboard_{slug}_core_snapshot_latest.csv")
 
     df_ks["collect_date"] = pd.to_datetime(df_ks["collect_time"], errors="coerce").dt.strftime("%Y-%m-%d")
     df_ks["role_type"] = df_ks.apply(classify_role_type, axis=1)
@@ -343,6 +466,7 @@ def generate_kuaishou_dashboard(df_all):
         & (df_ks["priority_skill_hit_count"] >= 3),
         "priority_label",
     ] = "PRIORITY_A"
+    df_ks["priority_score"] = df_ks.apply(compute_priority_score, axis=1)
     df_ks["is_core_target"] = (df_ks["cohort27_confidence"] == "high") & df_ks["is_shanghai_city"] & df_ks["is_data_job"]
 
     strict_now = df_ks[df_ks["cohort27_confidence"] == "high"].copy()
@@ -398,9 +522,12 @@ def generate_kuaishou_dashboard(df_all):
             "city",
             "cohort27_confidence",
             "priority_label",
+            "priority_score",
             "priority_skill_hit_count",
             "recruit_type",
             "raw_tags",
+            "link_status",
+            "link_reason",
             "update_time",
             "url",
             "jd_raw",
@@ -439,7 +566,8 @@ def generate_kuaishou_dashboard(df_all):
         [
             {
                 "date": today,
-                "kuaishou_total_jobs": len(df_ks),
+                "company": company_name,
+                "total_jobs": len(df_ks),
                 "confidence_high": int((df_ks["cohort27_confidence"] == "high").sum()),
                 "confidence_medium": int((df_ks["cohort27_confidence"] == "medium").sum()),
                 "confidence_low": int((df_ks["cohort27_confidence"] == "low").sum()),
@@ -448,6 +576,8 @@ def generate_kuaishou_dashboard(df_all):
                 "shanghai_ratio_pct": shanghai_ratio,
                 "core_target_new_today": int(len(today_high_df)),
                 "priority_a_new_today": int((today_high_df["priority_label"] == "PRIORITY_A").sum()),
+                "broken_link_count": int((df_ks["link_status"] == "BROKEN").sum()),
+                "risky_link_count": int((df_ks["link_status"] == "RISKY").sum()),
                 "close_warning_count": int(len(warn_df)),
             }
         ]
@@ -460,7 +590,7 @@ def generate_kuaishou_dashboard(df_all):
     today_high_df.to_csv(new_high_path, index=False, encoding="utf-8-sig")
     warn_df.to_csv(close_warn_path, index=False, encoding="utf-8-sig")
     daily_trend.to_csv(daily_trend_path, index=False, encoding="utf-8-sig")
-    print(f"[Dashboard] 快手看板已更新: {len(df_ks)} 条")
+    print(f"[Dashboard] {company_name}看板已更新: {len(df_ks)} 条")
 
     return {
         "latest": dashboard_latest_path,
@@ -473,18 +603,36 @@ def generate_kuaishou_dashboard(df_all):
     }
 
 
+def generate_all_summary_dashboard(frame):
+    part = frame[frame["company"].isin(TARGET_COMPANIES)].copy()
+    if part.empty:
+        return ""
+    summary = (
+        part.groupby(["company", "source"], as_index=False)
+        .agg(岗位数=("company", "count"))
+        .sort_values(["岗位数", "company"], ascending=[False, True])
+    )
+    total = int(summary["岗位数"].sum())
+    summary["占比_pct"] = (summary["岗位数"] / max(total, 1) * 100).round(2)
+    out = dashboard_path("dashboard_all_summary.csv")
+    summary.to_csv(out, index=False, encoding="utf-8-sig")
+    return out
+
+
 def safe_write_csv(df, file_name):
+    full_path = report_path(file_name)
     try:
-        df.to_csv(file_name, index=False, encoding="utf-8-sig")
-        return file_name
+        df.to_csv(full_path, index=False, encoding="utf-8-sig")
+        return full_path
     except PermissionError:
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        alt = file_name.replace(".csv", f"_{ts}.csv")
+        alt = report_path(file_name.replace(".csv", f"_{ts}.csv"))
         df.to_csv(alt, index=False, encoding="utf-8-sig")
         return alt
 
 
 def main():
+    ensure_output_dirs()
     all_frames = []
     for filename in glob.glob(os.path.join(shixiseng_path, "*.csv")):
         try:
@@ -514,7 +662,7 @@ def main():
     frame = pd.concat(all_frames, axis=0, ignore_index=True)
     for col in [
         "url", "company", "name", "city", "jd_raw", "salary", "company_size", "duration", "academic",
-        "publish_time", "deadline", "collect_time", "source", "recruit_type", "raw_tags",
+        "publish_time", "publish_time_estimated", "publish_time_estimated_source", "deadline", "collect_time", "source", "publish_time_source", "deadline_source", "recruit_type", "raw_tags",
         "external_job_id", "update_time", "sync_status"
     ]:
         frame[col] = frame[col].map(normalize_text)
@@ -544,6 +692,8 @@ def main():
     frame["is_27_inferred"] = frame.apply(infer_27_from_context, axis=1) | frame["cohort27_confidence"].isin(["high", "medium"])
 
     frame = frame.drop_duplicates(subset=["company", "name", "city", "url"], keep="first")
+    frame, link_report = attach_link_health(frame, companies=["快手", "腾讯", "字节跳动", "小红书", "美团", "阿里", "京东"], max_concurrent=12, timeout=6)
+    frame["priority_score"] = frame.apply(compute_priority_score, axis=1)
 
     out_master = safe_write_csv(frame, "internship_all_master.csv")
     out_legacy = safe_write_csv(frame, "internship_info_all.csv")
@@ -553,11 +703,13 @@ def main():
 
     target = frame.copy()
     target = target[target["is_shanghai"] & target["is_big_company"] & target["is_27_match"]]
+    target = target[~target["link_status"].isin(["BROKEN"])]
     target["score"] = target.apply(score_row, axis=1)
     target = target.sort_values(by=["score", "company", "name"], ascending=[False, True, True])
 
     out_target = safe_write_csv(target, "internship_target_jobs.csv")
     strict_27 = frame[(frame["is_shanghai"]) & (frame["is_big_company"]) & (frame["cohort27_confidence"] == "high")].copy()
+    strict_27 = strict_27[~strict_27["link_status"].isin(["BROKEN"])]
     strict_27["score"] = strict_27.apply(score_row, axis=1)
     strict_27 = strict_27.sort_values(by=["score", "company", "name"], ascending=[False, True, True])
     out_strict_27 = safe_write_csv(strict_27, "internship_target_strict_27.csv")
@@ -574,6 +726,7 @@ def main():
     out_potential = safe_write_csv(potential_27, "internship_target_potential_27.csv")
 
     inferred_27 = frame[(frame["is_shanghai"]) & (frame["is_big_company"]) & (frame["is_27_inferred"])].copy()
+    inferred_27 = inferred_27[~inferred_27["link_status"].isin(["BROKEN"])]
     inferred_27["score"] = inferred_27.apply(score_row, axis=1)
     inferred_27 = inferred_27.sort_values(by=["score", "company", "name"], ascending=[False, True, True])
     out_inferred = safe_write_csv(inferred_27, "internship_target_inferred_27.csv")
@@ -602,7 +755,17 @@ def main():
     )
     company_summary["平均分"] = company_summary["平均分"].round(2)
     out_company_summary = safe_write_csv(company_summary, "internship_target_company_summary.csv")
-    dashboard_outputs = generate_kuaishou_dashboard(frame)
+    priority_top = strict_27[strict_27["priority_score"] > 0].copy()
+    priority_top = priority_top.sort_values(["priority_score", "score"], ascending=[False, False]).head(20)
+    out_priority_top = safe_write_csv(priority_top, "internship_priority_top20.csv")
+
+    dashboard_outputs_kuaishou = generate_company_dashboard(frame, "快手")
+    dashboard_outputs_tencent = generate_company_dashboard(frame, "腾讯")
+    dashboard_outputs_xiaohongshu = generate_company_dashboard(frame, "小红书")
+    dashboard_outputs_meituan = generate_company_dashboard(frame, "美团")
+    dashboard_outputs_alibaba = generate_company_dashboard(frame, "阿里")
+    dashboard_outputs_jd = generate_company_dashboard(frame, "京东")
+    out_dashboard_all = generate_all_summary_dashboard(frame)
 
     print(f"主库岗位数: {len(frame)} -> {out_master}")
     print(f"兼容总表输出 -> {out_legacy}")
@@ -617,11 +780,34 @@ def main():
     print(f"简历准备JD包 -> {out_jd_delivery}")
     print(f"秋招大厂综合包 -> {out_autumn_pack}")
     print(f"公司维度汇总 -> {out_company_summary}")
-    if dashboard_outputs:
-        print(f"快手看板总表 -> {dashboard_outputs['latest']}")
-        print(f"快手看板摘要 -> {dashboard_outputs['summary']}")
-        print(f"快手新增高置信上海数据岗 -> {dashboard_outputs['new_high']}")
-        print(f"快手关闭预警 -> {dashboard_outputs['close_warn']}")
+    print(f"优先投递Top20 -> {out_priority_top}")
+    print(f"链接健康检查 -> {health_path('broken_links_report.csv')}")
+    if dashboard_outputs_kuaishou:
+        print(f"快手看板总表 -> {dashboard_outputs_kuaishou['latest']}")
+        print(f"快手看板摘要 -> {dashboard_outputs_kuaishou['summary']}")
+        print(f"快手新增高置信上海数据岗 -> {dashboard_outputs_kuaishou['new_high']}")
+    if dashboard_outputs_tencent:
+        print(f"腾讯看板总表 -> {dashboard_outputs_tencent['latest']}")
+        print(f"腾讯看板摘要 -> {dashboard_outputs_tencent['summary']}")
+        print(f"腾讯新增高置信上海数据岗 -> {dashboard_outputs_tencent['new_high']}")
+    if dashboard_outputs_xiaohongshu:
+        print(f"小红书看板总表 -> {dashboard_outputs_xiaohongshu['latest']}")
+        print(f"小红书看板摘要 -> {dashboard_outputs_xiaohongshu['summary']}")
+        print(f"小红书新增高置信上海数据岗 -> {dashboard_outputs_xiaohongshu['new_high']}")
+    if dashboard_outputs_meituan:
+        print(f"美团看板总表 -> {dashboard_outputs_meituan['latest']}")
+        print(f"美团看板摘要 -> {dashboard_outputs_meituan['summary']}")
+        print(f"美团新增高置信上海数据岗 -> {dashboard_outputs_meituan['new_high']}")
+    if dashboard_outputs_alibaba:
+        print(f"阿里看板总表 -> {dashboard_outputs_alibaba['latest']}")
+        print(f"阿里看板摘要 -> {dashboard_outputs_alibaba['summary']}")
+        print(f"阿里新增高置信上海数据岗 -> {dashboard_outputs_alibaba['new_high']}")
+    if dashboard_outputs_jd:
+        print(f"京东看板总表 -> {dashboard_outputs_jd['latest']}")
+        print(f"京东看板摘要 -> {dashboard_outputs_jd['summary']}")
+        print(f"京东新增高置信上海数据岗 -> {dashboard_outputs_jd['new_high']}")
+    if out_dashboard_all:
+        print(f"多公司总览 -> {out_dashboard_all}")
 
 
 if __name__ == "__main__":

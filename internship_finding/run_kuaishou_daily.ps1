@@ -17,7 +17,11 @@ try {
     python merge_file.py 2>&1 | Tee-Object -FilePath $LogFile -Append
     if ($LASTEXITCODE -ne 0) { throw "合并失败" }
 
-    Write-Host "[Success] 全部完成！请查看 dashboard_kuaishou_new_high_sh_data.csv" -ForegroundColor Green
+    Write-Host "[3/3] 正在整理产物目录..." -ForegroundColor Yellow
+    powershell -ExecutionPolicy Bypass -File ".\organize_workspace.ps1" 2>&1 | Tee-Object -FilePath $LogFile -Append
+    if ($LASTEXITCODE -ne 0) { throw "目录整理失败" }
+
+    Write-Host "[Success] 全部完成！请查看 outputs/dashboard/dashboard_all_summary.csv" -ForegroundColor Green
 } catch {
     Write-Host "[Error] 执行失败: $_" -ForegroundColor Red
     exit 1

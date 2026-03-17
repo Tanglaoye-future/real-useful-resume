@@ -23,6 +23,8 @@ CITY_KEYWORD = os.getenv("CITY_KEYWORD", "上海")
 GRAD_KEYWORDS = [x.strip() for x in os.getenv("GRAD_KEYWORDS", "27届,2027届,2027").split(",") if x.strip()]
 ENABLED_COMPANIES = set(CRAWLER_CONFIG.get("enabled_companies") or [])
 REQUEST_DELAY_SECONDS = float(CRAWLER_CONFIG.get("request_delay_seconds", 0))
+UNKNOWN_PUBLISH_TIME = "不知道发布时间"
+UNKNOWN_DEADLINE = "未知截止时间"
 
 SOURCES = [
     {"company": "字节跳动", "source": "official_bytedance", "url_template": "https://jobs.bytedance.com/campus/position?current={page}&limit=40", "pages": 60},
@@ -40,6 +42,40 @@ def norm(x: Any) -> str:
     if x is None or (isinstance(x, float) and pd.isna(x)):
         return ""
     return re.sub(r"\s+", " ", str(x)).strip()
+
+
+def normalize_time_value(x: Any) -> str:
+    v = norm(x)
+    if not v:
+        return ""
+    if re.fullmatch(r"\d{13}", v):
+        try:
+            return datetime.fromtimestamp(int(v) / 1000).strftime("%Y-%m-%d %H:%M:%S")
+        except Exception:
+            return v
+    if re.fullmatch(r"\d{10}", v):
+        try:
+            return datetime.fromtimestamp(int(v)).strftime("%Y-%m-%d %H:%M:%S")
+        except Exception:
+            return v
+    return v
+
+
+def infer_deadline_from_text(text: str) -> str:
+    t = norm(text)
+    if not t:
+        return ""
+    m = re.search(r"(截止|截止时间|网申截止|投递截止)[^\d]{0,8}((20\d{2}[./-]\d{1,2}[./-]\d{1,2})(?:\s*\d{1,2}:\d{2})?)", t)
+    if m:
+        return norm(m.group(2)).replace("/", "-").replace(".", "-")
+    return ""
+
+
+def is_time_like(value: str) -> bool:
+    v = norm(value)
+    if not v:
+        return False
+    return bool(re.search(r"(20\d{2}[-/.年]\d{1,2}[-/.月]\d{1,2}|20\d{2}-\d{2}-\d{2})", v))
 
 
 def source_key(source_name: str) -> str:
@@ -177,6 +213,10 @@ def extract_rows_from_payload(payload: Any, source: str, company: str, location_
         recruit_type = get_str(d, ["recruit_type", "job_type", "type"])
         if not is_valid_job_row(title, desc, req):
             continue
+        raw_publish = normalize_time_value(get_str(d, ["publish_time", "publishTime", "create_time"]))
+        raw_deadline = normalize_time_value(get_str(d, ["deadline", "end_time", "expire_time"]))
+        publish_time = raw_publish if is_time_like(raw_publish) else UNKNOWN_PUBLISH_TIME
+        deadline = raw_deadline if is_time_like(raw_deadline) else UNKNOWN_DEADLINE
         rows.append(
             {
                 "url": url,
@@ -188,11 +228,13 @@ def extract_rows_from_payload(payload: Any, source: str, company: str, location_
                 "company_size": "",
                 "duration": "",
                 "academic": "",
-                "publish_time": get_str(d, ["publish_time", "publishTime", "create_time"]),
-                "deadline": get_str(d, ["deadline", "end_time", "expire_time"]),
+                "publish_time": publish_time,
+                "deadline": deadline,
                 "collect_time": time.strftime("%Y-%m-%d %H:%M:%S"),
                 "source": source,
                 "recruit_type": recruit_type,
+                "publish_time_source": "real_api" if publish_time != UNKNOWN_PUBLISH_TIME else "unknown",
+                "deadline_source": "real_api" if deadline != UNKNOWN_DEADLINE else "unknown",
             }
         )
     return rows
@@ -375,7 +417,7 @@ def fetch_jd_jobs() -> List[Dict[str, str]]:
                     "company_size": "",
                     "duration": "",
                     "academic": norm(it.get("education")),
-                    "publish_time": norm(it.get("publishTime")),
+                    "publish_time": normalize_time_value(it.get("publishTime")),
                     "deadline": "",
                     "collect_time": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "source": "official_jd_api",
@@ -410,10 +452,11 @@ def fetch_tencent_jobs() -> List[Dict[str, str]]:
     page_size = 50
     page_index = 1
     total = 1
-    while (page_index - 1) * page_size < total:
+    max_pages = 200
+    while (page_index - 1) * page_size < total and page_index <= max_pages:
         payload = {
             "projectIdList": [],
-            "projectMappingIdList": [1],
+            "projectMappingIdList": [],
             "keyword": "",
             "bgList": [],
             "workCountryType": 0,
@@ -438,6 +481,9 @@ def fetch_tencent_jobs() -> List[Dict[str, str]]:
             title = norm(it.get("positionTitle"))
             city = norm(it.get("workCities"))
             recruit_type = norm(it.get("projectName") or it.get("recruitLabelName"))
+            raw_tags = norm(
+                f"{it.get('projectName') or ''} {it.get('recruitLabelName') or ''} {it.get('groupTag') or ''} {it.get('positionFamily') or ''}"
+            )
             detail = {}
             if post_id:
                 try:
@@ -449,12 +495,29 @@ def fetch_tencent_jobs() -> List[Dict[str, str]]:
                     ).json().get("data") or {}
                 except Exception:
                     detail = {}
-            desc = norm(detail.get("desc"))
-            req = norm(detail.get("require"))
+            desc = norm(detail.get("desc") or detail.get("topicDetail") or detail.get("introduction"))
+            req = norm(detail.get("request") or detail.get("require") or detail.get("topicRequirement"))
             link = f"https://join.qq.com/post.html?query=p_1&postId={post_id}" if post_id else ""
 
             if not title:
                 continue
+            collect_ts = time.strftime("%Y-%m-%d %H:%M:%S")
+            raw_publish = normalize_time_value(
+                it.get("publishTime")
+                or it.get("createTime")
+                or detail.get("publishTime")
+                or detail.get("createTime")
+                or detail.get("postTime")
+            )
+            publish_time = raw_publish if is_time_like(raw_publish) else UNKNOWN_PUBLISH_TIME
+            raw_deadline = normalize_time_value(
+                it.get("deadline")
+                or it.get("endTime")
+                or detail.get("deadline")
+                or detail.get("endTime")
+                or detail.get("finishTime")
+            ) or infer_deadline_from_text(f"{desc} {req}")
+            deadline = raw_deadline if is_time_like(raw_deadline) else UNKNOWN_DEADLINE
             rows.append(
                 {
                     "url": link,
@@ -466,11 +529,16 @@ def fetch_tencent_jobs() -> List[Dict[str, str]]:
                     "company_size": "",
                     "duration": "",
                     "academic": "",
-                    "publish_time": "",
-                    "deadline": "",
-                    "collect_time": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "publish_time": publish_time,
+                    "deadline": deadline,
+                    "collect_time": collect_ts,
                     "source": "official_tencent_api",
                     "recruit_type": recruit_type,
+                    "raw_tags": raw_tags,
+                    "external_job_id": post_id,
+                    "update_time": normalize_time_value(it.get("updateTime") or detail.get("updateTime")),
+                    "publish_time_source": "unknown" if publish_time == UNKNOWN_PUBLISH_TIME else "real_api",
+                    "deadline_source": "unknown" if deadline == UNKNOWN_DEADLINE else "real_api_or_text",
                 }
             )
         page_index += 1
@@ -507,6 +575,25 @@ def fetch_kuaishou_jobs_api(max_pages: int = 120) -> List[Dict[str, str]]:
                 parsed = adapter.parse(it)
                 if not parsed.get("title"):
                     continue
+                collect_ts = parsed.get("collect_time", time.strftime("%Y-%m-%d %H:%M:%S"))
+                raw_publish = normalize_time_value(parsed.get("publish_time"))
+                update_proxy = normalize_time_value(parsed.get("update_time"))
+                if is_time_like(raw_publish):
+                    publish_time = raw_publish
+                    publish_source = "real_api"
+                elif is_time_like(update_proxy):
+                    publish_time = update_proxy
+                    publish_source = "official_update_proxy"
+                else:
+                    publish_time = UNKNOWN_PUBLISH_TIME
+                    publish_source = "unknown"
+                raw_deadline = normalize_time_value(parsed.get("deadline")) or infer_deadline_from_text(parsed.get("jd_raw", ""))
+                if is_time_like(raw_deadline):
+                    deadline = raw_deadline
+                    deadline_source = "real_api_or_text"
+                else:
+                    deadline = UNKNOWN_DEADLINE
+                    deadline_source = "unknown"
                 rows.append(
                     {
                         "url": parsed.get("url", ""),
@@ -518,14 +605,16 @@ def fetch_kuaishou_jobs_api(max_pages: int = 120) -> List[Dict[str, str]]:
                         "company_size": "",
                         "duration": "",
                         "academic": "",
-                        "publish_time": "",
-                        "deadline": "",
-                        "collect_time": parsed.get("collect_time", time.strftime("%Y-%m-%d %H:%M:%S")),
+                        "publish_time": publish_time,
+                        "deadline": deadline,
+                        "collect_time": collect_ts,
                         "source": parsed.get("source", "official_kuaishou_api"),
                         "recruit_type": parsed.get("recruit_type", ""),
                         "raw_tags": parsed.get("raw_tags", ""),
                         "external_job_id": parsed.get("external_job_id", ""),
-                        "update_time": parsed.get("update_time", ""),
+                        "update_time": normalize_time_value(parsed.get("update_time", "")),
+                        "publish_time_source": publish_source,
+                        "deadline_source": deadline_source,
                     }
                 )
             if REQUEST_DELAY_SECONDS > 0:
@@ -541,13 +630,214 @@ def fetch_kuaishou_jobs_api(max_pages: int = 120) -> List[Dict[str, str]]:
     return dedup
 
 
+def fetch_xiaohongshu_jobs_api(max_pages: int = 120) -> List[Dict[str, str]]:
+    adapter = get_adapter("xiaohongshu")
+    if adapter is None:
+        return []
+    rows: List[Dict[str, str]] = []
+    for page in range(1, max_pages + 1):
+        try:
+            items = adapter.fetch_list(page)
+        except Exception:
+            items = []
+        if not items:
+            break
+        for it in items:
+            parsed = adapter.parse(it)
+            if not parsed.get("title"):
+                continue
+            collect_ts = parsed.get("collect_time", time.strftime("%Y-%m-%d %H:%M:%S"))
+            raw_publish = normalize_time_value(parsed.get("publish_time") or parsed.get("update_time"))
+            publish_time = raw_publish if is_time_like(raw_publish) else UNKNOWN_PUBLISH_TIME
+            publish_source = "real_api" if publish_time != UNKNOWN_PUBLISH_TIME else "unknown"
+            raw_deadline = normalize_time_value(parsed.get("deadline")) or infer_deadline_from_text(parsed.get("jd_raw", ""))
+            deadline = raw_deadline if is_time_like(raw_deadline) else UNKNOWN_DEADLINE
+            deadline_source = "real_api_or_text" if deadline != UNKNOWN_DEADLINE else "unknown"
+            rows.append(
+                {
+                    "url": parsed.get("url", ""),
+                    "company": parsed.get("company", "小红书"),
+                    "name": parsed.get("title", ""),
+                    "city": parsed.get("city", ""),
+                    "jd_raw": parsed.get("jd_raw", ""),
+                    "salary": "",
+                    "company_size": "",
+                    "duration": "",
+                    "academic": "",
+                    "publish_time": publish_time,
+                    "deadline": deadline,
+                    "collect_time": collect_ts,
+                    "source": parsed.get("source", "official_xiaohongshu"),
+                    "recruit_type": parsed.get("recruit_type", ""),
+                    "raw_tags": parsed.get("raw_tags", ""),
+                    "external_job_id": parsed.get("external_job_id", ""),
+                    "update_time": normalize_time_value(parsed.get("update_time", "")),
+                    "publish_time_source": publish_source,
+                    "deadline_source": deadline_source,
+                }
+            )
+        if REQUEST_DELAY_SECONDS > 0:
+            time.sleep(REQUEST_DELAY_SECONDS)
+    dedup = []
+    seen = set()
+    for r in rows:
+        key = (r["company"], r["name"], r["city"], r["url"], r["jd_raw"][:200])
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(r)
+    return dedup
+
+
+def fetch_meituan_jobs_api(max_pages: int = 150) -> List[Dict[str, str]]:
+    adapter = get_adapter("meituan")
+    if adapter is None:
+        return []
+    rows: List[Dict[str, str]] = []
+    for page in range(1, max_pages + 1):
+        try:
+            items = adapter.fetch_list(page)
+        except Exception:
+            items = []
+        if not items:
+            break
+        for it in items:
+            parsed = adapter.parse(it)
+            if not parsed.get("title"):
+                continue
+            collect_ts = parsed.get("collect_time", time.strftime("%Y-%m-%d %H:%M:%S"))
+            raw_publish = normalize_time_value(parsed.get("publish_time"))
+            update_proxy = normalize_time_value(parsed.get("update_time"))
+            if is_time_like(raw_publish):
+                publish_time = raw_publish
+                publish_source = "real_api"
+            elif is_time_like(update_proxy):
+                publish_time = update_proxy
+                publish_source = "official_update_proxy"
+            else:
+                publish_time = UNKNOWN_PUBLISH_TIME
+                publish_source = "unknown"
+            raw_deadline = normalize_time_value(parsed.get("deadline")) or infer_deadline_from_text(parsed.get("jd_raw", ""))
+            if is_time_like(raw_deadline):
+                deadline = raw_deadline
+                deadline_source = "real_api_or_text"
+            else:
+                deadline = UNKNOWN_DEADLINE
+                deadline_source = "unknown"
+            rows.append(
+                {
+                    "url": parsed.get("url", ""),
+                    "company": parsed.get("company", "美团"),
+                    "name": parsed.get("title", ""),
+                    "city": parsed.get("city", ""),
+                    "jd_raw": parsed.get("jd_raw", ""),
+                    "salary": "",
+                    "company_size": "",
+                    "duration": "",
+                    "academic": "",
+                    "publish_time": publish_time,
+                    "deadline": deadline,
+                    "collect_time": collect_ts,
+                    "source": parsed.get("source", "official_meituan"),
+                    "recruit_type": parsed.get("recruit_type", ""),
+                    "raw_tags": parsed.get("raw_tags", ""),
+                    "external_job_id": parsed.get("external_job_id", ""),
+                    "update_time": normalize_time_value(parsed.get("update_time", "")),
+                    "publish_time_source": publish_source,
+                    "deadline_source": deadline_source,
+                }
+            )
+        if REQUEST_DELAY_SECONDS > 0:
+            time.sleep(REQUEST_DELAY_SECONDS)
+    dedup = []
+    seen = set()
+    for r in rows:
+        key = (r["company"], r["name"], r["city"], r["external_job_id"], r["jd_raw"][:200])
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(r)
+    return dedup
+
+
+def fetch_alibaba_jobs_api(max_pages: int = 120) -> List[Dict[str, str]]:
+    adapter = get_adapter("alibaba")
+    if adapter is None:
+        return []
+    rows: List[Dict[str, str]] = []
+    for page in range(1, max_pages + 1):
+        try:
+            items = adapter.fetch_list(page)
+        except Exception:
+            items = []
+        if not items:
+            break
+        for it in items:
+            parsed = adapter.parse(it)
+            if not parsed.get("title"):
+                continue
+            collect_ts = parsed.get("collect_time", time.strftime("%Y-%m-%d %H:%M:%S"))
+            raw_publish = normalize_time_value(parsed.get("publish_time"))
+            update_proxy = normalize_time_value(parsed.get("update_time"))
+            if is_time_like(raw_publish):
+                publish_time = raw_publish
+                publish_source = "real_api"
+            elif is_time_like(update_proxy):
+                publish_time = update_proxy
+                publish_source = "official_update_proxy"
+            else:
+                publish_time = UNKNOWN_PUBLISH_TIME
+                publish_source = "unknown"
+            raw_deadline = normalize_time_value(parsed.get("deadline")) or infer_deadline_from_text(parsed.get("jd_raw", ""))
+            if is_time_like(raw_deadline):
+                deadline = raw_deadline
+                deadline_source = "real_api_or_text"
+            else:
+                deadline = UNKNOWN_DEADLINE
+                deadline_source = "unknown"
+            rows.append(
+                {
+                    "url": parsed.get("url", ""),
+                    "company": parsed.get("company", "阿里"),
+                    "name": parsed.get("title", ""),
+                    "city": parsed.get("city", ""),
+                    "jd_raw": parsed.get("jd_raw", ""),
+                    "salary": "",
+                    "company_size": "",
+                    "duration": "",
+                    "academic": "",
+                    "publish_time": publish_time,
+                    "deadline": deadline,
+                    "collect_time": collect_ts,
+                    "source": parsed.get("source", "official_alibaba"),
+                    "recruit_type": parsed.get("recruit_type", ""),
+                    "raw_tags": parsed.get("raw_tags", ""),
+                    "external_job_id": parsed.get("external_job_id", ""),
+                    "update_time": normalize_time_value(parsed.get("update_time", "")),
+                    "publish_time_source": publish_source,
+                    "deadline_source": deadline_source,
+                }
+            )
+        if REQUEST_DELAY_SECONDS > 0:
+            time.sleep(REQUEST_DELAY_SECONDS)
+    dedup = []
+    seen = set()
+    for r in rows:
+        key = (r["company"], r["name"], r["city"], r["external_job_id"], r["jd_raw"][:200])
+        if key in seen:
+            continue
+        seen.add(key)
+        dedup.append(r)
+    return dedup
+
+
 def main():
     all_rows: List[Dict[str, str]] = []
     with sync_playwright() as p:
         for conf in SOURCES:
             if not is_enabled(conf["source"]):
                 continue
-            if conf["source"] == "official_kuaishou":
+            if conf["source"] in {"official_kuaishou", "official_xiaohongshu", "official_meituan", "official_alibaba", "official_tencent", "official_jd"}:
                 continue
             rows = crawl_one_source(p, conf)
             print(conf["company"], conf["source"], len(rows))
@@ -562,6 +852,21 @@ def main():
         kuaishou_rows = fetch_kuaishou_jobs_api()
         print("快手 official_kuaishou_api", len(kuaishou_rows))
         all_rows.extend(kuaishou_rows)
+
+    if is_enabled("official_xiaohongshu"):
+        xiaohongshu_rows = fetch_xiaohongshu_jobs_api()
+        print("小红书 official_xiaohongshu", len(xiaohongshu_rows))
+        all_rows.extend(xiaohongshu_rows)
+
+    if is_enabled("official_meituan"):
+        meituan_rows = fetch_meituan_jobs_api()
+        print("美团 official_meituan", len(meituan_rows))
+        all_rows.extend(meituan_rows)
+
+    if is_enabled("official_alibaba"):
+        alibaba_rows = fetch_alibaba_jobs_api()
+        print("阿里 official_alibaba", len(alibaba_rows))
+        all_rows.extend(alibaba_rows)
 
     if is_enabled("official_jd_api"):
         jd_rows = fetch_jd_jobs()
@@ -588,32 +893,46 @@ def main():
             pass
 
     prev_records = load_snapshot(SNAPSHOT_PREV)
-    prev_map = {f"{norm(r.get('source'))}|{norm(r.get('external_job_id'))}": norm(r.get("content_hash")) for r in prev_records}
+    prev_map = {f"{norm(r.get('source'))}|{norm(r.get('external_job_id'))}": r for r in prev_records}
 
     status_list = []
     change_rows = []
     now_ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    first_seen_list = []
     for row in df.to_dict(orient="records"):
         key = row["sync_key"]
         new_hash = norm(row["content_hash"])
-        old_hash = prev_map.get(key)
-        if old_hash is None:
+        old_record = prev_map.get(key)
+        old_hash = norm((old_record or {}).get("content_hash"))
+        if old_record is None:
             status = "NEW"
+            first_seen_time = now_ts
         elif old_hash != new_hash:
             status = "UPDATED"
+            first_seen_time = norm(old_record.get("first_seen_time")) or now_ts
         else:
             status = "UNCHANGED"
+            first_seen_time = norm(old_record.get("first_seen_time")) or now_ts
         status_list.append(status)
+        first_seen_list.append(first_seen_time)
         if status in {"NEW", "UPDATED"}:
             change_rows.append({"sync_key": key, "status": status, "collect_time": now_ts})
     df["sync_status"] = status_list
+    df["first_seen_time"] = first_seen_list
+    df["publish_time_estimated"] = ""
+    df["publish_time_estimated_source"] = ""
+    unknown_mask = df["publish_time"].astype(str).eq(UNKNOWN_PUBLISH_TIME)
+    df.loc[unknown_mask, "publish_time_estimated"] = df.loc[unknown_mask, "first_seen_time"]
+    df.loc[unknown_mask, "publish_time_estimated_source"] = "history_first_seen"
+    df.loc[~unknown_mask, "publish_time_estimated"] = df.loc[~unknown_mask, "publish_time"]
+    df.loc[~unknown_mask, "publish_time_estimated_source"] = df.loc[~unknown_mask, "publish_time_source"]
 
     current_keys = set(df["sync_key"].tolist())
     for key in prev_map.keys():
         if key not in current_keys:
             change_rows.append({"sync_key": key, "status": "CLOSED", "collect_time": now_ts})
 
-    snapshot_rows = df[["source", "external_job_id", "content_hash"]].to_dict(orient="records")
+    snapshot_rows = df[["source", "external_job_id", "content_hash", "first_seen_time"]].to_dict(orient="records")
     save_snapshot(SNAPSHOT_LATEST, snapshot_rows)
 
     os.makedirs(HISTORY_DIR, exist_ok=True)

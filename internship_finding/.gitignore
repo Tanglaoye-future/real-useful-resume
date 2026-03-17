@@ -4,6 +4,7 @@ __pycache__/
 parsers/__pycache__/
 rules/__pycache__/
 logs/
+outputs/
 
 archive/history/
 data/
