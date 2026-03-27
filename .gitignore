@@ -5,8 +5,20 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
-output/*.xlsx
+# 输出文件和日志
+output/
+logs/
+*.csv
+*.json
+*.xlsx
+*.log
 
+# 测试和调试文件
+test_*.py
+*_test.py
+*_debug.html
+
+# IDE 和编辑器
 .trae/
 .vscode/
 .idea/
