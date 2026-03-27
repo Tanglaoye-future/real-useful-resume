@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-27T16:44:43.676270",
+  "total_duration": 29.314189,
+  "platforms": {
+    "BOSS直聘": {
+      "start_time": "2026-03-27T16:44:18.428517",
+      "status": "completed",
+      "jobs_collected": 30000,
+      "quality_metrics": {
+        "completeness_rate": 100.0,
+        "avg_jd_length": 437.56666666666666,
+        "min_jd_length": 426,
+        "max_jd_length": 450
+      },
+      "end_time": "2026-03-27T16:44:27.281309",
+      "duration": 8.852792
+    },
+    "猎聘": {
+      "start_time": "2026-03-27T16:44:18.429063",
+      "status": "completed",
+      "jobs_collected": 30000,
+      "quality_metrics": {
+        "completeness_rate": 100.0,
+        "avg_jd_length": 410.69806666666665,
+        "min_jd_length": 398,
+        "max_jd_length": 424
+      },
+      "end_time": "2026-03-27T16:44:27.012423",
+      "duration": 8.58336
+    }
+  },
+  "quality_issues": [],
+  "summary": {
+    "total_platforms": 2,
+    "success_count": 2,
+    "error_count": 0,
+    "total_jobs": 60000,
+    "quality_issues_count": 0
+  }
+}

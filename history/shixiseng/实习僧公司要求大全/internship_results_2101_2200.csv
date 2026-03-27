@@ -1,0 +1,1396 @@
+﻿url,company,info,city,name,salary,duration,academic
+https://www.shixiseng.com/intern/inn_5y3fk0cng0a6?pcm=pc_SearchList,智驾大陆,"职责描述：
+1. 支持车载传感器相机镜头选型评估，协助建立车载相机光学镜头的评价体系。
+2. 对于镜头光学指标及指标测试项需要有一定的了解。
+3. 支持实验室模组RAW图像客观测试。
+4. 支持实验室模组YUV图像客观测试。
+5. 支持实验室模组ISP图像调试。
+6. 参与自动驾驶相机传感器的系统方案、技术路线未来规划。
+7. 协助解决关联软硬件团队在开发、集成、测试过程中遇到的问题，支持车载相机模组的量产和落地。
+
+任职要求：
+1. 光学工程/光电信息科学与工程、机械工程/精密仪器等。
+2. 会使用Imatest图像分析软件，对于光学仿真软件，如Zemax、LightTools有一定了解。
+3. 熟悉且对自动驾驶传感器感兴趣，包括但不限于：Camera、Radar、Lidar、IMU、GNSS等。
+4. 能吃苦、抗压能力强，对车载相机镜头有相关论文及研究项目优先。
+5. 良好的英文读写能力。
+6. 熟悉常用的办公软件。",工作地点：上海市/上海市/嘉定区 智驾大陆(上海)智能科技有限公司收起地图,公司简介智驾大陆,,,
+https://www.shixiseng.com/intern/inn_ziwzhe0xiklp?pcm=pc_SearchList,UAES,"Education           
+business school, business administration, international management degree, international business school, communication or marketing school. 
+Hard skills           
+excellent ability to use powerpoint, English fluent 
+Soft Skills            
+excellent communication, self initiative, strong attention to detail, organizational skills
+飞书效率先锋认证优先",工作地点：上海市/上海市/浦东新区 联合汽车电子公司-1号门收起地图,公司简介UAES,,,
+https://www.shixiseng.com/intern/inn_4d50ucfcedhk?pcm=pc_SearchList,UAES,"Work Responsibilities
+AI Agent 开发与集成
+参与设计并开发基于 LLM（大语言模型）和 Agent 架构的 AI 智能体，用于自动化控制器软件研发流程（如代码生成、文档生成、缺陷检测等）。
+结合 V 模型（V-Model）的开发流程，优化 AI 在需求分析、设计验证、测试阶段的应用，提升研发效率。
+RAG 与知识库构建
+利用 RAG（Retrieval-Augmented Generation） 技术，构建面向控制器软件研发的知识库，支持智能问答、文档检索与生成。
+集成领域特定数据（如 MCP 协议、车载控制器设计规范）到 RAG 系统中，提升 AI 的上下文理解能力。
+MCP 协议与系统对接
+研究并实现 AI 智能体与 MCP 协议的工具的对接。
+Agent 架构设计与协作
+参与多 Agent 系统的设计，实现 AI 智能体之间的协同工作（如需求分析 Agent、代码生成 Agent、测试 Agent）。
+设计 Agent 交互逻辑，支持自动化流程（如从需求文档生成测试用例并执行验证）。
+工具链开发与集成
+开发或集成 Python 脚本、API 或 CLI 工具，将 AI 功能嵌入到现有的控制器软件研发工具链中（如 GitLab、JIRA、CI/CD 流水线）。
+
+Required Skills & Qualifications
+编程与开发能力
+熟练掌握 Python，具备良好的编码习惯和调试能力。
+熟悉 LLM 应用开发（如 LangChain、LlamaIndex 等框架）。
+了解 RAG 技术，能够实现基于向量数据库的知识检索。
+AI 与 Agent 技术基础
+理解 Agent 架构，有实际开发经验者优先。
+对 V 模型（V-Model）开发流程有基本认知。
+熟悉 MCP 协议，能够将一个工具进行MCP封装。
+熟悉 Dify 等低代码开发平台者优先。
+技术研究与创新
+具备快速学习新技术的能力，能够独立完成技术调研与原型开发。
+有 AI 模型优化经验（如 Prompt Engineering、模型微调）者优先。
+协作与沟通能力
+能够与跨职能团队（研发、测试、产品）协作，推动 AI 功能落地。
+具备良好的中文与英文读写能力，能撰写技术文档与报告。
+
+加分项
+有车载控制器软件开发或嵌入式系统相关项目经验。
+对自动化测试、代码质量分析工具有实践经验。
+飞书效率先锋认证优先",工作地点：上海市/上海市/浦东新区 联合汽车电子公司-1号门收起地图,公司简介UAES,,,
+https://www.shixiseng.com/intern/inn_parjn6h6pidj?pcm=pc_SearchList,哈啰,"工作职责
+1、负责核心指标监控并每日播报，从数据发现异常归纳整理反馈并提出初步解决方案，支撑精细化运营、日报、周报、月报的优化和分析；
+2、负责业务数据分析与基于数据的运营优化工作，通过对运营数据的分析定位找出问题，并对问题进行深度挖掘和归因分析；
+3、协调城市和其他各部门与总部之间的沟通与合作，需求处理等日常事项，并推动任务落地；
+4、产品运营需求收集、日常运营、效果评估等工作
+
+任职资格
+1、本科及以上学历，具有互联网行业实习经验者优先
+2、较强的数据分析能力和逻辑思维能力，精通Excel、掌握常规数据分析及统计方法
+3、具有较强的逻辑思维、清晰的沟通表达、项目管理及组织协调能力
+4、具有优秀的团队合作精神；诚实、勤奋、严谨；有独立思考的能力
+5、可实习4个月，每周出勤5天，理工科背景优先",工作地点：上海市/上海市/闵行区 旭辉·莘庄中心收起地图,公司简介哈啰,,可实习4个月，5天,本科及以上
+https://www.shixiseng.com/intern/inn_dhajqsqxfyv9?pcm=pc_SearchList,博世中国,"关于我们 
+博世集团（Bosch Group）成立于1886年，全称是罗伯特·博世有限公司（BOSCH），是工业技术、消费品和能源及建筑技术的产业。博世公司以其创新尖端的产品及系统解决方案闻名于世。
+博世集团是全球第一大汽车技术供应商，员工人数超过 42万，遍布 50 多个国家。2022年销售额达到884亿欧元，其中在中国销售额达到1323亿人民币。 2018年7月19日，《世界500强排行榜发布，博世集团位列75位。2022年12月，位列《2022胡润世界500强》第58位。
+ 
+职责描述:
+Update Security regulation and standards information
+Support Security consultant delivery
+Support Smartcard Q&A
+Support Security Marketing and Sales
+
+ 
+岗位要求:
+Fluet oral and written English, Good PPT/Excel skill
+A quick learner who is self-driven
+Can work at least 3 days/week, and at least 3 months
+
+ 
+福利:
+500强外企，跨文化交流，大平台新视野。
+公司有食堂班车，工作氛围轻松愉快，可优先接触内部转正机会！
+与行业专家一对一指导，快速提升专业技能和职场竞争力。
+在世界百强外企中积累宝贵的实习经验，为你的简历增色。",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_nneevhbrnacq?pcm=pc_SearchList,黑驴传媒,该职位接受暑期实习&长期实习。该职位接受暑期实习&长期实习。一、岗位职责内容策划、节目创意、文案、后期制作二、招聘需求1、应届毕业生，在校生至少每周提供5天工作时间2、热爱内容制作行业，有较强的抗压能力3、性格外向，擅长沟通，脑洞大。,工作地点：闵行区顾戴路2582号2幢4楼收起地图,公司简介黑驴传媒,,5天,
+https://www.shixiseng.com/intern/inn_8vkojwaque7s?pcm=pc_SearchList,黑驴传媒,岗位职责:1、配合后期剪辑师制作综艺节目花絮2、熟悉后期合成、音乐音效字幕等技术，资料的收集和整理。岗位需求：1、不要求应届毕业生，只要你牛B。2、熟悉FinalCutPro、AE、PS视频编辑软件；3、具有良好的沟通能力，性格外向，脑洞大。,工作地点：顾戴路2582号收起地图,公司简介黑驴传媒,,,
+https://www.shixiseng.com/intern/inn_9ikdv4publag?pcm=pc_SearchList,黑驴传媒,一、岗位职责协助导演内容梳理/粗编/顺结构花字/后续相关物料跟进及其他）二、招聘需求1、应届毕业生或大三在校生2、热爱内容制作行业，有较强的抗压能力3、性格外向，擅长沟通，脑洞大。,工作地点：闵行区顾戴路2582号2幢4楼收起地图,公司简介黑驴传媒,,,
+https://www.shixiseng.com/intern/inn_yxcsmnzah9ds?pcm=pc_SearchList,黑驴传媒,岗位职责:配合后期剪辑师制作综艺节目包装。岗位要求：1、熟悉AE、PS、AI软件，有一定的美术功底；2、具有良好的沟通能力，性格外向，脑洞大；3、综艺感强。,工作地点：闵行区顾戴路2582号2幢4楼收起地图,公司简介黑驴传媒,,,
+https://www.shixiseng.com/intern/inn_ttbq7sayrcch?pcm=pc_SearchList,天风证券,"岗位职责：
+1. 数据运营类：数据清洗处理与录入；
+2. 数据需求跟进类：协助项目建设开发的需求对接与跟进；
+3. 其他交办任务。
+任职要求：
+1. 至少实习6个月；
+2. 硕士在读；
+3. 有一定的抗压能力；
+4. 熟练运用office及excel多种公式；
+5. 对行研有一定的了解和基础。",工作地点：上海市/上海市/虹口区 天风证券股份有限公司收起地图,公司简介天风证券,,至少实习6个月,硕士
+https://www.shixiseng.com/intern/inn_ylz2dkjcx2xu?pcm=pc_SearchList,诺德基金,"岗位职责：
+1.协助经理对接银行、保险、券商、信托等机构客户的市场开拓并推动合作落地;
+2.与客户建立并保持良好的合作关系，重视客户体验，洞察客户需求；
+3.持续学习包括不限于资管、证券行业法律法规和相关业务知识，获取发现行业发展和服务客户的机会点。 
+任职要求：
+1.本硕均毕业于国内或国外著名院校的2026年应届生；
+2.有投资银行、资本市场部、机构销售的相关实习经验；
+3.沟通能力强、执行力强、思维敏捷、具有团队合作意识；
+4.自驱力强、有开拓精神、有责任心、能承担较大工作压力。",工作地点：上海市/上海市/浦东新区 富城路99号18层收起地图,公司简介诺德基金,,,
+https://www.shixiseng.com/intern/inn_0z3x72gxv5bn?pcm=pc_SearchList,诺德基金,"岗位职责：
+1.  协助进行Alpha选股因子方向研究；
+2.  协助进行机器学习、深度学习算法的相关研究。
+3.  协助进行可转债、事件驱动、大类资产配置等方面研究；
+4.  其他日常事务性工作。
+任职要求：
+1.  国内或国外著名院校的2026年应届生，硕士及以上学历，金融工程、数据分析、物理等方向，优秀者本科亦可；
+2.  熟悉至少一种编程语言；
+3.  熟悉机器学习、深度学习算法；有多因子策略开发经验者优先；具备较强的编程能力，有交易、回测系统开发经验者优先；熟练使用chatgpt等大模型工具者优先。",工作地点：上海市/上海市/浦东新区 富城路99号18层收起地图,公司简介诺德基金,,,硕士及以上
+https://www.shixiseng.com/intern/inn_hxxlwreb1x7c?pcm=pc_SearchList,诺德基金,"【岗位职责】
+1、协助做好上级党组织有关文件、会议精神、材料的贯彻落实、跟踪汇报工作；
+2、组织策划党组织会议及各项活动；做好对内、对外宣传信息的拟定、报送及发布工作；
+3、协助做好校园招聘工作；协助做好员工入离职、劳动关系处理及落户手续办理等；
+4、协助部门领导做好部门日常文书起草、上传下达、工作协调等工作；协助起草各项计划、总结、报告、会议材料等； 
+5、完成领导交办的其他各项临时性工作任务。
+
+【任职要求】
+1、硕士及以上学历，马克思主义、汉语言文学、哲学、行政管理、新闻等相关专业；
+2、具有良好的政治素质和服务精神，中共党员；
+3、有较强的沟通协调能力、执行力、工作责任心和敬业精神；工作细致踏实；有团队合作精神；
+4、熟悉办公软件，具有良好的文字功底。",工作地点：上海市/上海市/浦东新区 富城路99号18层收起地图,公司简介诺德基金,,,硕士及以上
+https://www.shixiseng.com/intern/inn_uezlmg8albu6?pcm=pc_SearchList,聚信,"职位描述:
+1、协助新能源资产交易全流程工作的开展；
+2、协助新能源资产交易项目估值测算等工作；
+3、配合资产交易经理进行资料整理，服务支持等工作；
+4、完成领导交办的其它任务。
+
+
+职位要求:
+1、本科及以上学历，金融等相关专业，一周可以出勤三天以上；
+2、具备良好的沟通协调能力，责任心强，细心有耐心。
+
+工作时间：9:00-17:30，周一至周五
+150元/天，饭贴20元/天",工作地点：上海市/上海市/徐汇区 大华汇智大厦28楼(漕溪北路) 漕溪北路396-398号收起地图,公司简介聚信,,一周，三天,本科及以上
+https://www.shixiseng.com/intern/inn_0moerlpsatlh?pcm=pc_SearchList,博世中国,"关于我们 
+博世集团（Bosch Group）成立于1886年，全称是罗伯特·博世有限公司（BOSCH），是工业技术、消费品和能源及建筑技术的产业。博世公司以其创新尖端的产品及系统解决方案闻名于世。
+博世集团是全球第一大汽车技术供应商，员工人数超过 42万，遍布 50 多个国家。2022年销售额达到884亿欧元，其中在中国销售额达到1323亿人民币。 2018年7月19日，《世界500强排行榜发布，博世集团位列75位。2022年12月，位列《2022胡润世界500强》第58位。
+ 
+职责描述:
+▪ Conducting a literature review on GaN switches, their drivers, and three-level inverter topologies. 
+▪ Designing and optimizing switch drivers for high-voltage applications. 
+▪ Developing loss models for power devices, passive components, and the overall inverter system. 
+▪ Supporting hardware design, including circuit schematics, PCB layout, and prototype assembly. 
+▪ Setting up double-pulse testing for high bandwidth semiconductors and validating switching performance. 
+▪ Testing and evaluating 800V inverter prototypes for proof of concept, including efficiency and thermal performance assessments
+ 
+Required knowledge, competencies and attributes 
+▪ Major in Electrical Engineering, Power Electronics, or related fields. 
+▪ Familiarity with GaN power devices and their gate driver design. 
+▪ Knowledge of three-level inverters, modulation techniques, and control strategies. 
+▪ Hands-on experience in designing and testing 800V power electronics converters. 
+▪ Proficiency in Matlab/Simulink, PLECS, LTspice, Altium Designer. 
+▪ Practical experience in PCB design, circuit debugging, and high-voltage testing. 
+▪ R&D or project experience with GaN/SiC MOSFET-based power converters is a plus. 
+▪ Strong analytical skills, problem-solving mindset, and ability to work independently. 
+▪ Good communication skills in English (oral and written).
+▪ Availability: At least 3 working days per week for a minimum of 8 months
+ 
+ 
+福利:
+500强外企，跨文化交流，大平台新视野。
+公司有食堂班车，工作氛围轻松愉快，可优先接触内部转正机会！
+与行业专家一对一指导，快速提升专业技能和职场竞争力。
+在世界百强外企中积累宝贵的实习经验，为你的简历增色。",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_hm8uqdkq5ti3?pcm=pc_SearchList,哈啰,"岗位职责：
+
+1、总结归纳日常/新策略的数据监控维度，建立数据监控体系，及时发现问题，为业务运营部门提供策略支持；
+2、日常负责为业务端提供数据分析项的能力，能对用户侧进行深度分析，不限于制表、绘表、输出SOP；
+3、需要支持部门内日常运营工作，如收集用户信息，对用户进行分层打标签，添加企微好友等（这块占比较少）
+4、及时处理上级安排的其他事宜。
+
+任职资格：
+1、本科及以上学历，男女不限，每周实习5天，至少实习3个月； 
+2、精通Excel、SQL，有Tableau 等可视化工具经验者优先；
+3、具有良好的用户视角和共情力和数据敏感性，自驱力强，亲和力强、沟通能力佳，养宠和爱猫人士优先。",工作地点：上海市/上海市/闵行区 西子国际中心(秀文路)收起地图,公司简介哈啰,,至少实习3个月，5天,本科及以上
+https://www.shixiseng.com/intern/inn_gt11kznflrfb?pcm=pc_SearchList,博世中国,"关于我们 
+博世集团（Bosch Group）成立于1886年，全称是罗伯特·博世有限公司（BOSCH），是工业技术、消费品和能源及建筑技术的产业。博世公司以其创新尖端的产品及系统解决方案闻名于世。
+博世集团是全球第一大汽车技术供应商，员工人数超过 42万，遍布 50 多个国家。2022年销售额达到884亿欧元，其中在中国销售额达到1323亿人民币。 2018年7月19日，《世界500强排行榜发布，博世集团位列75位。2022年12月，位列《2022胡润世界500强》第58位。
+ 
+Background
+Accurate and high-fidelity rendering of dynamic traffic environments from sparse, multi-views is an open research challenge. Recent advances in neural rendering make it possible to reconstruct photorealistic or semantically rich scenes from limited camera setups, even in the presence of occlusions and moving agents.
+Description
+The intern will work on developing and evaluating rendering pipelines that synthesize dynamic driving scenes from multiple camera feeds. The project involves experimenting with neural scene representations (e.g., NeRF variants, 3D Gaussian Splatting), handling dynamic object motion, and improving temporal consistency. She/He also explore ways to blend rendering quality with downstream utility, such as perception or simulation.
+背景
+从多摄像头视角还原高保真动态交通场景是一项前沿的研究挑战。随着神经渲染技术的进展（如 NeRF、3D 高斯投影等），现已可以在有限视角下，对包括存在遮挡或动态目标的案例，进行逼真且语义一致的场景合成。
+岗位描述
+实习生将参与从多摄像头输入中重建和渲染动态交通场景的技术研发，探索神经场表示（如 NeRF 系列方法、3D Gaussian Splatting）在真实交通数据下的表现。重点包括动态对象建模、时间一致性处理，以及将渲染质量与下游感知或仿真任务相结合的可能性。
+ 
+岗位要求
+• 深度学习和计算机视觉基础
+• 使用 PyTorch或其他深度学习工具的经验
+• 加分项：关于3D视觉、多视角几何学、场景渲染的基础知识
+ 
+ 
+福利:
+500强外企，跨文化交流，大平台新视野。
+公司有食堂班车，工作氛围轻松愉快，可优先接触内部转正机会！
+与行业专家一对一指导，快速提升专业技能和职场竞争力。
+在世界百强外企中积累宝贵的实习经验，为你的简历增色。",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_etzvg2qypfn2?pcm=pc_SearchList,立邦涂料,1、针对新产品开发及产品体系改良、CR等活动，根据化学师要求与指导进行实验方案的实施；2、协助各项目主管或化学师开展新品新色的初品验证及上线确认；3、协助各区域化学师对现有产品进行日常维护，包括必要的实验验证和确认，确保产品正常运行；4、实验室安全职责履行；5、领导交付的其他任务。岗位要求：1、 大专院校在校生或应届生2、 化学相关专业3、 能吃苦耐劳，有工作热情和责任心,工作地点：上海市浦东新区创业路287号收起地图,公司简介立邦涂料,,,大专
+https://www.shixiseng.com/intern/inn_ol12ygduscgs?pcm=pc_SearchList,立邦涂料,"岗位职责：
+1、协助项目经理或化学师新产品开发项目流程管理。							
+1.1根据各项目化学师、项目经理要求，负责全流程项目管理包括负责协调沟通各部门项目负责人，协助项目经理完成项目文件的编制，归纳，整理，存档工作等；							
+1.2协助化学师在项目立项，科研，配方设计，及初品的生产过程跟踪、工艺确认、上线跟踪中的工作，并协助化学师完成必要的技术文件编制，整理和归档；							
+2、协助各项目化学师完成日常实验工作，及配方维护。							
+2.1负责实验室日常原材料领料登记，物料统计，ELN-物料管理及汇总工作；						
+2.2依据项目开发进展（新品、改良品），协助QC人员对转移配方进行认证，包括性能、工艺等；							
+2.3协助化学师对新品新色以及改良品所对应的配方、新材料、检验要求等信息录入SAP系统；							
+2.4在化学师的指导下，积极参与各初品的生产过程跟踪、工艺确认、上线跟踪等工作，并完成初品报告、试线报告等相关内容；							
+2.5各新品完成3批次试线成功后，协助化学师对各相关产品进行APQP的编制工作。							
+3、协助各区域化学师对现有产品进行维护、升级，并对业务、生产提出的问题提供必要的技术支持工作。							
+3.1协助各化学师对现有产品进行日常维护，包括必要的实验验证和确认工作，确保产品正常运行；							
+3.2协助各区域化学师应对客户需求，通过实验、查找资料等工作，为化学师制定对策提供数据支撑；							
+3.3在化学师的指导下，参与各产品异常的技术跨部门调查工作，为其他部门解决问题提供技术支持；						
+3.4参与CCL相关库存的改制实验验证、方案设定、必要跟踪确认等工作，确保方案正确性。
+任职要求：
+1、大专及以上学历，化学类相关专业											
+2、了解涂料的配方设计原理及原材料的基础知识，了解产品性能的检测方法。了解ISO9001、RoHS、OHSAS18001、ISO14001标准知识，并实施。						
+3、具备分析能力、决策能力、解决问题的能力，关注细节",工作地点：上海市/上海市/浦东新区 立邦涂料(中国)有限公司 创业路287号收起地图,公司简介立邦涂料,,,大专及以上
+https://www.shixiseng.com/intern/inn_zxz4flpvfwhq?pcm=pc_SearchList,喜马拉雅,"岗位职责:
+-参与阅读&科学线上课项目视觉创意相关的头脑风暴，准确运用插画表达出产品的理念及创意，为项目提供插画视觉的支持与执行
+- 会平面设计/排版，有较好的审美和创造力，对儿童APP及儿童绘本设计流行趋势有敏锐的洞察力
+-辅助完成各个线上线下项目的视觉插画设计需求
+任职要求:
+-美术、平面、广告等相关专业学生，本科及以上学历，实习时间不少于3个月，能驾驭矢量、手绘,等多种风格，富有原创精神，执行力强，熟练运用PS、AI等相关设计软件，了解一定AIGC绘图
+-高度的工作责任心和团队协作能力，善于沟通，关注细节，有较好的平面设计功底和创意构思能力以及较高的儿童审美视觉表现能力
+-同时具备线上与线下插画视觉执行经验优先
+-请上传相关作品附件或者链接（没有作品集会有被直接过滤掉的可能哦）",工作地点：上海市浦东新区丹桂路799号广创三期二号楼收起地图,公司简介喜马拉雅,,不少于3个月,本科及以上
+https://www.shixiseng.com/intern/inn_mf6pvoqrflk5?pcm=pc_SearchList,DXPOS动次拍,"我们是一家专注于图像合成技术的AI创新企业，致力于为行业提供高端主题设计及一站式后期解决方案。团队年轻开放，注重审美与技术的结合，鼓励成员持续学习与成长。
+
+【主要工作职责】
+产品运营支持 (核心)：
+▪️协助策划与撰写符合品牌调性的社交媒体内容（如小红书、视频号、抖音等）。
+▪️监测内容数据（阅读量、互动率等），协助进行基础分析并反馈优化建议。
+▪️协助管理内容发布日历，确保按时更新。
+
+社群运营协助 (核心)：
+▪️协助运营与维护核心创作者社群。
+▪️收集、整理社群内的用户反馈、问题及UGC内容，及时同步给相关同事。
+▪️协助策划和执行线上社群互动活动（如话题讨论、有奖征集等），提升用户活跃度与粘性。
+▪️解答用户基础咨询（需熟悉公司产品/服务信息）。
+
+基础运营支持：
+▪️协助进行竞品/行业动态的基础信息搜集与整理。
+▪️协助处理简单的平台后台操作。
+▪️协助整理运营数据报表。
+▪️完成上级交办的其他运营相关辅助工作。
+
+我们期待你具备：
+1）学历专业： 在校大学生或26届应届毕业生，市场营销、新媒体、传播学、中文、电子商务等相关专业优先，更看重实践能力和热情！
+2）优秀的文字表达和沟通能力： 能撰写清晰、有吸引力、符合平台调性的文案。
+3）网感强，有审美： 熟悉主流社交媒体平台玩法，对AI图像、AI设计领域内容有兴趣和敏感度。
+4）用户思维： 乐于并善于与用户交流互动，理解用户需求。
+5）学习能力与主动性： 快速学习新知识，积极主动发现问题并提出想法。
+6）基础的数据敏感度： 能看懂基础数据指标。
+7）熟练使用办公软件及基础图片/视频编辑工具（如美图秀秀、剪映等）。
+
+加分项 (强烈欢迎！)：
+1）是社交媒体的深度用户（尤其小红书、抖音、视频号等），有自己的理解。
+2）对AI图像领域有浓厚兴趣或一定知识储备。
+3）有个人运营的社交媒体账号（不限粉丝量，能展示能力即可）或相关实习经验。
+4）会使用基础设计软件（如figma, PS）或视频剪辑。
+
+加入我们，你将：
+1）深入了解AI在创意产业中的实战经验，参与AI影像拍摄制作流程。
+2）在一个充满活力和创造力的团队中工作与成长。
+3）提升项目管理、沟通协调及综合行政能力。
+4）创始团队毕业于加州伯克利，可提供留学推荐信等。
+5）其他：公司弹性打卡，双休不加班，聚餐，下午茶，实习津贴外额外提供企业餐补。",工作地点：上海市/上海市/虹口区 同心德必运动LOFT A201收起地图,公司简介DXPOS动次拍,,,
+https://www.shixiseng.com/intern/inn_43u20pr7jzo9?pcm=pc_SearchList,上海乐高乐园度假区,"岗位职责:
+工作地点：
+上海乐高乐园度假区指挥部 （靠近金山北站）
+金山石化/朱泾、浦东龙阳路/秀沿路、浦西莲花路有班车
+职位描述:
+1 在Leader培训下，按要求协助准备部门的一部分ppt
+2 在部门负责人的培训下，完善HC模型并开始update line schedule
+3 协助部门负责人准备开园Park Study 计划
+4 协助部门负责人和Product Excellence Manager准备开园调研计划以及客人满意度调研questionnaire
+5 协助Product Excellence和CI准备开园的Park KPI的matrix和template
+6 协助leader按要求准备CP和SOP的常规性update 的deck
+7 协助leader按要求准备CP和SOP的会议schedule和会议安排
+8 部门OSE和设备的采买协调
+9 协助团队一些admin和Teambuilding方面的工作
+任职要求:
+其他需求:
+1 英语6级及以上，读写熟练
+2 熟练使用Excel Powerpoint等办公软件，熟练使用Python
+3 工作细心、有耐心
+4 热爱乐园及酒店等服务行业，并保持持续的好奇心及学习能力
+5 大学本科，专业为Business Analytics，Operation Research，Industrial Engineering, Applied Mathematics，Economics，工业工程，统计或应用数学或其他理工科专业的优先
+6 至少可实习3个月，每周出勤至少4天",工作地点：上海市金山区枫泾镇五一村2123 上海乐高乐园度假区建设指挥部收起地图,公司简介上海乐高乐园度假区,,可实习3个月，4天,本科
+https://www.shixiseng.com/intern/inn_6szte3r8sqlz?pcm=pc_SearchList,THOM BROWNE,"主要工作内容：
+1. 支持零售定制部门进行订单的收集、整理、录入；
+2. 支持零售运营部门数据的整理，制作不同类型的报告；
+3. 支持零售部门进行合同的整理和管理；
+4. 支持零售部门的其他相关工作；
+
+期望：实习生能一周出勤3-5天，6个月的时间，认真仔细，愿意多学多做。
+
+这份实习非常适合想要对零售行业有全面了解的同学，可以让你接触零售运营、定制业务两个部门的工作；
+如果你还有一定的设计方面的学习经验，相信定制部门的实习会让你对知识的实际应用有很好的拓展。",工作地点：上海市/上海市/静安区 玫琳凯大厦315收起地图,公司简介THOM BROWNE,,6个月，一周，5天,
+https://www.shixiseng.com/intern/inn_nbx0mfcm1esu?pcm=pc_SearchList,泰众会展,"1.协助部门经理进行各部门沟通协调；
+
+
+	2.协助部门经理完成文档的整合，归档；
+
+
+	3.协助部门经理完成对现有资源的深度开发及维护；
+
+
+	4.协助部门经理完成报销，制作账单，审核等工作；
+
+
+	5.负责其它日常工作的组织协调；
+
+
+	6.完成领导安排的其它工作",工作地点：江宁路212号15A收起地图,公司简介泰众会展,,,
+https://www.shixiseng.com/intern/inn_cbtbmwiyx0bm?pcm=pc_SearchList,TESLA-特斯拉,"职位名称：桌面支持工程师实习生
+职位类型：常规实习生
+工作地点：上海市闵行区向阳路特斯拉中心
+实习时间：6个月以上
+
+职位描述
+我们正在寻找一名桌面支持实习生，该职位的主要任务是对最终用户的问题进行故障排除和解决，安装和支持系统，与信息技术相关技术团队合作，更好的支持特斯拉中国销售交付业务的发展。
+ 
+职责描述
+支持Windows和Mac OS桌面操作系统，对于计算机和一般的网络问题进行诊断和排障。
+通过现场或远程的方式向最终用户的问题提供及时的解决方案。
+会议室设备，打印机的巡检和支持。
+根据业务需要的其他相关工作职责。
+能够以口头和书面形式进行有效沟通，并能与相关项目或工作中合作的人员（包括公司管理层和外部业务伙伴）建立和维护合作关系。
+ 
+任职要求
+必备要求
+本科或研究生在读，计算机或其他相关专业领域本科学历。
+对于Windows 和Mac OS 操作系统的知识娴熟，对于计算机软硬件也有一定程度的掌握。
+了解网TCP / IP，DNS，DHCP等网络知识。
+有一定排除PC，工作站，笔记本软硬件问题的能力。
+优秀的口头和书面沟通能力，能够在各种工作场景中用英语进行有效沟通、阅读和撰写。
+团队协作能力出色，处理问题能力卓越。注重细节，能在压力下高效率的进行工作。
+
+优先考虑
+有卓越的客户服务技能，对细节的高度关注和对问题的出色跟进。
+有自动化编程(包括低代码项目如PowerApps或Power Automate)经验者优先。",工作地点：向阳路880号收起地图,公司简介TESLA-特斯拉,,6个月,本科
+https://www.shixiseng.com/intern/inn_k5h4ecuonu0u?pcm=pc_SearchList,高力国际,"岗位简介
+- 负责抖音等新媒体渠道的视频内容产出
+- 配合运营官号抖音，协助完成campaign在平台的上线及推广
+- 与业务部门沟通，将所需推广的内容转化成短视频营销形式
+- 根据平台玩法/热梗，及时产出短视频内容
+- 协助完成部门其他日常工作
+		
+
+职位要求：
+- 对短视频有内容想法及视频创意，了解平台玩法
+- 熟练使用剪映/PR等剪辑软件，能独立完成剪辑
+- 文案功底好，脑洞大，善于捕捉亮点
+- 责任心强，做事细心，有良好的合作沟通能力
+- 每周保证4天在岗，实习至少半年",工作地点：上海市/上海市/静安区 Colliers高力国际中国区总部（永和路253号6号楼）收起地图,公司简介高力国际,,4天,
+https://www.shixiseng.com/intern/inn_zvk0obhhc4cy?pcm=pc_SearchList,地平线,"岗位职责:
+1.参与端到端智驾模型训练/评测数据生产全链路开发，包括数据生产、数据挖掘、打标、质检等；
+2.参与智驾标签体系、meta体系的研发、维护及落地；
+3.参与数据全链路相关的基础框架研发，包括挖掘、生产及分析框架等；
+任职要求:
+1.扎实的计算机/软件工程基础，对操作系统、设计模式等熟悉；
+2.优秀的沟通、表达及协调能力；
+3.善于使用各种ai coding/agent工具，高效的数据全栈开发者（或愿意成为）；
+4.有智驾数据或者模型经验优先。",工作地点：上海市嘉定区安亭镇安拓路56弄15号1单元收起地图,公司简介地平线,,,
+https://www.shixiseng.com/intern/inn_f2umqfcthzxe?pcm=pc_SearchList,TESLA-特斯拉,"THE ROLE
+Cabin Engineering at Tesla is responsible to design and engineer interior cabin components.  
+ 
+RESPONSIBILITIES
+•	Support cabin new program development & launch with positive attitude.
+•	Support cabin engineering for creating 2D and 3D by Catia.
+•	Contribute directly as project team coordinator to ensure successful execution.
+
+REQUIREMENTS
+•	Bachelor or Master degree in mechanical, manufacturing, industrial.
+•	Excellent organization, problem solving, tactical thinking, and time management skills.
+•	Proven record of quickly adapting to business needs, can-do mindset, flexibility, and fast-learner. Ability to thrive in an ambiguous environment.
+•	Working knowledge of technical software: Catia, Microsoft.
+•	Understanding of planning and building an electric vehicle plant.
+
+This job application may involve an interview with an interviewer outside of Tesla China. If you complete your application, you agree Tesla provides your application information to overseas interviewers in Tesla, Inc. for recruitment purposes.",工作地点：上海市浦东新区正嘉路1188号，特斯拉上海超级工厂收起地图,公司简介TESLA-特斯拉,,,
+https://www.shixiseng.com/intern/inn_kzybgfuxyv58?pcm=pc_SearchList,博世中国,"关于我们 
+博世集团（Bosch Group）成立于1886年，全称是罗伯特·博世有限公司（BOSCH），是工业技术、消费品和能源及建筑技术的产业。博世公司以其创新尖端的产品及系统解决方案闻名于世。
+博世集团是全球第一大汽车技术供应商，员工人数超过 42万，遍布 50 多个国家。2022年销售额达到884亿欧元，其中在中国销售额达到1323亿人民币。 2018年7月19日，《世界500强排行榜发布，博世集团位列75位。2022年12月，位列《2022胡润世界500强》第58位。
+ 
+职责描述:
+Participate in the design and implementation of ETL (Extract, Transform, Load) processes for public cloud data. 
+Develop and maintain front-end BI (Business Intelligence) reports, enhancing data visualization and user interaction experience. 
+Learn and apply network protocols such as API and HTTP to support data integration and front-end service optimization. Assist in data migration and system integration based on project requirements, ensuring data accuracy and integrity. 
+ 
+岗位要求:
+Master's degree or higher in Computer Science, Software Engineering, or a related field. 
+Proficiency in C++ or Python programming, with good programming practice experience. 
+Basic knowledge of public cloud or API calls. 
+CET-6 level or above in English, capable of effective written and verbal communication.
+Strong interest in data analysis and front-end design, eager to solve complex problems. 
+Basic understanding of public cloud platforms (Azure, AWS, Alibaba Cloud & etc) 
+ 
+ 
+福利:
+500强外企，跨文化交流，大平台新视野。
+公司有食堂班车，工作氛围轻松愉快，可优先接触内部转正机会！
+与行业专家一对一指导，快速提升专业技能和职场竞争力。
+在世界百强外企中积累宝贵的实习经验，为你的简历增色。",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_16jsvgx6tlya?pcm=pc_SearchList,OUTPUT,"1、加入多元化背景的策划团队，协助完成数字场景项目的策划方案
+2、项目类型含多媒体装置、创新零售店、展览展馆、文旅场景、快闪营销活动等
+3、根据项目需求，以整体规划思维提供体验流策划方案，并与客户沟通汇报
+4、参与数字场景的整体策划，并带领设计师、艺术家和技术人员完成完整的策划方案
+ 
+职位要求： 
+1、本科以上学历，艺术、设计、建筑等相关专业在读；
+2、富有创意和想法，对科技、艺术、潮流等内容感兴趣；
+3、熟练使用Word，PPT，Excel等基本计算机软件；
+4、 一周到岗办公至少3天，能长期工作最佳，3个月实习期起。",工作地点：上海市/上海市/虹口区 北苏州路298号 OUTPUT收起地图,公司简介OUTPUT,,3个月，一周，3天,本科
+https://www.shixiseng.com/intern/inn_aauxqygpqtds?pcm=pc_SearchList,科思创,"Key Responsibilities
+•	Assist chemists and laboratory engineers in conducting synthesis experiments and routine analytical procedures
+•	Perform experimental documentation and data analysis for polyurethane dispersion development projects
+•	Conduct regular material testing and evaluation activities
+•	Manage and maintain sample and raw material inventory
+•	Ensure laboratory safety compliance and maintain workspace organization
+•	Operate and maintain laboratory equipment according to standard procedures
+
+
+Required Qualifications
+•	Current enrollment in Bachelor's or Master's degree program in Chemistry, Chemical Engineering, or Polymer Science
+•	Understanding of fundamental laboratory procedures and analytical techniques
+•	Practical experience with standard chemistry experiments and analytical methods
+•	Proficiency in MS Office and laboratory software applications
+•	Strong analytical and data interpretation skills
+•	Excellent organizational and time management capabilities
+•	Effective written and verbal communication skills in English
+•	Demonstrated commitment to laboratory safety protocols",工作地点：上海市/上海市/浦东新区 科思创 秦桥路33号收起地图,公司简介科思创,,,
+https://www.shixiseng.com/intern/inn_62ewq57toas4?pcm=pc_SearchList,采埃孚,"About the Team
+We're looking for a new colleague to join ZF Aftermarket Division at our location in Shanghai. [Please ask the hiring manager to provide relevant information about the team and department in 3-5 sentences.]
+
+What you can look forward to as BD & Strategy Assistant :
+
+Responsible for daily affairs of the KA Tru Automotive and Business Development & Strategy, mainly for program acceleration.
+Data analysis and reporting for key account management.
+Stakeholder liaison.
+Project support for business development activities.
+Analysis and reporting.
+Program management.
+
+Your Profile as BD& Strategy Assistant :
+
+Undergraduate or post-graduate student in Business Administration or Statistics (preferred).
+Good English communication skills (written & spoken, mandatory).
+Advanced Excel skills.
+Strong analytical skills.
+Project management background/skills (advantageous but not necessary).
+Excellent communication skills across internal and external stakeholders.
+Strong logical thinking and ability to work under pressure.
+
+Why you should choose ZF in Shanghai?
+
+Individual Growth: At ZF, you accelerate your career by working together across borders and cultures. Take advantage of global development opportunities, support, and a flexible working environment.
+Experience Variety: Join ZF to shape future mobility and sustainable systems. Drive smart solutions and contribute to safer, cleaner, affordable mobility for all.
+Find Inspiration: Develop yourself in a team-oriented and supportive environment at ZF. Take on international challenges, be inspired by your colleagues, and shape the future with us.",工作地点：上海市/上海市/徐汇区 采埃孚销售服务有限公司(中国)收起地图,公司简介采埃孚,,,
+https://www.shixiseng.com/intern/inn_5dfqnjddwubu?pcm=pc_SearchList,科勒,"职位简介
+
+本次招聘岗位隶属于 IT 的 Business Partner 部门，该部门专注于业务 Go To Market 领域，负责系统整体架构与解决方案的设计与实施。
+我们的工作范畴广泛，涵盖报表自动化与 PowerBI 可视化展示，通过数据驱动助力业务决策；进行网站及电商平台的内容优化，提升用户体验与品牌影响力；同时，承担业务流程搭建与以 PowerPoint 形式呈现流程方案的工作，确保业务高效运转。
+此外，公司高度重视多元化、公平性和包容性（DEI）文化建设，积极营造开放、平等的工作环境，尊重每一位员工的独特背景与观点。在这里，你将深度参与到极具挑战性与创新性的项目中，积累宝贵的实战经验，同时感受多元文化交融的魅力。
+
+岗位职责
+
+- UI 美化设计：运用专业设计技能，参与产品界面的美化与优化，提升用户视觉体验，需熟练掌握色彩搭配、构图排版等设计原理，让界面兼具美观性与实用性。
+- 视频内容制作：负责视频策划、拍摄、剪辑及后期制作全流程工作，产出高质量视频内容，用于品牌宣传、产品推广，DEI活动汇总等，为公司传播注入活力。
+- 活动规划：协助团队完成各类线上线下活动的策划与执行，包括活动方案撰写、物料设计、流程把控等，确保活动顺利开展并达到预期效果。同时，有机会参与公司 DEI 相关活动的组织与讨论，为多元化包容性文化建设贡献创意与力量。
+
+任职要求
+
+- 专业背景：
+1. 数字媒体设计、视觉传达设计、广告学、计算机科学与技术（多媒体方向）、影视摄影与制作等相关专业优先，本科与研究生均可
+2. 非相关专业但具备上述能力要求的候选人也可
+- 技能要求：
+1. 具备扎实的 media 设计功底，熟练掌握 UI 设计、视频制作相关软件工具，有相关设计作品或账号展示的候选人优先考虑；
+2. 拥有一定的 IT 基础知识，能更好地理解和运用技术工具辅助设计工作；
+3. 英文良好，可流畅阅读英文资料及进行简单英文沟通。
+- 个人素质：
+1. 责任心强，具有良好的契约精神，对交付工作认真负责；
+2. 性格开朗，具备出色的团队协作能力与沟通能力，能快速融入团队；
+3. 对多元化和包容性文化活动感兴趣，对于多元公平与包容文化有认同感。
+- 时间要求：
+1. 每周出勤不少于3天。能够出勤5天，或能够以3+2等远程方式支持5天工作的候选人优先
+2. 至少保证3个月的实习时间，能够从6月一直实习到12月的候选人优先
+
+
+实习收获
+
+- 实践机会：深度参与公司核心项目，将课堂所学知识转化为实际工作能力，积累宝贵的行业经验。同时，有机会参与公司 KOL 培养计划，助力多元化声音的传播，拓宽个人视野。
+- 成长空间：与行业资深导师近距离学习交流，获得专业指导与职业发展建议，快速提升个人能力。在多元包容的工作环境中，锻炼跨文化沟通与协作能力，培养全球化视野。
+- 实习福利：舒适的办公环境、和谐的团队氛围。公司定期举办 DEI 主题活动，为你提供展示自我、学习交流的平台，让你在多元文化的滋养中不断成长。",工作地点：上海市/上海市/静安区 江场三路158号收起地图,公司简介科勒,,3个月，3天,本科
+https://www.shixiseng.com/intern/inn_0cibqnjb1dpt?pcm=pc_SearchList,科锐国际,"任职要求
+    专业背景：本科及以上学历，人力资源、工商管理、计算机科学、信息管理等相关专业优先。对人力资源管理和 HR SaaS系统有一定的理论基础，了解人力资源管理的基本
+    模块，如招聘、培训、绩效管理、薪酬福利等。
+    技能要求：熟悉常用办公软件，如 Excel、Word、PowerPoint等，具备基本的数据处理和文档撰写能力；能够快速学习新的软件系统和工具，对 HR SaaS 系统的操作和功
+    能有较强的学习兴趣和学习能力；具备良好的沟通能力，能够清晰、准确地表达自己的想法，与客户进行有效的沟通交流。
+    个人特质：具备较强的责任心和服务意识，能够关注客户需求，积极主动地为客户解决问题；具有良好的团队合作精神，能够与团队成员协作配合，共同完成工作任务；具备
+    较强的应变能力和问题解决能力，能够在面对突发情况和客户问题时，迅速做出反应，提出有效的解决方案；对HR SaaS 行业有浓厚的兴趣，愿意在该领域深入学习和发展。",工作地点：上海市/上海市/徐汇区 漕河泾国际孵化中心A区1501收起地图,公司简介科锐国际,,,本科及以上
+https://www.shixiseng.com/intern/inn_pqw7lrkapdbs?pcm=pc_SearchList,Jewel Talent Group,"你需要做什么：
+1、通过LinkedIn/Ins/FB等海外社交媒体平台建立相关国家和行业的高级人才网络；
+2、根据项目的需求，与潜在的候选人建立联系并推荐匹配的工作机会；
+3、预约/协调/参加相关候选人的面试并撰写面试报告；
+4、与客户紧密沟通，推进候选人的整个面试流程并反馈给团队；
+
+你需要具备的技能和背景：
+1、本科以上学历，英语流利，海外留学或者实习经验是加分；
+2、对与不同国家的客户和候选人沟通感兴趣，对在猎头行业发展感兴趣；
+3、好学、主动，自我驱动，外向型性格；",工作地点：上海市/上海市/浦东新区 浦东嘉里城收起地图,公司简介Jewel Talent Group,,,本科
+https://www.shixiseng.com/intern/inn_ubvsawnylpdu?pcm=pc_SearchList,爱奇艺,"职责描述：
+-负责视频类内容AI自动产线的模型实验，包括对标案例收集、prompt测试及优化分析、结果评价、成片效果评估等；
+-探索影视、短剧、小说相关二创类视频自动生产的质量优化方案，负责自动产线成片筛选或使用AI工具完成半自动加工生产，对方案测试账号的内容进行发布和运营，为内容质量和账号运营效果负责；
+-协助各产线的功能建设和产品优化，整理相关使用问题反馈并跟进排查情况；
+-为团队内其他产品运营工作提供必要支持。
+任职要求：
+-在校本科生或研究生，一周到岗5天，实习时间3个月以上，不支持线上办公。能够尽快到岗者优先；
+-熟悉剪映/Pr等视频剪辑工具的使用，了解Office办公软件的基本操作；
+-对AI产品有浓烈兴趣和探索欲，可熟练使用ChatGPT、deepseek、Midjourney等AI工具，且具备总结方法论的能力；
+-乐于接触和学习新鲜事物，工作细致有耐心，具备较强的自驱力、执行力和时间管理能力；
+-对影视、短剧、小说及相关二创感兴趣，熟悉以上品类的二创内容类别和创作方式，了解混剪或解说类短视频的创作过程，具备良好的文案能力、内容审美和理解力。有相关自媒体经验者优先，欢迎在简历中附个人相关账号或作品链接。
+
+注：本岗位招聘可能包含一轮内容为AI工具使用及视频剪辑的笔试",工作地点：上海市/上海市/长宁区 临虹路265号收起地图,公司简介爱奇艺,,3个月，一周，5天,本科
+https://www.shixiseng.com/intern/inn_t2d8uf78aum8?pcm=pc_SearchList,国金证券,"岗位职责：
+1. 协助带教更新每日数据、制作报告；
+2. 通过Wind、Bloomberg等平台查找宏观、行业相关数据并进行分析；
+3. 完成领导交代的其他任务。
+任职要求：
+1、2024年及以后毕业的在校生，本科及以上学历；
+2、细心，对数据敏感，信息搜集处理能力强者加分；
+3、熟练使用wind、excel函数公式、PS等办公软件加分；
+4、在校成绩优秀，学术能力强者优先；
+5、一周实习3天以上，至少实习3个月，无留用机会，需线下实习，提供实习津贴。",工作地点：上海市/上海市/浦东新区 紫竹国际大厦 芳甸路1088号收起地图,公司简介国金证券,,至少实习3个月，一周，3天,本科及以上
+https://www.shixiseng.com/intern/inn_1tlkoav3docz?pcm=pc_SearchList,东方世纪,"职位描述：
+1.定期与会员企业负责联络；
+2.开发潜在会员企业，完成销售目标和订单；
+3.定期走访客户，和客户高管沟通，撰写原创新鲜资讯；
+4.安排的其他工作。
+要求：
+1.专业不限，营销、广告、财经等专业优先，大学本科及以上学历；
+2.身体健康，为人诚信；
+3.性格外向开朗，具有与企业高管的较强的沟通经验；
+4.具团队敬业和坚韧精神，情绪管理和抗压能力强；
+5.有广告、公关和市场推广等经验；
+6.有较为流畅的文笔。",工作地点：上海市/上海市/静安区 上海市静安区新闸路831号丽都新贵6层M室收起地图,公司简介东方世纪,,,本科及以上
+https://www.shixiseng.com/intern/inn_8f4km4wzayhm?pcm=pc_SearchList,欧力OATLY,"主要职责：
+负责OATLY自媒体平台运营、内容策划与推广，通过制定策略、分析数据、优化内容，提高用户粘性和活跃度，以实现品牌传播和业务目标。
+1. 负责自媒体平台的日常运营，包括内容策划、发布、推广等，提高用户关注度和粘性。
+2. 对运营效果进行跟踪与分析，提出优化方案并执行，确保自媒体平台的稳定发展。
+3. 根据用户需求和热点，与团队共创制作优质内容，提高用户参与度和互动率。
+4. 协助部门主管完成其他相关事务性工作，如活动策划、数据分析等。
+5. 关注行业动态，积极发掘新媒体营销机会，提升用户粘性及活跃度。
+6. 熟悉各平台规则，能够及时应对和处理舆情情况，保障自媒体平台的正常运行。
+职位要求：
+1. 本科及以上学历，市场营销、新闻传播等相关专业优先，到岗时间ASAP(尽量在2025.2.17之前）
+2. 具备较强的文字表达能力和创意策划能力，管理并输出高质量的自媒体内容。
+3. 熟悉自媒体平台的运营规则和算法，具备数据分析能力和优化策略。
+4. 具备较强的沟通能力和团队协作能力，能够与各部门协同合作，实现业务目标。
+5. 对新媒体传播趋势和变化保持敏感，能够提出创新推广方案并进行实践。",工作地点：上海市/上海市/普陀区 开伦·江南场 长寿路街道光复西路1003号收起地图,公司简介欧力OATLY,,,本科及以上
+https://www.shixiseng.com/intern/inn_ouymp9ut9fxg?pcm=pc_SearchList,纳芯微电子,"职位描述：
+设计芯片评估测试方案软件系统，包含上位机及嵌入式。
+配合完成芯片早期的测试和Debug工作。
+配合完成芯片应用文档以及数据手册的撰写。
+协助AE工程师完成实验室自动化以及量产软件开发。
+
+任职条件
+微电子、集成电路、电子工程、自动化等计算机相关专业。
+有上位机GUI开发经验。
+熟悉C++、C#、C等编程语言。
+熟悉Python、熟悉图像处理者优先。
+工作负责，做事积极主动，学习能力强。
+良好的人际沟通协调能力，富有团队精神。",工作地点：上海市/上海市/浦东新区 苏州纳芯微电子股份有限公司上海分公司收起地图,公司简介纳芯微电子,,,
+https://www.shixiseng.com/intern/inn_cogq5g1g32oh?pcm=pc_SearchList,建信期货,"岗位职责：
+1、协助完成期货市场资金流量存量数据分析工作，参与相关代码的编写、优化和执行；
+2、参与大宗商品、金融衍生品等数据架构建设；
+3、完成上级安排的其他工作。
+
+任职要求：
+1、计算机、统计等相关专业本科及以上学历；
+2、精通Python、Matlab等编程语言，有相关编程经验者优先；
+3、具有较强的技术分析能力、数据处理能力；
+4、熟悉Wind数据库的使用；
+5、具有一定的抗压能力，适应快速的工作节奏。",工作地点：上海市/上海市/浦东新区 建行大厦 银城路99号收起地图,公司简介建信期货,,,本科及以上
+https://www.shixiseng.com/intern/inn_yqhviwixhblr?pcm=pc_SearchList,科思创,"背景介绍 ：
+动设备巡检及设备预防性和预见性维修现均采用纸质版进行记录，纸质版很难追踪也很难实时了解情况； 为了实现人机交互，提高工作的效率和有效性，决定采用POWAPP 设计出APP用于动设备巡检及设备预防性和预见性维修。
+职位介绍：
+•熟悉设备检维修流程
+•使用PowerApp制作动设备巡检APP， 其他设备预防性&预见性维修APP。
+•APP 进行测试去BUG.
+•提供IT方面支持
+•协助完成其它日常工作。",工作地点：上海市/上海市/奉贤区 科思创(上海)一体化基地 柘林镇上海化学工业区目华路82号收起地图,公司简介科思创,,,
+https://www.shixiseng.com/intern/inn_f3u4mic0zmwh?pcm=pc_SearchList,科思创,"项目背景：
+ 安全作业票是安全施工管理的一项主要措施，是现场班组基础的安全管理。 
+ 通过作业许可流程对可能给生产带来风险的作业进行控制。
+ 对具有明显风 险的作业实施作业许可管理，明确工作程序和控制准则，并对作业过程进行监督。
+ 为了更好地提高效率，安全作业票电子化是必然的趋势。
+职位介绍：
+使用PowerApp完成12种工作证+其他巡检表的设计。
+通过流程优化将现有作业申请单、特殊作业许可证和安全交底单业务内容融合
+协助项目组，搭建标准化的安全作业许可电子化业务流程（电子 作业票），实现工作票快速审批、全业务覆盖、高标准评价体系、安全风险全局管控的、
+可视化、标准化的作业管理
+为项目组提供IT方面支持
+协助完成其它日常工作
+教育程度：
+IT或相关专业；学士或硕士
+技能要求：
+熟悉Java或JavaScript或c++，并能使用它们设计软件，了解PowerApp尤佳
+其他需求：
+好奇、求知欲强
+善于沟通协调、应变能力强    
+一周至少3天工作时间，服务时间至少3个月（最好6个月）
+此实习岗位不仅能学到上述德资企业的工作票的管理流程及先进的管理理念和安全理念，还是理论与实践结合的好机会。
+舞台很大，欢迎大家来到科思创唱响属于自己青春的歌。",工作地点：上海市/上海市/奉贤区 科思创(上海)一体化基地 柘林镇上海化学工业区目华路82号收起地图,公司简介科思创,,3个月，一周，3天,硕士
+https://www.shixiseng.com/intern/inn_ppiuxgl9z9gx?pcm=pc_SearchList,广电通信,"岗位职责
+1. 推进项目方案设计、预算、计划及项目启动的准备工作；
+2. 监管启动项目运营实施质量、流程优化及改善提升；
+3. 推动新项目团队搭建，保障新项目顺利启动；
+4. 负责梳理并建立相关项目标准化服务流程；
+5. 负责项目管理数据达成情况，并定期输出项目分析报表；
+6. 负责合同管理、外部信息处理；
+7. 负责行业研究、竞品分析及策略制定；
+8. 完成领导分配的其他任务。
+
+
+任职资格
+1. 本科或以上学历，项目管理、工业工程、电子、通信等相关专业； 2. 熟悉wrod、excel、PPT等办公软件；
+3. 思维逻辑清晰，具有较强的沟通协调能力、文字表达能力和团队合作精神；
+4. 注重效率，良好的抗压能力，自我学习能力。",工作地点：上海市/上海市/闵行区 上海广电通信技术有限公司收起地图,公司简介广电通信,,,本科
+https://www.shixiseng.com/intern/inn_0vdfygtn9dyj?pcm=pc_SearchList,荷兰皇家菲仕兰,"【工作职责】
+1.客户基础销售/库存/效期/货架等数据收集，原始报表整理
+2.整合所有paperwork，定时提醒客户经理，催收作业
+3.内部KPI数据信息整理计算，沟通客户经理，各KPI完成情况
+4.客户费用核对、核销申请
+5.日常会议准备 & 申请，文具申请管理等行政工作
+
+【岗位要求】  
+1. 一本类大三、大四在读或应届毕业生，硕士在读。财务和IT/AI相关专业优先；
+2. 熟悉Microsoft Office软件的操作，比如Excel、PowerPoint、Word等。优先考虑熟悉Power BI的候选人；
+3. 优秀的英语读写及口语能力；
+4. 工作认真踏实、细心，善于沟通，协调能力强，团队合作精神；  
+5. 确保每周到岗3个工作日或以上",工作地点：上海市/上海市/黄浦区 大上海时代广场 淮海中路99号收起地图,公司简介荷兰皇家菲仕兰,,,硕士
+https://www.shixiseng.com/intern/inn_tizhxsslriwo?pcm=pc_SearchList,IKEA,"Responsibilities: 
+- Manage FTA compliance and verification for FTAs used widely in APAC on daily basis 
+- Communicating with suppliers to ensure a smooth FTA verification process 
+- Involve in automation solution development and share insights 
+
+Motivation: 
+- Togetherness and teamwork 
+- Curiousness
+- Enjoying the friendly and international working environment 
+
+Your profile: 
+- Knowledge in the field of international trade and commerce (candidates studying relevant majors are preferred) 
+- Attention to details 
+- Good learning ability Excellent English skills, both reading and writing (candidates with language qualification test score attached in CVs are preferred) 
+- Good problem identification and solving skills 
+- Can work for 4-5 days every week 
+
+You will have: 
+- A deeper understanding on FTA rule of origin for those FTAs widely used in APAC countries 
+- A strengthened understanding in how to develop automation solution for business 
+- International and cross-culture exposure 
+- Open and respectful working environment
+- Convenient working location (Xuhui district near Longcao Rd station of metro line 3,12) 160-180 RMB/day as allowance 
+- Fruit and snacks everyday",工作地点：上海市/上海市/徐汇区 天华信息科技园(南区) 龙田路195号收起地图,公司简介IKEA,,,
+https://www.shixiseng.com/intern/inn_ec3mmih8gee9?pcm=pc_SearchList,混知,"岗位职责：
+1.协助抖音，视频号，小红书平台直播工作，配合策划及监测直播数据
+2.学习混知相关内容产品，生动有趣的在直播间分享知识及带货
+3.支持整体直播数据提升及改善
+
+岗位要求：
+1.爱读书，喜欢知识分享
+2.口齿清晰、没有明显口音",工作地点：上海市/上海市/嘉定区 现厂-C幢收起地图,公司简介混知,,,
+https://www.shixiseng.com/intern/inn_ilqrzu7tf5zp?pcm=pc_SearchList,模型发展,"【岗位职责】
+1、主要参与日常简历筛选、面试、招聘台账等招聘工作
+2、培训、党团活动组织等
+3、人事档案整理归档
+【岗位要求】
+1、有良好的沟通协调能力、较高的责任心、细心、耐心 
+2、大二、大三或者研一、研二学生
+3、一周至少出勤3天以上
+【福利待遇】170/天，下午茶、零食、培训等福利多多~
+【工作地点】徐汇区龙台路180号模速空间",工作地点：上海市/上海市/徐汇区 模速空间(SMC)-A区收起地图,公司简介模型发展,,一周，3天,
+https://www.shixiseng.com/intern/inn_onmdgz2w8y7l?pcm=pc_SearchList,德国大陆汽车,"Job description:
+1-支持ABS产品ECU控制器台架测试
+2-支持ABS产品测试试验环境的搭建
+3-实验室日常5S环境管理
+ 
+Job requirement:
+1-至少三个月以上，每周至少3天；
+2-汽车工程、电子电气等相关专业；
+3-会使用示波器、万用表等设备优先。",工作地点：上海市/上海市/嘉定区 大陆汽车嘉定研发中心 汇荣路100号收起地图,公司简介德国大陆汽车,,三个月，3天,
+https://www.shixiseng.com/intern/inn_k07eqhauxnmx?pcm=pc_SearchList,德国大陆汽车,"春节期间可以实习者优先。
+
+Job description:
+
+Support EMC test actives in third-part EMC laboratory.
+Support ESC function test in the electrical lab.	·
+Maintain daily 5S on the electrical test bench.
+Support make cable harness meet test requirements.	·
+Support make wheel speed sensor, IPB switch, vacuum sensor, and cable harness
+connectors.
+
+Help to track DV/Homologation EMC test prototypes and peripheral loads.·
+Maintain EMC test record and track project running states.
+
+Job requirement:
+	·
+At least work for six months, three days every week.·
+Bachelor's degree or above, major in
+electrical/electronic engineering or automotive engineering plus.·
+Good at computer skills, Proficiency in office software (Microsoft Office EXCEL, PPT, etc.).	·
+Good at written and oral English skills.	·
+Having a valid driver's C license is preferred, not a must skill.",工作地点：嘉定区汇荣路100号收起地图,公司简介德国大陆汽车,,,
+https://www.shixiseng.com/intern/inn_zillysoeusms?pcm=pc_SearchList,德国大陆汽车,"Job description:
+1-支持ABS产品ECU控制器台架测试
+2-支持ABS产品测试试验环境的搭建
+3-实验室日常5S环境管理
+ 
+Job requirement:
+1-至少三个月以上，每周至少3天；
+2-汽车工程、电子电气等相关专业；
+3-会使用示波器、万用表等设备优先。",工作地点：上海市/上海市/嘉定区 汇荣路100号收起地图,公司简介德国大陆汽车,,三个月，3天,
+https://www.shixiseng.com/intern/inn_i7tu01iccuet?pcm=pc_SearchList,罗氏中国,"在罗氏，我们鼓励每位同事展现真实的自己；我们欣赏独特且出众的品质。罗氏的文化鼓励积极的表达、开放的对话和真诚的连结，在这里，你将因为做自己而被重视、接纳和尊重，并得到个人的提升和职业的发展。所有的这一切，都是为了更好地预防、阻止和治愈疾病，并确保医疗资源的可及性和可持续性。欢迎加入罗氏，一个重视每种声音的地方。
+职位
+​1. 职位职责：
+（1）协助在公司政策和程序指引下向指定客户群传达医学信息
+（2）协助进行区域内外部客户医学信息沟通和传递，医学教育活动和培训
+（3）协助开展学术会议，向客户介绍产品在不同适应症上的优点
+（4）协助及时收集、提供市场信息并做出适当建议
+                                     
+2. 职位要求：
+（1）在校大学生
+（2）本科及以上学历，医药相关专业
+（3）拥有良好的沟通能力、学习能力、执行能力、抗压能力以及团队合作精神
+（4）熟练运用Excel、PPT、Word等办公应用软件
+（5）拥有良好的英语书写能力",工作地点：上海市/上海/浦东新区收起地图,公司简介罗氏中国,,,本科及以上
+https://www.shixiseng.com/intern/inn_wp2kjaso1smt?pcm=pc_SearchList,博世中国,"•	Position title and description 
+ Information Security and Data Protection Business Marketing&Awareness Activity Specialist - intern 
+
+ •	Job Description 
+Ensure efficient and effective set up of processes, standards, agency set up etc for Awareness Activity and data to enable BUs and regions to conduct successful Awareness Activity Data reports 
+Defines overarching standards and processes for Awareness Activity and data analysis across legal entity 
+ Tracking of open points (quality, service level, customer feedback, etc.) 
+
+
+ •	Job Tasks 
+ Conduct ISP overarching Awareness Activity and to report effectiveness of our measures 
+Develop required dashboards together with team to enable BUs for systematic and smooth tracking 
+Bring in and translate latest trends, technologies and benchmarks as regards to ISP Awareness Activity",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_3gfvhranbrjx?pcm=pc_SearchList,博世中国,"Responsibilities:
+
+1. Research and engineering work in general ML/DL algorithm, software design and implementation.
+2. Base on specific use case, define SW architecture and develop related core algorithm
+3. Fulfill the project goals on timing and quality
+4. Document process and results during development, especially for the key milestones
+5. Feedback process or problems timely, discuss and find solutions with team
+6. Support testing for other projects in the group
+
+职责描述:
+
+1. 机器学习，深度学习，软件设计及实现等相关的研究与工程工作
+2. 根据具体应用场景，研究并实现核心算法开发及软件架构设计
+3. 规划开发进度，并能按计划逐步完成开发工作
+4. 记录开发进程及阶段性成果，里程碑成果进行总结汇报
+5. 及时反馈开发进度及遇到的问题，与团队讨论并寻找解决方案，并记录
+6. 支撑组内其他项目的测试工作
+
+Requirements:
+
+1. Major in electronic engineering, computer science, or related fields to information technology.
+2. Experiences with machine learning and deep learning.
+3. Excellent programming capability, familiar with python, Linux, and commonly used packages such as PyTorch,
+TensorFlow, PyQt, Tornado.
+4. Self-dependent, highly motivated and problem solving mentality.
+5. English reading and writing capability is required.
+Preferred:
+1. Experience with causal inference and root cause analysis,
+2. Enroll as soon as possible, and could stay for more than 6 months
+
+ 能力需求: 
+
+1. 电子工程，计算机或相关科学领域
+2. 有机器学习，深度学习等项目经验
+3. 优秀的编程能力，熟悉Python， Linux以及常用开发库比如PyTorch, TensorFlow, PyQt, Tornado
+4. 独立，积极和主动解决问题的能力
+5. 良好的英文读写能力
+6. 每周至少能在公司工作三天以上
+优先考虑：
+1. 有因果推理，根因分析等相关经验
+2. 能尽快入职，可实习6个月及以上",工作地点：福泉北路333号收起地图,公司简介博世中国,,可实习6个月，三天,
+https://www.shixiseng.com/intern/inn_n4ziyuseqv5k?pcm=pc_SearchList,博世中国,"Your Responsibilities: 
+
+You will work in teams and directly with our internal clients. You will work with a team of consultants at Bosch for internal BUs. Projects can vary in length, team size, depending on the client's situation.
+
+You will own and identify information sources, gather and interpret facts and figures, and execute analysis to translate your findings into meaningful client recommendations.
+
+You will present your findings to team members and client stakeholders.
+
+Our Requirements:
+
+- Currently enrolled in Undergraduate or Master program, experience in academic projects preferred or experience in consulting, strategy, business analysis as a plus
+
+- Honest, intellectually curious, high energy and mature
+
+- Excellent communication skills; fluency in English (writing and speaking)
+
+- Familiar with MS office (Word, PowerPoint)
+
+- At least 3-4 days/week; expected on-board date is ASAP",工作地点：福泉北路333号收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_fwihb5y2ylyr?pcm=pc_SearchList,博世中国,"职责描述:
+
+1. 在自动驾驶领域参与开发深度学习相关项目, 开发并优化面向自动驾驶的视觉语言模型（如多模态感知、场景理解等）
+2. 针对实际场景需求（延迟、精度、效率等），实现并落地AI感知模型
+3. 调研前沿视觉语言模型/自动驾驶技术（如E2E、VLA），完成技术选型评估。
+4. 高质量地按计划完成项目开发任务。
+
+能力需求:
+1. 计算机科学、电子工程、机器人等相关专业硕士/博士（博士优先）
+2. 专业能力：
+•	必需项:
+o	视觉语言模型/多模态模型实战经验（如CLIP、BEVFormer等）。
+o	熟练使用Python及深度学习框架（PyTorch/TensorFlow）。
+•	加分项:
+o	CVPR/ICCV等顶会论文发表经历。
+3.熟练阅读/撰写英文技术文档，具备主动解决问题能力
+4. 每周5天全职，实习期≥6个月，可尽快入职者优先
+
+Responsibilities:
+
+1. Develop and optimize vision-language models (e.g., multi-modal
+perception, scene understanding) for autonomous driving systems.
+2. Implement and deploy AI perception models under real-world constraints (latency, accuracy)
+3. Research cutting-edge VLM/autonomous driving technologies (e.g., BEV, LLM integration) and evaluate feasibility
+4. Hands-on development for the project with quality.
+
+Requirements: 
+ 1. Master/PhD in CS, EE, Robotics, or related fields (PhD candidates preferred for VLM research). 
+ 2. Technical Skills 
+ •	Must-have: 
+ Hands-on experience with VLM models (e.g., CLIP, BLIP, LLaVA). 
+ Proficiency in Python and DL frameworks (PyTorch/TensorFlow). 
+ •	Preferred: 
+ Publications at CVPR/ICCV/ECCV/IROS. 
+ 3. Language & Soft Skills 
+ •	Fluent in technical English (paper reading/writing). 
+ •	Strong problem-solving skills and self-driven mentality. 
+ 4. ≥6 months full-time (5 days/week), immediate onboarding preferred.",工作地点：福泉北路333号收起地图,公司简介博世中国,,每周5天，6个月,硕士
+https://www.shixiseng.com/intern/inn_uzw8mygtqyae?pcm=pc_SearchList,连颂健康,"招聘启事：摄影创意实习生（聚焦高端抗衰保健品）
+
+我们是谁：
+一家致力于高端抗衰保健品研发与推广的创新机构，重视视觉艺术在品牌塑造中的力量。我们寻找新鲜、有创造力的摄影视角来展现产品的科技与美感。
+
+我们在找谁：
+摄影、视觉艺术相关专业的在读学生（本科或研究生）。最重要的是你需要：
+
+热衷摄影创作： 你对按下快门充满热情，不满足于单纯记录，总想用镜头讲出有态度的故事。
+善于小场景叙事： 特别关注和擅长在小空间、小布景（如桌面、微观环境）中构建有氛围、有质感的画面。能变“小”为“大”，赋予静态产品独特的视觉张力和艺术感。
+商业艺术两手抓： 理解商业摄影需要服务于品牌信息传递（高端、科技、功效、优雅），并渴望在其中融入你的艺术表达和个人风格，让产品照不仅仅是产品照。
+技术基础扎实： 熟练掌握相机操作、光影布置、常见修图软件（如Photoshop, Lightroom）。
+你将做什么：
+
+参与高端抗衰保健品的核心视觉创作过程。
+在导师指导下，负责或协助策划、布景、拍摄具有艺术感与强商业传播力的产品及概念图片。
+学习如何在“小场景”限制下发挥创意，用独特的构图、光影、道具、后期技巧展现产品特点和品牌调性（科技感、奢华感、有效性等）。
+参与头脑风暴，为新品上市或营销活动提供视觉创意方案。
+你能获得：
+
+真刀真枪的商业项目实践： 直接参与重要产品线的视觉创作，作品会被实际使用。
+资深导师指导： 由经验丰富的商业摄影师/艺术总监亲自带教，快速提升专业能力。
+优质创作资源： 接触并学习使用专业的灯光、器材（根据项目需要可能包括微距镜头等）。
+创作热情施展平台： 鼓励你在完成商业目标的同时，融入你的艺术创意和风格探索。
+有竞争力的实习津贴： 300元/天。
+实习证明 & 作品署名： 为你的简历添上重要一笔。
+我们需要你的申请材料：
+
+个人简历： 包含你的联系方式、教育背景、实习/项目经历（如有）。
+作品集（最重要！）：
+精选 5-7张 最能代表你水平的摄影作品。
+重点展示：
+“小场景创作能力”： 例如：精心布置的桌面静物、微观摄影、有质感的细节表现等。可以是任何主题（产品、物品、抽象概念），关键是体现你的巧思、布光、构图和艺术感。如果能有将普通物体拍得不普通的作品更好。
+“艺术与商业的结合”（如有）： 如果能展示你在项目中如何平衡艺术表达和商业需求的作品（即使是学校项目模拟商业简报），将是巨大加分项。
+请对每张作品提供简短说明（主题/想表达什么/你做了什么）。",工作地点：上海市/上海市/徐汇区 6789GROUP-复医创新创业中心收起地图,公司简介连颂健康,,,本科
+https://www.shixiseng.com/intern/inn_ilcqbgckuuk4?pcm=pc_SearchList,博世中国,"欢迎加入博世中国人才甄选专家中心，和团队的伙伴们一起瞭望前沿人才市场、学习人才甄选方法论，探索数字化浪潮下人力资源管理的新模式。
+
+Job Description
+
+1. Talent Market Intelligence research (market report, talent interview, talent persona, talent map, etc.)
+支持人才市场情报收集（市场报告，人才访谈，人才画像，人才地图）
+
+2. Support channel management and data analysis
+支持渠道管理和相关的数据分析工作（python)
+
+3. Support talent relationship management follow-up tasks
+支持人才关系维护管理相关工作
+
+任职要求：
+熟悉数据分析，熟练运用Python数据分析的优先；
+熟练的英语书面与口语能力；
+一周出勤4天以上，持续至少4个月，6个月优先~~",工作地点：福泉北路333号收起地图,公司简介博世中国,,4个月，一周，4天,
+https://www.shixiseng.com/intern/inn_o10ggojpqhey?pcm=pc_SearchList,混知,"职位描述:
+1.在培训下参与混知各类出品的创作实践
+2.辅助完成产品的内容创意和编写
+3.通过一段时间的写作培训及锻炼后，可参与策划符合公司发展方向、市场需求的产品
+
+个人风格期待:   
+1.学习能力强，新知识接受快
+2.逻辑性强、擅于沟通交流
+3. 有良好的输出能力、团队能力和表达能力
+
+接受大一大二学生实习
+超级畅销书作者带领创作",工作地点：上海市/上海市/嘉定区 现厂-C幢收起地图,公司简介混知,,,
+https://www.shixiseng.com/intern/inn_uvvjs2wtsup7?pcm=pc_SearchList,创必达,"1.	进行研究并选择所有计划上市地点的照片。2.	需要有修整和编辑照片能力3.	提升设计团队开发的App的风格和外观。4.	根据需要协助其他编辑与各种研究任务。任职要求：1.	对图片有很好的审美能力,并热爱挑选图片。2.	热爱旅游，吃喝玩乐等美好的事物。3.	有一定的英语基础能力。4.	.有一定的PS基础，对摄影设计爱好的有加分。5.	有一定的挑图工作经验。6.	的时间管理和沟通技巧。",工作地点：上海市徐汇区宜山路900收起地图,公司简介创必达,,,
+https://www.shixiseng.com/intern/inn_7wrukhr3ihgz?pcm=pc_SearchList,创必达,1）负责公司电话接转、传真及信件收发、文档复印等工作；2）负责各类办公文档、商务文档、合同协议的录入、排版、打印；3）公司考勤管理；4）按照要求完成固定资产的进、出、存；5）公司各类会务支持、协调安排会议室；6）保洁阿姨工作的管理，确保办公环境整洁；7）公司各类活动的支持协调工作；8）新员工入职的管理及初级培训。9）体验中心引导和培训工作任职要求：1）大专及以上学历，能熟练使用计算机，熟悉OFFICE办公软件；2）待人热情、处事大方、得体、工作细心严谨、有责任心、语言表达能力较强；,工作地点：上海市徐汇区宜山路900收起地图,公司简介创必达,,,大专及以上
+https://www.shixiseng.com/intern/inn_4xlw2dviiajm?pcm=pc_SearchList,创必达,1、负责本校及周边院校职业资格项目的市场推广活动；  2、定期组织校园活动，派发礼品、礼券；  3、建立校园市场推广团队，组织监督市场活动的执行；岗位要求：1、全国各大院校在校学生，课余时间丰富；2、思维活跃，良好的表达能力，组织能力强；3、有责任心、组织能力以及团队合作能力；4、性格活泼，外向，善于人际交往；5、勇于挑战自我，有招生代理、销售、校园关系网、社团资源、教育行业资源者优先考虑；无需坐班！,工作地点：上海市徐汇区宜山路900号B8收起地图,公司简介创必达,,,
+https://www.shixiseng.com/intern/inn_t37m6nbf8xza?pcm=pc_SearchList,磐松资产,"【工作时间】
+- 实习每周3天及以上，实习期3-6个月以上。
+【岗位描述】
+- 行政助理全面负责磐松行政日常事务性工作及办公室行为规范的监督工作，辅助完成行政SOP搭建、团建活动的策划与执行。理想的候选人需要有良好的沟通能力、严谨细致的工作态度、一定的服务意识以及活动策划能力。
+【岗位职责】
+1. 前台事务性工作：负责公司外来人员的接待和衔接、快递信件的收发管理、公司电话的接听记录和转达等；
+2. 公司环境卫生管理：负责公共区域卫生的监督维护、公司花草的养护和保养和员工工位卫生的监督；
+3. 公司采购工作：负责固定资产、办公用品、办公设备、办公餐及日用品的申购，定期做好数据录入工作，及时更新数据；
+4. 团建活动：负责协助日常团建、年会、周年会的策划、组织和协调；
+5. 办公设备设施管理：负责公司办公设备正常运作的监督、报修与维护；
+6. 完成上级安排的其他工作。
+【岗位要求】
+1. 专科（含）以上学历，专业不限，有相关经验者优先；
+2. 学习能力强、有责任心，具备良好的协调和组织能力、沟通表达能力和服务意识；
+3. 具有良好的职业操守，品行端正，工作细致，形象大方；
+4. 熟练运用计算机和office办公软件。
+5. 有丰富的活动策划经验、社团经验者优先；",工作地点：上海市/上海市/杨浦区 淞沪路398号创智天地8号楼302室收起地图,公司简介磐松资产,,每周3天，6个月,
+https://www.shixiseng.com/intern/inn_xwe3c3xbzx1p?pcm=pc_SearchList,博世中国,"【Job Summary】
+你的主要职责是为公司内部用户部门开发网页版应用程序。
+你将使用C#语言进行后端开发，并利用JavaScript、Vue.js以及Element UI构建前端界面。应用程序将通过IIS在本地服务器上部署，使用SQL Server和MongoDB数据库；
+如果你具备Java技能，将有机会参与在Azure云平台上的网页版应用程序开发，其中后端将使用Java，而数据库采用MySQL。
+
+【Job Responsibilities】
+作为BDO Software Intern，你将加入我们的软件开发团队，负责以下关键任务：
+1、Support LOG to develop the local software/支持物流团队开发本地的软件;
+2、Digital project (DCCS CIP System)/支持公司数字化项目;
+3、HANA project coordination support/HANA项目支持.
+
+【Job Requirements】
+在读研究生，计算机软件开发专业；
+良好的编程能力，掌握C#和其他大众语言；
+具备良好的沟通能力及团队合作精神.
+
+【Salary and Benefits】
+薪资：日常实习本硕博120元/天，中午的餐食免费
+餐食：公司食堂提供多条美食餐线，美味且经济实惠，满足不同口味需求
+交通：提供覆盖全上海范围的多条免费班车服务，方便上下班通勤
+
+【What You'll Gain】
+实习经验：在世界百强外企中积累宝贵的实习经验，为你的简历增色
+专业指导：与行业专家一对一指导，快速提升专业技能和职场竞争力
+办公氛围：享受超温馨的办公环境和丰富的茶歇饮料，工作氛围轻松愉快
+
+【Location】
+上海市长宁区福泉北路Bosch博世研发中心",工作地点：上海市长宁区福泉北路Bosch博世研发中心收起地图,公司简介博世中国,,,
+https://www.shixiseng.com/intern/inn_p4mekxr31jdn?pcm=pc_SearchList,广联达,"任职要求/岗位职责：
+
+1.在校研究生，人机交互、工业设计、服务设计、视觉传达等相关专业；
+
+2. 设计方法论、设计原则等理论框架扎实，熟悉各主流平台的设计规范和设计语言；
+
+3. 熟练掌握各主流设计工具，但没有工具的时候，你也能善于表达自己的想法和意图；
+
+4. 具备全链路意识，有产品思维和商业思维，愿意深入业务，贴近用户，洞察需求；
+
+5. 学习动力强，对设计趋势有足够的敏锐度，善于分析，并敢于落地尝试；
+
+6. 良好的沟通能力和团队协作精神，耐心、诚恳，有强烈的责任心和积极主动的工作态度。",工作地点：上海市/上海市/闵行区 广联达数字科技(上海)有限公司收起地图,公司简介广联达,,,
+https://www.shixiseng.com/intern/inn_0pxgamkunwkr?pcm=pc_SearchList,科锐国际,"工作职责：
+协助实验室主管完成化学实验，包括化学分析和简单仪器使用；通过文献与行业网站资讯搜索和整理，对外文资料进行翻译。
+将会学习到化工工艺流程，了解化工行业市场动态
+	
+要求：化学相关专业",工作地点：上海市/上海市/松江区 江田东路135号2号门收起地图,公司简介科锐国际,,,
+https://www.shixiseng.com/intern/inn_m3mmwmr23q7h?pcm=pc_SearchList,URBANEER都市工作群,"//加入我们做什么
+1、负责新媒体内容的编辑、采写、排版发布等工作；
+2、参与话题的策划和讨论，并共同完成媒体计划；
+3、统筹运营公众号、小红书等自媒体工具。
+
+
+//我们期待的你
+1、不迎合于当下，而强调独立思想，相信观念与观点的力量；
+2、热爱与关注业态创新、在地文化、设计与艺术等新锐的社会现象；
+3、愿意投放更长的时间在莫干山、南通等地，以周期性驻地的方式参与工作，具有杂志工作经验者优先。",工作地点：上海市/上海市/嘉定区 urbaneer都市工作群 安诚路180弄29号101室收起地图,公司简介URBANEER都市工作群,,,
+https://www.shixiseng.com/intern/inn_zrgeucsgsqcd?pcm=pc_SearchList,URBANEER都市工作群,"岗位要求：
+我们寻找的不是绘图员，而是手握设计利器的视觉叙事革新者。我们期待这样的你：视觉基因自带高级感，空间/工业设计科班出身，对美有偏执的追求和叛逆的表达欲，擅长把专业术语变成「小白」也能懂的视觉方案，能把抽象理论自动翻译成视觉脑图，爱捣鼓不同媒介的多元表达，坚信好设计是「吵」出来的，享受在碰撞中打磨创意……如果你看到好设计会心跳加速，对创作有持续的热情，享受跨专业无边界的协作，相信「设计即社会提案」，渴望用视觉力量重塑公共对话，这里会是你的实验场。
+
+
+工作职责：
+以平面设计为基础，长期稳定的参与「观念」的可视化呈现设计；
+以平面表现为基础，不限于三维、视频、动画、印刷制作等各类表现介质；
+熟悉传统印刷制作后道，熟悉新媒体（如手机微信微网站等多介质）视觉表达；
+对新事物新技术保持好奇，善于借助新工具介入设计表现；
+根据不同对象的各类设计做对接和深化，并负责落地制作呈现；
+参与公司各类艺术节、大型活动、内容生产的概念设计和视觉传达。
+
+任职要求：
+空间设计/跨媒体设计/环艺专业/工业设计/艺术策展/博物馆策展相关专业（本科及以上），专业功底扎实，理论、形式、创造力、管理能力在线；
+熟练使用办公软件和三维专业软件（如：PS、Illustrator、Pr、keynote、Final Cut Pro等视频剪辑软件）；
+我们欢迎跨领域的脑袋，有此类学习或工作经验者优先。",工作地点：上海市/上海市/嘉定区 urbaneer都市工作群 安诚路180弄29号101室收起地图,公司简介URBANEER都市工作群,,,本科及以上
+https://www.shixiseng.com/intern/inn_xadprmji7uos?pcm=pc_SearchList,老佛爷百货,"KEY RESPONSIBILITIES
+
+1.	主要负责协助招商部进行招商工作相关的档案管理、流程推动、合同跟进，费用推进等事宜。
+Mainly responsible for assisting the department to carry out investment promotion work related file management, process promotion, contract follow-up, cost promotion and other matters.
+2.	协助招商部进行协作部门的动态沟通、信息传递及反馈确认等工作。
+Assist the department to carry out dynamic communication, information transfer and feedback confirmation of the collaborating departments.
+3.	日常各类合同文本修改、资料用印、装订整理及归档工作。
+Daily revision of all kinds of contract texts, printing, binding, organizing and filing of information.
+4.	跨部门沟通及内部工作协调，完成领导交办的其他事情。
+Cross-sectoral communication and internal work coordination, to complete other matters assigned by the leader.
+
+SKILLS AND QUALIFICATIONS REQUIRED 
+
+1.	本科及以上学历，工商管理、市场营销、经济学、国际贸易等相关专业优先。
+Bachelor degree or above, preferably majoring in business administration, marketing, economics, international trade and other related fields.
+2.	具备良好的时尚品味以及品牌感知力，对商业运营感兴趣，沟通表达能力、理解应变及逻辑思维能力佳。
+Have good fashion taste and brand perception, interested in business operation, good communication and expression skills, good understanding of strain and logical thinking ability.
+3.	良好的英语水平，英语可作为商务洽谈语言。
+Good command of English, which can be used as a language for business negotiations.
+4.	熟练掌握WORD、EXCEL、POWERPOINT等办公软件。
+Proficient in office software such as WORD, EXCEL, POWERPOINT。
+5.	一周可以出勤4天及以上，实习3-6个月。
+Available for four or more days a week and for internships of three to six months.",工作地点：上海市/上海市/静安区 嘉地中心1001-03A单元收起地图,公司简介老佛爷百货,,6个月，一周，4天,本科及以上
+https://www.shixiseng.com/intern/inn_rrfthayny6xr?pcm=pc_SearchList,明蔚网络,"岗位职责：
+1，协助产品设计师进行跨境电商产品设计辅助；
+2，完成其他美术支持工作安排；
+任职要求：
+1，年龄不限，大专及以上在读，英语可正常读写；
+2，熟悉Photoshop等设计软件，熟悉MJ/SD/Comfyui等AI设计软件优先；
+3，每周可保证3天出勤时间；",工作地点：上海市/上海市/闵行区 德必虹桥525-A栋收起地图,公司简介明蔚网络,,3天,大专及以上
+https://www.shixiseng.com/intern/inn_ywvqhi0nykar?pcm=pc_SearchList,德勤中国,"工作内容】
+1．了解客户业务现状，分析业务痛点，设计业务方案、数字化战略、及AI战略
+2. 协助产品需求分析、数据分析、需求与流程设计，完成需求文档编写及原型设计；
+3. 深入了解项目，寻找人工智能机会点，创造性的使用人工智能解决客户问题；
+4．与研发团队进行沟通，确保研发人员对产品需求文档理解准确、充分； 
+5．协助产品测试，落地实现设计的内容；
+6．资料收集、访谈记录；行业研究、企业案例研究等团队其他工作。
+【岗位需求】
+1．本科及以上学历，商业分析、信息管理、数据科学、管理学等专业优先，2025年毕业优先 
+2．对咨询行业、数字化咨询、人工智能、产品设计、数据分析有浓厚兴趣；
+3．思维活跃开放，对未知领域具备快速学习能力和出色的逻辑思考能力； 
+4．具备良好的沟通技巧和人际交往能力； 
+5．熟练掌握office办公软件及GAI产品； 
+6．[Must]可持续实习3个月以上，每周4-5天。
+7.   尽快入职者优先，有咨询或商业分析相关实习经验优先。",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,实习3个月，5天,本科及以上
+https://www.shixiseng.com/intern/inn_x7m6qcdmbdrc?pcm=pc_SearchList,德勤中国,"a)       Discover Phase
+  Organize meeting mins and conduct market research
+  Finetune slides and excel sheets
+  Facilitate ideation workshop 
+b)        Define Phase
+  Collect requirements to assist in future solution design 
+  Organize need-based discussion working sessions and document changes/needs
+  Finetune slides and conduct proofreading
+  Facilitate to-be design report-out
+c)        Plan Phase
+  Gather all project deliverables into a master file for final delivery and proofread documents
+  Facilitate global reporting",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,,
+https://www.shixiseng.com/intern/inn_oppaiqkdqft1?pcm=pc_SearchList,德勤中国,"岗位职责：
+1. 参加访谈、文审、重要议题评估
+2. 支持做ESG报告
+岗位需求：
+1. 实习期：2月至4月底
+2. 专业偏好：英语专业优先，需要笔译能力过关，有相关经验的同学优先",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,,
+https://www.shixiseng.com/intern/inn_41me2r9jbwgl?pcm=pc_SearchList,德勤中国,"岗位职责：
+1、与客户紧密合作，服务于客户经营活动的各类数据追踪报告；
+2、通过报告、数据分析、数据洞察以及业务梳理，协助客户搭建报告体系，并逐步优化报告策略；
+3、满足客户业务需求，包括数据分析，汇报材料制作，数据加工清洗等，为客户经营业务提供全方面的技术支持；
+4、能够独立完成领导布置的各类复杂的数据处理工作。
+
+任职要求
+1、本科及以上学历，统计学、数学、计算机相关专业优先；
+2、能够熟练使用Excel，PPT等办公软件，精通计算公式，图表设计等；
+3、有UI设计的经验和能力优先；
+4、工作认真仔细，对数据敏感；
+5、良好的沟通表达能力，责任心强，自驱力强，抗压能力强。",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,,本科及以上
+https://www.shixiseng.com/intern/inn_4bfrj932nfjl?pcm=pc_SearchList,德勤中国,"【工作内容】：参与鉴证团队完成可持续发展咨询项目，包括ESG报告、ESG评级以及碳管理等不同服务，内容包括协助项目团队完成资料调研、数据分析与处理、报告校对及团队要求的其他工作。
+【岗位要求】：
+1、中文，新闻专业、环境、能源管理、金融、供应链管理、气候变化和其他可持续发展相关专业学位优先；
+3、对ESG/可持续发展咨询事业有热情，能积极主动投入工作；
+4、有ESG、可持续发展议题及政策研究工作经验者优先；
+5、能够多线程处理工作，具备自我驱动力和学习新知识的兴趣；
+6、优秀的文案写作能力、英文写作及交流水平，英文接近native水平者优先；
+7、耐心细致、具备良好的沟通、逻辑分析与抗压能力；
+8、尽快到岗，线下实习，每周3-5天，实习至3月或4月底。",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,5天,
+https://www.shixiseng.com/intern/inn_pcqn7qqhlrpx?pcm=pc_SearchList,德勤中国,"职位描述：
+•	参与业务访谈和需求梳理
+•	协助进行项目管理
+•	参与编写项目材料
+•	整理各类文档材料、会议纪要等
+•	项目经理安排的其他任务
+招聘要求：
+•	语言能力：日语听说读写熟练
+•	本科以上学历，供应链、物流、仓储等相关专业
+•	具备良好的协调沟通能力和方案整合能力
+•	有很强的主观能动性和自律性
+•	每周至少到岗实习4天",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,4天,本科
+https://www.shixiseng.com/intern/inn_zwjpgvfittir?pcm=pc_SearchList,德勤中国,"【实习时间】可快速到岗，长期或全勤实习优先，可以每周5天的优先 
+【教育背景】 保险学相关专业，热爱咨询行业优先，大四、研一、研二优先 
+【工作内容】包括但不限于：
+1、金融行业研究、战略及业务转型分析、管理模式分析等 
+2、在指导下独立完成desk research、访谈纪要整理与观点凝结等工作
+3、协助完成项目有关PPT或WORD等相关材料制作
+4、完成项目经理安排的其他项目工作 
+【能力要求】 聪明勤奋、积极主动、抗压能力强，有良好的沟通与团队协作能力、良好的逻辑思维与快速学习能力。",工作地点：上海市/上海市/黄浦区 外滩中心收起地图,公司简介德勤中国,,每周5天,
+https://www.shixiseng.com/intern/inn_ybdwncchhw2z?pcm=pc_SearchList,衡立斐迪企业服务,"工作职责
+1．接听客户来电并及时记录客户需求；
+2．回复客户邮件、电话或面对面咨询的问题；
+3.  协助准备公司设立文件；
+4．完成客户文件的归档、公司设立资料的翻译等工作；
+5．协助部门组织和安排会议，完成会议纪要；
+6．提交和核对日常费用报告；
+7．上级分配的其他任务。
+
+任职要求
+1． 本科或研究生在校生（2025届应届生）；
+2． CET4或以上，英文书面可进行商务沟通；
+3． 工作态度积极，认真细致，能够在严格的专业环境中工作；
+4．出色的多任务管理和时间管理能力；
+5． 熟练使用word, excel，PPT等办公软件；
+6． 实习期8个月及以上，每周可出勤4天及以上；
+7． 表现优异者，毕业后可转正",工作地点：上海市/上海市/浦东新区收起地图,公司简介衡立斐迪企业服务,,8个月，4天,本科
+https://www.shixiseng.com/intern/inn_zgddvplcytft?pcm=pc_SearchList,英格尔医药,工作内容：1、基本化学实验室操作。2、完成领导安排的其他工作。3、辅助实验室经理进行实验。任职要求：1、化学、应用化学、药学、食品、环境等理科相关专业2、工作认证负责、态度端正；3、能够尽快到岗优先考虑；4、可实习到9月，表现优秀毕业之后可以直接留用5.可以尽快到岗食堂，宿舍  做五休二,工作地点：上海市闵行区瓶北路155号收起地图,公司简介英格尔医药,,,
+https://www.shixiseng.com/intern/inn_cmoh18pcqmcb?pcm=pc_SearchList,TESLA-特斯拉,"职位名称：测试开发实习生
+职位类型：常规实习生
+工作地点：上海临港特斯拉超级工厂
+实习时间：6个月以上
+
+职位描述：
+该职位要求构建自动化框架、工具和开发自动化脚本，用于验证特斯拉当前以及下一代的应用系统。应聘者需要具备在超快的敏捷开发环境中开发世界级的自动化脚本的热情。您需要与开发团队共同工作，并且在功能开发流程进行的同时，并行地创建自动化脚本。您同时需要与产品经理，DevOps团队合作，以构建UI和API的功能自动化脚本，并且与我们的CI/CD pipeline进行集成。我们使用自研的测试平台，我们最了解特斯拉业务，并以我们的能力为系统高可用，安全，功能完善等方面保驾护航。
+
+岗位职责：
+负责开发BDD场景
+负责为给定的模块开发自动化测试套件
+在紧迫的截止期限内独立工作的能力，以项目优先级为首要任务
+使用自动化脚本验证数据质量
+在错误跟踪系统中记录、管理和重新测试缺陷
+向项目利益相关者报告测试状态、重要阶段和问题
+对细节的敏锐关注，特别擅长识别不一致和缺陷
+广泛地更新和使用Confluence页面以实现开放的知识共享
+
+任职要求：
+本科及以上学历，计算机科学、IT或相关领域
+如下一种或多种语言的扎实编程经验：Java，JavaScript/Type Script
+对REST有深刻的理解，并在Web服务API测试/自动化方面具有一定的经验
+比较好的使用开源工具的经验，比如Git、Jenkins
+熟悉如下一种或多种工具，Selenium Webdriver / Appium
+了解如何设计和创建自动化框架
+开发测试自动化框架Protractor、BDD（例如Cucumber、Jasmine）、JavaScript、TypeScript
+持续集成（例如Jenkins）或交付方面的经验
+精通单元测试，使用例如TestNG、Junit的工具
+清楚了解产品开发周期、技术要求和项目管理
+对计算机体系结构、数据结构和编程实践相关的概念有充分的理解
+熟练掌握SQL和软件架构",工作地点：上海市浦东新区正嘉路1188号，特斯拉上海超级工厂收起地图,公司简介TESLA-特斯拉,,6个月,本科及以上
+https://www.shixiseng.com/intern/inn_9pmtnkkqaqsp?pcm=pc_SearchList,TESLA-特斯拉,"职位名称：软件开发实习生
+职位类型：常规实习生
+工作地点：上海临港特斯拉超级工厂
+实习时间：6个月以上
+
+我们的软件开发团队负责构建应用以支持 Tesla 的快速增长，同时提供出色的客户体验的产品。 我们团队的使命是简化业务运营、降低成本、改善客户体验并解决开发和支持方面的工程挑战。
+我们的工程师亲力亲为，并鼓励他们拥有自己的项目，为新想法做出贡献，以最终持续优化Tesla的运营方式。
+
+你将从事的工作： 
+特斯拉正在为我们的各种应用的工程团队寻找有才华、充满活力的同学，以最前沿的角度打造Tesla生产制造、物流、销售、服务、基础设施等业界领先的软件平台！
+
+我们需要你：
+基础要求：
+本科及以上学历，计算机科学或相关专业
+与软件工程师和各种跨职能团队成员合作，构建、管理、执行和支持项目落地，运行维护的各个方面
+与产品经理、测试工程师和 DevOps 合作，以敏捷的方式执行项目
+从技术角度设计开发应用程序以支持跨团队的各种功能
+推广软件工程的最佳实践
+独立自驱地快速应对不断变化的业务策略
+在学习和实施新技术的同时充分利用现有的技能
+优秀的沟通能力
+能够在快节奏的全球分布式团队中工作
+熟练专业的英语能力
+
+技术要求：
+具有以下任意编程经验：Golang, Java Spring, .NET Core, Python, Angular, React
+数据库经验 (MySQL, Cassandra, PostgreSQL, Mango, Redis, etc.) 及良好的查询优化方面的知识
+具有使用中心化日志调试(debug)复杂系统经验 (Prometheus, Splunk, etc.)
+消息队列和流式使用经验 (NATS, RabbitMQ, Kafka, etc.)
+扎实的REST APIs知识
+具有单元测试和集成测试的实践经验
+Agile/SCRUM 软件开发流程经验，熟悉CI/CD工具
+接触过Docker和Kubernetes",工作地点：上海市浦东新区正嘉路1188号，特斯拉上海超级工厂收起地图,公司简介TESLA-特斯拉,,6个月,本科及以上
+https://www.shixiseng.com/intern/inn_vbsp4qfdlwgn?pcm=pc_SearchList,深圳汇泽,"【岗位职责】
+1.负责公司日常财务事务处理，包括月度费用报销单据审核、制单及台账维护，确保流程合规性。
+2.执行供应商月度对账工作，整理核对往来账目，协助处理付款审批流程。
+3.完成银行账户月度对账，准确导出交易流水并编制资金报表。
+4.负责境外主体公司管理维护（香港及离岸公司），对接注册代理机构完成年报申报等事宜。
+5.统筹管理外包服务机构（财务代理、商旅服务、行政供应商等），跟进服务进度并维护合作档案。
+6.协助建立及完善行政管理制度，参与办公资产盘点及行政采购支持。
+7.处理部门日常文书工作，包括合同归档、会议纪要整理及其他临时性行政事务时性行政事务。
+
+【岗位要求】
+1.本科/硕士在读学生（财务/会计/工商管理专业优先），可保证连续实习3个月以上。
+2.每周到岗4-5天（法定节假日除外），能长期实习者将优先考虑。
+3.具备基础财务知识，熟悉Excel数据透视、VLOOKUP等函数操作，有报销系统操作经验更佳。
+4.性格细致严谨，对数字敏感度高，具备基础跨部门沟通协调能力。
+5.适应快节奏工作环境，可同时处理多线程任务，有学生干部经历者优先。",工作地点：上海市/上海市/静安区 苏河湾中心MT收起地图,公司简介深圳汇泽,,连续实习3个月，5天,本科
+https://www.shixiseng.com/intern/inn_wafmf1ad48h2?pcm=pc_SearchList,广联达,"机电助理需求工程师(实习)岗位职责
+
+1.协助产品经理完成机电设计软件中功能模块的需求定义;
+2.协助产品经理完成迭代内功能验收工作;
+
+任职资格：
+
+1·本科及以上学历，暖通、给排水相关专业
+2.能够使用原型，流程图，PRD等方法将需求转化成可供研发的和设计使用的需求文档
+3.具备良好清晰的逻辑思维能力以及语言表达能力",工作地点：上海市/上海市/闵行区 广联达数字科技(上海)有限公司收起地图,公司简介广联达,,,本科及以上
+https://www.shixiseng.com/intern/inn_r91i96viyvoi?pcm=pc_SearchList,艺恩数据,"岗位职责：
+1、 参与内容与消费行业（影视、内容营销、艺人、短视频、KOL等）研究与分析；
+2、 协助完成资料数据收集、处理、输出图表；
+3、 协助完成研究报告、新闻稿件、IP报告撰写工作
+
+任职要求
+1、 本科大三/研一/研二在读生，市场营销、文化产业、新闻学、统计学、经济学等相关专业；
+2、 有较好的研究分析逻辑思维，热爱时尚美妆穿搭，对热点趋势动态有极大的关注度和兴趣度；
+3、 沟通表达能力较好，逻辑思维严谨，熟练掌握office工具；
+4、有行业稿件撰写、研究分析、深入了解各垂直圈层（时尚潮流、鞋服搭配）的话语权者优先考虑；具有social listening分析经验者优先考虑；
+5、有较强的执行能力、学历能力、责任心、团队精神和一定的抗压性；
+6、实习期3个月以上，每周至少出勤4天。",工作地点：上海市/上海市/浦东新区 上海市浦东新区杨高南路799号陆家嘴世纪金融广场3号楼收起地图,公司简介艺恩数据,,3个月，4天,本科
+https://www.shixiseng.com/intern/inn_ileow3xg0csy?pcm=pc_SearchList,广联达,"【岗位职责】
+
+1. 负责建筑专业相关数据分类、数据清洗及数据标注工作
+
+2. 负责建筑专业相关数据模型制作
+
+【任职资格】
+
+1. 本科及以上学历。
+
+2. 有3维建模工具使用经验。
+
+3. 有建筑相关专业背景。",工作地点：上海市/上海市/闵行区 广联达数字科技(上海)有限公司收起地图,公司简介广联达,,,本科及以上
+https://www.shixiseng.com/intern/inn_oawl6jjv6xs1?pcm=pc_SearchList,拳头游戏,"工作职责：
+-发行策略：对行业重点产品进行发行策略拆解和剖析，包括市场宣发，研运合作模式，活动运营打法等，协助公司管理层提炼和积累相关洞察
+-区域分析：重点区域和国家的纵深研究，包括市场格局，用户趋势，竞争态势等，协助管理层制定部分区域发行策略
+-参与公司其他战略创新项目的孵化和落地
+ 
+我们希望你：
+-本科及以上在校生，英语水平极佳，实习能每周4-5天，持续6个月及以上
+-热爱游戏行业，长期深入体验过多品类游戏，对于游戏行业、游戏作品有独到理解
+-有较强的Problem Solving 和 Critical Thinking 的能力；有咨询公司实习经验、互联网公司战略部实习经验、游戏公司实习经验加分
+-有过行业研究，市场研究经历加分
+熟练的英文写作和PPT、Excel应用能力",工作地点：上海市/上海市/静安区 博华广场 新闸路669号收起地图,公司简介拳头游戏,,6个月，5天,本科及以上
+https://www.shixiseng.com/intern/inn_7ip4q1u7umss?pcm=pc_SearchList,心动网络,"岗位职责：
+1、协助开发团队在UE4引擎中实现游戏与引擎功能和逻辑；
+2、参与游戏项目中定制化模块的开发；
+3、协助进行游戏性能瓶颈的定位、优化和技术问题的调试；
+4、参与功能文档的编写和维护。
+
+岗位要求：
+1、计算机科学或相关领域本科及以上学历在校生；
+2、熟悉C++编程语言和基本的数据结构；
+3、了解UE4引擎的基本操作和游戏开发流程；
+4、良好的逻辑思维能力和解决问题的能力；
+5、每周实习4天以上，至少实习时长3个月；
+6、有UE4引擎开发经验或相关项目经验者优先。",工作地点：上海市静安区万荣路700号收起地图,公司简介心动网络,,3个月，4天,本科及以上
+https://www.shixiseng.com/intern/inn_oshzcgfb71rv?pcm=pc_SearchList,智驾大陆,"职责描述：
+1. 与交付项目经理配合开展客户项目的全生命周期管理工作，包括但不限于项目获取、项目计划制定、进度跟踪、风险控制等，确保项目按照预定时间、质量和成本要求顺利交付。
+2. 在交付项目经理的指导下完成项目中的样件采购、生产、物流和分配等管理工作，确保满足内部研发和客户交付的需求。
+3. 负责项目团队内部各领域及跨部门间沟通协调，保障信息流畅，协助解决跨领域跨部门问题。
+4. 负责组织项目会议，记录会议纪要，跟进会议决议执行情况；协助交付项目经理准备项目汇报材料，支持项目评审和总结工作。
+5. 如有兴趣，可以参与到客户项目的研发管理工作中，包括但不限于功能/软件问题修复、产品体验优化等的任务管理和问题闭环。
+任职要求：
+1. 本科及以上学历，计算机、机械、车辆工程、电子信息或管理类相关专业。
+2. 对ADAS行业和产品感兴趣，具备相关知识或者经验者优先。
+3. 工作积极主动，责任心强，有一定的抗压能力，能快速接受并适应变化。
+4. 具备较强的学习意愿和快速学习新知识的能力。
+5. 具备良好的沟通与协调能力，及时发现并处理项目中存在的问题、和客户、供应商及内部开发团队及时沟通、确保项目顺利进行、保障项目质量。",工作地点：上海市/上海市/嘉定区 智驾大陆(上海)智能科技有限公司收起地图,公司简介智驾大陆,,,本科及以上
+https://www.shixiseng.com/intern/inn_x3kyj3s9yaev?pcm=pc_SearchList,阳狮集团,"阳狮集团旗下整合传播公司明思力MSL招募信息
+
+岗位职责：
+微信/微博/视频号/小红书内容运营，包括日常文案写作，数据统计，设计跟进等；
+方案、日报、周报、月报整理及制作的支持工作；
+
+要求：
+1.   prefer公关/新闻/传媒/中文/英语相关专业，在校生or手有offer同学都欢迎，要热爱公共传播领域；
+
+2.   秀米编辑器使用熟练（必需），基础E2编辑器技能，PS或Canva作图技能加分;
+
+3.   靠谱的小伙伴，踏实肯干，工作效率高，沟通能力强；
+
+4.   具有一定文案功底（必需），熟悉微信/微博/视频号/小红书运营；
+
+5.   一周5天，可连续三个月及以上；
+
+6.   具有行业经验的小伙伴优先考虑；
+
+7.  有一定审美能力;
+
+8.  对奢侈品行业/酒店行业有一定了解。",工作地点：上海市/上海市/静安区 恒基688广场收起地图,公司简介阳狮集团,,三个月，一周，5天,
+https://www.shixiseng.com/intern/inn_q8klu1r9nngy?pcm=pc_SearchList,NE时代,"岗位职责
+1、	新能源汽车领域（整车、核心零部件如电驱动、电池、热管理，底盘悬架、智舱、智驾等）的行业动态、企业动态跟踪，信息收集整理。
+2、	月报，技术专题小课题相关的信息收集，数据分析以及归纳整理。
+3、	协助项目经理完成部分咨询项目的市场研究、调研、报告梳理撰写的辅助工作，包括会议纪要整理、项目报告翻译、项目资料收集整理、部分PPT撰写等。
+4、	可参与部门内关于新能源汽车行业、技术等的相关探讨与学习，以及有机会接触行业论坛、活动等相关学习机会。
+
+岗位要求
+1. 对汽车行业具备一定的基础认知
+2. 具备较强的信息检索、资料收集整合能力 
+3. 优秀的PPT报告撰写能力，团队协作、沟通能力，具有较强的自主学习能力
+4. 优秀的英语读写能力，能够独立完成阅读和撰写英语报告、文章能力
+5. 能够保证实习至少5个月，每周3-5天实习时间；可接受少量在家/在校办公，在校研究生或者时间相对充裕的大四本科生；
+6. 具备车辆工程、微电子、机械、材料、电力电子等相关专业背景
+
+
+地址：普陀区光新路88号中一国际大厦18楼06室",工作地点：上海市/上海市/普陀区 中一国际商务大厦18楼1806室收起地图,公司简介NE时代,,5个月，5天,本科
+https://www.shixiseng.com/intern/inn_qyjnnycsf7nq?pcm=pc_SearchList,首创郎园,"此岗位倾向平面设计类宣推工作
+1、负责文旅新商业项目相关设计工作，包括但不限于活动海报、项目PPT、logo、文创衍生品等的设计工作
+2、熟悉小红书、微信公众号、抖音等社交平台，协助新媒体账号线上宣发物料设计
+3、精通PS、Ai、可画等工具，审美在线，创意出众
+4、本科及以上学历，实习期内需是在校学生
+5、线下实习至少三个月，每周坐班至少3天",工作地点：上海市/上海市/松江区 仓城历史文化风貌区收起地图,公司简介首创郎园,,三个月，3天,本科及以上
+https://www.shixiseng.com/intern/inn_p1bfkbtflqwg?pcm=pc_SearchList,上海迪士尼度假区,"上海迪士尼度假区正在寻找创意制作实习生，加入市场营销创意团队，并与团队成员紧密合作，促进、实施并支持正在进行的制作项目。此外，实习生还将支持与第三方的各种合同流程，按照公司流程推进项目，与其他业务部门合作以确保项目顺利进行，并管理资产库。
+
+主要职责：
+作为团队成员参与静态图像拍摄项目的制作，协助制片人进行生产管理，与不同业务部门的人员合作并进行沟通。
+与供应商合作，确保遵守上海迪士尼度假区的安全和安保政策，并协助供应商进入后台区域进行工作。跟踪项目进度，协助制片人推动项目进展。
+掌握摄影设备和软件（如Adobe Lightroom、Photoshop等）的基本知识和技能。
+独立整理和归档数据，根据不同的目录/项目/时间需求记录和备份工作文件。协助收集第三方的所有信息，并协助管理资产库。
+
+任职要求：
+每周至少工作3天，持续6个月。
+中文和英文口语和书面表达能力出色。
+愿意在室内和室外工作，愿意在非标准工作时间工作，如在乐园开放前或关闭后，根据项目需求。
+优先考虑大学四年级学生，且专业与商业相关。
+有在跨国公司实习经验者优先。
+具备出色的沟通和人际交往能力。
+学习能力强，有主动性，能够独立解决问题。
+熟练掌握Microsoft Office应用程序（Word、Excel、PowerPoint、Outlook等）的中级水平。
+能够在快节奏的工作环境中承受压力。",工作地点：上海市/上海市/浦东新区 上海迪士尼乐园 申迪西路753号收起地图,公司简介上海迪士尼度假区,,6个月，3天,
+https://www.shixiseng.com/intern/inn_i7wgkjc0aoul?pcm=pc_SearchList,阳狮集团,"任职需求：
+- 热爱公共传播行业，有相关行业实习经历优先
+- 专业不限，大二/三、研一/二优先
+- 玩转微信、视频号、小红书等社交平台，有深厚的文案撰写能力
+- 熟练掌握微软办公软件完成日常报告及简报收集
+- 熟悉秀米及微信后台排版
+- 认真踏实，沟通能力强，一周至少4天，任期3个月及以上",工作地点：上海市/上海市/静安区 恒基688广场23层MSL收起地图,公司简介阳狮集团,,3个月，一周，4天,
+https://www.shixiseng.com/intern/inn_x7qljxw173iy?pcm=pc_SearchList,飞书深诺,"岗位职责*：
+1.加入项目，与其他项目成员一起完成广告搭建
+2.日常对广告投放数据进行整理、分析、汇报
+3.利用公司创意平台找寻找广告素材灵感，分析竞品素材，归纳出本地化/不同媒介/不同产品的创意迭代方向
+4.积极参与项目广告投放文案脑暴，输出吸睛文案
+
+岗位要求*：
+1. 正在就读广告、传媒、市场营销专业的大学本科或研究生学位 
+2. 英语六级，有海外留学背景或具备良好的英文书写能力者优先（阿拉伯语专业加分）
+3. 对于海外媒介有了解的优先，且有意向往海外媒介学习和发展
+4. 每周可出勤三天及以上，实习期三个月及以上
+5. 认真细致，有项目owner意识，任务交付质量和结果为导向 
+
+能力要求*：
+1. PPT能力（擅长快速PPT制作，美化）
+2. 逻辑思维（逻辑思维清晰，对于数据敏感，具备基础的数据统计分析能力）
+3. 学习能力（能够熟练掌握海外社媒广告原理和账户操作）
+4. 执行能力（理解客户需求，根据客户需求提供服务并持续跟进确保问题解决）
+5. 协作能力（具备团队合作精神，能够在多任务环境中工作）",工作地点：上海市/上海市/长宁区 大虹桥德必WE收起地图,公司简介飞书深诺,,三个月，三天,本科
+https://www.shixiseng.com/intern/inn_rvbi1od82pq8?pcm=pc_SearchList,地平线,"岗位职责:
+1、负责ADAS、城区/高速NOA场景下的感知算法研发，包含交通灯、标识牌检测等空中要素检测工作;
+2、探索2D\3D的检测，以及时序和多传感器融合算法；
+3、负责核心算法或模型的原创设计以及工程化落地，如模型优化、评测体系化构建、case选代等;
+4、掌握教据挖掘、标注、训练、部署及badcase回归等闭环链路，并伴随业务开展持续优化:
+5、掌握通过数据闭环持续迭代模型的能力;
+任职要求:
+1、计算机视觉、模式识别、机器学习、电子信息、机器人等相关专业的硕士/博十在读；
+2、熟悉主流深度学习算法，精通一/多个领域，包括但不限于目标检测、分割、跟踪、多任务学习、立体视觉等领域，有计算机视觉、模式识别领域顶会，（CVPR/ICCV/ECCV/ICML/NeurIPS）或顶刊（TPAMI/IJCV/TIP）作品者优先，顶级学术比赛获奖者或实际工程项目经验者优先；
+3、掌握一种以上的深度学习训练框架(Pytorch,MXNet,Tensorflow...)
+4、深入了解数据结构、算法、代码优化和大规模数据处理等相关知识;
+5、精通 C/C++ 或 Python 编程，有ACM经验者优先",工作地点：上海市浦东新区申江路5005号楼1号楼3楼收起地图,公司简介地平线,,,硕士

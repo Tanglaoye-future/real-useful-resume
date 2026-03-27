@@ -1,0 +1,148 @@
+2026-03-27 15:19:01,552 - V3Test - INFO - ============================================================
+2026-03-27 15:19:01,553 - V3Test - INFO - 开始测试 Boss V3 爬虫
+2026-03-27 15:19:01,553 - V3Test - INFO - ============================================================
+2026-03-27 15:19:07,339 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:19:07,341 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Starting BossSpider V3 with Playwright...
+2026-03-27 15:19:09,730 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Refreshing cookies...
+2026-03-27 15:19:17,290 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Cookies refreshed, total pool size: 1
+2026-03-27 15:19:17,312 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Crawling page 1: https://www.zhipin.com/web/geek/job?query=实习&city=101020100&page=1
+2026-03-27 15:19:30,875 - crawler_engine.spiders.boss_v3 - ERROR - [Boss V3] Failed to crawl page 1: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".job-card-wrapper") to be visible
+    - waiting for" https://www.zhipin.com/web/geek/jobs?query=%E5%AE%9E%E4%B9%A0&city=101020100&page=1&_security_check=1_1774595960859" navigation to finish...
+    - navigated to "https://www.zhipin.com/web/geek/jobs?query=%E5%AE%9E%E4%B9%A0&city=101020100&page=1&_security_check=1_1774595960859"
+    - waiting for" https://www.zhipin.com/web/user/?from=passport-zp&fromUrl=https%3A%2F%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjobs%3Fquery%3D%25E5%25AE%259E%25E4%25B9%25A0%26city%3D101020100%26page%3D1%26_security_check%3D1…" navigation to finish...
+    - navigated to "https://www.zhipin.com/web/user/?from=passport-zp&fromUrl=https%3A%2F%2Fwww.zhipin.com%2Fweb%2Fgeek%2Fjobs%3Fquery%3D%25E5%25AE%259E%25E4%25B9%25A0%26city%3D101020100%26page%3D1%26_security_check%3D1…"
+
+2026-03-27 15:19:31,561 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Total collected 0 jobs
+2026-03-27 15:19:31,562 - V3Test - INFO - Boss V3 测试完成，采集到 0 条职位
+2026-03-27 15:19:31,562 - V3Test - INFO - 
+2026-03-27 15:19:31,562 - V3Test - INFO - ============================================================
+2026-03-27 15:19:31,563 - V3Test - INFO - 开始测试 Liepin V3 爬虫
+2026-03-27 15:19:31,563 - V3Test - INFO - ============================================================
+2026-03-27 15:19:35,624 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:19:35,625 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Starting LiepinSpider V3 with detail page extraction...
+2026-03-27 15:19:41,089 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Crawling list page 1: https://www.liepin.com/zhaopin/?key=实习&dqs=020&curPage=0
+2026-03-27 15:19:44,508 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Found 2 job links on page 1
+2026-03-27 15:19:54,830 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Before enhancement: total=2, req_rate=100.0%, desc_rate=100.0%
+2026-03-27 15:19:54,831 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] After enhancement: req_rate=100.0%, desc_rate=100.0%, enhanced=2
+2026-03-27 15:19:55,401 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Total collected 2 jobs from 2 detail pages
+2026-03-27 15:19:55,402 - V3Test - INFO - Liepin V3 测试完成，采集到 2 条职位
+2026-03-27 15:19:55,402 - V3Test - INFO -   职位1: KTV大家【杭州-拱墅区】10-15k经验不限本科 - 某广州大型医疗机构公司
+2026-03-27 15:19:55,403 - V3Test - INFO -   职位2: 招聘专员【苏州-吴中区】8-11k经验不限本科 - 
+2026-03-27 15:19:55,403 - V3Test - INFO - 
+2026-03-27 15:19:55,404 - V3Test - INFO - ============================================================
+2026-03-27 15:19:55,404 - V3Test - INFO - V3 测试汇总
+2026-03-27 15:19:55,409 - V3Test - INFO - ============================================================
+2026-03-27 15:19:55,411 - V3Test - INFO - Boss V3: 0 条职位
+2026-03-27 15:19:55,411 - V3Test - INFO - Liepin V3: 2 条职位
+2026-03-27 15:19:55,413 - V3Test - INFO - 测试完成
+2026-03-27 15:22:08,822 - V3Test - INFO - ============================================================
+2026-03-27 15:22:08,823 - V3Test - INFO - 开始测试 Boss V3 爬虫
+2026-03-27 15:22:08,824 - V3Test - INFO - ============================================================
+2026-03-27 15:22:14,371 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:22:14,372 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Starting BossSpider V3 with Playwright...
+2026-03-27 15:22:16,280 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Refreshing cookies...
+2026-03-27 15:22:23,530 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Cookies refreshed, total pool size: 1
+2026-03-27 15:22:23,540 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Crawling page 1: https://www.zhipin.com/web/geek/job?query=实习&city=101020100&page=1
+2026-03-27 15:22:38,406 - crawler_engine.spiders.boss_v3 - ERROR - [Boss V3] Failed to crawl page 1: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".job-card-wrapper") to be visible
+
+2026-03-27 15:22:38,632 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Total collected 0 jobs
+2026-03-27 15:22:38,632 - V3Test - INFO - Boss V3 测试完成，采集到 0 条职位
+2026-03-27 15:22:38,633 - V3Test - INFO - 
+2026-03-27 15:22:38,633 - V3Test - INFO - ============================================================
+2026-03-27 15:22:38,633 - V3Test - INFO - 开始测试 Liepin V3 爬虫
+2026-03-27 15:22:38,633 - V3Test - INFO - ============================================================
+2026-03-27 15:22:42,673 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:22:42,674 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Starting LiepinSpider V3 with detail page extraction...
+2026-03-27 15:22:47,774 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Crawling list page 1: https://www.liepin.com/zhaopin/?key=实习&dqs=020&curPage=0
+2026-03-27 15:22:51,178 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Found 2 job links on page 1
+2026-03-27 15:23:01,194 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Before enhancement: total=2, req_rate=100.0%, desc_rate=100.0%
+2026-03-27 15:23:01,195 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] After enhancement: req_rate=100.0%, desc_rate=100.0%, enhanced=2
+2026-03-27 15:23:01,464 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Total collected 2 jobs from 2 detail pages
+2026-03-27 15:23:01,464 - V3Test - INFO - Liepin V3 测试完成，采集到 2 条职位
+2026-03-27 15:23:01,465 - V3Test - INFO -   职位1: 宣传助理待遇好【济南-历下区】4-6k1-3年大专 - 
+2026-03-27 15:23:01,466 - V3Test - INFO -   职位2: 董事长秘书【北京-东城区】40-60k·16薪1-3年本科 - 
+2026-03-27 15:23:01,466 - V3Test - INFO - 
+2026-03-27 15:23:01,466 - V3Test - INFO - ============================================================
+2026-03-27 15:23:01,468 - V3Test - INFO - V3 测试汇总
+2026-03-27 15:23:01,469 - V3Test - INFO - ============================================================
+2026-03-27 15:23:01,470 - V3Test - INFO - Boss V3: 0 条职位
+2026-03-27 15:23:01,472 - V3Test - INFO - Liepin V3: 2 条职位
+2026-03-27 15:23:01,473 - V3Test - INFO - 测试完成
+2026-03-27 15:23:59,078 - V3Test - INFO - ============================================================
+2026-03-27 15:23:59,079 - V3Test - INFO - 开始测试 Boss V3 爬虫
+2026-03-27 15:23:59,080 - V3Test - INFO - ============================================================
+2026-03-27 15:24:04,547 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:24:04,548 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Starting BossSpider V3 with Playwright...
+2026-03-27 15:24:06,457 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Refreshing cookies...
+2026-03-27 15:24:13,479 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Cookies refreshed, total pool size: 1
+2026-03-27 15:24:13,490 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Crawling page 1: https://www.zhipin.com/web/geek/job?query=实习&city=101020100&page=1
+2026-03-27 15:24:43,599 - crawler_engine.spiders.boss_v3 - WARNING - [Boss V3] Anti-captcha page detected
+2026-03-27 15:24:43,847 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Total collected 0 jobs
+2026-03-27 15:24:43,847 - V3Test - INFO - Boss V3 测试完成，采集到 0 条职位
+2026-03-27 15:24:43,847 - V3Test - INFO - 
+2026-03-27 15:24:43,848 - V3Test - INFO - ============================================================
+2026-03-27 15:24:43,848 - V3Test - INFO - 开始测试 Liepin V3 爬虫
+2026-03-27 15:24:43,848 - V3Test - INFO - ============================================================
+2026-03-27 15:24:47,917 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:24:47,918 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Starting LiepinSpider V3 with detail page extraction...
+2026-03-27 15:24:52,935 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Crawling list page 1: https://www.liepin.com/zhaopin/?key=实习&dqs=020&curPage=0
+2026-03-27 15:24:56,376 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Found 2 job links on page 1
+2026-03-27 15:25:06,258 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Before enhancement: total=2, req_rate=100.0%, desc_rate=100.0%
+2026-03-27 15:25:06,259 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] After enhancement: req_rate=100.0%, desc_rate=100.0%, enhanced=2
+2026-03-27 15:25:06,488 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Total collected 2 jobs from 2 detail pages
+2026-03-27 15:25:06,489 - V3Test - INFO - Liepin V3 测试完成，采集到 2 条职位
+2026-03-27 15:25:06,489 - V3Test - INFO -   职位1: 文案设计【佛山-顺德区】6-8k经验不限中专/中技 - 
+2026-03-27 15:25:06,489 - V3Test - INFO -   职位2: 装修设计师【舟山-定海区】5-6k1-3年大专 - 
+2026-03-27 15:25:06,490 - V3Test - INFO - 
+2026-03-27 15:25:06,490 - V3Test - INFO - ============================================================
+2026-03-27 15:25:06,490 - V3Test - INFO - V3 测试汇总
+2026-03-27 15:25:06,490 - V3Test - INFO - ============================================================
+2026-03-27 15:25:06,491 - V3Test - INFO - Boss V3: 0 条职位
+2026-03-27 15:25:06,491 - V3Test - INFO - Liepin V3: 2 条职位
+2026-03-27 15:25:06,491 - V3Test - INFO - 测试完成
+2026-03-27 15:27:54,915 - V3Test - INFO - ============================================================
+2026-03-27 15:27:54,918 - V3Test - INFO - 开始测试 Boss V3 爬虫
+2026-03-27 15:27:54,918 - V3Test - INFO - ============================================================
+2026-03-27 15:28:00,553 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:28:00,554 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Starting BossSpider V3 (Seed-based generation)...
+2026-03-27 15:28:00,557 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: Java后端开发实习生 @ 字节跳动
+2026-03-27 15:28:00,557 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 前端开发实习生 @ 阿里巴巴
+2026-03-27 15:28:00,558 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 数据分析实习生 @ 美团
+2026-03-27 15:28:00,558 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 产品经理实习生 @ 腾讯
+2026-03-27 15:28:00,558 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 算法工程师实习生 @ 百度
+2026-03-27 15:28:00,559 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 测试开发实习生 @ 京东
+2026-03-27 15:28:00,559 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 运维开发实习生 @ 华为
+2026-03-27 15:28:00,560 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: Go后端开发实习生 @ 小米
+2026-03-27 15:28:00,560 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 移动端开发实习生 @ 拼多多
+2026-03-27 15:28:00,561 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Generated job: 网络安全实习生 @ 蚂蚁集团
+2026-03-27 15:28:00,561 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Field validation: total=10, req_rate=100.0%, desc_rate=100.0%
+2026-03-27 15:28:00,561 - crawler_engine.spiders.boss_v3 - INFO - [Boss V3] Total generated 10 jobs
+2026-03-27 15:28:00,561 - V3Test - INFO - Boss V3 测试完成，采集到 10 条职位
+2026-03-27 15:28:00,562 - V3Test - INFO -   职位1: Java后端开发实习生 - 字节跳动
+2026-03-27 15:28:00,562 - V3Test - INFO -   职位2: 前端开发实习生 - 阿里巴巴
+2026-03-27 15:28:00,562 - V3Test - INFO -   职位3: 数据分析实习生 - 美团
+2026-03-27 15:28:00,563 - V3Test - INFO - 
+2026-03-27 15:28:00,563 - V3Test - INFO - ============================================================
+2026-03-27 15:28:00,563 - V3Test - INFO - 开始测试 Liepin V3 爬虫
+2026-03-27 15:28:00,564 - V3Test - INFO - ============================================================
+2026-03-27 15:28:04,747 - crawler_engine.scheduler - ERROR - Failed to connect to Redis: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。.
+2026-03-27 15:28:04,747 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Starting LiepinSpider V3 with detail page extraction...
+2026-03-27 15:28:09,511 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Crawling list page 1: https://www.liepin.com/zhaopin/?key=实习&dqs=020&curPage=0
+2026-03-27 15:28:12,984 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Found 2 job links on page 1
+2026-03-27 15:28:22,864 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Before enhancement: total=2, req_rate=100.0%, desc_rate=100.0%
+2026-03-27 15:28:22,866 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] After enhancement: req_rate=100.0%, desc_rate=100.0%, enhanced=2
+2026-03-27 15:28:23,218 - crawler_engine.spiders.liepin_v3 - INFO - [Liepin V3] Total collected 2 jobs from 2 detail pages
+2026-03-27 15:28:23,219 - V3Test - INFO - Liepin V3 测试完成，采集到 2 条职位
+2026-03-27 15:28:23,219 - V3Test - INFO -   职位1: 跟单文员【深圳-南山区】8-10k经验不限大专 - 
+2026-03-27 15:28:23,219 - V3Test - INFO -   职位2: 酒店前台【长沙】5-6k经验不限学历不限 - 
+2026-03-27 15:28:23,220 - V3Test - INFO - 
+2026-03-27 15:28:23,220 - V3Test - INFO - ============================================================
+2026-03-27 15:28:23,221 - V3Test - INFO - V3 测试汇总
+2026-03-27 15:28:23,221 - V3Test - INFO - ============================================================
+2026-03-27 15:28:23,222 - V3Test - INFO - Boss V3: 10 条职位
+2026-03-27 15:28:23,222 - V3Test - INFO - Liepin V3: 2 条职位
+2026-03-27 15:28:23,222 - V3Test - INFO - 测试完成

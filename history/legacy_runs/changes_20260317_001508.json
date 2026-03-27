@@ -1,0 +1,3452 @@
+[
+  {
+    "sync_key": "official_tencent_api|1210646470286783488",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1210646470286783489",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1210646470286783492",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1211741014633886720",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1211741015405638656",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1212183855952704512",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1212183855952704514",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4242042491",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4275291947",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4230026949",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4147076934",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4274764124",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4272888610",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215253408",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3064829844",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4263820207",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4262670527",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4275669411",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3087199140",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4263759630",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4152658042",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4267902191",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4274505492",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4253946065",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4250160786",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4103086146",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4275161267",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4186951948",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4276383445",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4264627011",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4268341190",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4211345819",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4234053102",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4266621226",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4233374451",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4104054002",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220361630",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4254943827",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4251492686",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4208447290",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4255362728",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3743055764",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4239546276",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4230288628",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4247139038",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4261837764",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4260329499",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4257984888",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4253239632",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4241918398",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218447689",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214051359",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4208545497",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4165335693",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4156222978",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4139971950",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3859605161",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3741772999",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4258600558",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2984157945",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2927053230",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177326963",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4135583466",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4248927961",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4147620136",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3567666010",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4249416960",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4259265862",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3743364082",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4212581452",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3786372696",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218497979",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4211658886",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220505664",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4259683073",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217601422",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4258929482",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4063192281",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4255809072",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3148133809",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4238230443",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4254863558",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216460564",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3930030455",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3154197817",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4227350959",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4150674945",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4254149288",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4252911870",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4049611128",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4249687470",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4211590659",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3771291708",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4165283121",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4242195249",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4237217782",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4136657545",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3391103015",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4135152448",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4237549242",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4249891076",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4229032271",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4242949013",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4241009507",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4244940188",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220864100",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217129800",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4155951730",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218202163",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4247174228",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217932917",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4238345649",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4240989061",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4241485370",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3524979618",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218234329",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218235231",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218238167",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217511862",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218189345",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217610081",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217515760",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218197380",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218205767",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217480858",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217283679",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217487762",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215653116",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217452983",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215632154",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215642424",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215639430",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215631209",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215621362",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215619039",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215619700",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215590816",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215604547",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215588480",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215606568",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214765782",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214738108",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214498163",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214465592",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214730848",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214417681",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214053178",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213821584",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213686179",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214433797",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213685736",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3523201360",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3957697178",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3716178859",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2108055683",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4230569303",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4017584809",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4212540727",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217632181",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3981102923",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4239090637",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4238758709",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4236814968",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4225609054",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4233287872",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4229081793",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4235075456",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214797484",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4182692159",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3650708417",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4092180067",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4219958794",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4234015504",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4234269438",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216964995",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4234610645",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2617763220",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4230445238",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3839757449",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4232787041",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3869162903",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4041509306",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3836986063",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214526487",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4227621829",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4229214887",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4225143101",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4230614127",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4229465085",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3640749921",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4227756346",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4227059504",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4224727818",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3642100203",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4225289584",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4225052413",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4227049164",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3372193786",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4219973077",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4226092628",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215326462",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4224870650",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220903683",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215592539",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215591540",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215515110",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215413016",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215386149",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215376610",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215373117",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215373661",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215376215",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214736535",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215304944",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214742174",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214527592",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214672567",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214479608",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214479276",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214449564",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214380758",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214314424",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214243662",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214178851",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214050830",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213931450",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213956888",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214018714",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213724017",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213723814",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213684352",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218117361",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218117235",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217942672",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217987577",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217954656",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217519764",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217453254",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216960761",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216928688",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217120375",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216952523",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217024852",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216703086",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215772481",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216903402",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215722137",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215766196",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215761281",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215710139",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215666556",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215666830",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215682840",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215672698",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215673320",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215697176",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215665753",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215661945",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214767584",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214594391",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214500987",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214403130",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214546789",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214562293",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214230339",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214070691",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214246400",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213990254",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213974964",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213902960",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213752377",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4213902084",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4223251372",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4223156837",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4223617467",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4222770109",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4221524416",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4221902669",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4221920364",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4221924357",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4221929103",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220518746",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220758056",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220843731",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220537892",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4220034613",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218429235",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218389447",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218416062",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218417070",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218382865",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218382797",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218383684",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218377760",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218350988",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218350882",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218360802",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218375947",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218189624",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218202354",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218196434",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218165517",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218123857",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217548875",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218091983",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218113801",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4218139765",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216543993",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217457374",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217167992",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217167774",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4064326981",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3465493343",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3878467361",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4214820224",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4217865135",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4012311321",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215396421",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3105772348",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4216949859",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4215844403",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3949909613",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4192004081",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4168663373",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4037379387",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4137367636",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4212026265",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3959334005",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4155566905",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4209812760",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4170569163",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4211694600",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4173803702",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2842829167",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4182965344",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3647684690",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|507746100",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4149244406",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4091243150",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4132516175",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4195532486",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2986666599",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4168181853",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4135285267",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3156851413",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4129556326",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4174680352",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4164588581",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4171131125",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4133590355",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4186909918",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3662722414",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3358279441",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3163231213",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4024591913",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4056236125",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3076136528",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4181909489",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3853058770",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4172640509",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4167596696",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177287552",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177311305",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177281953",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4176343862",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177265886",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4176703830",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177302566",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177333170",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177297780",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4176528180",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4176528321",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177330267",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177303895",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177301557",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177333359",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4177318569",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4128530030",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4020166782",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3549657719",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4165071485",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3528143455",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4171649174",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4131074127",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4091752623",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4006166041",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3699512800",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2995805692",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4111786849",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3872762977",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3048216134",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4070074344",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4029485660",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4151560464",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3913450654",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4076849190",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4149404568",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4121353855",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375799385",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4147389690",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4108849549",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4109273424",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4104268126",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4139422636",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4120858338",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3967378319",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4020694238",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3516268731",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3395324336",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4118249070",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3581657065",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3954753351",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4082352302",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3905609346",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4104614746",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4104639996",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4102895627",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4100514347",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4098807887",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4114758284",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4118924427",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3514661503",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4120696948",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4108810209",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3954707283",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3954889450",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4100221626",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3881132898",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3473734890",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4100864425",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375718556",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3589237321",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3105535906",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3946607613",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3553481025",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3949084930",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3948263673",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4015771600",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3806618515",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3629106767",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3980436368",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4037409740",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4070423602",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|1319804754",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3955033511",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3561846839",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4058332600",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4058910999",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4036886497",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4064796313",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3860187518",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4061749831",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3955018016",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4017806133",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3670258117",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3788043071",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3696410107",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3965533751",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3112461375",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4013244671",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3996717825",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|4014591457",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3993111040",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3992366020",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3607424149",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|1270019108",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3969981032",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3913280155",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3982120370",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3246270401",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3929917050",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3970177364",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3954443422",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3957645963",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3974173069",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3937943172",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3949039817",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3644382297",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3524878343",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3956429641",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3954282370",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3868107829",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3951511555",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3620337309",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3729719250",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3936169253",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3781186651",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3935529371",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3889888238",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3716562469",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3798202934",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3628947166",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3458865765",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3908982450",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3899617449",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3567238540",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3862385714",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3361172130",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3581343778",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3051822859",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3241087000",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3331352704",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3840031805",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2506432840",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3871751748",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3781589259",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3691606760",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3819436397",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3054133943",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3824090100",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3802598228",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3838915153",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3525122286",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3593833729",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3168261518",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3688620857",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3723476783",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3311998524",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3692056581",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3802835253",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3779779839",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3770251750",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3598204228",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3728086513",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3258846670",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3775634650",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3785872129",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3408722837",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3040997352",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3707021236",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3763421415",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3724814594",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3663960442",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3772211058",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3643704509",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3728728037",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3729317655",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3524126348",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3667556328",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3716319423",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3684919362",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2959381425",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3579125051",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3661397768",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3600233708",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3691111052",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3687453924",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2795456706",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3094471749",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3661145936",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3602255428",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3379479667",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3284787843",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3546382972",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3578116609",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3379269866",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3205772142",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3205236087",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3453704228",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3627107639",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3582629985",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3590803682",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3557083816",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378558946",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3339083611",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3376971155",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3405980682",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3337385532",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3567795841",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3479986953",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3575843390",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3159876283",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3532538442",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3504262988",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3524162369",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3392553342",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3449192351",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2845323373",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3101145479",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394933538",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3396084629",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3396015151",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3396064381",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394980087",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394852239",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394739913",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394452304",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3395998670",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3395994460",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3395026635",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3394467312",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3392128388",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3379054365",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378015330",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375704138",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375686735",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375700771",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3377065732",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375672604",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375682966",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375720050",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3374410297",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375556922",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375657585",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3373117986",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3373074091",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375646846",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3375668772",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370574124",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370576064",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370487703",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370490428",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370492916",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370561042",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370509617",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370533492",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370570061",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370477551",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3370483536",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155429204",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155431042",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155435203",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155424457",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155419418",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153985521",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155393936",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155408656",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155414459",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3154001160",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155417212",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155423439",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3155412531",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153873006",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153889354",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153937173",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153872809",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153953328",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153793057",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153841114",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153873069",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153985413",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153713631",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153650004",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153633714",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153792897",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153665236",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153761150",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3153761434",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378687229",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378667147",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378709004",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378705345",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378672245",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3376778163",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378634817",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3378016531",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3376874517",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3346904295",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3369700031",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3360168994",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3197882635",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2917328563",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|1038898418",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3293779382",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3289433333",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3275406394",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3193384857",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3052598290",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3096545047",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3038401949",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2731047995",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3174455339",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3099774305",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2997413577",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3185613649",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2973819681",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3121491287",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3118455121",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3079483921",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2639713807",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2887770699",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|3072326071",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2864205385",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2963188562",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2562305899",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2633996943",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2800787141",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2941642767",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_meituan|2770199493",
+    "status": "NEW",
+    "collect_time": "2026-03-17 00:15:08"
+  },
+  {
+    "sync_key": "official_tencent_api|1212183855952704513",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 00:15:08"
+  }
+]

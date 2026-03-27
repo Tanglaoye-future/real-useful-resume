@@ -1,0 +1,427 @@
+[
+  {
+    "sync_key": "official_tencent_api|1226957086077102080",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11609",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11613",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11599",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19670",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19668",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19667",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4213953231",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4153278760",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4274505492",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4253946065",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4250160786",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4267902191",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4217610081",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4214243662",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|3375668772",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|3155393936",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|3155423439",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|3153665236",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27305",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27303",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27301",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27299",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27297",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27295",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27293",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27291",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27287",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27283",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27279",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27268",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26977",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26981",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27012",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27008",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27006",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27004",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27001",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|27000",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26997",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26995",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26993",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26992",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26989",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26987",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26986",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26984",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26980",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26976",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26974",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26972",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26969",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26964",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26963",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26957",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26954",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26951",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26950",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26948",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26943",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26940",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26936",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26933",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26932",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26927",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26924",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26920",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26917",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26914",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26911",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26908",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26903",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26902",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26897",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26894",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26892",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26889",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26886",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26881",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26878",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26875",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26872",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_bilibili|26867",
+    "status": "NEW",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4214500987",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 17:25:03"
+  },
+  {
+    "sync_key": "official_meituan|4177281953",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 17:25:03"
+  }
+]

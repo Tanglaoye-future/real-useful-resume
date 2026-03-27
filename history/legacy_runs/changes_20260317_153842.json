@@ -1,0 +1,1522 @@
+[
+  {
+    "sync_key": "official_tencent_api|1211741035269862400",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1226671880397034496",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1226671919517307904",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1150109729725632512",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1150109730677739520",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1210646470286783488",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|1224696384415040512",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|2033745249712631808",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_tencent_api|2033745245438640128",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|12300",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|12304",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|12303",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|12302",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11346",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|9763",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|9805",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11155",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|12311",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19663",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19660",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19659",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19655",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19657",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19656",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_xiaohongshu|19654",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4279067934",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3992877820",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4127706263",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4276546803",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4277215390",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4278827256",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4276434106",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4264602795",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|2108055683",
+    "status": "UPDATED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4215642424",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3370509617",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3370533492",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3153872809",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|cac1dddb3b6830a45370341b3ef8b90a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|806ceb172ed2afb329290783382b8bda",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|24712e1ec105cbc1b17bba8a06eb28e1",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3a2d783311e658f0ebb08c2a1815adae",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6e2cbe7798737dc24075a4486a1fea11",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9343556b921ceae66a4f30f582f834a0",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ef0e2edbd3265f0483e8777a3f32473b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9b02509ea79344ee5a49f4918d58cc60",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2bdbc124da2585ad0fb79af24c601bc3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c3435f84394f191fe57de30d1b9386d2",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|7bfe23767bd9f37ba5f856ffbe111d54",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5bb79894fe7d45ae5bb61f25f4ff7741",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1d492130da37a5bd24e784743887ddbf",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|984f48a1f00ba157633bba8836c2111d",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b66353f8f86d3be794d850c63fdb4bbe",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5bcbbad1e44eec433cc387e33f84e92b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5150e08a92b8f85d650256871210d97b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|73944e1f4e7adf980cdf0d638fe72825",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c8797a67f8095864e2c7883ac8f82251",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|03bfa588f1569f1f68442c8b72069d1c",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|17d875c7b63475ff34a723d67cb2d6cd",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|abbe53ea198f47f4e446732808294754",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|cf1f1d27e8fb444f41f5c96fa274eaf7",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d25a0128e4fc4358ef668d4e2d0e16b6",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e787230973bc5879c83391830cb0fb6f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ee017a5f6e3e6ce3a10950536f961a74",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5966c2bf4661f833efeefde30f5e9013",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f00577b9f769086b54c132c052231d1d",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e11a93c69084ffc8ac7c2024dab0ad19",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fdfc9275fcaf61ed45e85445a01f0e9f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1cace3f1038249d61af05c1a5d0c659d",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8fce9bb7a4f2e94f152c94dcf4181972",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3dbe593d360423e2ff525885110646cc",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a8300b1cf3e10f22336e0006e6408937",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|68ed407860fa557c1945f9acc724d861",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3ea56b9bc6ba487d787b7cf0a1ebfaa5",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4b54727772a72107b53acc043bb088aa",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2383792f8ac26878ee13cd689cf5ff37",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8b83a23c4c2a78745c73a7f99ae13227",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|cbf2632f5359f4b12d0306d31a73723f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|af01d23cca93f19bb91f73c85fb5993a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|0037ced00995f792514ca216ee6a942f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a364fe9f13dd973ec73314564cac3a74",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3b891adfe219777e53f28f339cc9814b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|332da201b87b62c744caebfc3eb51668",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fdf1c76e44151fff37bc90c5ae96e8c3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f12a620aad2d2158c1201c7849c1c9f1",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3d2fedcfac546c299c409977b87425d1",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6aeaa07503d44ed10b99d281680934e0",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|47b05ecb862301eb136bf4f8165d5d56",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2df36ef1308f15b6762c45379f239cbe",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fcea9d218bd8404fbbc9a98e1761f67c",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e01d043ed64223c24e8acff58cd5ad8e",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b7b4ad2cc5efabd595d31b4bfe59d2ec",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d27d2f99a02e3019d0d55ad407afb9ea",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|7de4fecef628da8272db009297b91968",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|90c7a26c7e39dd7d4cac8db2e62b3fad",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c393cafbab71d4738f4b73ae678d8cd3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5f6a8a63cd725bf501ac4314749b7b29",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|79c9658e6b7c32c39b386050bbd0cfb9",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|980e961f7743657c6ed3703edbb2eefd",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|372a3482cc936352d2a9e07b0dccfee7",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fa88c796d0cb166b1ed1380d2e969ee4",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1aabfb943518cd7106ec0c01103b11ce",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|41b87e90e824f32979e51ee98e57952b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fb095ebacbcb59e06be010fc0182efa3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1b6925ce730f6a0ca30d323f66b0a43a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b89b7f564cc75c5d956a1ac8b8643fed",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|30a718e9b7d7c9fb53f479d6fe7b99d3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5a4e70c7ea0e1a3ad4a252b28155a34a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|060b9ea9285c4c7bf29fad34cbf64a7b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6a841e92419b05ec97a36c4a52660aca",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ab6aa5ce72f839ec00481f58a2f1d897",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|31db45633d5486f1c0f20e604b010c62",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c7adce78e091919edec2a6829aa4a895",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5880f8b564ca266c32f57047e5e0864c",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c37ca9c2670691f8bd8dc82b3bffc86f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|bed7a5416a2972c15e3d90814319c208",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d61503e3c73899423abf33571b6d3752",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|369127b36e7abd8c0cf74ebb2c8c102a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|77b009d8988f42300739b3f697a04336",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|84a92a8bd166b250041c45bc7ceadeb3",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|726548085cdce003e3c776bffaa07246",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8f85fead25179114d3b2494ba7848766",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f8c2607c706ab4007825d62fd0cdd9c9",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d09ff5424fddc73e78c42cc0d05574ea",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|467b29e723476d1af5c28eaa5649c3e9",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|0c0bf7ec5492c156a6ab68b3709ff977",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|03bef9447c25da268f9f9e16f97f12bc",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|388bb7f64bcb1449e142a69b6890761a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e842975bf8d2d080bb3de17eaaf9bdc7",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|de51dc81dba0b66302c74c30974c2997",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|102c4a5854692ec0cff6a3c99c1ba0be",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|126dca80b7b9889e9c8f83c908e432e5",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|15100ee263e37c28d04baf1bfbcd41f6",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fa810f8523f0d225e82549abc44ad109",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8ae4428222f6d2655d449d251cb76dcc",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|755a92192f778af73f9c500c202fbc63",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2282b86de60192401341d1ab7da14a5a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9a93df5d7c93ef61233b7ad35fef3475",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|966d7b9324e56c06ab223ac1b001bb3e",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|84182dc38dcd36bc0e570fc98c334986",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|45a808c3eaeebc6217372e9d5a4d6e4b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a8ca259e39951b4e026995a651f38c35",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|78cc7cfdc2d45226f08bb50d9c4c133b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ad33c09456e6c709780f7d55cb965b6f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4f99950a406d0d152dbfb3a3dc273f1f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|bf6d637838f871d0a836ed84bef330d2",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1e55c27b9b041608996a8fc1bd5d0074",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a9234aa91cad6f89248a1967d87bf3cb",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|0f8d4e22f2a53674625b7a801b819864",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ddb42a60cc657b521bd2dc2e5a4d5f85",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e4572638833121db56215ba4d1fcf7e2",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4ec8b81d60c637def73c80bfc97e9080",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|114f8d1721fb35a7165085acca31560f",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6746876602ff8b9bc00fe13330dea613",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a35d3484840142ec9794586db4fa9660",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|30de2a1a5c104c101fa8177c1b9101e1",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|eb272348e88cb29b6e30d582cc0f5cd6",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|cc70c7092123fa7824ec40e7c845c4a1",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2e277255eb8df120647d70bc4c3b521e",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c87f72fd9e713cedba6bf89907994e10",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6dca68c45d56e84e160fa7e9c5e0b3bd",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|47dc4f566da98894d37de3a2dbe4849b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d6f0293b98447a731db04ca82b0ef84a",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a42e93a22a0f5d505d4c33aa3dfd4073",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4feba8ddc47aabd4ba12b4196f17523b",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a08aca08a5b60dc813d23052b45d74fa",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fac0f60da5e029c35ff17ae500eb6bea",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|328fcc3b4ed6a2017276ae55c68aade9",
+    "status": "NEW",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|11219",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_kuaishou_api|9583",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|4218205767",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3959334005",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3153985521",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_meituan|3154001160",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f33ff12e9911247e979b7051d1fa3ffa",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c153d83d01b7db8aad94bde6cad425e0",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|38795b0db1780eb646e1ec71372e9fcf",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5a70267a1f3de4cf2e920dba1fb8b64e",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|512be83bb46daa35982d101e715aabfa",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|aec5e836eb77fb0cdc321111554ce696",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|167a79c827b4e99c38a722aedb6f9de8",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b3777002450a44751b7ec432e20658c9",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|683baf44bc7c69736824be8961bcc414",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|70cc0d8901142a34abf55cbd1a8f6b0f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8a7bcbe9b2ae859d35598e693cf7cfbb",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|bb3385e28c09efad0e59f2eaaa190132",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|62594e90df571fdf9da3aca9623951f9",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|27d6280b7ff2275a42747cb9880450fd",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|365f3d25cbc9e8de24b3835d220b775e",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5506e23f6cc6584afd24f920f060696c",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b5cd7ad6887db7acfc96725e9d4dc4c3",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5253461d52f2b7b7f3b304574018f1db",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c22926a99124ba54d0dc12090d507db7",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|41858a83414b5682bb1e98d0e91a4352",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c12ebb0fe6cb92c5545451724e16dd96",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|63571c30a2e838bf312d9428b9d12f56",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b7af9bc56073e22cd4bf8ec676563cdf",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|0913501e29c3b57f2e8e314c32bebb69",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|d61dc3cb89996f6a5cd7be98481a1572",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8d5f0c2a295bf7983464f7a32bce7106",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f9f5ea6e1595d48a815b1d01a7981c95",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e12262780a4c8ff990938253e1e94dc1",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|501c619d8e01a05591da34c7e4e7b7ee",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9f5bed125687b6e19cfad77407837179",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|642e9a4e103832b51890deea94d3cd38",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a4645d696c535da523af6e1d60645022",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1b404c4e10db515bd5c25c1158841e0b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|05e70e6e1d3378d370c8ae1a1abd297c",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4d7bad43ce4fa43a234042f7478f232b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4b1bd90f853c03917972866c3a189a65",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|6af961371ded8d3aa844402df53cc049",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c1a6917ac85e16a28188288581fdc7ae",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c8ce44c6be1331a9a3f479605f5c4441",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f18540fd4959e49971c7f9b7d816e967",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|96cdb4d3f221dc55425a2c04a35376f2",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|898c40e78798673e36f7f6936923326b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|aac3475f859c56491b6ae0af0241027e",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|beaaf838ad09610f9956f0f0eb810f64",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2ea696101adc51585f4f99861ff15773",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|23e8a064533e7b1e5c89453b448cf16f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3b0f955b50db4cf2f502e072adfe49c8",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|009f5612433778ca387eb37e2210597b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5ac02c84ea132a8e382d6967427ff352",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|531df44c4768ede167c08371aaaf29f0",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f30d8622e5a9f08bb8c1bcc303ef8608",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|4896f6f3363512c18622a83ffb7f6566",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|634a2828afda48dd4e736652b0f981d8",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c29d2aa60cb6757860db995faaf3281e",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|7a74dbb4dba304915416d3c8f0438e2f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|cdace2fe9c96cc2f4124e4e56afd18cd",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|97a0665d0e1e784466db931c5a06ce6d",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|989b992d643da8a2d3b6066fc99ef529",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|16462383b010e9a4ea27e64ff24eb833",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ed27381a0135322544c9e34202ec6173",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|49f58e5e3a2a7366f929686ad9ae4bed",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f57c6aa4213b9f08ac36825fdf4d178a",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9e116536c0d828832d6261519fa609a1",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|75be9e12ce332158641d707d2542e002",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a63696606762b673c396605369fe2765",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|7f5d2d3cb67d254ea740f25edd394d4f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|16df4b53c13cfe5247b01c7a2ce5a3c8",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|91a9a07508a5fcbda45815e5fb591b27",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|af199a65378735390a1d8e1bde9c261b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8db72c8a15e8d9d70b768124cd064303",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1f7858f6bb7da89851453196589d8c72",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|64667b094f6d4aeefb22a61ccea28e14",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|22a28e3154b2886f7e3e1aff5b195ff7",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2db927d4e180a9554ccc2a8dbd0e8bb4",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f802178ab29e77401115fee9f78c16af",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|51399dc281eb2492eaafd9b183a59c36",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b6b302bf99a3f3496ffa788ea1d7bee0",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5fa9554d436687e341cb917e9fea4022",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c6f64354287569278027eff921a7b0e1",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|16b0b204ccf1ab8522d2bf388c915119",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|34cfe423f47f0775e885d9c44eb209f2",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|7fb6f47758589e1a1819bfad86b1ab76",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|43da44a38aa42f1489314b9e920e1b2f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|89c00d4984047587f7fab9c7be7ecaef",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|75abe36fa220b429fc908ddb03dec02c",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2a37d25f39329f6c44db1e2979b4e5d2",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|b8d4798efb2fd4e25e482842ef2691ae",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8d49e8297437928fddbd41f7d313fd1f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c76178302b63f940c9c6616dda11acd7",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9b93ff9ad65d4b7ad1546689264c49fa",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|076c311381983fcd9d64b5a58bb10d32",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|8bf46d2b7fd224321c01eacbb86c4976",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e55c3be7d93665703a614f098f6b084b",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|29ba8387eff392a6b7bbcbf0a82c3b13",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|23df6c58b2e59f6e2589f81adb068b24",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|12e082089867a8cac160551ac9feb3cf",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2c33abdc38dac6d1009618bfa8cc7a23",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|5eada19e2745890bfcb2716be9f6ee37",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e192a75cdcb08f40c7e55e7343afeb2e",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|09006509d08d40d5ea017a0c5036c52f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|dd2f6900b5634d4afc232d4e535f0e86",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|acc9e7f7fc1370618445c3387409ece7",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|21e9343a09d287883a042ad7a07f96e6",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|eb037e3e489881413a6ae1008a53084c",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ac630249cce61e1884a5419437a359d8",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f5de9cae7a29b158f5910689e1cc4030",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e218d83a644dc6d6c5c86a1fe772e41d",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|1ec230534f6d93b295ab3f42eb7615c4",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|64f0dc0615aa0eca7b259c22bb563b33",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|9c0c68d289a3e1a7e68bf464f6eaad0c",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|fc725481dc8d8fcfeb741ff3704d92cc",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|3b05fe99341ad2c7abce502e078657b9",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2337e6d12ef9c6020277fdafb7274712",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|db6f0e5ec4bc18f1f3d6c7e705432e47",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c32cc452f1f92c6349a56233fe4f363a",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|111b717e98b1283a5745b4eed5e61025",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|ededbf0060ccf927d4df3f54b54130b4",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|c7aba81995c51b59e8aa2132f01b2b45",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|60645fc9273ee4a080cf4f91b518a7e7",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|63dd75f5c545bc3ee95953b10970b2ea",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|97958d38a9c3b3455c935cdb5d63b630",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e199d0e5a3774f87e2d82e6fd58b2230",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|29c7f43762e43cb0180f8b05ed1a462d",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|02a0d92d7b04f7bd3401088f786c5a54",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|2ea505a8fa45a390134ac0cb8832ea97",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|f35f3843c11e7126881bd9ba6f040965",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|dd6052cac95978b9ca3aa175be870176",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|e58771e7b0578d836d0ef41c9bb4d493",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a715802c68fc7b97fe66e35d4314131f",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  },
+  {
+    "sync_key": "official_jd_api|a6320182adafa69253c7039da24775c5",
+    "status": "CLOSED",
+    "collect_time": "2026-03-17 15:38:41"
+  }
+]
