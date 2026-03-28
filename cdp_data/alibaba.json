@@ -1,0 +1,4784 @@
+{
+  "alibaba": [
+    {
+      "page": 1,
+      "items": [
+        {
+          "title": "AI应用算法工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540003?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agent Infra工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480006?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Infra工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540007?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI SRE",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480002?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI数据工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220056?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent优化工程师-训练/数据/评测",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500011?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI应用研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220038?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 广州 / 杭州 / 南京 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI安全技术工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903920067?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "3D重建大模型-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903780044?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "跨模态理解与视频生成处理-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903720035?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "items": [
+        {
+          "title": "视频编解码-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903800031?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AIGC数字人视频生成-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903740034?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "语音多模态-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903700038?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "风险合规专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200029?deptCodes=",
+          "details": [
+            "更新于 2026-03-20",
+            "风险管理类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大语言模型（代码研发 & 端侧模型）（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903720032?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-3D重建大模型（T-Star Lab）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903780042?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-跨模态理解与视频生成处理（T-Star Lab）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903800030?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-视频编解码（T-Star Lab）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903720033?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AIGC数字人视频生成（T-Star Lab）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903700036?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-语音多模态（T-Star Lab）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903740032?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "items": [
+        {
+          "title": "算法工程师-AI Coding",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903700008?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "风控产品策略",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903780043?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "风险管理类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "阿里云管培生-商业技术方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500014?deptCodes=",
+          "details": [
+            "更新于 2026-03-19",
+            "销售类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "风险策略运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180030?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "风险管理类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "iOS Client Engineer -Tokyo",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903660001?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Android Client Engineer-Tokyo",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903620002?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Product Operation Specialist -Tokyo",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903680001?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "运营类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Product Manager -Tokyo",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903680002?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "产品类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Designer-Tokyo / Hangzhou",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903660002?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "设计类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Infra软硬件结合开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903720027?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 成都 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "items": [
+        {
+          "title": "AI Infra硬件系统开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820063?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "信号完整性/电源完整性工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240026?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-强化学习",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180013?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大模型后训练 (Post-training)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240031?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-VLM训练",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180017?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agent自我学习进化与多Agent群体智能研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500015?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agentic训练与统一智能体演进研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460011?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "统一多模态大模型后训练算法研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460010?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态Search Agent研究&应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500016?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大模型预训练 (Pre-training)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220016?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "items": [
+        {
+          "title": "算法工程师-AI Agent",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260012?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-语音多模态大模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280011?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大模型应用",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240038?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向万亿参数大模型多层级kvcache存储系统研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520003?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "安全研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220004?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏Live2D动画设计",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240054?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏场景原画（国风）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280027?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏技术美术",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220040?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏UI设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280026?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏2D动作",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240053?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "items": [
+        {
+          "title": "游戏3D场景",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240052?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏3D角色",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280025?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏角色/场景原画（二次元）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220037?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏角色原画（国风二次元）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240051?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏场景原画（写实）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280024?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏角色原画（写实）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240050?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏动效",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280023?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏交互",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240049?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏交互（SLG）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240048?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "全球化电商推荐大模型 - 阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480014?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "items": [
+        {
+          "title": "全球零售经营 AI Agent 体系与商业应用架构 - 阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480013?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "全球化电商推荐大模型-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560018?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "LLM and Multimodal Post-training-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480017?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI芯片硬件系统设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420005?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI芯片DFX设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420004?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI SOC芯片设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903400002?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI芯片物理设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903380002?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 成都 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片框架开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360008?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI SoC芯片技术科学家",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360005?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大语言模型量化方法研发-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240074?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "items": [
+        {
+          "title": "推理引擎设计研发-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280049?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI技术服务工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180077?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "技术服务工程师-AI大模型/智算",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240082?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 厦门 / 上海 / 深圳 / 武汉 / 长沙 / 重庆",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "技术服务工程师-AI大模型/智算-香港",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560014?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "中国香港",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agent 全生命周期基建能力建设与应用- Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903840018?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "视觉生成模型的内生安全对齐与伦理约束机制研究- A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820019?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI安全算法工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903920015?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "云安全技术工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903920062?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "二进制转译关键技术研究与实现-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240070?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片软件工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903700006?deptCodes=",
+          "details": [
+            "更新于 2026-03-18",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "items": [
+        {
+          "title": "算法工程师-大语言模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220023?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-规划控制",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200015?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-医学影像",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大数据处理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "1688买家Agentic AI算法专家-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903860004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "1688AI大模型应用算法专家-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903900003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "1688产业大模型算法专家-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903860003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-机器人感知",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260016?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "存算一体架构研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280048?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent 内核代码生成研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220051?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "items": [
+        {
+          "title": "AI SoC先进架构研究科学家-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460024?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI体验设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240014?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Infra工程师（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "数据安全工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "具身智能仿真平台研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500009?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-生成式排序",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "封装方案与设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片软件工程师-AI方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "计算机体系结构工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品经理-全球化度假方向（日韩）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200034?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "产品类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "items": [
+        {
+          "title": "动漫制片人",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180034?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "内容类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-计算机图形",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180024?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-计算机图形/引擎",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260022?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI动画与渲染",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180028?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品经理-搜推策略",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "产品类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI技术美术工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220019?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-视频生成",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240041?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客户端开发工程师鸿蒙",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏美术设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏技术美术设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "items": [
+        {
+          "title": "动漫制片人",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180034?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "内容类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-计算机图形",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180024?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-计算机图形/引擎",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260022?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI动画与渲染",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180028?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品经理-搜推策略",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "产品类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI技术美术工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220019?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-视频生成",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240041?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客户端开发工程师鸿蒙",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏美术设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏技术美术设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "items": [
+        {
+          "title": "AI研发工程师-商业化风控",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540011?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "采购专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260029?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "职能类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "自动化方案规划",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "项目管理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260034?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "其他",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-供应链需求预测",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "商品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220029?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "商品运营-小语种",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280060?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "智能体化多模态生成模型研究：从系统设计到实践应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "端到端语音智能体前沿技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480016?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "items": [
+        {
+          "title": "安全领域基础大模型构建与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480037?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "千问Qwen基础大模型前沿技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280041?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "万相Wan视觉生成与世界模型前沿技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280039?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "器件model工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态大模型算法研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240064?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "聚焦大规模 AI 系统的边界探索，构建下一代前沿分布式框架与底层核心技术-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Native搜推算法工程师-π天才计划",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "向量数据库竞争力构建-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520002?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Answer Engine查询引擎中的多模态和向量检索技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI for Biology and Pharmacy-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500029?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "items": [
+        {
+          "title": "AI Infra 高性能 KVCache 存储系统研发-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI搜索架构与系统设计-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "MaaS 的高效资源调度与系统设计-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "用户渠道运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500028?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI工程设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500027?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "海外电商图文及短视频生成-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500026?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客服场景的多语言多模态大模型优化和智能体应用-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520011?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AdMind:大模型重构推荐广告增效新范式-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500025?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "B2B场景下的全网AI搜索与复杂推理能力建设-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500024?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际智能供应链与物流 AI Agent-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "items": [
+        {
+          "title": "大模型与Agentic RL系统-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500023?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "电商购物Agent-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520013?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际化多语言电商大模型建设以及对电商搜索系统的革新升级-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500022?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "研发工程师-媒体转码与处理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520014?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向复杂意图理解的AI搜索智能体建设-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于多模态大模型的智能定价和投资Agent能力建设和优化-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500020?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI搜索/推荐",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "风控场景的多语言多模态大模型优化和智能体应用-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500019?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-运筹&因果推断（AI智能决策）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520018?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多智能体协同优化平台和演化算法 -A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "items": [
+        {
+          "title": "智算网络竞争力构建 -A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540002?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "下一代大模型智能体自进化技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态 AI 数据湖存储技术-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "智能数仓自动优化技术-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向AI的分布式存储系统研发-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 成都 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "网络实时动态数据智能化分析辅助决策-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向云原生的因果世界模型与自主运维智能体-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向通用人工智能（AGI）的新一代智能体/沙箱运行时-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500002?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "云安全大模型智能体对抗评测与能力边界定义-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向推理场景的通算&智算多业务融合网络技术-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "items": [
+        {
+          "title": "面向Agentic AI的持久化文件系统与上下文记忆架构研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480031?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "KV Cache分布式存储的网络优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "MaaS多模态大模型后训练与行业应用-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480030?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向训推一体与特定硬件无关的通信优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Partner Operations- SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480029?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "搜推广场景的训推效能攻坚以及面向高吞吐低延迟的AI架构创新-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540009?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-生成式检索",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540013?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-生成式推荐",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540014?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI 训练推理场景下万亿文件规模高性能文件存储系统架构设计-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "研发工程师-视频传输与播放",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480026?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "items": [
+        {
+          "title": "算法工程师-3D渲染与仿真",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480025?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "网络研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480024?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI创意艺术家",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480023?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "构建面向 AI Agent 的下一代调度与计算引擎-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "构建基于AI模型和Agentic架构的智能自主化Kubernetes容器服务-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向超节点的大语言模型推理方案-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品体验设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480022?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大语言模型异构和虚拟化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "复杂多模态信息理解与Tool-use-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型训练数据处理的文本去重和分类性能优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "items": [
+        {
+          "title": "Agentic后训练-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480020?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agent Harness-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480019?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Streaming AI 推理 & Agent 技术-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态生成Agentic研究-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480018?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于量化与并行化的高效大模型推理服务优化技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480011?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "超大规模后训练关键技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480010?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向大规模llm infra的编译优化&代码生成与高性能算子优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于大语言模型和OpenAPI的云平台智能运维系统-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI芯片与系统架构科学家",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "MaaS大模型&智能体算法研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460023?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "items": [
+        {
+          "title": "Product Manager - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "产品类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "User Experience（UX） Researcher - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460020?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "设计类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Sales Operations - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460018?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Content Operations- SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460019?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "在电商场景下的Agent工具使用与记忆机制设计与研究-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560015?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大规模API下的RL环境与奖励设计训练-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560016?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "全栈研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460016?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-视频增强与AI生成处理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460014?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "电商多模态大模型及在商品理解的应用-Bravo Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向多模态大模型的分布式推理架构与极致性能优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460009?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "items": [
+        {
+          "title": "大模型推理优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态大模型研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180064?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向AI训练/推理全生命周期的稳定性增强与AI驱动运维-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态领域模型前沿技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "下一代AI范式的大模型应用编程与强化学习技术栈研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型推理KV Cache系统：从存储架构到软硬协同的全栈演进-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Data+AI融合：下一代多模态数据库/下一代AI数据湖-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460002?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "下一代AI智能体在在线旅行领域的研究&实践-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180070?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "编译器 DSL 开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903440005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI方案验证工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903440004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "items": [
+        {
+          "title": "AIGC多模态内容生成算法研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200064?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于大模型的搜索算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200065?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片软件工具链研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903440001?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向数字员工的自主Agent编程技术研究与系统实现-Astar",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于多模态大模型的理解与生成算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220042?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态内容理解算法及应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220043?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "具身智能应用研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "供应链规划与交付数据工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903400004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向无影多端Agent的多模态流程自动化大模型-A star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903400003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "构建基于线上回流数据的大模型训练与评测体系-Astar",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903380007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "items": [
+        {
+          "title": "面向 AI Coding 的下一代高性能推理引擎与智能成本治理体系-Astar",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903380006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI全栈开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903380005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片系统软件工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903380003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "集合通信库工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-药物基础模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型评测工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903360003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "构建面向软件工程的自主进化智能体系统-Astar",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903340007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "具身智能模型优化加速工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903340006?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-医疗多模态大模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903340005?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-世界模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903340004?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "items": [
+        {
+          "title": "芯片软件测试开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903340003?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Applied Scientist",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280067?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "森尼韦尔",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI芯片驱动工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280066?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI商业分析师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280065?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "其他",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "关务运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280064?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "物流类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "服务结算管理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280062?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-多模态检索/RAG",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280061?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "医疗AI基础大模型技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220048?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "在线旅行领域的多模态大模型研究&实践-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220049?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "工程效能工程师-AI与研发基建方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280059?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "items": [
+        {
+          "title": "具身智能大模型技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220050?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "整合营销-小语种",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280058?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "营销类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI内容运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280057?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片固件/操作系统工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280056?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "价格运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280055?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向跨学科的多模态统一推理大模型-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240067?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "移动端AI推理引擎优化工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280054?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI 互联通信软件工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280053?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片编译研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240084?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片体系结构工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240083?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "items": [
+        {
+          "title": "大规模分布式训练推理加速及核心基础设施软硬协同优化-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240068?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "服务质量运营-AI方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240081?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "呼吸系统疾病筛查AI智能体技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240071?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI视频前沿算法标准探索及产品化-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240072?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "用于决策的通用人工智能AGI技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280047?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "时空互联网商业AI内核范式的研究和应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280038?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "电商场景下AI Infra & Data Infra建设-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于大模型的广告算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280033?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "保险方案运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220059?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI产品评测工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220058?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "items": [
+        {
+          "title": "AI 计算加速软件工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220057?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基于大模型的推荐算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260062?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Channel & Influencer Operations Specialist -Spain Market",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200074?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "马德里",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI框架软件工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200073?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片工具研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200072?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "海外用户运营及市场营销-AI方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180078?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Channel & Influencer Operations Specialist – Japan Market",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180076?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "东京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "物流全链路运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180075?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "物流类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "物流解决方案",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180074?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "物流类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片性能分析优化工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180073?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "items": [
+        {
+          "title": "培训专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200053?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "职能类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "公共关系专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260055?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "职能类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "物流产品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280030?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "物流类",
+            "杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际化物流运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240058?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "物流类",
+            "杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "GEO运营专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180053?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏平台内容运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240057?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏服务器开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220041?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏客户端开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240056?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "北京 / 广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "内容安全自进化智能体研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460025?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客服场景的多语言多模态大模型优化和智能体应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "items": [
+        {
+          "title": "游戏界面设计(GUI-三国）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180049?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏界面设计(GUI）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200045?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏音频设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180048?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏特效",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180047?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏动作",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260043?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏美术项目管理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180054?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态世界模型强化学习研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480035?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态音乐理解与生成的研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480036?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际化多语言电商大模型建设以及对电商搜索系统的革新升级-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏视频制作",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200046?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "items": [
+        {
+          "title": "LLM and Multimodal Post-training-AliStar",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500013?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州 / 森尼韦尔",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏营销（SLG）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260048?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏营销（日语）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260049?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏营销",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180051?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏平台市场营销",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260047?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏服务体验管理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180052?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏运营（SLG）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260046?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型推理训练前沿技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500018?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏内容运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260045?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态理解和生成统一的前沿应用研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500030?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "items": [
+        {
+          "title": "游戏用户运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200049?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "世界模型视觉算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500031?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏产品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200048?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "多模态大模型理解的研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500032?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏文案策划（克苏鲁题材）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200047?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "心血管系统疾病AI筛查与诊断技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500033?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "支持完整的软件研发生命周期Agent研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500034?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型内生安全对齐与幻觉治理-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903500035?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "复杂场景的 Agentic Model 训练-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520008?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Agentic后训练-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520009?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "items": [
+        {
+          "title": "面向真实安全攻防场景的自主智能体（Security AI Agent）体系构建与核心能力研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520007?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏策划（箱庭关卡）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280028?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "风控场景的多语言多模态大模型优化和智能体应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560011?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏策划（SLG）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220039?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AdMind:大模型重构推荐广告增效新范式 -阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560012?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向异步长程任务的主动式Agent研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560013?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏策划（MMO）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240055?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI搜索跨语言与多模态预训练及后训练-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560017?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏策划（卡牌）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260044?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "广州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型理解和生成统一结构研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560021?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "items": [
+        {
+          "title": "多模态语音理解与生成的研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560022?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏策划（放置MMO）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180050?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "游戏类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型训练推理前沿技术及算法融合创新-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560023?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "通用GUI Agent的识别机制与对抗防御研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520020?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "数据研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200011?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际化产品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240037?deptCodes=",
+          "details": [
+            "更新于 2026-03-17",
+            "运营类",
+            "杭州 / 新加坡",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "影视级视频理解和可控生成研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产业链Agentic AI与多模态世界模型算法专家-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820005?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基础平台研发工程师-开源技术社区",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903700007?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向多源异构场景的多模态Agent技术研究-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903900004?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "items": [
+        {
+          "title": "基于高德LBS大模型的搜推算法研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903900005?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AIGC方向（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903860001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "智能实验平台开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903840001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-多模态（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820003?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基础平台研发工程师（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903820002?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-自然语言处理（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903780009?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI For Science",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903780008?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "深度学习模型性能调优师-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480009?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "面向 Agent 进化的自适应语义数据引擎-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480007?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "超大规模训练/推理软硬协同技术研究-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903620001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "items": [
+        {
+          "title": "AI Agent基础设施&系统架构-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540018?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "处理器AI架构师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420006?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "具身智能模型研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903420002?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "安全技术工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240019?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "商务拓展专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180019?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "销售类",
+            "北京 / 常州 / 成都 / 福州 / 广州 / 杭州 / 合肥 / 济南 / 南京 / 宁波 / 上海 / 深圳 / 苏州 / 天津 / 温州 / 武汉 / 西安 / 郑州 / 重庆",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "硬件开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240027?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "模拟设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180011?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "数据中心技术运维工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200027?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 成都 / 杭州 / 河源 / 南通 / 上海 / 乌兰察布 / 张家口",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI Agent（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903900001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-机器学习（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903880001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "items": [
+        {
+          "title": "多模态世界模型研究与应用-阿里星",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480034?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Product Operations - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903560020?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "运营类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Supply Chain Operations- SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540015?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Product Operations - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480027?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "运营类",
+            "杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI软件测试开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460001?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 成都 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "创意设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480015?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "设计类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "Industry Operations - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903460017?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "运营类",
+            "广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-多模态AIGC",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220027?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片项目devops工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220021?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "深度学习AI编译和推理引擎研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240030?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "items": [
+        {
+          "title": "算法工程师-供应链和定价 AI",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260017?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-时空数据预测",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260010?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-机器学习",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180020?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "RAG引擎研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260007?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent 研发工程师-决策方向",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180009?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "桌面端开发工程师Windows/Mac/Linux",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180007?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算子开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200023?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "前端开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240008?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客户端开发工程师Android",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180006?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "基础平台研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240005?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 南京 / 上海 / 深圳",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "items": [
+        {
+          "title": "大模型Infra研发工程师（训练/推理）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240004?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "研发工程师C/C++",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240002?deptCodes=",
+          "details": [
+            "更新于 2026-03-16",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent应用开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903740004?deptCodes=",
+          "details": [
+            "更新于 2026-03-15",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI应用产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903860002?deptCodes=",
+          "details": [
+            "更新于 2026-03-15",
+            "产品类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大模型应用（T-Star Lab ）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903840002?deptCodes=",
+          "details": [
+            "更新于 2026-03-13",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大规模分布式推理加速及核心基础设施软硬协同优化-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903640001?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "技术服务工程师-伊斯坦布尔",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903640002?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "伊斯坦布尔",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "技术服务工程师-吉隆坡",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903620003?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "吉隆坡",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "音视频数字人多模态大模型算法研究和应用-A Star",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903520019?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "User Experience (UX) Designer - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540017?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "设计类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "items": [
+        {
+          "title": "Merchandise Operations- SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903540016?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "User Operations - SEA Program (TH/ID/VN/MY/PH)",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903480028?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏引擎开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260053?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "游戏类",
+            "北京 / 广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200037?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "产品类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "游戏引擎开发工程师-UE5",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200030?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "游戏类",
+            "广州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "财务专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200026?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "职能类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "质控与产能管理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260023?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "物流类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "物流运力运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260020?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "物流类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "市场营销专员",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180018?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "营销类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "用户运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260015?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "北京 / 杭州 / 济南 / 深圳 / 苏州 / 西安",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "items": [
+        {
+          "title": "行业运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180016?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客户服务体验运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220026?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "北京 / 杭州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI Agent研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280015?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-自然语言处理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220024?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "销售运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280014?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "北京 / 杭州 / 中国台湾",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "客户端开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280013?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-运筹优化",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220022?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "内容运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240039?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "供应链运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220020?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-医疗大模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240034?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "items": [
+        {
+          "title": "ATE测试工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240033?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "国际化产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220014?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "产品类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-搜索推荐",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220013?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-数字人",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240025?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240023?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片物理设计工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220010?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "成都 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "机器学习系统工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180015?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-深度学习",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200012?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "技术服务工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220008?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 厦门 / 上海 / 深圳 / 武汉 / 长沙",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "移动端逆向工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240020?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "items": [
+        {
+          "title": "算法工程师-三维重建和生成",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200010?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "数据科学家",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200009?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型数据研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200008?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AIGC设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240016?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "设计类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI数据平台研发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180012?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI架构及后端工程师（ABE）",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260006?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI大模型产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200004?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "产品类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI创意设计师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240013?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "设计类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "软硬件结合开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240012?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "终端开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240011?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 广州 / 杭州",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "items": [
+        {
+          "title": "客户端开发工程师iOS",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240007?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "大模型应用开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240003?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "研发工程师Golang/Python",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180004?deptCodes=",
+          "details": [
+            "更新于 2026-03-12",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "全栈开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240009?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "编译器与计算机体系结构开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180008?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-计算机视觉",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180010?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-具身智能",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260008?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片/处理器验证工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240018?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 成都 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "测试开发工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180014?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "芯片设计/验证/DFT工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240022?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 成都 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "items": [
+        {
+          "title": "算法工程师-视频编码与处理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260011?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-数据合成",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240024?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "IT服务工程师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280006?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "广州 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220012?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "产品类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "数据分析师",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200032?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "数据类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-基因组",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180022?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-基础安全风控",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903200020?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-AI安全",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903260014?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-多模态",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220028?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 广州 / 杭州 / 上海",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-大模型评测",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280010?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州 / 上海",
+            "在招业务"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "items": [
+        {
+          "title": "AI产品运营",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280009?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "运营类",
+            "杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-音频算法",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903220018?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "算法工程师-安全大模型",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903280008?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 杭州",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "AI产品经理",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903240028?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "产品类",
+            "北京 / 广州 / 杭州 / 上海 / 深圳",
+            "在招业务"
+          ]
+        },
+        {
+          "title": "研发工程师JAVA",
+          "url": "https://campus-talent.alibaba.com/campus/position/199903180003?deptCodes=",
+          "details": [
+            "更新于 2026-03-11",
+            "技术类",
+            "北京 / 成都 / 广州 / 杭州 / 上海 / 深圳 / 西安",
+            "在招业务"
+          ]
+        }
+      ]
+    }
+  ]
+}
