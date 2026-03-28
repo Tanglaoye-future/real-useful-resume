@@ -1,53 +1,37 @@
-# internship_finding
+# ResuMiner
 
-多源官方校招/实习抓取与清洗项目（字节/腾讯/快手/小红书/美团/阿里/京东），用于产出可投递岗位池与公司行动看板。
+多源官方校招/实习岗位抓取仓库，当前收录字节、腾讯、快手、小红书、美团、阿里、京东等来源，包含爬虫代码与可复用数据产物。
 
-## 目录
+## 项目结构
 
-- `official_multi_crawler.py`：官方源抓取主入口
-- `merge_file.py`：清洗、规则判定、评分、看板输出
-- `parsers/`：公司适配器（按公司定制字段解析）
-- `rules/`：27届规则与城市归一化
-- `utils/link_checker.py`：链接健康检查
-- `run_kuaishou_daily.ps1`：一键运行脚本
-- `run_task6_pipeline.ps1`：Task6全链路运行脚本（爬取→清洗→分析→报告→监控→回归）
-- `register_task6_schedule.ps1`：Windows计划任务注册脚本（等价调度）
-- `organize_workspace.ps1`：产物整理脚本
+- `official_multi_crawler.py`：主抓取入口（统一调度多公司官方源）
+- `crawlers/`：各公司抓取器
+- `crawlers/cdp/`：基于 CDP 的反爬抓取脚本
+- `parsers/`：公司字段适配与解析逻辑
+- `rules/`：27届规则与城市归一化规则
+- `config.py`：抓取参数配置
+- `cdp_data/`：CDP 抓取结果（JSON）
+- `outputs/raw/`：公司级原始 CSV 输出
+- `release_data/`：对外可分享的数据快照
+- `official_jobs_raw.csv`：汇总原始岗位数据
 
-## 运行
+## 运行方式
+
+安装依赖后可直接运行主入口：
 
 ```powershell
 python official_multi_crawler.py
-python merge_file.py
 ```
 
-或直接执行：
+也可以按公司入口运行（示例）：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\run_kuaishou_daily.ps1
+python crawlers\run_all_official.py
 ```
 
-Task6全链路执行：
+## 数据说明
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run_task6_pipeline.ps1
-```
-
-仅验证Task6监控与回归（跳过爬取）：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run_task6_pipeline.ps1 -SkipCrawl
-```
-
-注册每日自动调度（Windows计划任务）：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\register_task6_schedule.ps1 -StartTime 09:00
-```
-
-## 输出
-
-- 运行产物默认写入 `outputs/`（已在 `.gitignore` 忽略）
-- 本仓库额外保留一份可分享快照到 `release_data/`，用于版本对比与复盘
-- Task6监控指标产出：`outputs/reports/task6_monitoring_metrics_latest.json`
-- Task6双周回归记录：`outputs/reports/task6_biweekly_regression_log.csv` 与 `outputs/reports/task6_biweekly_regression_latest.md`
+- `cdp_data/*.json`：CDP 会话抓取的结构化原始结果
+- `outputs/raw/*.csv`：按公司拆分的官方岗位原始数据
+- `release_data/*.csv`：对外发布快照（汇总、质量、看板等）
+- `official_jobs_raw.csv`：全量官方岗位原始汇总
