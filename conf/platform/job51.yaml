@@ -1,0 +1,24 @@
+# 前程无忧 (51job) 平台配置
+platform:
+  name: "前程无忧"
+  code: "job51"
+  base_url: "https://www.51job.com"
+
+# 搜索配置
+search:
+  job_area: "020000"  # 上海
+  keywords:
+    campus: ["实习", "秋招"]
+    intern: ["实习", "秋招"]
+    fallback: ["实习"]
+  max_pages: 500
+  page_size: 20
+  empty_streak_limit: 5
+  target_min_count: 5000
+
+# 请求配置
+request:
+  timeout: 30
+  retry_times: 3
+  delay_min: 3
+  delay_max: 8

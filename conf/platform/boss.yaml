@@ -1,0 +1,19 @@
+# BOSS直聘平台配置
+platform:
+  name: "BOSS直聘"
+  code: "boss"
+  base_url: "https://www.zhipin.com"
+
+# 搜索配置
+search:
+  city_code: "101020100"  # 上海
+  keywords: ["实习", "秋招"]
+  max_pages: 10
+  page_size: 30
+
+# 请求配置
+request:
+  timeout: 30
+  retry_times: 3
+  delay_min: 3
+  delay_max: 8

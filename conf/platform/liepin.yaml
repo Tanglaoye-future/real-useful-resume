@@ -1,0 +1,25 @@
+# 猎聘 (Liepin) 平台配置
+platform:
+  name: "猎聘"
+  code: "liepin"
+  base_url: "https://www.liepin.com"
+
+# 搜索配置
+search:
+  city_code: "020"  # 上海
+  keywords: ["实习", "秋招"]
+  max_pages: 500
+  page_size: 20
+  target_count: 5000
+
+# 请求配置
+request:
+  timeout: 30
+  retry_times: 3
+  delay_min: 2
+  delay_max: 5
+
+# FSCP 请求头配置
+fscp:
+  version: "1.1"
+  client_type: "web"
