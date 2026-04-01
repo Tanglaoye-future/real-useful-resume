@@ -126,3 +126,9 @@ Call log:
 2026-04-01 21:27:51,513 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 20 jobs from 51job page, filtered=0
 2026-04-01 21:27:51,514 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=20, req_rate=10.0%, desc_rate=100.0%, jd_rate=100.0%
 2026-04-01 21:27:51,516 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 18 jobs with missing requirements
+2026-04-01 21:29:55,876 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 19 jobs from 51job page, filtered=1
+2026-04-01 21:29:55,877 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=19, req_rate=26.3%, desc_rate=100.0%, jd_rate=100.0%
+2026-04-01 21:29:55,878 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 14 jobs with missing requirements
+2026-04-01 21:31:54,527 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 19 jobs from 51job page, filtered=1
+2026-04-01 21:31:54,529 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=19, req_rate=10.5%, desc_rate=94.7%, jd_rate=100.0%
+2026-04-01 21:31:54,548 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 17 jobs with missing requirements

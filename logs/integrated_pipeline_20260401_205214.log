@@ -126,3 +126,12 @@ Call log:
 2026-04-01 21:28:25,238 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 20 jobs from 51job page, filtered=0
 2026-04-01 21:28:25,238 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=20, req_rate=10.0%, desc_rate=100.0%, jd_rate=100.0%
 2026-04-01 21:28:25,240 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 18 jobs with missing requirements
+2026-04-01 21:30:24,600 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 19 jobs from 51job page, filtered=1
+2026-04-01 21:30:24,601 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=19, req_rate=26.3%, desc_rate=100.0%, jd_rate=100.0%
+2026-04-01 21:30:24,603 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 14 jobs with missing requirements
+2026-04-01 21:32:23,204 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 19 jobs from 51job page, filtered=1
+2026-04-01 21:32:23,205 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=19, req_rate=10.5%, desc_rate=94.7%, jd_rate=100.0%
+2026-04-01 21:32:23,209 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 17 jobs with missing requirements
+2026-04-01 21:34:30,642 - core.crawler_engine.spiders.job51_v2 - INFO - Parsed 18 jobs from 51job page, filtered=2
+2026-04-01 21:34:30,643 - core.crawler_engine.spiders.job51_v2 - INFO - Field validation: total=18, req_rate=11.1%, desc_rate=100.0%, jd_rate=100.0%
+2026-04-01 21:34:30,644 - core.crawler_engine.spiders.job51_v2 - INFO - Enhanced 16 jobs with missing requirements
