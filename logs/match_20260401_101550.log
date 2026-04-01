@@ -1,0 +1,72 @@
+2026-04-01 10:15:50,538 - __main__ - INFO - ================================================================================
+2026-04-01 10:15:50,539 - __main__ - INFO - 📂 加载官网爬虫数据
+2026-04-01 10:15:50,541 - __main__ - INFO - ================================================================================
+2026-04-01 10:15:50,542 - __main__ - INFO - 📄 找到文件: c:\Users\Lenovo\projects\ResuMiner_main\release_data\internship_shanghai_latest.csv
+2026-04-01 10:15:50,691 - __main__ - INFO - ✅ 加载 2932 条官网岗位
+2026-04-01 10:15:50,701 - __main__ - INFO - 
+================================================================================
+2026-04-01 10:15:50,703 - __main__ - INFO - 📂 加载第三方平台数据
+2026-04-01 10:15:50,703 - __main__ - INFO - ================================================================================
+2026-04-01 10:15:50,706 - __main__ - INFO - 📄 找到51job数据: c:\Users\Lenovo\projects\ResuMiner\data\output\job51\job51_data_v2_20260328_210655.json
+2026-04-01 10:15:51,287 - __main__ - INFO - ✅ 加载 3924 条51job岗位
+2026-04-01 10:15:51,289 - __main__ - INFO - 📄 找到猎聘数据: c:\Users\Lenovo\projects\ResuMiner\data\output\liepin\liepin_data_20260328_143025.json
+2026-04-01 10:15:52,150 - __main__ - INFO - ✅ 加载 16417 条猎聘岗位
+2026-04-01 10:15:52,154 - __main__ - INFO - ✅ 第三方平台共加载 20341 条岗位
+2026-04-01 10:15:52,157 - __main__ - INFO - 
+================================================================================
+2026-04-01 10:15:52,167 - __main__ - INFO - 🔄 合并数据并去重
+2026-04-01 10:15:52,168 - __main__ - INFO - ================================================================================
+2026-04-01 10:15:52,171 - __main__ - INFO - 合并前: 2932 + 20341 = 23273 条
+2026-04-01 10:15:52,216 - __main__ - INFO - 去重后: 4857 条 (去重 18416 条)
+2026-04-01 10:15:52,872 - __main__ - INFO - 💾 原始数据已保存: C:\Users\Lenovo\projects\ResuMiner_Integrated\data\raw\integrated_jobs_20260401_101552.json
+2026-04-01 10:15:52,872 - __main__ - INFO - 
+================================================================================
+2026-04-01 10:15:52,873 - __main__ - INFO - 🎯 开始简历匹配
+2026-04-01 10:15:52,873 - __main__ - INFO - ================================================================================
+2026-04-01 10:15:53,164 - __main__ - INFO - 📄 加载简历: c:\Users\Lenovo\projects\ResuMiner\my_resume.json
+2026-04-01 10:15:53,165 - __main__ - INFO - 📄 简历: 唐圣昕
+2026-04-01 10:16:14,722 - matcher.scoring.semantic_scorer - INFO - 加载语义模型: paraphrase-multilingual-MiniLM-L12-v2
+2026-04-01 10:16:14,724 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-04-01 10:16:14,725 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-04-01 10:16:17,897 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:17,899 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 10:16:17,970 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/modules.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:18,247 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:18,317 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:18,600 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:18,667 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:18,948 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:19,017 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/README.md "HTTP/1.1 200 OK"
+2026-04-01 10:16:19,297 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:19,356 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/modules.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:19,627 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:19,696 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:19,967 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 10:16:20,256 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:20,318 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:21,006 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:21,067 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:21,336 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:21,396 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:21,826 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:22,186 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:22,707 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 10:16:23,158 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 10:16:27,177 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-04-01 10:16:27,947 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 10:16:28,034 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 10:16:28,377 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-04-01 10:16:28,396 - matcher.core.matcher - INFO - 开始匹配: 简历 唐圣昕 vs 4857 个岗位
+2026-04-01 10:16:28,396 - matcher.core.matcher - INFO - Phase 1: 硬性规则过滤...
+2026-04-01 10:16:28,401 - matcher.filters.hard_filter - INFO - 硬性过滤完成: 4857 通过, 0 被拒绝
+2026-04-01 10:16:28,402 - matcher.core.matcher - INFO - 硬性过滤完成: 4857 通过, 0 被拒绝
+2026-04-01 10:16:28,402 - matcher.core.matcher - INFO - Phase 2: 语义打分...
+2026-04-01 10:48:30,140 - matcher.core.matcher - INFO - 语义打分完成，Top 100 岗位已排序
+2026-04-01 10:48:30,141 - matcher.core.matcher - INFO - Phase 3: 生成匹配报告...
+2026-04-01 10:48:30,163 - matcher.scoring.match_reporter - INFO - 匹配报告已生成: data\output\matcher\match_report_20260401_104830.md
+2026-04-01 10:48:30,165 - __main__ - INFO - ✅ 匹配完成: 100 个匹配岗位
+2026-04-01 10:48:30,166 - __main__ - INFO - 
+================================================================================
+2026-04-01 10:48:30,167 - __main__ - INFO - 📊 生成投递策略报告
+2026-04-01 10:48:30,167 - __main__ - INFO - ================================================================================
+2026-04-01 10:48:30,212 - __main__ - INFO - ✅ 投递报告已生成: C:\Users\Lenovo\projects\data\output\application_reports\application_report_20260401_104830.md

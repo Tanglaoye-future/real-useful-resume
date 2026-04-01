@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-04-01T17:13:35.424431",
+  "candidate_name": "唐圣昕",
+  "project_root": "c:\\Users\\Lenovo\\projects\\ResuMiner_Integrated",
+  "data_sources": {
+    "official": 6724,
+    "third_party": 20341,
+    "total_after_dedup": 27065,
+    "shanghai_only": 5330
+  },
+  "match_results": {
+    "total_matched": 100,
+    "immediate": 5,
+    "high_priority": 10,
+    "recommended": 15,
+    "backup": 20
+  },
+  "files": {
+    "reports": [
+      "application_report_20260401_142839.md",
+      "match_report_20260401_160730.md"
+    ],
+    "resume": [
+      "resume.json",
+      "resume_formatted.json"
+    ],
+    "data": []
+  }
+}

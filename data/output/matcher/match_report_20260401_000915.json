@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-04-01T00:09:15.578060",
+  "resume_summary": {
+    "name": "唐圣昕",
+    "work_years": 1,
+    "education": "本科",
+    "expected_salary": 15000,
+    "skills": [
+      "Python编程",
+      "Java编程",
+      "Go编程",
+      "Vue开发",
+      "React开发",
+      "Figma原型设计",
+      "爬虫开发",
+      "数据采集",
+      "AI模型部署",
+      "Spring Boot",
+      "MySQL"
+    ]
+  },
+  "filter_stats": {
+    "passed": 1,
+    "rejected": 0,
+    "total": 1
+  },
+  "matched_jobs": [
+    {
+      "job_name": "",
+      "company_name": "",
+      "location": "",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.4364481568336487,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.522756854891777
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    }
+  ]
+}

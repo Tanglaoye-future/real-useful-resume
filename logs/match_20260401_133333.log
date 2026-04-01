@@ -1,0 +1,12 @@
+2026-04-01 13:33:33,885 - bin.run_with_existing_data - INFO - ================================================================================
+2026-04-01 13:33:33,886 - bin.run_with_existing_data - INFO - 📂 加载官网爬虫数据
+2026-04-01 13:33:33,887 - bin.run_with_existing_data - INFO - ================================================================================
+2026-04-01 13:33:33,888 - bin.run_with_existing_data - INFO - 📄 找到原始数据: c:\Users\Lenovo\projects\ResuMiner_main\release_data\official_jobs_raw_latest.csv
+2026-04-01 13:33:34,610 - bin.run_with_existing_data - INFO - ✅ 加载 1971 条官网原始岗位
+2026-04-01 13:33:34,619 - bin.run_with_existing_data - INFO - 📄 找到上海实习数据: c:\Users\Lenovo\projects\ResuMiner_main\release_data\internship_shanghai_latest.csv
+2026-04-01 13:33:34,956 - bin.run_with_existing_data - INFO - ✅ 加载 2932 条上海实习岗位
+2026-04-01 13:33:34,986 - bin.run_with_existing_data - INFO - 📄 检查 outputs/raw 目录
+2026-04-01 13:33:35,005 - bin.run_with_existing_data - INFO - ✅ 加载 20 条 alibaba 岗位
+2026-04-01 13:33:35,339 - bin.run_with_existing_data - INFO - ✅ 加载 1801 条 bytedance 岗位
+2026-04-01 13:33:35,345 - bin.run_with_existing_data - INFO - 
+📊 官网数据总计: 6724 条

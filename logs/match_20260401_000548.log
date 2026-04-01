@@ -1,0 +1,29 @@
+2026-04-01 00:05:48,748 - __main__ - INFO - ================================================================================
+2026-04-01 00:05:48,749 - __main__ - INFO - 📂 加载官网爬虫数据
+2026-04-01 00:05:48,749 - __main__ - INFO - ================================================================================
+2026-04-01 00:05:48,750 - __main__ - INFO - 📄 找到文件: c:\Users\Lenovo\projects\ResuMiner_main\release_data\internship_shanghai_latest.csv
+2026-04-01 00:05:48,950 - __main__ - INFO - ✅ 加载 2932 条官网岗位
+2026-04-01 00:05:48,950 - __main__ - INFO - 
+================================================================================
+2026-04-01 00:05:48,951 - __main__ - INFO - 📂 加载第三方平台数据
+2026-04-01 00:05:48,951 - __main__ - INFO - ================================================================================
+2026-04-01 00:05:48,952 - __main__ - WARNING - ⚠️ 未找到第三方平台数据文件
+2026-04-01 00:05:48,952 - __main__ - INFO - 
+================================================================================
+2026-04-01 00:05:48,952 - __main__ - INFO - 🔄 合并数据并去重
+2026-04-01 00:05:48,953 - __main__ - INFO - ================================================================================
+2026-04-01 00:05:48,953 - __main__ - INFO - 合并前: 2932 + 0 = 2932 条
+2026-04-01 00:05:48,955 - __main__ - INFO - 去重后: 1 条 (去重 2931 条)
+2026-04-01 00:05:48,958 - __main__ - INFO - 💾 原始数据已保存: C:\Users\Lenovo\projects\ResuMiner_Integrated\data\raw\integrated_jobs_20260401_000548.json
+2026-04-01 00:05:48,958 - __main__ - INFO - 
+================================================================================
+2026-04-01 00:05:48,959 - __main__ - INFO - 🎯 开始简历匹配
+2026-04-01 00:05:48,959 - __main__ - INFO - ================================================================================
+2026-04-01 00:05:48,970 - __main__ - ERROR - ❌ 匹配过程出错: No module named 'resuminer'
+2026-04-01 00:05:48,973 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Lenovo\projects\ResuMiner_Integrated\bin\run_with_existing_data.py", line 164, in run_resume_matching
+    from matcher.core.matcher import JobMatcher
+  File "C:\Users\Lenovo\projects\ResuMiner_Integrated\matcher\core\__init__.py", line 7, in <module>
+    from resuminer.matcher.core.parser import ResumeParser
+ModuleNotFoundError: No module named 'resuminer'
+

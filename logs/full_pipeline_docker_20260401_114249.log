@@ -1,0 +1,118 @@
+2026-04-01 11:42:49,060 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,061 - __main__ - INFO - 🚀 ResuMiner Docker 完整流程
+2026-04-01 11:42:49,062 - __main__ - INFO - 从爬虫到匹配的端到端流程
+2026-04-01 11:42:49,063 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,065 - __main__ - INFO - 开始时间: 2026-04-01 11:42:49
+2026-04-01 11:42:49,068 - __main__ - INFO - 项目路径: /app
+2026-04-01 11:42:49,070 - __main__ - INFO - 
+2026-04-01 11:42:49,071 - __main__ - INFO - ⚠️  重要说明:
+2026-04-01 11:42:49,074 - __main__ - INFO -    官网CDP爬虫需要在Docker外部运行（需要Chrome浏览器）
+2026-04-01 11:42:49,075 - __main__ - INFO -    第三方平台爬虫（51job、猎聘）可以在Docker中运行
+2026-04-01 11:42:49,078 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,083 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,085 - __main__ - INFO - 🚀 步骤1: 运行官网CDP爬虫
+2026-04-01 11:42:49,091 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,094 - __main__ - INFO - ⚠️ 注意: CDP爬虫需要在Docker外部运行（需要Chrome浏览器）
+2026-04-01 11:42:49,098 - __main__ - INFO -    在Docker环境中跳过实际爬取，使用预存数据或模拟数据
+2026-04-01 11:42:49,124 - __main__ - INFO -    ✅ 已创建爬虫说明文件
+2026-04-01 11:42:49,143 - __main__ - INFO -    ⚠️ 没有找到预存数据，请在Docker外部运行爬虫
+2026-04-01 11:42:49,144 - __main__ - INFO - 
+================================================================================
+2026-04-01 11:42:49,145 - __main__ - INFO - 🚀 步骤2: 运行第三方平台爬虫
+2026-04-01 11:42:49,146 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,148 - __main__ - INFO - 
+📍 开始爬取: 前程无忧(51job)
+2026-04-01 11:42:49,619 - __main__ - WARNING -    ⚠️ 51job 返回非零状态: 1
+2026-04-01 11:42:49,620 - __main__ - WARNING -    错误: Traceback (most recent call last):
+  File "/app/core/crawler_engine/spiders/job51_v2.py", line 8, in <module>
+    from core.crawler_engine.base_spider import BaseSpider
+  File "/app/core/crawler_engin
+2026-04-01 11:42:49,621 - __main__ - INFO - 
+📍 开始爬取: 猎聘
+2026-04-01 11:42:49,875 - __main__ - WARNING -    ⚠️ 猎聘 返回非零状态: 1
+2026-04-01 11:42:49,876 - __main__ - INFO - 
+✅ 第三方平台爬虫完成
+2026-04-01 11:42:49,877 - __main__ - INFO - 
+================================================================================
+2026-04-01 11:42:49,879 - __main__ - INFO - 📊 步骤3: 收集和合并数据
+2026-04-01 11:42:49,881 - __main__ - INFO - ================================================================================
+2026-04-01 11:42:49,903 - __main__ - INFO - 
+✅ 数据收集完成: 共 0 条岗位
+2026-04-01 11:42:49,903 - __main__ - INFO - 
+================================================================================
+2026-04-01 11:42:49,904 - __main__ - INFO - 🎯 步骤4: 运行简历匹配
+2026-04-01 11:42:49,905 - __main__ - INFO - ================================================================================
+2026-04-01 11:43:10,091 - matcher.scoring.semantic_scorer - INFO - 加载语义模型: all-MiniLM-L6-v2
+2026-04-01 11:43:10,097 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-04-01 11:43:10,099 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-04-01 11:43:12,294 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:12,299 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 11:43:12,708 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:13,128 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:13,658 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:13,930 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:14,214 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:14,683 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:14,939 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:15,429 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:15,690 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-04-01 11:43:15,924 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-04-01 11:43:16,367 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:16,604 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:17,003 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:17,200 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:17,425 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:17,863 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 11:43:18,307 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:43:18,555 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:18,752 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-01 11:43:19,335 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-04-01 11:43:19,763 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/xet-read-token/c9745ed1d9f207416be6d2e6f8de32d1f16199bf "HTTP/1.1 200 OK"
+2026-04-01 11:44:45,125 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:45,192 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:45,473 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:45,539 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:45,608 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:45,929 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 11:44:46,212 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 11:44:46,492 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:46,556 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/vocab.txt "HTTP/1.1 200 OK"
+2026-04-01 11:44:46,647 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/vocab.txt "HTTP/1.1 200 OK"
+2026-04-01 11:44:47,023 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:47,096 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:47,180 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:47,522 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-04-01 11:44:47,821 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:47,903 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:47,981 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:48,289 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-04-01 11:44:48,639 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 11:44:48,740 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:48,861 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 11:44:49,159 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-04-01 11:44:49,169 - __main__ - INFO - ✅ 简历加载成功: 唐圣昕
+2026-04-01 11:44:49,177 - __main__ - INFO - 📊 加载 0 个岗位
+2026-04-01 11:44:49,177 - __main__ - ERROR - ❌ 没有岗位数据可供匹配
+2026-04-01 11:44:49,178 - __main__ - INFO -    提示: 请先运行爬虫获取数据，或提供预存数据文件
+2026-04-01 11:44:49,178 - __main__ - INFO - 
+================================================================================
+2026-04-01 11:44:49,179 - __main__ - INFO - ✅ 步骤5: 验证输出结果
+2026-04-01 11:44:49,179 - __main__ - INFO - ================================================================================
+2026-04-01 11:44:49,197 - __main__ - INFO -    📄 匹配报告: 8 个Markdown, 8 个JSON
+2026-04-01 11:44:49,217 - __main__ - INFO -    📄 最新报告: match_report_20260401_182322.md
+2026-04-01 11:44:49,225 - __main__ - INFO -    📄 投递报告: 1 个
+2026-04-01 11:44:49,228 - __main__ - INFO -    📄 最新报告: application_report_20260401_182322.md
+2026-04-01 11:44:49,238 - __main__ - INFO -    📊 爬虫数据: 0 条岗位
+2026-04-01 11:44:49,239 - __main__ - INFO - 
+✅ 全流程验证完成!
+2026-04-01 11:44:49,239 - __main__ - INFO - 
+================================================================================
+2026-04-01 11:44:49,240 - __main__ - INFO - 🎉 完整流程执行完成!
+2026-04-01 11:44:49,241 - __main__ - INFO - ================================================================================
+2026-04-01 11:44:49,242 - __main__ - INFO - 总耗时: 2.0 分钟
+2026-04-01 11:44:49,243 - __main__ - INFO - 日志文件: /app/logs/full_pipeline_docker_20260401_114249.log
+2026-04-01 11:44:49,244 - __main__ - INFO - 
+2026-04-01 11:44:49,244 - __main__ - INFO - 📋 后续步骤:
+2026-04-01 11:44:49,245 - __main__ - INFO -    1. 如需官网数据，请在Docker外部运行CDP爬虫
+2026-04-01 11:44:49,246 - __main__ - INFO -    2. 重新运行 docker-compose up 进行匹配
+2026-04-01 11:44:49,247 - __main__ - INFO - ================================================================================

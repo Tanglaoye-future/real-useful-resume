@@ -1,0 +1,1729 @@
+{
+  "generated_at": "2026-04-01T18:23:22.818967",
+  "resume_summary": {
+    "name": "唐圣昕",
+    "work_years": 1,
+    "education": "本科",
+    "expected_salary": 15000,
+    "skills": [
+      "Python编程",
+      "Java编程",
+      "Go编程",
+      "Vue开发",
+      "React开发",
+      "Figma原型设计",
+      "爬虫开发",
+      "数据采集",
+      "AI模型部署",
+      "Spring Boot",
+      "MySQL"
+    ]
+  },
+  "filter_stats": {
+    "passed": 5330,
+    "rejected": 0,
+    "total": 5330
+  },
+  "matched_jobs": [
+    {
+      "job_name": "AI创作系统后端实习生（Python/Flask）",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7782363891601562,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6423827362060547
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI开发实习生（平台工程方向）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7406028509140015,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6292109978199005
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法工程实习生",
+      "company_name": "小红书",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7224280834197998,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.62284982919693
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发实习生-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7169326543807983,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6209264290332794
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "推荐大模型训练/推理优化实习生Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.71599942445755,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6205997985601426
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "测试开发实习生-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7155050039291382,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6204267513751984
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发工程师",
+      "company_name": "京东",
+      "location": "北京市-北京市 上海市-上海市 四川省-成都市 广东省-深圳市 湖北省-武汉市",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7138985991477966,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6198645097017288
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型应用算法实习生-豆包手机助手",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7136367559432983,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6197728645801543
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "C++客户端开发实习生-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7129107713699341,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6195187699794769
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AIP实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7126132249832153,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6194146287441253
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "客户端开发实习生-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7113448977470398,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6189707142114639
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发实习生-机器学习平台",
+      "company_name": "小红书",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7107202410697937,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6187520843744277
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "推荐系统Data For AI开发实习生-Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7103269696235657,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.618614439368248
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI开发实习生（数据工程方向二）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7097260355949402,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.618404112458229
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "云平台开发实习生【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7092967629432678,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6182538670301437
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "数据平台开发实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7068648338317871,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6174026918411255
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI数据开发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7066277861595154,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6173197251558303
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型应用算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7058340907096863,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6170419317483902
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发实习生-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7055339217185974,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6169368726015091
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "具身数据产品实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7043506503105164,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6165227276086807
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型训练推理实习生-智能创作",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7038307189941406,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6163407516479492
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型算法研究实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7036843299865723,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6162895154953003
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发实习生（机审平台）",
+      "company_name": "小红书",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7028777599334717,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.616007215976715
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生（虚拟人方向）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7025892734527588,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6159062457084655
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI创作算法策略实习生-剪映CapCut",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7017579674720764,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6156152886152267
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI for Science平台后端实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7011570334434509,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6154049617052078
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "语音交互大模型算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.7002131938934326,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6150746178627013
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型知识图谱算法实习生-飞书AI",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6994842886924744,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.614819501042366
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发实习生-计算",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6992931365966797,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6147525978088378
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "多模态大模型算法实习生-豆包手机助手",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6991594433784485,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.614705805182457
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "数据渠道运营实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6990415453910828,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6146645408868789
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型训练编排调度研发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6976791620254517,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6141877067089081
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "网络平台前端开发实习生-算力与AI基础设施",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6971100568771362,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6139885199069977
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "机器学习系统研发实习生-Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6969292163848877,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6139252257347106
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端项目实习生",
+      "company_name": "美团",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6968836188316345,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.613909266591072
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生-剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6965176463127136,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6137811762094497
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "科学生成模型实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.696312665939331,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6137094330787658
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI方向后端开发工程师（实习）",
+      "company_name": "美团",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6958919167518616,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6135621708631516
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "模型系统实习生-Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6958357095718384,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6135424983501434
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "【快Star-X】大模型训练框架研发工程师",
+      "company_name": "快手",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6956419944763184,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6134746980667114
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "评测产品经理实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6955317854881287,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.613436124920845
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型训练优化研发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6954283118247986,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6133999091386795
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "计算后端开发实习生-计算",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6949896812438965,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6132463884353637
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型Agent应用架构实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6945091485977173,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.613078202009201
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "网络平台后端开发实习生-算力与AI基础设施",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6936893463134766,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6127912712097168
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型算法研究实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6933718323707581,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6126801413297653
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "强化学习算法实习生（角色化模型方向）-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6929358243942261,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6125275385379791
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "流媒体开发实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6929256319999695,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6125239711999892
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "Coding Agent研发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6929071545600891,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6125175040960311
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生（语音方向二）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.69288170337677,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6125085961818695
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "语音算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6923238039016724,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6123133313655853
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "测试开发实习生-Flow",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6919487714767456,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.612182070016861
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发工程师（实习）",
+      "company_name": "美团",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6914887428283691,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6120210599899292
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI开发实习生（数据工程方向一）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6913714408874512,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6119800043106078
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "软件开发-测试开发方向",
+      "company_name": "腾讯",
+      "location": "深圳总部 北京 上海 广州 成都 杭州",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6910542845726013,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6118689996004104
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "战略分析实习生-开发者服务",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6903827786445618,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6116339725255966
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "强化学习研究实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.690239429473877,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6115838003158569
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生（虚拟人方向）",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6902123093605042,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6115743082761764
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6900783181190491,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6115274113416671
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "机器人数据开发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6900547742843628,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6115191709995269
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法大模型测试开发实习生-抖音研发",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6895141005516052,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6113299351930618
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "多模态大模型应用算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6892088651657104,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6112231028079986
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "角色化模型强化学习算法工程师-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6886500120162964,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6110275042057037
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI搜索策略运营实习生-剪映CapCut",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6882639527320862,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6108923834562301
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "代码质量大模型算法实习生-质量技术",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6878173351287842,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6107360672950745
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI训推优化实习生-算力与AI基础设施",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6875284314155579,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6106349509954452
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "人工智能算法实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6873689293861389,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6105791252851486
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "运维开发实习生-Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6872144937515259,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.610525072813034
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生-飞书低代码平台和大模型应用",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6872087121009827,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.610523049235344
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大模型算法实习生-开发者服务",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6871534585952759,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6105037105083465
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发工程师-Flow",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6867156624794006,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6103504818677902
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "开发实习生（数据平台）",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6863855719566345,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6102349501848221
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "特征工程研发工程师-Data-抖音/直播/电商/剪映",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6861726641654968,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6101604324579238
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "智能信息-夸克多模态大模型研发&应用-阿里星",
+      "company_name": "阿里",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6861374378204346,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6101481032371521
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发实习生-飞书低代码平台和大模型应用",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6860599517822266,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6101209831237793
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "网络开发实习生-算力与AI基础设施",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6857135891914368,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6099997562170029
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "测试开发工程师-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6855357885360718,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6099375259876251
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "机器学习系统研发实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6854525804519653,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6099084031581878
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "高性能优化实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.684853732585907,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096988064050675
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "强化学习算法工程师（角色化模型方向）-Top Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6847164630889893,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096507620811462
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "后端开发实习生-基础技术",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6846936941146851,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096427929401398
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI策略运营实习生（大模型专项）-抖音增长",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6846901774406433,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096415621042252
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发工程师-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6846326589584351,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096214306354523
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生（业务安全方向）【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6845758557319641,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6096015495061874
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "服务端开发实习生-豆包手机助手",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6844927072525024,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6095724475383758
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "游戏算法实习生【2027届】",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6844536662101746,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.609558783173561
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "电机驱动器硬件实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6844004392623901,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6095401537418366
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "客户端开发工程师-豆包",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6842638850212097,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6094923597574233
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "算法实习生 — 推荐精排方向",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6836727857589722,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6092854750156402
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型AI搜索算法实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6825289130210876,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6088851195573807
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "测试开发工程师-Flow",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6825117468833923,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6088791114091873
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "豆包大模型算法研究实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6820825338363647,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6087288868427276
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "内容理解算法实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6814978718757629,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.608524255156517
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI算法运营实习生-剪映CapCut",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6812803745269775,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6084481310844421
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "AI产品体验设计实习生-剪映CapCut",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6812291741371155,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6084302109479904
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "端侧大模型算法工程师-抖音体验-筋斗云人才计划",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6811015605926514,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6083855462074279
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "前端开发实习生-Data",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6810020804405212,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6083507281541825
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "大语言模型应用算法工程师（安全方向）-Top Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.680676281452179,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6082366985082626
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "异构芯片性能优化实习生-Seed",
+      "company_name": "字节跳动",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6806265115737915,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.608219279050827
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    },
+    {
+      "job_name": "游戏客户端开发实习生",
+      "company_name": "哔哩哔哩",
+      "location": "上海",
+      "salary": "",
+      "jd_url": "",
+      "scores": {
+        "semantic": 0.6803685426712036,
+        "skill": 0.3,
+        "experience": 1.0,
+        "overall": 0.6081289899349213
+      },
+      "highlights": [
+        "学历符合要求 (本科)",
+        "工作年限 (1年) 符合初级/中级岗位要求"
+      ]
+    }
+  ]
+}
