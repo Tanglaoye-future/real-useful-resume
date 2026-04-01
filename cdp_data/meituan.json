@@ -1,0 +1,452 @@
+{
+  "meituan": [
+    {
+      "data": {
+        "list": [
+          {
+            "jobUnionId": "1503483562",
+            "name": "资深产品经理（商品产品）",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "产品类",
+            "jobFamilyGroup": "产品",
+            "cityList": [
+              {
+                "code": null,
+                "name": "上海市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "核心本地商业-服务零售事业部",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1.基于服务零售长期规划负责服务零售商品领域中商品策略或商品应用管理的建设；\n2.深入业务运营，挖掘痛点抽象归纳需求共性，输出通用化平台能力，和业务共同推进核心业务指标的达成；\n3.数据驱动，打造数据化运营体系，围绕供货和控货等系统，设计产品流程，丰富供给数量与质量；\n4.进行产品功能设计、远行设计、产品需求书等需求文档的编写，协助开发、测试团队理解和掌握需求，对产品需求方向和落地负责。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "可深耕的专业产品领域和丰富的可接触行业资源",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1735177602000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "2831487336",
+            "name": "绩效管理专家",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "职能类",
+            "jobFamilyGroup": "人力资源",
+            "cityList": [
+              {
+                "code": null,
+                "name": "北京市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "核心本地商业-美团平台",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "岗位职责\n1、负责优化与推进业务部绩效管理体系建设，推动绩效改进和持续提升，推动绩效考核落地；\n2、推动绩效管理体系的规则、标准、流程的落地实施，推动绩效管理全流程的高效运行；\n3、结合业务部实际情况，进行绩效管理模式、工具、方法、协同机制的研究，不断提升绩效管理工作的有效性，提升绩效管理对业务部目标达成和员工行为改变的促进作用；\n4、持续优化绩效评估方案以及激励方案，并为业务提供定制化激励方案。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "1、互联网大平台；\n2、开放的工作氛围以及团队。",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734922276000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "2949504163",
+            "name": "业务开发-地面产品销售",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "销售、客服与支持类",
+            "jobFamilyGroup": "销售",
+            "cityList": [
+              {
+                "code": null,
+                "name": "武汉市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "软硬件服务-餐饮SaaS事业部",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1、面向本地餐饮商家，负责美团收银系统及相关产品的销售，通过面访的形式约见客户，为客户解决问题，达成合作。\n2、执行公司的市场策略及政策，达成业绩考核及个人成长的各项目标。\n3、与公司各部门配合，及时处理用户的反馈、定期回访客户，投诉和建议，提高用户满意度。\n4、归档和更新目标商户拜访、协议、服务条款等有关的文件和数据，确保客户信息在数据库中得到正确的维护。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "我们提供互联网业内卓越的平台+有竞争力的薪资+当地五险一金+双休+所有法定节假日（带薪年、产、陪产、病等假期）+晋升机会+月度定期团建活动……\n薪资构成：无责任底薪+绩效工资+交通通话补贴+提成",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734912129000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "2035106410",
+            "name": "中小发西南大区-产品销售",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "销售、客服与支持类",
+            "jobFamilyGroup": "销售",
+            "cityList": [
+              {
+                "code": null,
+                "name": "德宏傣族景颇族自治州",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "核心本地商业-服务零售事业部",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1．通过销售拜访，了解商户的业务现状与实际需求并结合消费者的消费动向，制定个性化营销方案，与商户谈判并达成合作；\n2．执行公司的销售策略及政策，达成业绩目标；\n3．与公司各部门配合，及时处理用户的反馈、投诉和建议，提高用户满意度；\n4．归档和更新所有目标商户拜访、协议、服务条款等有关的文件和数据，确保信息在数据库中得到正确的维护。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "1.能够与下沉市场生活服务行业中小商户深度沟通，运用专业帮他们经营更好； 2.年轻团队、富有活力，入职即有师傅带教，将获得运营、销售、沟通等技能的专人辅导 3.发展空间大，向上可晋升至管理岗。",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734674651000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "2195843141",
+            "name": "充电宝渠道经理",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "销售、客服与支持类",
+            "jobFamilyGroup": "销售",
+            "cityList": [
+              {
+                "code": null,
+                "name": "福州市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "厦门市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "南昌市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "长沙市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "贵阳市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "南宁市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "昆明市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "软硬件服务-充电宝业务部",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1.负责管理区域内合作商，及时解决合作商的问题与诉求。\n2.负责所管理合作商的数据运营分析，定期走访，协助合作商提高单产，缩短回本周期。\n3.负责当地城市的资源搭建，深挖负责城市资源类型，扩大城市规模，提高美团市占。\n4.负责属地内市场拓展的任务，每月依据公司目标制定自己属地内拓展的策略并落地实施",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "大厂工作、周末双休、法定节假日、六险一金、福利好。\n1.销售+管理的工作属性，同序列更高的岗位称重；\n2.双晋升通道（管理晋升&专业晋升）；\n3.成熟且上升的行业，有无限可能。",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734601512000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "1587322460",
+            "name": "餐饮SaaS-大客户销售-渝滇黔",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "销售、客服与支持类",
+            "jobFamilyGroup": "销售",
+            "cityList": [
+              {
+                "code": null,
+                "name": "重庆市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "昆明市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "贵阳市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "软硬件服务-餐饮SaaS事业部",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1.负责区域内餐饮连锁收银产品的销售和市场商务拓展工作，并为区域整体绩效结果负责；\n2.通过销售拜访，了解商户的业务现状与实际需求,通过电话或面访的形式约见客户，与餐饮连锁企业深度沟通、为客户解决问题，提供SaaS一体化解决方案；\n3.及时跟进客户，做好客户关系的维系和定期回访工作，建议良好的长期合作关系；\n4.执行公司的市场策略及政策，达成业绩考核及个人成长的各项目标；\n5.与公司各部门配合，及时处理用户的反馈、投诉和建议，提高用户满意度；\n6.归档和更新所有目标商户拜访、协议、服务条款等有关的文件和数据，确保信息在数据库中得到正确的维护。\n\n任职要求：\n1.大专以上学历，有销售工作经验、互联网经验或有收银软件/硬件销售工作经验优先；\n2.个性开朗，有很强的学习能力和适应能力，适应互联网行业的快速发展，精力充沛，出色完成任务能力；\n3.具备较强的人际沟通能力和逻辑思维能力，思维敏捷，能够准确的把握产品优势和客户心理，高效整合内外部资源促成销售业绩；\n4.富有激情额创新理念，追求个人职业发展和公司利益的双赢，注重职业升华机遇和优质工作氛围；\n5.热爱销售，善于挑战，积极乐观，有强烈的成功欲望和企图心；\n6.为人正直，诚实可靠，以公司利益为重。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "P线可晋升职级，发展空间大，P线也可以转M线，提成上不封顶",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734415914000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          },
+          {
+            "jobUnionId": "2594230810",
+            "name": "云计算技术产品经理",
+            "projectId": null,
+            "projectName": null,
+            "jobType": "3",
+            "jobSpecialCode": "5",
+            "jobSource": "1",
+            "jobStatus": "000",
+            "jobFamily": "产品类",
+            "jobFamilyGroup": "产品",
+            "cityList": [
+              {
+                "code": null,
+                "name": "北京市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              },
+              {
+                "code": null,
+                "name": "上海市",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "workYear": null,
+            "department": [
+              {
+                "code": null,
+                "name": "核心本地商业-基础研发平台",
+                "children": null,
+                "sort": null,
+                "subCode": null,
+                "mapping": null,
+                "outerCode": null,
+                "bgNode": false
+              }
+            ],
+            "desc": null,
+            "departmentIntro": null,
+            "jobDuty": "1.负责美团私有云服务的产品设计与优化迭代，涵盖IaaS、PaaS、SaaS等完整的云产品方向。\n2.理解产品的使用场景和重点需求，从运维、研发等技术用户的视角进行功能设计。\n3.深入产品建设周期和链路上下游，从支持业务、保障稳定、提升效率、降低成本、优化使用体验等方面推动产品的建设迭代，保障交付质量。\n4.完善用户体验的双向互动和质量运营，加速产品落地推广，及时解决用户痛点，不断提升产品的核心价值。",
+            "jobRequirement": null,
+            "precedence": null,
+            "highLight": "1.独当一面的工作空间，全面负责美团基础技术产品的方案设计、工程实现、用户推广、运营迭代。\n2.做为支撑美团万亿业务交互的技术平台，有丰富的产品形态和巨大的产品流量，具备广阔的发展和成长空间。",
+            "otherInfo": null,
+            "firstPostTime": null,
+            "refreshTime": 1734136117000,
+            "tag": null,
+            "expiredTime": null,
+            "socialRecommendJob": null
+          }
+        ],
+        "page": {
+          "pageNo": 351,
+          "pageSize": 10,
+          "totalPage": 351,
+          "totalCount": 3507
+        },
+        "traceId": null
+      },
+      "status": 1,
+      "message": "成功"
+    }
+  ]
+}
