@@ -589,10 +589,12 @@ class ValueFilter:
         国企加分项：稳定编制、落户保障、福利完善
         """
         bonus = 0
-        job_text = (job.get('job_name', '') + ' ' + 
-                   job.get('job_description', '') + ' ' + 
-                   job.get('requirements', '') + ' ' +
-                   job.get('benefits', '')).lower()
+        job_text = (
+            str(job.get('job_name', '')) + ' ' + 
+            str(job.get('job_description', '')) + ' ' + 
+            str(job.get('requirements', '')) + ' ' +
+            str(job.get('benefits', ''))
+        ).lower()
         
         if company_type == "外企":
             # 外企加分项
@@ -881,6 +883,18 @@ class ValueFilter:
     def get_stats(self) -> Dict[str, int]:
         """获取筛选统计信息"""
         return self.stats.copy()
+
+    def get_tier_distribution(self, jobs: List[Dict[str, Any]]) -> Dict[str, int]:
+        """获取公司等级分布统计"""
+        distribution = {tier.value: 0 for tier in CompanyTier}
+        
+        for job in jobs:
+            details = job.get('score_details', {})
+            company_info = details.get('company', {})
+            tier = company_info.get('tier', '未知')
+            distribution[tier] = distribution.get(tier, 0) + 1
+        
+        return distribution
 
     def get_top_companies(self, jobs: List[Dict[str, Any]], top_n: int = 50) -> List[Dict[str, Any]]:
         """

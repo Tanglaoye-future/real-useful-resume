@@ -63,9 +63,9 @@ def run_basic_pipeline():
 
 
 def run_custom_pipeline():
-    """运行自定义配置的数据管道"""
+    """运行自定义配置的数据管道（使用新高价值筛选V2）"""
     print("\n" + "=" * 60)
-    print("运行自定义数据管道（针对27届上海产品岗位）")
+    print("运行自定义数据管道 V2（支持外企/独角兽/国企评估）")
     print("=" * 60 + "\n")
 
     # 创建数据管道实例
@@ -79,15 +79,24 @@ def run_custom_pipeline():
     )
     pipeline.setup_hard_filter(hard_rules)
 
-    # 配置高价值筛选
+    # 配置高价值筛选V2（新算法）
     value_config = ValueFilterConfig(
-        min_company_tier=CompanyTier.TIER_3,  # 只保留中厂及以上
-        high_value_keywords=[
+        # 公司维度权重50%，岗位维度权重50%
+        company_weight=0.5,
+        job_weight=0.5,
+        # 最低总分要求
+        min_total_score=60.0,
+        # 高价值岗位阈值
+        high_value_threshold=75.0,
+        # 高价值岗位类型
+        high_value_job_types=[
             "产品经理", "产品实习", "策略产品", "数据产品",
-            "增长产品", "商业化产品", "AI产品", "B端产品", "C端产品"
+            "增长产品", "商业化产品", "AI产品", "B端产品", "C端产品",
+            "Go后端开发", "数据分析师", "数据工程师"
         ],
-        min_salary_score=0.4,  # 最低薪资评分
-        min_success_rate=0.3   # 最低投递成功率
+        medium_value_job_types=[
+            "Java后端", "前端开发", "运营", "产品运营"
+        ]
     )
     pipeline.setup_value_filter(value_config)
 
@@ -95,7 +104,7 @@ def run_custom_pipeline():
     result = pipeline.run_full_pipeline()
 
     if result['success']:
-        print("\n✅ 自定义数据管道运行成功！")
+        print("\n✅ 自定义数据管道V2运行成功！")
         print(f"\n📊 详细统计:")
         stats = result['stats']
         print(f"  - 原始数据: {stats['raw_count']} 条")
@@ -113,14 +122,20 @@ def run_custom_pipeline():
 
         print(f"\n📝 详细报告: {result['report']}")
 
-        # 显示高价值岗位示例
+        # 显示高价值岗位示例（包含企业类型）
         if result['high_value_jobs']:
             print("\n🏆 高价值岗位示例（前5条）:")
             for i, job in enumerate(result['high_value_jobs'][:5], 1):
                 company = job.get('company_name', 'Unknown')
                 title = job.get('job_name', 'Unknown')
-                score = job.get('value_score', 0)
-                print(f"  {i}. [{company}] {title} (价值分: {score})")
+                total_score = job.get('total_score', 0)
+                details = job.get('score_details', {})
+                company_info = details.get('company', {})
+                tier = company_info.get('tier', '?')
+                company_type = company_info.get('type', '?')
+                print(f"  {i}. [{tier}-{company_type}] {company}")
+                print(f"      岗位: {title}")
+                print(f"      总分: {total_score:.1f}")
     else:
         print(f"\n❌ 数据管道运行失败: {result.get('error', 'Unknown error')}")
 

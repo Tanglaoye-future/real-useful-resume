@@ -282,10 +282,49 @@ def save_raw_data(jobs: List[Dict], output_dir: Path):
     return output_file
 
 
-def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
-    """执行简历匹配"""
+def load_processed_jobs() -> List[Dict]:
+    """加载已处理的高价值岗位数据（来自数据管道V2）"""
     logger.info("\n" + "="*80)
-    logger.info("🎯 开始简历匹配")
+    logger.info("📂 加载已处理的高价值岗位数据（V2）")
+    logger.info("="*80)
+    
+    processed_dir = project_root / 'data' / 'processed'
+    jobs = []
+    
+    # 加载高价值岗位
+    high_value_files = list(processed_dir.glob('high_value_jobs_*.json'))
+    if high_value_files:
+        latest_file = max(high_value_files, key=lambda p: p.stat().st_mtime)
+        logger.info(f"📄 找到高价值岗位: {latest_file}")
+        try:
+            with open(latest_file, 'r', encoding='utf-8') as f:
+                high_jobs = json.load(f)
+                jobs.extend(high_jobs)
+                logger.info(f"✅ 加载 {len(high_jobs)} 条高价值岗位")
+        except Exception as e:
+            logger.error(f"❌ 加载失败: {e}")
+    
+    # 加载中价值岗位
+    medium_value_files = list(processed_dir.glob('medium_value_jobs_*.json'))
+    if medium_value_files:
+        latest_file = max(medium_value_files, key=lambda p: p.stat().st_mtime)
+        logger.info(f"📄 找到中价值岗位: {latest_file}")
+        try:
+            with open(latest_file, 'r', encoding='utf-8') as f:
+                medium_jobs = json.load(f)
+                jobs.extend(medium_jobs)
+                logger.info(f"✅ 加载 {len(medium_jobs)} 条中价值岗位")
+        except Exception as e:
+            logger.error(f"❌ 加载失败: {e}")
+    
+    logger.info(f"\n📊 已处理岗位总计: {len(jobs)} 条")
+    return jobs
+
+
+def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
+    """执行简历匹配（使用新高价值筛选V2的数据）"""
+    logger.info("\n" + "="*80)
+    logger.info("🎯 开始简历匹配（基于高价值筛选V2）")
     logger.info("="*80)
     
     try:
@@ -294,10 +333,11 @@ def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
         
         # 加载简历 - 尝试多个路径
         resume_paths = [
+            project_root / 'assets' / 'resume' / 'uploads' / '唐圣昕_简历.json',
+            project_root / 'resume_upload' / 'resume.json',
+            project_root / 'project_package' / 'resume' / 'resume.json',
             project_root / 'resumes' / 'my_resume.json',
             project_root / 'my_resume.json',
-            Path('c:/Users/Lenovo/projects/ResuMiner/my_resume.json'),
-            Path('c:/Users/Lenovo/projects/ResuMiner_main/my_resume.json'),
         ]
         
         resume = None
@@ -312,9 +352,9 @@ def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
             logger.error("❌ 未找到简历文件")
             return {'success': False, 'message': '简历文件不存在'}
         
-        logger.info(f"📄 简历: {resume.get('basic_info', {}).get('name', '未知')}")
+        logger.info(f"📄 简历: {resume.get('name', resume.get('basic_info', {}).get('name', '未知'))}")
         
-        # 创建匹配器
+        # 创建匹配器（使用JobMatcher）
         config = {
             'model': {'embedding_model': 'paraphrase-multilingual-MiniLM-L12-v2'},
             'match': {
@@ -325,18 +365,41 @@ def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
                 }
             }
         }
-        
         matcher = JobMatcher(config)
         
         # 执行匹配
         result = matcher.match(resume, jobs, top_k=100)
         
-        if result.get('success'):
-            logger.info(f"✅ 匹配完成: {len(result.get('matched_jobs', []))} 个匹配岗位")
-        else:
+        if not result.get('success'):
             logger.warning(f"⚠️ 匹配未完成: {result.get('message')}")
+            return result
         
-        return result
+        matches = result.get('matched_jobs', [])
+        
+        logger.info(f"✅ 匹配完成: {len(matches)} 个匹配岗位")
+        
+        # 打印Top 10匹配结果
+        if matches:
+            logger.info("\n🏆 Top 10 匹配岗位:")
+            for i, match in enumerate(matches[:10], 1):
+                job = match.get('job', {})
+                company = job.get('company_name', 'Unknown')
+                title = job.get('job_name', 'Unknown')
+                match_score = match.get('match_score', 0)
+                total_score = job.get('total_score', 0)
+                details = job.get('score_details', {})
+                company_info = details.get('company', {})
+                tier = company_info.get('tier', '?')
+                company_type = company_info.get('type', '?')
+                logger.info(f"  {i:2d}. [{tier}-{company_type}] {company} - {title}")
+                logger.info(f"      匹配度: {match_score:.1f}% | 高价值评分: {total_score:.1f}")
+        
+        return {
+            'success': True,
+            'matched_jobs': matches,
+            'resume': resume,
+            'total_jobs': len(jobs)
+        }
         
     except Exception as e:
         logger.error(f"❌ 匹配过程出错: {e}")
@@ -348,11 +411,13 @@ def run_resume_matching(jobs: List[Dict]) -> Dict[str, Any]:
 def generate_reports(result: Dict[str, Any]):
     """生成报告"""
     logger.info("\n" + "="*80)
-    logger.info("📊 生成投递策略报告")
+    logger.info("📊 生成投递策略报告（基于高价值筛选V2）")
     logger.info("="*80)
     
     try:
         from matcher.report.application_report import ApplicationReportGenerator
+        import json
+        from datetime import datetime
         
         generator = ApplicationReportGenerator()
         
@@ -361,8 +426,44 @@ def generate_reports(result: Dict[str, Any]):
         resume = result.get('resume', {})
         
         if matched_jobs:
-            report_path = generator.generate_application_report(matched_jobs, resume)
+            # 生成投递报告
+            report_path = generator.generate_application_report(matched_jobs, resume, top_n=50)
             logger.info(f"✅ 投递报告已生成: {report_path}")
+            
+            # 保存匹配结果JSON
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            match_file = project_root / 'data' / 'output' / 'matcher' / f'match_report_{timestamp}.json'
+            match_file.parent.mkdir(parents=True, exist_ok=True)
+            
+            with open(match_file, 'w', encoding='utf-8') as f:
+                json.dump({
+                    'timestamp': timestamp,
+                    'total_matches': len(matched_jobs),
+                    'matches': matched_jobs[:50]
+                }, f, ensure_ascii=False, indent=2)
+            
+            logger.info(f"✅ 匹配结果已保存: {match_file}")
+            
+            # 打印汇总统计
+            logger.info("\n📈 匹配结果汇总:")
+            tier_stats = {}
+            company_types = {}
+            for match in matched_jobs[:20]:
+                job = match.get('job', {})
+                details = job.get('score_details', {})
+                company_info = details.get('company', {})
+                tier = company_info.get('tier', '未知')
+                company_type = company_info.get('type', '未知')
+                tier_stats[tier] = tier_stats.get(tier, 0) + 1
+                company_types[company_type] = company_types.get(company_type, 0) + 1
+            
+            logger.info("  公司分级分布:")
+            for tier, count in sorted(tier_stats.items(), key=lambda x: -x[1]):
+                logger.info(f"    - {tier}: {count} 个")
+            
+            logger.info("  企业类型分布:")
+            for ctype, count in sorted(company_types.items(), key=lambda x: -x[1]):
+                logger.info(f"    - {ctype}: {count} 个")
         else:
             logger.warning("⚠️ 没有匹配岗位，跳过投递报告生成")
             
@@ -373,29 +474,36 @@ def generate_reports(result: Dict[str, Any]):
 
 
 def main():
-    """主函数"""
+    """主函数 - 使用数据管道V2处理后的高价值岗位"""
     print("="*80)
-    print("🚀 ResuMiner 基于现有数据运行匹配")
+    print("🚀 ResuMiner 基于高价值筛选V2运行匹配")
     print("="*80)
     print(f"开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    # 加载数据
-    official_jobs = load_official_jobs()
-    third_party_jobs = load_third_party_jobs()
+    # 优先使用数据管道V2处理后的高价值岗位数据
+    processed_jobs = load_processed_jobs()
     
-    # 合并数据
-    all_jobs = merge_and_deduplicate(official_jobs, third_party_jobs)
+    if processed_jobs:
+        logger.info("✅ 使用数据管道V2处理后的高价值岗位数据")
+        all_jobs = processed_jobs
+    else:
+        logger.warning("⚠️ 未找到已处理的高价值岗位数据，尝试加载原始数据...")
+        # 回退到加载原始数据
+        official_jobs = load_official_jobs()
+        third_party_jobs = load_third_party_jobs()
+        all_jobs = merge_and_deduplicate(official_jobs, third_party_jobs)
     
     if not all_jobs:
         print("\n❌ 没有加载到任何岗位数据")
         print("\n请确保以下文件存在:")
-        print("  - ResuMiner_main/release_data/internship_shanghai_latest.csv")
-        print("  - 或 ResuMiner/data/output/crawler/*.json")
+        print("  - data/processed/high_value_jobs_*.json (数据管道V2输出)")
+        print("  - 或 ResuMiner_main/release_data/internship_shanghai_latest.csv")
         return 1
     
-    # 保存原始数据
-    raw_dir = project_root / 'data' / 'raw'
-    save_raw_data(all_jobs, raw_dir)
+    # 保存原始数据（如果不是从processed加载的）
+    if not processed_jobs:
+        raw_dir = project_root / 'data' / 'raw'
+        save_raw_data(all_jobs, raw_dir)
     
     # 执行简历匹配
     result = run_resume_matching(all_jobs)
