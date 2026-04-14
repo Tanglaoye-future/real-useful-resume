@@ -298,7 +298,14 @@ def p0_detail_enrich() -> pd.DataFrame:
         company = norm(row.get("company_name", row.get("公司全称", "")))
         name = norm(row.get("job_name", row.get("岗位名称", "")))
         location = norm(row.get("location", row.get("工作地点", "")))
-        text_full = f"{name} {norm(row.get('完整职责', ''))} {norm(row.get('完整要求', ''))} {norm(row.get('完整技能', ''))}"
+        duties = norm(row.get("完整职责", ""))
+        reqs = norm(row.get("完整要求", ""))
+        # 详情抽取失败时回填列表页描述，避免空值直接清零
+        if len(duties) < 20:
+            duties = norm(row.get("job_description", ""))
+        if len(reqs) < 20:
+            reqs = norm(row.get("job_requirement", ""))
+        text_full = f"{name} {duties} {reqs} {norm(row.get('完整技能', ''))}"
         c_score, c_type, c_rank = company_score(company)
         r_score = role_score(name)
         e_score = english_score(text_full)
@@ -315,8 +322,8 @@ def p0_detail_enrich() -> pd.DataFrame:
                 "实习时长": norm(row.get("实习时长", "")),
                 "留用机会": norm(row.get("留用机会", "")),
                 "投递链接": norm(row.get("url", "")),
-                "完整职责": norm(row.get("完整职责", "")),
-                "完整要求": norm(row.get("完整要求", "")),
+                "完整职责": duties,
+                "完整要求": reqs,
                 "完整技能": norm(row.get("完整技能", "")),
                 "抓取日期": now_str(),
                 "截止日期": norm(row.get("截止日期", "")),
@@ -395,12 +402,12 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     # hard keep
     work = work[~work["company_name"].astype(str).str.contains(BIG_TECH_BAN_RE, regex=True, na=False, case=False)]
     work = work[~work["company_name"].astype(str).str.contains(OUTSOURCE_RE, regex=True, na=False, case=False)]
-    work = work[work["company_name"].astype(str).str.contains(FOREIGN_INCLUDE_RE, regex=True, na=False, case=False)]
+    # 粗过滤阶段不再强依赖外企名录，先做高召回；外企主体在严格阶段判定
     work = work[work["location"].astype(str).str.contains("上海|shanghai", regex=True, na=False, case=False)]
     work = work[work["job_name"].astype(str).str.contains("实习", regex=True, na=False)]
     work = work[work["job_name"].astype(str).str.contains(DATA_ROLE_RE, regex=True, na=False, case=False)]
     text = (work["job_name"].astype(str) + " " + work["job_description"].astype(str) + " " + work["job_requirement"].astype(str))
-    work = work[text.str.contains(EN_RE, regex=True, na=False, case=False)]
+    work = work[text.str.contains(EN_RE, regex=True, na=False, case=False) | work["job_name"].astype(str).str.contains(r"[A-Za-z]{6,}", regex=True, na=False)]
     work = work.drop_duplicates(subset=["url"], keep="first")
     return work
 
@@ -426,6 +433,8 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
             fail.append("要求不足3条")
         if not re.search(SKILL_RE, text, re.I):
             fail.append("无硬技能关键词")
+        if not re.search(FOREIGN_INCLUDE_RE, company, re.I):
+            fail.append("非严格外企")
         if re.search(OUTSOURCE_RE, company, re.I):
             fail.append("外包中介")
         if row.get("链接状态", "") != "OK":
@@ -519,7 +528,7 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
     return pd.DataFrame(ok_rows).fillna(""), pd.DataFrame(fail_rows).fillna("")
 
 
-def generate_quality_report(raw_total: int, coarse_count: int, ok_count: int, fail_df: pd.DataFrame, strict_df: pd.DataFrame):
+def generate_quality_report(raw_total: int, coarse_count: int, ok_count: int, fail_df: pd.DataFrame, strict_df: pd.DataFrame, raw_df: pd.DataFrame):
     fail_reasons = {}
     if not fail_df.empty and "失败原因" in fail_df.columns:
         for x in fail_df["失败原因"].astype(str):
@@ -567,6 +576,23 @@ def generate_quality_report(raw_total: int, coarse_count: int, ok_count: int, fa
     md.append("- 各行业条数分布:")
     for k, v in industry_bins.items():
         md.append(f"  - {k}: {v}")
+    md.append("- 每关键词召回条数:")
+    if not raw_df.empty and "keyword_group" in raw_df.columns:
+        for k, v in raw_df["keyword_group"].value_counts().items():
+            md.append(f"  - {k}: {int(v)}")
+    else:
+        md.append("  - 无")
+    md.append("- 每平台超时/熔断次数:")
+    fail_csv = OUT_DIR / "rpc_page_failures_v2.csv"
+    if fail_csv.exists():
+        fdf = pd.read_csv(fail_csv)
+        if not fdf.empty and "platform" in fdf.columns:
+            for k, v in fdf["platform"].value_counts().items():
+                md.append(f"  - {k}: {int(v)}")
+        else:
+            md.append("  - 无")
+    else:
+        md.append("  - 无")
     (OUT_DIR / "quality_report_v2.md").write_text("\n".join(md), encoding="utf-8")
 
 
@@ -581,10 +607,19 @@ def main():
 
     # P1: 50 pages/source * keyword groups
     max_pages = int(os.getenv("PAGES_PER_SOURCE", "50"))
-    raw_df = crawl_keyword_pages(max_pages_per_source=max_pages)
-    ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
-    f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
-    f_all.write_text(raw_df.to_json(orient="records", force_ascii=False), encoding="utf-8")
+    use_existing_raw = os.getenv("USE_EXISTING_RAW", "0") == "1"
+    if use_existing_raw:
+        latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
+        if latest:
+            raw_df = pd.DataFrame(json.load(open(latest[0], "r", encoding="utf-8"))).fillna("")
+            print(f"use_existing_raw=1 source={latest[0]} rows={len(raw_df)}")
+        else:
+            raw_df = pd.DataFrame()
+    else:
+        raw_df = crawl_keyword_pages(max_pages_per_source=max_pages)
+        ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+        f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
+        f_all.write_text(raw_df.to_json(orient="records", force_ascii=False), encoding="utf-8")
 
     coarse_df = coarse_filter(raw_df)
     coarse_path = OUT_DIR / "foreign_strict_shanghai_candidate_pool_v2.csv"
@@ -615,6 +650,7 @@ def main():
         ok_count=len(ok_df),
         fail_df=fail_df,
         strict_df=strict_df,
+        raw_df=raw_df,
     )
 
     print(f"saved {coarse_path} rows={len(coarse_df)}")
