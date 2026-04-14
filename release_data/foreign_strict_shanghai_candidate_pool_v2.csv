@@ -1,6 +1,6 @@
-﻿job_id,source,company_name,position_name,salary_min,salary_max,salary_text,location,experience,education,job_description,job_requirements,publish_date,crawl_time,url,platform,job_name,raw,job_requirement
-,websearch,依必安派特电机(上海)有限公司,,,,,上海,实习,本科,,,,,https://m.liepin.com/job/1974570865.shtml,network,数字化实习生/Digitalization Intern,,
-,websearch,勘讯企业咨询服务(上海)有限公司,,,,,上海,实习,本科,,,,,https://m.liepin.com/job/1978673171.shtml,network,数据分析实习生-市场营销方向,,
-,websearch,麦当劳中国,,,,,上海,实习,本科,,,,,https://m.liepin.com/lptjob/73506939?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_73506939%3A1%3Agw.52e2e3c0-318993442,network,Strategy and Insights Intern,,
-,websearch,未知（海外运营方向）,,,,,上海,实习,本科,,,,,https://m.liepin.com/lptjob/69374041?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_69374041%3A1%3Agw.e7d6e393-36186052,network,数据策略实习生 Data Intern,,
-,websearch,未知公司,,,,,上海,实习,本科,,,,,https://m.liepin.com/job/1936252787.shtml,network,数据分析实习生,,
+﻿platform,source,company_name,job_name,location,salary_text,education,experience,url,publish_date,job_description,job_requirement
+network,websearch,依必安派特电机(上海)有限公司,数字化实习生/Digitalization Intern,上海,,本科,实习,https://m.liepin.com/job/1974570865.shtml,,,
+network,websearch,勘讯企业咨询服务(上海)有限公司,数据分析实习生-市场营销方向,上海,,本科,实习,https://m.liepin.com/job/1978673171.shtml,,,
+network,websearch,麦当劳中国,Strategy and Insights Intern,上海,,本科,实习,https://m.liepin.com/lptjob/73506939?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_73506939%3A1%3Agw.52e2e3c0-318993442,,,
+network,websearch,未知（海外运营方向）,数据策略实习生 Data Intern,上海,,本科,实习,https://m.liepin.com/lptjob/69374041?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_69374041%3A1%3Agw.e7d6e393-36186052,,,
+network,websearch,未知公司,数据分析实习生,上海,,本科,实习,https://m.liepin.com/job/1936252787.shtml,,,

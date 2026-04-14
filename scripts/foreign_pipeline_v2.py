@@ -864,6 +864,16 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
         "job_description",
         "job_requirement",
     ]
+    master_path = OUT_DIR / "foreign_master_database_v2.csv"
+    retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
+
+    # 1) load existing master
+    if master_path.exists():
+        master = pd.read_csv(master_path).fillna("")
+    else:
+        master = pd.DataFrame(columns=base_cols + ["ingest_time", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"])
+
+    # 2) upsert new raw links but do not overwrite historical processed status
     b = raw_df.copy().fillna("")
     for c in base_cols:
         if c not in b.columns:
@@ -876,43 +886,78 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
     b["link_status"] = ""
     b["link_reason"] = ""
     b["retry_needed"] = True
+    if not master.empty:
+        known_urls = set(master.get("url", pd.Series([], dtype=str)).astype(str))
+        b_new = b[~b["url"].astype(str).isin(known_urls)].copy()
+    else:
+        b_new = b
+    master = pd.concat([master, b_new], ignore_index=True).fillna("")
 
+    # 3) build status updates for processed urls only
+    updates = []
     if not ok_df.empty:
         o = ok_df.copy().fillna("")
-        o["detail_status"] = o.get("详情抓取状态", "成功")
-        o["jd_visibility"] = o.get("JD可见性", "未知")
-        o["jd_visibility_reason"] = o.get("JD可见性原因", "")
-        o["link_status"] = o.get("链接状态", "")
-        o["link_reason"] = o.get("链接原因", "")
-        o["retry_needed"] = o["jd_visibility"] != "清晰可见"
-        keep = ["url", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"]
-        b = b.drop(columns=[c for c in keep if c in b.columns and c != "url"]).merge(o[keep], on="url", how="left")
-        b["detail_status"] = b["detail_status"].fillna("未处理")
-        b["jd_visibility"] = b["jd_visibility"].fillna("未知")
-        b["jd_visibility_reason"] = b["jd_visibility_reason"].fillna("")
-        b["link_status"] = b["link_status"].fillna("")
-        b["link_reason"] = b["link_reason"].fillna("")
-        b["retry_needed"] = b["retry_needed"].fillna(True)
-
+        for _, r in o.iterrows():
+            updates.append(
+                {
+                    "url": str(r.get("url", "")),
+                    "detail_status": r.get("详情抓取状态", "成功"),
+                    "jd_visibility": r.get("JD可见性", "未知"),
+                    "jd_visibility_reason": r.get("JD可见性原因", ""),
+                    "link_status": r.get("链接状态", ""),
+                    "link_reason": r.get("链接原因", ""),
+                    "retry_needed": r.get("JD可见性", "未知") != "清晰可见",
+                }
+            )
     if not fail_df.empty:
         f = fail_df.copy().fillna("")
-        fm = dict(zip(f.get("url", pd.Series([], dtype=str)).astype(str), f.get("失败原因", pd.Series([], dtype=str)).astype(str)))
-        b["detail_status"] = b.apply(
-            lambda r: "失败" if str(r.get("url", "")) in fm else r.get("detail_status", "未处理"), axis=1
-        )
-        b["jd_visibility_reason"] = b.apply(
-            lambda r: f"detail_fetch_failed:{fm.get(str(r.get('url', '')), '')}"
-            if str(r.get("url", "")) in fm and not str(r.get("jd_visibility_reason", ""))
-            else r.get("jd_visibility_reason", ""),
-            axis=1,
-        )
-        b["retry_needed"] = b.apply(
-            lambda r: True if str(r.get("url", "")) in fm else bool(r.get("retry_needed", True)), axis=1
-        )
+        for _, r in f.iterrows():
+            updates.append(
+                {
+                    "url": str(r.get("url", "")),
+                    "detail_status": "失败",
+                    "jd_visibility": "未知",
+                    "jd_visibility_reason": f"detail_fetch_failed:{r.get('失败原因', '')}",
+                    "link_status": "",
+                    "link_reason": "",
+                    "retry_needed": True,
+                }
+            )
 
-    master_path = OUT_DIR / "foreign_master_database_v2.csv"
-    retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
-    master = _upsert_by_url(master_path, b)
+    if updates:
+        upd = pd.DataFrame(updates).fillna("").drop_duplicates(subset=["url"], keep="last")
+        master = master.drop(columns=[c for c in ["detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"] if c in master.columns]).merge(
+            upd, on="url", how="left"
+        )
+        # fill back unchanged historical rows
+        hist = pd.read_csv(master_path).fillna("") if master_path.exists() else pd.DataFrame()
+        if not hist.empty:
+            hist = hist.set_index("url")
+            for col, default in [
+                ("detail_status", "未处理"),
+                ("jd_visibility", "未知"),
+                ("jd_visibility_reason", ""),
+                ("link_status", ""),
+                ("link_reason", ""),
+                ("retry_needed", True),
+            ]:
+                master[col] = master.apply(
+                    lambda r: r[col]
+                    if str(r.get(col, "")) not in ["", "nan", "None"]
+                    else (hist.at[r["url"], col] if r["url"] in hist.index and col in hist.columns else default),
+                    axis=1,
+                )
+        else:
+            master["detail_status"] = master["detail_status"].replace("", "未处理")
+            master["jd_visibility"] = master["jd_visibility"].replace("", "未知")
+            master["jd_visibility_reason"] = master["jd_visibility_reason"].fillna("")
+            master["link_status"] = master["link_status"].fillna("")
+            master["link_reason"] = master["link_reason"].fillna("")
+            master["retry_needed"] = master["retry_needed"].fillna(True)
+
+    if "url" in master.columns:
+        master = master.drop_duplicates(subset=["url"], keep="last")
+
     retry = master[(master["retry_needed"] == True) | (master["jd_visibility"] != "清晰可见")].copy()
     master.to_csv(master_path, index=False, encoding="utf-8-sig")
     retry.to_csv(retry_path, index=False, encoding="utf-8-sig")
@@ -995,6 +1040,11 @@ def main():
         rq = pd.read_csv(retry_path).fillna("")
         if "retry_needed" in rq.columns:
             rq = rq[rq["retry_needed"] == True].copy()
+        # 优先处理未处理链接，其次失败链接，再处理不清晰回填链接
+        if "detail_status" in rq.columns:
+            priority_map = {"未处理": 0, "失败": 1, "失败-列表回填": 2, "成功": 3}
+            rq["_prio"] = rq["detail_status"].astype(str).map(priority_map).fillna(9)
+            rq = rq.sort_values(["_prio"], ascending=[True]).drop(columns=["_prio"])
         rq = rq.head(retry_batch_size)
         # 对齐字段
         for c in processing_df.columns:
