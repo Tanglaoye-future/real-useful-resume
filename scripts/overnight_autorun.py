@@ -51,8 +51,9 @@ def run_one_cycle(cycle: int):
         f"PAGES_PER_SOURCE={env['PAGES_PER_SOURCE']} RETRY_BATCH_SIZE={env['RETRY_BATCH_SIZE']}"
     )
     cmd = [sys.executable, str(ROOT / "scripts" / "foreign_pipeline_v2.py")]
-    # hard timeout for one cycle
-    proc = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=3600)
+    # shorter cycle timeout for visible progress
+    cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "1200"))
+    proc = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=cycle_timeout)
     tail = "\n".join((proc.stdout or "").splitlines()[-14:])
     log(f"cycle={cycle} exit={proc.returncode}\n{tail}")
     if proc.stderr:
@@ -66,7 +67,11 @@ def main():
     deadline = time.time() + hours * 3600
     cycle = 1
     log(f"overnight start hours={hours}")
+    max_cycles = int(os.getenv("MAX_CYCLES", "0"))  # 0 means unlimited within deadline
     while time.time() < deadline:
+        if max_cycles > 0 and cycle > max_cycles:
+            log(f"reach MAX_CYCLES={max_cycles}, stop")
+            break
         before = read_master_stats()
         log(f"before stats={before}")
         try:
