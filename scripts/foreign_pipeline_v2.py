@@ -837,6 +837,88 @@ def generate_quality_report(
     (OUT_DIR / "quality_report_v2.md").write_text("\n".join(md), encoding="utf-8")
 
 
+def _upsert_by_url(existing_path: Path, df_new: pd.DataFrame) -> pd.DataFrame:
+    if existing_path.exists():
+        old = pd.read_csv(existing_path).fillna("")
+        merged = pd.concat([old, df_new], ignore_index=True).fillna("")
+    else:
+        merged = df_new.fillna("")
+    if "url" in merged.columns:
+        merged = merged.drop_duplicates(subset=["url"], keep="last")
+    return merged
+
+
+def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: pd.DataFrame):
+    base_cols = [
+        "platform",
+        "source",
+        "company_name",
+        "job_name",
+        "location",
+        "salary_text",
+        "education",
+        "experience",
+        "url",
+        "publish_date",
+        "job_id",
+        "job_description",
+        "job_requirement",
+    ]
+    b = raw_df.copy().fillna("")
+    for c in base_cols:
+        if c not in b.columns:
+            b[c] = ""
+    b = b[base_cols].copy()
+    b["ingest_time"] = now_str()
+    b["detail_status"] = "未处理"
+    b["jd_visibility"] = "未知"
+    b["jd_visibility_reason"] = ""
+    b["link_status"] = ""
+    b["link_reason"] = ""
+    b["retry_needed"] = True
+
+    if not ok_df.empty:
+        o = ok_df.copy().fillna("")
+        o["detail_status"] = o.get("详情抓取状态", "成功")
+        o["jd_visibility"] = o.get("JD可见性", "未知")
+        o["jd_visibility_reason"] = o.get("JD可见性原因", "")
+        o["link_status"] = o.get("链接状态", "")
+        o["link_reason"] = o.get("链接原因", "")
+        o["retry_needed"] = o["jd_visibility"] != "清晰可见"
+        keep = ["url", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"]
+        b = b.drop(columns=[c for c in keep if c in b.columns and c != "url"]).merge(o[keep], on="url", how="left")
+        b["detail_status"] = b["detail_status"].fillna("未处理")
+        b["jd_visibility"] = b["jd_visibility"].fillna("未知")
+        b["jd_visibility_reason"] = b["jd_visibility_reason"].fillna("")
+        b["link_status"] = b["link_status"].fillna("")
+        b["link_reason"] = b["link_reason"].fillna("")
+        b["retry_needed"] = b["retry_needed"].fillna(True)
+
+    if not fail_df.empty:
+        f = fail_df.copy().fillna("")
+        fm = dict(zip(f.get("url", pd.Series([], dtype=str)).astype(str), f.get("失败原因", pd.Series([], dtype=str)).astype(str)))
+        b["detail_status"] = b.apply(
+            lambda r: "失败" if str(r.get("url", "")) in fm else r.get("detail_status", "未处理"), axis=1
+        )
+        b["jd_visibility_reason"] = b.apply(
+            lambda r: f"detail_fetch_failed:{fm.get(str(r.get('url', '')), '')}"
+            if str(r.get("url", "")) in fm and not str(r.get("jd_visibility_reason", ""))
+            else r.get("jd_visibility_reason", ""),
+            axis=1,
+        )
+        b["retry_needed"] = b.apply(
+            lambda r: True if str(r.get("url", "")) in fm else bool(r.get("retry_needed", True)), axis=1
+        )
+
+    master_path = OUT_DIR / "foreign_master_database_v2.csv"
+    retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
+    master = _upsert_by_url(master_path, b)
+    retry = master[(master["retry_needed"] == True) | (master["jd_visibility"] != "清晰可见")].copy()
+    master.to_csv(master_path, index=False, encoding="utf-8-sig")
+    retry.to_csv(retry_path, index=False, encoding="utf-8-sig")
+    return master, retry
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (RAW_DIR / "51job").mkdir(parents=True, exist_ok=True)
@@ -937,6 +1019,8 @@ def main():
     top50_path = OUT_DIR / "foreign_strict_top50_actionable_v2.csv"
     top50.to_csv(top50_path, index=False, encoding="utf-8-sig")
 
+    master_df, retry_df = build_master_and_retry(raw_df, ok_df, fail_df)
+
     generate_quality_report(
         raw_total=len(raw_df),
         coarse_count=len(coarse_df),
@@ -952,6 +1036,8 @@ def main():
     print(f"saved {strict_path} rows={len(strict_df)}")
     print(f"saved {top50_path} rows={len(top50)}")
     print(f"saved {jd_unclear_path} rows={len(jd_unclear_df)}")
+    print(f"saved {(OUT_DIR / 'foreign_master_database_v2.csv')} rows={len(master_df)}")
+    print(f"saved {(OUT_DIR / 'foreign_retry_queue_v2.csv')} rows={len(retry_df)}")
     print(f"saved {(OUT_DIR / 'quality_report_v2.md')}")
 
 
