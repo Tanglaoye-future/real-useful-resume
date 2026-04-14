@@ -186,6 +186,7 @@ def parse_jd_fields(text: str) -> Tuple[str, str]:
     t = norm(repair_mojibake(text))
     if not t:
         return "", ""
+    split_pattern = r"[\n；;。,.，]"
     duties = extract_section(
         t,
         [
@@ -230,25 +231,23 @@ def parse_jd_fields(text: str) -> Tuple[str, str]:
         ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责", "Responsibilities", "Responsibility", "what you'll do", "you will"],
     )
     if not duties and not reqs:
-        lines = [x for x in re.split(r"[\n；;。]", t) if len(x.strip()) >= 8]
+        lines = [x for x in re.split(split_pattern, t) if len(x.strip()) >= 8]
         # fallback split: front as duties, latter as requirements
         if len(lines) >= 6:
             mid = len(lines) // 2
             duties = "；".join(lines[:mid])
             reqs = "；".join(lines[mid:])
     # second fallback: only one side extracted, split the long side into two parts
-    if duties and not reqs and len(duties) >= 120:
-        lines = [x for x in re.split(r"[\n；;。]", duties) if len(x.strip()) >= 8]
-        if len(lines) >= 4:
-            mid = len(lines) // 2
-            duties = "；".join(lines[:mid])
-            reqs = "；".join(lines[mid:])
-    if reqs and not duties and len(reqs) >= 120:
-        lines = [x for x in re.split(r"[\n；;。]", reqs) if len(x.strip()) >= 8]
-        if len(lines) >= 4:
-            mid = len(lines) // 2
-            duties = "；".join(lines[:mid])
-            reqs = "；".join(lines[mid:])
+    duty_lines = [x for x in re.split(split_pattern, duties) if len(x.strip()) >= 8]
+    req_lines = [x for x in re.split(split_pattern, reqs) if len(x.strip()) >= 8]
+    if duties and not reqs and (len(duties) >= 120 or len(duty_lines) >= 4):
+        mid = len(duty_lines) // 2
+        duties = "；".join(duty_lines[:mid])
+        reqs = "；".join(duty_lines[mid:])
+    if reqs and not duties and (len(reqs) >= 120 or len(req_lines) >= 4):
+        mid = len(req_lines) // 2
+        duties = "；".join(req_lines[:mid])
+        reqs = "；".join(req_lines[mid:])
     return norm(duties), norm(reqs)
 
 
@@ -500,22 +499,33 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
     job = it.get("job") if isinstance(it.get("job"), dict) else {}
     dq = job.get("dq") if isinstance(job.get("dq"), dict) else {}
     job_id = job.get("jobId") or it.get("jobId")
+    # dom_parsing fallback structure: {title, href, company, tags}
+    href = norm(it.get("href", ""))
+    title_dom = norm(it.get("title", ""))
+    company_dom = norm(it.get("company", ""))
+    tags_dom = " ".join(it.get("tags", [])) if isinstance(it.get("tags"), list) else norm(it.get("tags", ""))
+    if href and not href.startswith("http"):
+        href = "https://www.liepin.com" + href
+    if not job_id and href:
+        m = re.search(r"/job/(\d+)\.shtml", href)
+        if m:
+            job_id = m.group(1)
     return {
         "platform": "liepin",
         "source": "liepin",
         "keyword_group": keyword,
         "page": page,
         "job_id": job_id,
-        "job_name": job.get("title") or it.get("title"),
-        "company_name": comp.get("compName") or comp.get("name") or it.get("compName"),
+        "job_name": job.get("title") or it.get("title") or title_dom,
+        "company_name": comp.get("compName") or comp.get("name") or it.get("compName") or company_dom,
         "location": dq.get("name") if isinstance(dq, dict) else "",
         "salary_text": job.get("salary") or "",
         "education": job.get("requireEduLevel") or "",
         "experience": job.get("requireWorkYears") or "",
-        "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else "",
+        "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else href,
         "publish_date": job.get("refreshTime") or "",
-        "job_description": job.get("description") or it.get("description") or "",
-        "job_requirement": job.get("require") or job.get("requireText") or "",
+        "job_description": job.get("description") or it.get("description") or tags_dom,
+        "job_requirement": job.get("require") or job.get("requireText") or tags_dom,
     }
 
 
@@ -526,8 +536,9 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     # hard keep
     work = work[~work["company_name"].astype(str).str.contains(BIG_TECH_BAN_RE, regex=True, na=False, case=False)]
     work = work[~work["company_name"].astype(str).str.contains(OUTSOURCE_RE, regex=True, na=False, case=False)]
-    # 粗过滤阶段不再强依赖外企名录，先做高召回；外企主体在严格阶段判定
-    work = work[work["location"].astype(str).str.contains("上海|shanghai", regex=True, na=False, case=False)]
+    # 粗过滤阶段召回优先：location 为空时不提前剔除（城市在严格阶段再做）
+    loc = work["location"].astype(str)
+    work = work[loc.eq("") | loc.str.contains("上海|shanghai", regex=True, na=False, case=False)]
     full_text = (
         work["job_name"].astype(str)
         + " "
@@ -574,6 +585,8 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
 
         # strict detail filters
         fail = []
+        if not re.search("上海|shanghai", norm(row.get("location", "")), re.I):
+            fail.append("非上海")
         duty_sent_cnt = len(split_sentences(duties))
         req_sent_cnt = len(split_sentences(reqs))
         if duty_sent_cnt < JD_MIN_SENTENCES and len(duties) < JD_MIN_CHARS:
@@ -616,6 +629,7 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
 
 def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
     rows: List[Dict] = []
+    only_liepin = os.getenv("ONLY_LIEPIN", "0") == "1"
     job51_timeout = int(os.getenv("JOB51_RPC_TIMEOUT", "8"))
     liepin_timeout = int(os.getenv("LIEPIN_RPC_TIMEOUT", "20"))
     fail_stats = []
@@ -627,7 +641,7 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
             if job51_consecutive_fail >= 5 and liepin_consecutive_fail >= 8:
                 break
             # 51job
-            if job51_consecutive_fail < 5:
+            if (not only_liepin) and job51_consecutive_fail < 5:
                 p1 = {"keyword": kw, "pageNum": page, "jobArea": "020000", "pageSize": 20, "requestId": f"p1_{page}_{int(time.time())}"}
                 try:
                     obj = requests.post(f"{RPC_BASE}/job51/search_jobs", json=p1, timeout=job51_timeout).json()
@@ -837,6 +851,7 @@ def main():
     use_existing_raw = os.getenv("USE_EXISTING_RAW", "0") == "1"
     use_all_local_raw = os.getenv("USE_ALL_LOCAL_RAW", "1") == "1"
     use_merged_pool = os.getenv("USE_MERGED_POOL", "1") == "1"
+    only_liepin = os.getenv("ONLY_LIEPIN", "0") == "1"
     if use_existing_raw:
         if use_all_local_raw:
             rows = []
@@ -877,6 +892,14 @@ def main():
             raw_df = pd.concat([raw_df, mdf[raw_df.columns.intersection(mdf.columns)]], ignore_index=True).fillna("")
             raw_df = raw_df.drop_duplicates(subset=["url"], keep="first")
             print(f"use_merged_pool=1 merged_rows={len(mdf)} total_rows={len(raw_df)}")
+
+    if only_liepin and not raw_df.empty:
+        src = raw_df.get("source", pd.Series([""] * len(raw_df))).astype(str).str.lower()
+        platform = raw_df.get("platform", pd.Series([""] * len(raw_df))).astype(str).str.lower()
+        mask = src.str.contains("liepin|websearch|network", na=False) | platform.str.contains("liepin|network", na=False)
+        before = len(raw_df)
+        raw_df = raw_df[mask].copy()
+        print(f"only_liepin=1 rows {before}->{len(raw_df)}")
 
     coarse_df = coarse_filter(raw_df)
     coarse_path = OUT_DIR / "foreign_strict_shanghai_candidate_pool_v2.csv"
