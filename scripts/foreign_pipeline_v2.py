@@ -156,6 +156,30 @@ def split_sentences(text: str) -> List[str]:
     return [x.strip() for x in parts if len(x.strip()) >= 6]
 
 
+def parse_jd_fields(text: str) -> Tuple[str, str]:
+    t = norm(text)
+    if not t:
+        return "", ""
+    duties = extract_section(
+        t,
+        ["岗位职责", "工作职责", "职位描述", "职位职责", "工作内容", "Responsibilities", "Responsibility"],
+        ["任职要求", "岗位要求", "职位要求", "任职资格", "Minimum Experience", "Qualifications", "Requirements"],
+    )
+    reqs = extract_section(
+        t,
+        ["任职要求", "岗位要求", "职位要求", "任职资格", "Minimum Experience", "Qualifications", "Requirements"],
+        ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责", "Responsibilities", "Responsibility"],
+    )
+    if not duties and not reqs:
+        lines = [x for x in re.split(r"[\n；;。]", t) if len(x.strip()) >= 8]
+        # fallback split: front as duties, latter as requirements
+        if len(lines) >= 6:
+            mid = len(lines) // 2
+            duties = "；".join(lines[:mid])
+            reqs = "；".join(lines[mid:])
+    return norm(duties), norm(reqs)
+
+
 def infer_intern_type(text: str) -> str:
     t = norm(text)
     if re.search("可转正", t):
@@ -300,6 +324,13 @@ def p0_detail_enrich() -> pd.DataFrame:
         location = norm(row.get("location", row.get("工作地点", "")))
         duties = norm(row.get("完整职责", ""))
         reqs = norm(row.get("完整要求", ""))
+        parsed_duties, parsed_reqs = parse_jd_fields(
+            f"{norm(row.get('详情抓取文本',''))} {norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}"
+        )
+        if len(duties) < 20 and parsed_duties:
+            duties = parsed_duties
+        if len(reqs) < 20 and parsed_reqs:
+            reqs = parsed_reqs
         # 详情抽取失败时回填列表页描述，避免空值直接清零
         if len(duties) < 20:
             duties = norm(row.get("job_description", ""))
@@ -422,6 +453,10 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
         detail = norm(row.get("详情抓取文本", ""))
         duties = norm(row.get("完整职责", ""))
         reqs = norm(row.get("完整要求", ""))
+        if not duties or not reqs:
+            d, r = parse_jd_fields(f"{detail} {norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}")
+            duties = duties or d
+            reqs = reqs or r
         skills = norm(row.get("完整技能", ""))
         text = f"{name} {duties} {reqs} {skills} {detail}"
 
@@ -522,9 +557,32 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
         url = norm(row.get("url", ""))
         detail, status = fetch_detail(url, max_retries=2)
         if status == "ok":
-            ok_rows.append({**row.to_dict(), **detail, "详情抓取状态": "成功"})
+            merged = {**row.to_dict(), **detail, "详情抓取状态": "成功"}
+            d, r = parse_jd_fields(f"{norm(merged.get('详情抓取文本',''))} {norm(merged.get('job_description',''))} {norm(merged.get('job_requirement',''))}")
+            if not norm(merged.get("完整职责", "")):
+                merged["完整职责"] = d
+            if not norm(merged.get("完整要求", "")):
+                merged["完整要求"] = r
+            ok_rows.append(merged)
         else:
-            fail_rows.append({**row.to_dict(), "详情抓取状态": "失败", "失败原因": status})
+            # fallback with list JD so pipeline does not lose JD candidates
+            d, r = parse_jd_fields(f"{norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}")
+            if d or r:
+                ok_rows.append(
+                    {
+                        **row.to_dict(),
+                        "详情抓取状态": "失败-列表回填",
+                        "失败原因": status,
+                        "完整职责": d if d else norm(row.get("job_description", "")),
+                        "完整要求": r if r else norm(row.get("job_requirement", "")),
+                        "完整技能": " ".join(
+                            sorted(set(re.findall(r"SQL|Python|Tableau|Power BI|SAS|R|Spark|Hadoop", f"{d} {r}", flags=re.I)))
+                        ),
+                        "详情抓取文本": norm(row.get("job_description", ""))[:3000],
+                    }
+                )
+            else:
+                fail_rows.append({**row.to_dict(), "详情抓取状态": "失败", "失败原因": status})
     return pd.DataFrame(ok_rows).fillna(""), pd.DataFrame(fail_rows).fillna("")
 
 
