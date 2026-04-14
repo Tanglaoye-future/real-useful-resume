@@ -83,6 +83,10 @@ TIER_35 = ["shein", "openai", "anthropic", "shopee"]
 TIER_30 = ["微软", "谷歌", "亚马逊", "苹果", "meta", "特斯拉", "麦肯锡", "bcg", "贝恩", "高盛", "摩根士丹利"]
 TIER_25 = ["ibm", "sap", "英特尔", "德勤", "毕马威", "埃森哲", "欧莱雅", "汇丰", "渣打", "普华永道", "安永"]
 
+# JD可见性阈值（从120下调，减少误伤）
+JD_MIN_SENTENCES = 2
+JD_MIN_CHARS = 80
+
 
 def norm(v) -> str:
     return re.sub(r"\s+", " ", str(v or "")).strip()
@@ -281,24 +285,30 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
     for attempt in range(max_retries + 1):
         try:
             r = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
-            html = r.text
+            html_doc = r.text
+            raw_lower = html_doc.lower()
+            is_51job = "51job.com" in url.lower() or "51job.com" in raw_lower
+            if is_51job and re.search(r"captcha|traceid|访问验证|验证页面|security check|verify you are human", raw_lower, re.I):
+                reason = "captcha_or_waf"
+                time.sleep(1)
+                continue
             # Try extract structured JD from embedded JSON first
             jd_json_text = ""
             for pat in [
                 r'"jobDescription"\s*:\s*"([\s\S]*?)"\s*,\s*"jobType"',
                 r'"description"\s*:\s*"([\s\S]*?)"\s*,\s*"employmentType"',
             ]:
-                m = re.search(pat, html, re.I)
+                m = re.search(pat, html_doc, re.I)
                 if m:
                     jd_json_text = m.group(1)
                     break
             if jd_json_text:
                 jd_json_text = html.unescape(jd_json_text)
                 jd_json_text = jd_json_text.encode("utf-8", "ignore").decode("unicode_escape", "ignore")
-            text = html_to_text(html)
+            text = html_to_text(html_doc)
             if jd_json_text:
                 text = norm(jd_json_text + " " + text)
-            if re.search("验证码|captcha|访问受限|请验证|人机验证", text, re.I):
+            if re.search("验证码|captcha|访问受限|请验证|人机验证|traceid", text, re.I):
                 reason = "blocked_or_captcha"
                 time.sleep(15)
                 continue
@@ -536,9 +546,9 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
         fail = []
         duty_sent_cnt = len(split_sentences(duties))
         req_sent_cnt = len(split_sentences(reqs))
-        if duty_sent_cnt < 3 and len(duties) < 120:
+        if duty_sent_cnt < JD_MIN_SENTENCES and len(duties) < JD_MIN_CHARS:
             fail.append("职责不足3条")
-        if req_sent_cnt < 3 and len(reqs) < 120:
+        if req_sent_cnt < JD_MIN_SENTENCES and len(reqs) < JD_MIN_CHARS:
             fail.append("要求不足3条")
         if not re.search(SKILL_RE, text, re.I):
             fail.append("无硬技能关键词")
@@ -624,7 +634,36 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
     return raw
 
 
-def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def build_jd_backfill_index() -> Dict[str, Dict[str, str]]:
+    idx: Dict[str, Dict[str, str]] = {}
+    files = sorted(glob.glob(str(RAW_DIR / "51job" / "jobs_51job_*.json"))) + sorted(
+        glob.glob(str(RAW_DIR / "liepin" / "jobs_liepin_*.json"))
+    )
+    for f in files:
+        try:
+            rows = json.load(open(f, "r", encoding="utf-8"))
+            if not isinstance(rows, list):
+                continue
+            for r in rows:
+                if not isinstance(r, dict):
+                    continue
+                url = norm(r.get("url", ""))
+                job_id = norm(r.get("job_id", ""))
+                desc = norm(r.get("job_description", ""))
+                req = norm(r.get("job_requirement", ""))
+                if not (desc or req):
+                    continue
+                payload = {"desc": desc, "req": req}
+                if url and url not in idx:
+                    idx[url] = payload
+                if job_id and job_id not in idx:
+                    idx[job_id] = payload
+        except Exception:
+            continue
+    return idx
+
+
+def enrich_details_with_retry(df: pd.DataFrame, jd_index: Dict[str, Dict[str, str]]) -> Tuple[pd.DataFrame, pd.DataFrame]:
     ok_rows = []
     fail_rows = []
     for _, row in df.iterrows():
@@ -639,8 +678,8 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
                 merged["完整要求"] = r
             duty_cnt = len(split_sentences(norm(merged.get("完整职责", ""))))
             req_cnt = len(split_sentences(norm(merged.get("完整要求", ""))))
-            jd_visible = (duty_cnt >= 3 or len(norm(merged.get("完整职责", ""))) >= 120) and (
-                req_cnt >= 3 or len(norm(merged.get("完整要求", ""))) >= 120
+            jd_visible = (duty_cnt >= JD_MIN_SENTENCES or len(norm(merged.get("完整职责", ""))) >= JD_MIN_CHARS) and (
+                req_cnt >= JD_MIN_SENTENCES or len(norm(merged.get("完整要求", ""))) >= JD_MIN_CHARS
             )
             merged["JD可见性"] = "清晰可见" if jd_visible else "不清晰"
             merged["JD可见性原因"] = "" if jd_visible else f"duty_cnt={duty_cnt},req_cnt={req_cnt}"
@@ -648,6 +687,12 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
         else:
             # fallback with list JD so pipeline does not lose JD candidates
             d, r = parse_jd_fields(f"{norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}")
+            if not (d or r):
+                key_url = norm(row.get("url", ""))
+                key_id = norm(row.get("job_id", ""))
+                bf = jd_index.get(key_url) or jd_index.get(key_id) or {}
+                d = d or norm(bf.get("desc", ""))
+                r = r or norm(bf.get("req", ""))
             if d or r:
                 ok_rows.append(
                     {
@@ -807,7 +852,8 @@ def main():
     coarse_path = OUT_DIR / "foreign_strict_shanghai_candidate_pool_v2.csv"
     coarse_df.to_csv(coarse_path, index=False, encoding="utf-8-sig")
 
-    ok_df, fail_df = enrich_details_with_retry(coarse_df)
+    jd_index = build_jd_backfill_index()
+    ok_df, fail_df = enrich_details_with_retry(coarse_df, jd_index)
     # link check
     if not ok_df.empty:
         checks = asyncio.run(check_links_batch(ok_df["url"].astype(str).tolist(), max_concurrent=12, timeout=12))
