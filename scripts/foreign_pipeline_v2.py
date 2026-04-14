@@ -92,6 +92,23 @@ def norm(v) -> str:
     return re.sub(r"\s+", " ", str(v or "")).strip()
 
 
+def repair_mojibake(text: str) -> str:
+    s = str(text or "")
+    if not s:
+        return s
+    # common mojibake signal for utf-8 decoded as latin1 (e.g., "æ°æ®")
+    signal = s.count("æ") + s.count("ç") + s.count("å") + s.count("ä")
+    if signal < 12:
+        return s
+    try:
+        fixed = s.encode("latin1", errors="ignore").decode("utf-8", errors="ignore")
+        if len(fixed.strip()) >= max(20, int(len(s) * 0.5)):
+            return fixed
+    except Exception:
+        pass
+    return s
+
+
 def now_str() -> str:
     return dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -166,7 +183,7 @@ def split_sentences(text: str) -> List[str]:
 
 
 def parse_jd_fields(text: str) -> Tuple[str, str]:
-    t = norm(text)
+    t = norm(repair_mojibake(text))
     if not t:
         return "", ""
     duties = extract_section(
@@ -219,6 +236,19 @@ def parse_jd_fields(text: str) -> Tuple[str, str]:
             mid = len(lines) // 2
             duties = "；".join(lines[:mid])
             reqs = "；".join(lines[mid:])
+    # second fallback: only one side extracted, split the long side into two parts
+    if duties and not reqs and len(duties) >= 120:
+        lines = [x for x in re.split(r"[\n；;。]", duties) if len(x.strip()) >= 8]
+        if len(lines) >= 4:
+            mid = len(lines) // 2
+            duties = "；".join(lines[:mid])
+            reqs = "；".join(lines[mid:])
+    if reqs and not duties and len(reqs) >= 120:
+        lines = [x for x in re.split(r"[\n；;。]", reqs) if len(x.strip()) >= 8]
+        if len(lines) >= 4:
+            mid = len(lines) // 2
+            duties = "；".join(lines[:mid])
+            reqs = "；".join(lines[mid:])
     return norm(duties), norm(reqs)
 
 
@@ -258,7 +288,7 @@ def html_to_text(html: str) -> str:
     no_style = re.sub(r"<style[\s\S]*?</style>", " ", no_script, flags=re.I)
     plain = re.sub(r"<[^>]+>", " ", no_style)
     plain = re.sub(r"&nbsp;|&amp;|&lt;|&gt;|&#\d+;", " ", plain)
-    return norm(plain)
+    return norm(repair_mojibake(plain))
 
 
 def extract_section(text: str, starts: List[str], ends: List[str]) -> str:
