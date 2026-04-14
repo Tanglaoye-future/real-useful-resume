@@ -54,7 +54,10 @@ FOREIGN_INCLUDE_RE = (
     "morgan stanley|deloitte|pwc|ey|kpmg|accenture|nestle|pepsi|hsbc|standard chartered|"
     "谷歌|微软|亚马逊|苹果|甲骨文|英伟达|英特尔|高通|思科|领英|优步|爱彼迎|贝宝|西门子|博世|联合利华|宝洁|摩根|高盛|德勤|普华永道|安永|毕马威|"
     "巴斯夫|淡水河谷|陶氏|杜邦|必和必拓|力拓|辉瑞|罗氏|诺华|abb|壳牌|bp|埃克森|泰科电子|喜利得|普立万|麦格纳|凯士比|"
-    "依必安派特|麦当劳|勘讯|analyt(ic|ic) partners|ebm-papst"
+    "依必安派特|麦当劳|勘讯|analyt(ic|ic) partners|ebm-papst|"
+    "阿斯利康|礼来|诺和诺德|赛默飞|丹纳赫|拜耳|飞利浦|霍尼韦尔|施耐德|3m|"
+    "merck|sanofi|gsk|abbott|boehringer|novo nordisk|astrazeneca|lilly|thermo fisher|danaher|"
+    "philips|honeywell|schneider|siemens healthineers|bosch rexroth|byk|evonik|basf|roche|pfizer"
 )
 
 WHITELIST_40 = [
@@ -436,7 +439,17 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     work = work[~work["company_name"].astype(str).str.contains(OUTSOURCE_RE, regex=True, na=False, case=False)]
     # 粗过滤阶段不再强依赖外企名录，先做高召回；外企主体在严格阶段判定
     work = work[work["location"].astype(str).str.contains("上海|shanghai", regex=True, na=False, case=False)]
-    work = work[work["job_name"].astype(str).str.contains("实习", regex=True, na=False)]
+    full_text = (
+        work["job_name"].astype(str)
+        + " "
+        + work["job_description"].astype(str)
+        + " "
+        + work["job_requirement"].astype(str)
+    )
+    work = work[
+        work["job_name"].astype(str).str.contains("实习|intern|校招", regex=True, na=False, case=False)
+        | full_text.str.contains("实习|intern|校招", regex=True, na=False, case=False)
+    ]
     # 召回优先：岗位关键词放宽，英语要求下沉到严格过滤评分阶段
     broad_role_re = r"数据|分析|bi|ai|analytics|analyst|strategy|商业智能|数字化"
     work = work[work["job_name"].astype(str).str.contains(broad_role_re, regex=True, na=False, case=False)]

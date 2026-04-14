@@ -84,3 +84,18 @@
   - 总分：63（保底目标）
 - 关键判断：
   - 提量方向有效（从 0 通过提升到 1 通过），但外企主体识别仍是最大瓶颈，需要进一步扩充“严格外企”白名单与别名映射。
+
+## 9) 提量继续（第二轮）
+- 新增二跳直达详情页种子（`m.liepin.com/job/*.shtml`）7 条，全部通过链接可访问预检。
+- 联网线索总量提升：`foreign_networked_leads_expanded_20260414.csv` 从 13 提升到 20。
+- 合并池提升：`foreign_strict_shanghai_candidate_pool_merged_v2.csv` 从 16 提升到 23。
+- 重跑三段式后：
+  - `candidate_pool_v2`: 20
+  - `filtered_v2`: 20
+  - `strict_pass`: 2
+  - `>=60`: 1
+- 当前通过岗位：
+  - 勘讯企业咨询服务(上海)有限公司：数据分析实习生-市场营销方向（63）
+  - 麦当劳中国：Strategy and Insights Intern（48，已通过严格过滤）
+- 下一跳重点：
+  - 把“非严格外企”失败项拆为“可白名单映射”与“确认为非目标公司”两类，继续抬升 strict_pass。
