@@ -47,7 +47,7 @@ BIG_TECH_BAN_RE = (
 OUTSOURCE_RE = "外包|驻场|中介|代招|人力资源|劳务派遣|服务外包|猎头"
 EN_RE = "english|英语|英文|cet-6|tem-4|fluent"
 DATA_ROLE_RE = "数据分析|商业分析|数据科学|bi|data analyst|business analyst|data scientist"
-SKILL_RE = "sql|python|tableau|power bi"
+SKILL_RE = "sql|python|tableau|power\\s?bi|pbi|spark|hadoop|sas|r语言|r "
 FOREIGN_INCLUDE_RE = (
     "microsoft|google|amazon|apple|oracle|ibm|sap|salesforce|adobe|nvidia|intel|amd|qualcomm|cisco|"
     "linkedin|uber|airbnb|paypal|stripe|shopee|shein|tesla|siemens|bosch|unilever|p&g|jpmorgan|goldman|"
@@ -436,9 +436,9 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     # 粗过滤阶段不再强依赖外企名录，先做高召回；外企主体在严格阶段判定
     work = work[work["location"].astype(str).str.contains("上海|shanghai", regex=True, na=False, case=False)]
     work = work[work["job_name"].astype(str).str.contains("实习", regex=True, na=False)]
-    work = work[work["job_name"].astype(str).str.contains(DATA_ROLE_RE, regex=True, na=False, case=False)]
-    text = (work["job_name"].astype(str) + " " + work["job_description"].astype(str) + " " + work["job_requirement"].astype(str))
-    work = work[text.str.contains(EN_RE, regex=True, na=False, case=False) | work["job_name"].astype(str).str.contains(r"[A-Za-z]{6,}", regex=True, na=False)]
+    # 召回优先：岗位关键词放宽，英语要求下沉到严格过滤评分阶段
+    broad_role_re = r"数据|分析|bi|ai|analytics|analyst|strategy|商业智能|数字化"
+    work = work[work["job_name"].astype(str).str.contains(broad_role_re, regex=True, na=False, case=False)]
     work = work.drop_duplicates(subset=["url"], keep="first")
     return work
 
@@ -462,9 +462,11 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
 
         # strict detail filters
         fail = []
-        if len(split_sentences(duties)) < 3:
+        duty_sent_cnt = len(split_sentences(duties))
+        req_sent_cnt = len(split_sentences(reqs))
+        if duty_sent_cnt < 3 and len(duties) < 120:
             fail.append("职责不足3条")
-        if len(split_sentences(reqs)) < 3:
+        if req_sent_cnt < 3 and len(reqs) < 120:
             fail.append("要求不足3条")
         if not re.search(SKILL_RE, text, re.I):
             fail.append("无硬技能关键词")
@@ -666,13 +668,29 @@ def main():
     # P1: 50 pages/source * keyword groups
     max_pages = int(os.getenv("PAGES_PER_SOURCE", "50"))
     use_existing_raw = os.getenv("USE_EXISTING_RAW", "0") == "1"
+    use_all_local_raw = os.getenv("USE_ALL_LOCAL_RAW", "1") == "1"
     if use_existing_raw:
-        latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
-        if latest:
-            raw_df = pd.DataFrame(json.load(open(latest[0], "r", encoding="utf-8"))).fillna("")
-            print(f"use_existing_raw=1 source={latest[0]} rows={len(raw_df)}")
+        if use_all_local_raw:
+            rows = []
+            # aggregate historical third-party snapshots to improve sample size
+            f51 = sorted(glob.glob(str(RAW_DIR / "51job" / "jobs_51job_*.json")))
+            flp = sorted(glob.glob(str(RAW_DIR / "liepin" / "jobs_liepin_*.json")))
+            for f in f51 + flp:
+                try:
+                    data = json.load(open(f, "r", encoding="utf-8"))
+                    if isinstance(data, list):
+                        rows.extend(data)
+                except Exception:
+                    continue
+            raw_df = pd.DataFrame(rows).fillna("")
+            print(f"use_existing_raw=1 use_all_local_raw=1 files={len(f51)+len(flp)} rows={len(raw_df)}")
         else:
-            raw_df = pd.DataFrame()
+            latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
+            if latest:
+                raw_df = pd.DataFrame(json.load(open(latest[0], "r", encoding="utf-8"))).fillna("")
+                print(f"use_existing_raw=1 source={latest[0]} rows={len(raw_df)}")
+            else:
+                raw_df = pd.DataFrame()
     else:
         raw_df = crawl_keyword_pages(max_pages_per_source=max_pages)
         ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -59,3 +59,14 @@
   - `RISKY`: 6
   - `BROKEN`: 1
 - 结论：联网扩源有效，但仍需二跳抓取（从聚合页进入具体 JD 详情页）才能进入严格过滤环节。
+
+## 7) 提量增量（立即执行）
+- 已扩充联网线索到 10 条：`release_data/foreign_networked_leads_expanded_20260414.csv`
+  - `OK`: 4
+  - `RISKY`: 5
+  - `BROKEN`: 1
+- 已合并本地候选池与联网线索：
+  - `release_data/foreign_strict_shanghai_candidate_pool_v2.csv`: 12
+  - `release_data/foreign_networked_leads_expanded_20260414.csv`: 10
+  - `release_data/foreign_strict_shanghai_candidate_pool_merged_v2.csv`: 22（去重后）
+- 当前数据规模已从“个位数可用”提升到“可二跳详情补抓”的候选池规模，下一步重点是把 RISKY 聚合页转换为可评分 JD 详情页。
