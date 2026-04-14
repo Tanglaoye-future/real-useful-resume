@@ -579,6 +579,13 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
                 merged["完整职责"] = d
             if not norm(merged.get("完整要求", "")):
                 merged["完整要求"] = r
+            duty_cnt = len(split_sentences(norm(merged.get("完整职责", ""))))
+            req_cnt = len(split_sentences(norm(merged.get("完整要求", ""))))
+            jd_visible = (duty_cnt >= 3 or len(norm(merged.get("完整职责", ""))) >= 120) and (
+                req_cnt >= 3 or len(norm(merged.get("完整要求", ""))) >= 120
+            )
+            merged["JD可见性"] = "清晰可见" if jd_visible else "不清晰"
+            merged["JD可见性原因"] = "" if jd_visible else f"duty_cnt={duty_cnt},req_cnt={req_cnt}"
             ok_rows.append(merged)
         else:
             # fallback with list JD so pipeline does not lose JD candidates
@@ -595,6 +602,8 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
                             sorted(set(re.findall(r"SQL|Python|Tableau|Power BI|SAS|R|Spark|Hadoop", f"{d} {r}", flags=re.I)))
                         ),
                         "详情抓取文本": norm(row.get("job_description", ""))[:3000],
+                        "JD可见性": "不清晰",
+                        "JD可见性原因": f"detail_fetch_failed:{status}",
                     }
                 )
             else:
@@ -602,7 +611,16 @@ def enrich_details_with_retry(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFr
     return pd.DataFrame(ok_rows).fillna(""), pd.DataFrame(fail_rows).fillna("")
 
 
-def generate_quality_report(raw_total: int, coarse_count: int, ok_count: int, fail_df: pd.DataFrame, strict_df: pd.DataFrame, raw_df: pd.DataFrame):
+def generate_quality_report(
+    raw_total: int,
+    coarse_count: int,
+    ok_count: int,
+    fail_df: pd.DataFrame,
+    strict_df: pd.DataFrame,
+    raw_df: pd.DataFrame,
+    jd_clear_count: int,
+    jd_unclear_count: int,
+):
     fail_reasons = {}
     if not fail_df.empty and "失败原因" in fail_df.columns:
         for x in fail_df["失败原因"].astype(str):
@@ -636,6 +654,8 @@ def generate_quality_report(raw_total: int, coarse_count: int, ok_count: int, fa
     md.append(f"- 总抓取列表页条数: {raw_total}")
     md.append(f"- 粗过滤后剩余条数: {coarse_count}")
     md.append(f"- 详情页补抓成功条数: {ok_count}")
+    md.append(f"- JD清晰可见条数: {jd_clear_count}")
+    md.append(f"- JD不清晰条数: {jd_unclear_count}")
     md.append(f"- 详情页补抓失败条数: {len(fail_df)}")
     md.append("- 详情页补抓失败原因:")
     if fail_reasons:
@@ -740,7 +760,16 @@ def main():
         ok_df["链接状态"] = []
         ok_df["链接原因"] = []
 
-    strict_df = strict_filter_and_score(ok_df)
+    # 强制 JD 可见性门槛：不清晰JD进入隔离池，不参与严格筛选
+    if "JD可见性" not in ok_df.columns:
+        ok_df["JD可见性"] = "不清晰"
+        ok_df["JD可见性原因"] = "missing_visibility_flag"
+    jd_clear_df = ok_df[ok_df["JD可见性"] == "清晰可见"].copy()
+    jd_unclear_df = ok_df[ok_df["JD可见性"] != "清晰可见"].copy()
+    jd_unclear_path = OUT_DIR / "foreign_jd_unclear_quarantine_v2.csv"
+    jd_unclear_df.to_csv(jd_unclear_path, index=False, encoding="utf-8-sig")
+
+    strict_df = strict_filter_and_score(jd_clear_df)
     strict_path = OUT_DIR / "foreign_strict_shanghai_filtered_v2.csv"
     strict_df.to_csv(strict_path, index=False, encoding="utf-8-sig")
 
@@ -755,11 +784,14 @@ def main():
         fail_df=fail_df,
         strict_df=strict_df,
         raw_df=raw_df,
+        jd_clear_count=len(jd_clear_df),
+        jd_unclear_count=len(jd_unclear_df),
     )
 
     print(f"saved {coarse_path} rows={len(coarse_df)}")
     print(f"saved {strict_path} rows={len(strict_df)}")
     print(f"saved {top50_path} rows={len(top50)}")
+    print(f"saved {jd_unclear_path} rows={len(jd_unclear_df)}")
     print(f"saved {(OUT_DIR / 'quality_report_v2.md')}")
 
 
