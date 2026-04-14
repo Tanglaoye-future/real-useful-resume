@@ -1,6 +1,7 @@
 import asyncio
 import datetime as dt
 import glob
+import html
 import json
 import os
 import re
@@ -166,13 +167,46 @@ def parse_jd_fields(text: str) -> Tuple[str, str]:
         return "", ""
     duties = extract_section(
         t,
-        ["岗位职责", "工作职责", "职位描述", "职位职责", "工作内容", "Responsibilities", "Responsibility"],
-        ["任职要求", "岗位要求", "职位要求", "任职资格", "Minimum Experience", "Qualifications", "Requirements"],
+        [
+            "岗位职责",
+            "工作职责",
+            "职位描述",
+            "职位职责",
+            "工作内容",
+            "Responsibilities",
+            "Responsibility",
+            "what you'll do",
+            "you will",
+            "key responsibilities",
+        ],
+        [
+            "任职要求",
+            "岗位要求",
+            "职位要求",
+            "任职资格",
+            "Minimum Experience",
+            "Qualifications",
+            "Requirements",
+            "what we're looking for",
+            "you are",
+            "candidate profile",
+        ],
     )
     reqs = extract_section(
         t,
-        ["任职要求", "岗位要求", "职位要求", "任职资格", "Minimum Experience", "Qualifications", "Requirements"],
-        ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责", "Responsibilities", "Responsibility"],
+        [
+            "任职要求",
+            "岗位要求",
+            "职位要求",
+            "任职资格",
+            "Minimum Experience",
+            "Qualifications",
+            "Requirements",
+            "what we're looking for",
+            "you are",
+            "candidate profile",
+        ],
+        ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责", "Responsibilities", "Responsibility", "what you'll do", "you will"],
     )
     if not duties and not reqs:
         lines = [x for x in re.split(r"[\n；;。]", t) if len(x.strip()) >= 8]
@@ -248,7 +282,22 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
         try:
             r = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
             html = r.text
+            # Try extract structured JD from embedded JSON first
+            jd_json_text = ""
+            for pat in [
+                r'"jobDescription"\s*:\s*"([\s\S]*?)"\s*,\s*"jobType"',
+                r'"description"\s*:\s*"([\s\S]*?)"\s*,\s*"employmentType"',
+            ]:
+                m = re.search(pat, html, re.I)
+                if m:
+                    jd_json_text = m.group(1)
+                    break
+            if jd_json_text:
+                jd_json_text = html.unescape(jd_json_text)
+                jd_json_text = jd_json_text.encode("utf-8", "ignore").decode("unicode_escape", "ignore")
             text = html_to_text(html)
+            if jd_json_text:
+                text = norm(jd_json_text + " " + text)
             if re.search("验证码|captcha|访问受限|请验证|人机验证", text, re.I):
                 reason = "blocked_or_captcha"
                 time.sleep(15)
@@ -459,7 +508,16 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
 
 def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
-        return df
+        return pd.DataFrame(
+            columns=[
+                "company_name",
+                "job_name",
+                "严格过滤通过",
+                "严格过滤失败原因",
+                "总分",
+                "投递优先级",
+            ]
+        )
     rows = []
     for _, row in df.iterrows():
         company = norm(row.get("company_name", ""))
@@ -773,7 +831,10 @@ def main():
     strict_path = OUT_DIR / "foreign_strict_shanghai_filtered_v2.csv"
     strict_df.to_csv(strict_path, index=False, encoding="utf-8-sig")
 
-    top50 = strict_df[(strict_df["严格过滤通过"] == True) & (strict_df["总分"] >= 70)].head(50).copy()
+    if "严格过滤通过" in strict_df.columns and "总分" in strict_df.columns:
+        top50 = strict_df[(strict_df["严格过滤通过"] == True) & (strict_df["总分"] >= 70)].head(50).copy()
+    else:
+        top50 = pd.DataFrame()
     top50_path = OUT_DIR / "foreign_strict_top50_actionable_v2.csv"
     top50.to_csv(top50_path, index=False, encoding="utf-8-sig")
 
