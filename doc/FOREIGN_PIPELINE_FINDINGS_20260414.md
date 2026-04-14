@@ -70,3 +70,17 @@
   - `release_data/foreign_networked_leads_expanded_20260414.csv`: 10
   - `release_data/foreign_strict_shanghai_candidate_pool_merged_v2.csv`: 22（去重后）
 - 当前数据规模已从“个位数可用”提升到“可二跳详情补抓”的候选池规模，下一步重点是把 RISKY 聚合页转换为可评分 JD 详情页。
+
+## 8) 最新进展（继续提量）
+- 已将 `m.liepin.com/job/*.shtml` 直达详情页作为优先扩源入口，并新增 4 条高质量种子（均可访问）。
+- `foreign_networked_leads_expanded_20260414.csv` 已扩展到 13 条。
+- 合并候选池后重跑：
+  - `candidate_pool_v2`: 15
+  - `filtered_v2`: 15
+  - `strict_pass`: 1（首次出现可通过严格过滤的岗位）
+- 当前首个通过岗位：
+  - 公司：勘讯企业咨询服务(上海)有限公司
+  - 岗位：数据分析实习生-市场营销方向
+  - 总分：63（保底目标）
+- 关键判断：
+  - 提量方向有效（从 0 通过提升到 1 通过），但外企主体识别仍是最大瓶颈，需要进一步扩充“严格外企”白名单与别名映射。

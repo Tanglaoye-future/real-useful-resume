@@ -53,7 +53,8 @@ FOREIGN_INCLUDE_RE = (
     "linkedin|uber|airbnb|paypal|stripe|shopee|shein|tesla|siemens|bosch|unilever|p&g|jpmorgan|goldman|"
     "morgan stanley|deloitte|pwc|ey|kpmg|accenture|nestle|pepsi|hsbc|standard chartered|"
     "谷歌|微软|亚马逊|苹果|甲骨文|英伟达|英特尔|高通|思科|领英|优步|爱彼迎|贝宝|西门子|博世|联合利华|宝洁|摩根|高盛|德勤|普华永道|安永|毕马威|"
-    "巴斯夫|淡水河谷|陶氏|杜邦|必和必拓|力拓|辉瑞|罗氏|诺华|abb|壳牌|bp|埃克森|泰科电子|喜利得|普立万|麦格纳|凯士比"
+    "巴斯夫|淡水河谷|陶氏|杜邦|必和必拓|力拓|辉瑞|罗氏|诺华|abb|壳牌|bp|埃克森|泰科电子|喜利得|普立万|麦格纳|凯士比|"
+    "依必安派特|麦当劳|勘讯|analyt(ic|ic) partners|ebm-papst"
 )
 
 WHITELIST_40 = [
@@ -669,6 +670,7 @@ def main():
     max_pages = int(os.getenv("PAGES_PER_SOURCE", "50"))
     use_existing_raw = os.getenv("USE_EXISTING_RAW", "0") == "1"
     use_all_local_raw = os.getenv("USE_ALL_LOCAL_RAW", "1") == "1"
+    use_merged_pool = os.getenv("USE_MERGED_POOL", "1") == "1"
     if use_existing_raw:
         if use_all_local_raw:
             rows = []
@@ -696,6 +698,19 @@ def main():
         ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
         f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
         f_all.write_text(raw_df.to_json(orient="records", force_ascii=False), encoding="utf-8")
+
+    if use_merged_pool:
+        merged_pool = OUT_DIR / "foreign_strict_shanghai_candidate_pool_merged_v2.csv"
+        if merged_pool.exists():
+            mdf = pd.read_csv(merged_pool).fillna("")
+            for c in ["platform", "source", "company_name", "job_name", "location", "salary_text", "education", "experience", "url", "publish_date", "job_description", "job_requirement"]:
+                if c not in raw_df.columns:
+                    raw_df[c] = ""
+                if c not in mdf.columns:
+                    mdf[c] = ""
+            raw_df = pd.concat([raw_df, mdf[raw_df.columns.intersection(mdf.columns)]], ignore_index=True).fillna("")
+            raw_df = raw_df.drop_duplicates(subset=["url"], keep="first")
+            print(f"use_merged_pool=1 merged_rows={len(mdf)} total_rows={len(raw_df)}")
 
     coarse_df = coarse_filter(raw_df)
     coarse_path = OUT_DIR / "foreign_strict_shanghai_candidate_pool_v2.csv"
