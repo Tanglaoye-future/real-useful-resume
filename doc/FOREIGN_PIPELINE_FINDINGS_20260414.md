@@ -51,3 +51,11 @@
 - 质量报告新增两项：
   - 每关键词召回条数
   - 每平台超时/熔断次数
+
+## 6) 已执行的联网扩源（当日增量）
+- 已新增联网种子池：`release_data/foreign_networked_leads_seed_20260414.csv`
+- 本轮新增 8 条外网线索（BASF/Siemens/Bosch/Roche/Glassdoor 聚合页），并完成可访问性预检：
+  - `OK`: 1
+  - `RISKY`: 6
+  - `BROKEN`: 1
+- 结论：联网扩源有效，但仍需二跳抓取（从聚合页进入具体 JD 详情页）才能进入严格过滤环节。
