@@ -311,9 +311,10 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
         "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     }
     reason = ""
+    req_timeout = int(os.getenv("DETAIL_REQ_TIMEOUT", "30"))
     for attempt in range(max_retries + 1):
         try:
-            r = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
+            r = requests.get(url, headers=headers, timeout=req_timeout, allow_redirects=True)
             html_doc = r.text
             raw_lower = html_doc.lower()
             is_51job = "51job.com" in url.lower() or "51job.com" in raw_lower
@@ -1034,6 +1035,7 @@ def main():
 
     # 增量处理重试队列：避免每轮只处理coarse_df导致大量JD长期未处理
     retry_batch_size = int(os.getenv("RETRY_BATCH_SIZE", "150"))
+    process_retry_only = os.getenv("PROCESS_RETRY_ONLY", "0") == "1"
     processing_df = coarse_df.copy()
     retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
     if retry_batch_size > 0 and retry_path.exists():
@@ -1057,6 +1059,21 @@ def main():
         if "url" in processing_df.columns:
             processing_df = processing_df.drop_duplicates(subset=["url"], keep="first")
         print(f"retry_batch_enabled=1 batch={len(rq)} processing_rows={len(processing_df)}")
+    if process_retry_only and retry_path.exists():
+        rq = pd.read_csv(retry_path).fillna("")
+        if "retry_needed" in rq.columns:
+            rq = rq[rq["retry_needed"] == True].copy()
+        if "detail_status" in rq.columns:
+            priority_map = {"未处理": 0, "失败": 1, "失败-列表回填": 2, "成功": 3}
+            rq["_prio"] = rq["detail_status"].astype(str).map(priority_map).fillna(9)
+            rq = rq.sort_values(["_prio"], ascending=[True]).drop(columns=["_prio"])
+        rq = rq.head(retry_batch_size)
+        # align and force retry-only set
+        for c in processing_df.columns:
+            if c not in rq.columns:
+                rq[c] = ""
+        processing_df = rq[processing_df.columns].copy() if not processing_df.empty else rq.copy()
+        print(f"process_retry_only=1 processing_rows={len(processing_df)}")
 
     jd_index = build_jd_backfill_index()
     ok_df, fail_df = enrich_details_with_retry(processing_df, jd_index)
