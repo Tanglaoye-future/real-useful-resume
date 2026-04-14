@@ -52,6 +52,9 @@ cookies/
 data/output/
 data/raw/
 data/processed/
+cdp_data/*.json
+outputs/raw/*.csv
+output/job51_checkpoint.json
 
 # Reports
 reports/
