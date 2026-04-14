@@ -987,8 +987,29 @@ def main():
     coarse_path = OUT_DIR / "foreign_strict_shanghai_candidate_pool_v2.csv"
     coarse_df.to_csv(coarse_path, index=False, encoding="utf-8-sig")
 
+    # 增量处理重试队列：避免每轮只处理coarse_df导致大量JD长期未处理
+    retry_batch_size = int(os.getenv("RETRY_BATCH_SIZE", "150"))
+    processing_df = coarse_df.copy()
+    retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
+    if retry_batch_size > 0 and retry_path.exists():
+        rq = pd.read_csv(retry_path).fillna("")
+        if "retry_needed" in rq.columns:
+            rq = rq[rq["retry_needed"] == True].copy()
+        rq = rq.head(retry_batch_size)
+        # 对齐字段
+        for c in processing_df.columns:
+            if c not in rq.columns:
+                rq[c] = ""
+        for c in rq.columns:
+            if c not in processing_df.columns:
+                processing_df[c] = ""
+        processing_df = pd.concat([processing_df, rq[processing_df.columns]], ignore_index=True).fillna("")
+        if "url" in processing_df.columns:
+            processing_df = processing_df.drop_duplicates(subset=["url"], keep="first")
+        print(f"retry_batch_enabled=1 batch={len(rq)} processing_rows={len(processing_df)}")
+
     jd_index = build_jd_backfill_index()
-    ok_df, fail_df = enrich_details_with_retry(coarse_df, jd_index)
+    ok_df, fail_df = enrich_details_with_retry(processing_df, jd_index)
     # link check
     if not ok_df.empty:
         checks = asyncio.run(check_links_batch(ok_df["url"].astype(str).tolist(), max_concurrent=12, timeout=12))
