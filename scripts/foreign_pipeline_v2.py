@@ -604,9 +604,15 @@ def parse_job51_item(it: Dict, keyword: str, page: int) -> Dict:
         "education": it.get("degreeString"),
         "experience": it.get("workYearString"),
         "url": it.get("jobHref") or (f"https://jobs.51job.com/shanghai/{job_id}.html" if job_id else ""),
-        "publish_date": it.get("issueDateString"),
+        "publish_date": it.get("issueDateString") or it.get("issueDate") or "",
         "job_description": it.get("jobDescribe") or it.get("jobDescribeText") or "",
         "job_requirement": it.get("jobRequirements") or "",
+        # extra fields from 51job API
+        "company_industry": it.get("indCategory") or it.get("industryCategory") or it.get("industryText") or "",
+        "company_size": it.get("companySize") or it.get("companySizeString") or it.get("scaleText") or "",
+        "company_finance_stage": "",
+        "headcount": str(it.get("headCount") or it.get("jobCount") or it.get("recruitNum") or ""),
+        "list_deadline": it.get("endDate") or it.get("deadline") or "",
     }
 
 
@@ -654,9 +660,15 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         "education": job.get("requireEduLevel") or "",
         "experience": job.get("requireWorkYears") or "",
         "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else href,
-        "publish_date": job.get("refreshTime") or "",
+        "publish_date": job.get("refreshTime") or job.get("createTime") or job.get("publishTime") or "",
         "job_description": job_desc,
         "job_requirement": job_req,
+        # extra fields from liepin XHR API
+        "company_industry": comp.get("industryField") or comp.get("industry") or comp.get("indCategory") or "",
+        "company_size": comp.get("scale") or comp.get("compScale") or comp.get("scaleText") or "",
+        "company_finance_stage": comp.get("financeStage") or comp.get("financeText") or "",
+        "headcount": str(job.get("headCount") or job.get("recruitNum") or job.get("jobCount") or ""),
+        "list_deadline": job.get("endTime") or job.get("deadLine") or job.get("deadline") or job.get("expireTime") or "",
     }
 
 
@@ -1017,7 +1029,18 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
         "job_id",
         "job_description",
         "job_requirement",
+        # enriched from list-page API (may be empty for older rows)
+        "company_industry",
+        "company_size",
+        "company_finance_stage",
+        "headcount",
+        "list_deadline",
     ]
+    # fields extracted from detail pages — initially empty, filled after RPC fetch
+    detail_cols = ["截止日期", "实习时长", "留用机会", "完整职责", "完整要求", "完整技能"]
+    # all columns that may be overwritten by the ok/fail updates
+    updatable_cols = ["detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"] + detail_cols
+
     master_path = OUT_DIR / "foreign_master_database_v2.csv"
     retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
 
@@ -1025,14 +1048,14 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
     if master_path.exists():
         master = pd.read_csv(master_path).fillna("")
     else:
-        master = pd.DataFrame(columns=base_cols + ["ingest_time", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"])
+        master = pd.DataFrame(columns=base_cols + detail_cols + ["ingest_time", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"])
 
     # 2) upsert new raw links but do not overwrite historical processed status
     b = raw_df.copy().fillna("")
-    for c in base_cols:
+    for c in base_cols + detail_cols:
         if c not in b.columns:
             b[c] = ""
-    b = b[base_cols].copy()
+    b = b[base_cols + detail_cols].copy()
     b["ingest_time"] = now_str()
     b["detail_status"] = "未处理"
     b["jd_visibility"] = "未知"
@@ -1047,7 +1070,7 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
         b_new = b
     master = pd.concat([master, b_new], ignore_index=True).fillna("")
 
-    # 3) build status updates for processed urls only
+    # 3) build status + detail updates for processed urls
     updates = []
     if not ok_df.empty:
         o = ok_df.copy().fillna("")
@@ -1061,6 +1084,13 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
                     "link_status": r.get("链接状态", ""),
                     "link_reason": r.get("链接原因", ""),
                     "retry_needed": r.get("JD可见性", "未知") != "清晰可见",
+                    # persist detail-page extracted fields into master
+                    "截止日期": r.get("截止日期", ""),
+                    "实习时长": r.get("实习时长", ""),
+                    "留用机会": r.get("留用机会", ""),
+                    "完整职责": r.get("完整职责", ""),
+                    "完整要求": r.get("完整要求", ""),
+                    "完整技能": r.get("完整技能", ""),
                 }
             )
     if not fail_df.empty:
@@ -1075,15 +1105,22 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
                     "link_status": "",
                     "link_reason": "",
                     "retry_needed": True,
+                    # leave detail fields empty for fails — fill_back will restore from hist
+                    "截止日期": "",
+                    "实习时长": "",
+                    "留用机会": "",
+                    "完整职责": "",
+                    "完整要求": "",
+                    "完整技能": "",
                 }
             )
 
     if updates:
         upd = pd.DataFrame(updates).fillna("").drop_duplicates(subset=["url"], keep="last")
-        master = master.drop(columns=[c for c in ["detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"] if c in master.columns]).merge(
+        master = master.drop(columns=[c for c in updatable_cols if c in master.columns]).merge(
             upd, on="url", how="left"
         )
-        # fill back unchanged historical rows
+        # fill back unchanged historical rows (including detail fields)
         hist = pd.read_csv(master_path).fillna("") if master_path.exists() else pd.DataFrame()
         if not hist.empty:
             hist = hist.set_index("url")
@@ -1094,6 +1131,12 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
                 ("link_status", ""),
                 ("link_reason", ""),
                 ("retry_needed", True),
+                ("截止日期", ""),
+                ("实习时长", ""),
+                ("留用机会", ""),
+                ("完整职责", ""),
+                ("完整要求", ""),
+                ("完整技能", ""),
             ]:
                 master[col] = master.apply(
                     lambda r: r[col]
@@ -1108,6 +1151,8 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
             master["link_status"] = master["link_status"].fillna("")
             master["link_reason"] = master["link_reason"].fillna("")
             master["retry_needed"] = master["retry_needed"].fillna(True)
+            for c in detail_cols:
+                master[c] = master[c].fillna("") if c in master.columns else ""
 
     if "url" in master.columns:
         master = master.drop_duplicates(subset=["url"], keep="last")
@@ -1166,7 +1211,7 @@ def main():
         merged_pool = OUT_DIR / "foreign_strict_shanghai_candidate_pool_merged_v2.csv"
         if merged_pool.exists():
             mdf = pd.read_csv(merged_pool).fillna("")
-            for c in ["platform", "source", "company_name", "job_name", "location", "salary_text", "education", "experience", "url", "publish_date", "job_description", "job_requirement"]:
+            for c in ["platform", "source", "company_name", "job_name", "location", "salary_text", "education", "experience", "url", "publish_date", "job_description", "job_requirement", "company_industry", "company_size", "company_finance_stage", "headcount", "list_deadline"]:
                 if c not in raw_df.columns:
                     raw_df[c] = ""
                 if c not in mdf.columns:
