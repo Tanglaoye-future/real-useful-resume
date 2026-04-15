@@ -5,6 +5,7 @@ import glob
 import html
 import json
 import os
+import random
 import re
 import time
 from pathlib import Path
@@ -17,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "release_data"
 RAW_DIR = ROOT / "data" / "raw"
 RPC_BASE = "http://127.0.0.1:5600/invoke"
+RPC_DETAIL_TIMEOUT = int(os.getenv("RPC_DETAIL_TIMEOUT", "45"))
 
 # Reuse existing URL checker
 import sys
@@ -291,6 +293,31 @@ def html_to_text(html: str) -> str:
     return norm(repair_mojibake(plain))
 
 
+def _normalize_row_jd(row: dict) -> dict:
+    """Extract job_description / job_requirement from the nested 'raw' field
+    when the top-level fields are empty.  The MVP scraper stored the full API
+    payload in raw.jobDescribe but left the top-level columns blank.
+    Works in-place and returns the same dict."""
+    desc = norm(row.get("job_description", ""))
+    req = norm(row.get("job_requirement", ""))
+    if desc and req:
+        return row
+    raw = row.get("raw", {})
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except Exception:
+            raw = {}
+    if isinstance(raw, dict):
+        desc = desc or norm(raw.get("jobDescribe") or raw.get("jobDescribeText") or "")
+        req = req or norm(raw.get("jobRequirements") or raw.get("jobRequire") or raw.get("jobRequirement") or "")
+    if desc:
+        row["job_description"] = desc
+    if req:
+        row["job_requirement"] = req
+    return row
+
+
 def extract_section(text: str, starts: List[str], ends: List[str]) -> str:
     lower = text.lower()
     for s in starts:
@@ -306,74 +333,161 @@ def extract_section(text: str, starts: List[str], ends: List[str]) -> str:
     return ""
 
 
+_DUTY_STARTS = ["岗位职责", "工作职责", "职位描述", "职位职责", "工作内容", "岗位描述",
+                "Responsibilities", "Responsibility", "what you'll do", "you will", "key responsibilities"]
+_DUTY_ENDS   = ["任职要求", "岗位要求", "职位要求", "我们希望", "任职资格",
+                "Qualifications", "Requirements", "what we're looking for", "candidate profile"]
+_REQ_STARTS  = ["任职要求", "岗位要求", "职位要求", "任职资格",
+                "Qualifications", "Requirements", "what we're looking for", "candidate profile",
+                "Minimum Experience"]
+_REQ_ENDS    = ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责",
+                "Responsibilities", "Responsibility", "what you'll do", "you will"]
+_SKILL_PAT   = r"SQL|Python|Tableau|Power\s?BI|SAS|R\b|Spark|Hadoop|Excel|Alteryx"
+
+# 51job embeds JD in window.__INITIAL_STATE__ / SSR JSON; these patterns cover
+# both the API response shape and the page-embedded JSON.
+_JD_JSON_PATS = [
+    r'"jobDescribe"\s*:\s*"([\s\S]{20,4000}?)"(?:\s*,|\s*})',
+    r'"jobRequirements"\s*:\s*"([\s\S]{10,2000}?)"(?:\s*,|\s*})',
+    r'"description"\s*:\s*"([\s\S]{50,4000}?)"(?:\s*,\s*"(?:jobType|salary|location|requireEdu))',
+    r'"jobDescription"\s*:\s*"([\s\S]{50,4000}?)"(?:\s*,|\s*})',
+    r'jobDescribe["\']?\s*:\s*["\']([^"\']{50,})["\']',
+]
+
+
+def _parse_html_for_jd(url: str, html_doc: str) -> Dict[str, str]:
+    """Extract JD fields from a raw detail-page HTML string.
+    Returns an empty dict if the page looks like a captcha/block page."""
+    # Captcha / block detection on raw HTML before expensive parsing
+    snippet = html_doc[:4000].lower()
+    if re.search(r"captcha|traceid|_waf_is_mobile|请完成验证|访问受限|人机验证", snippet):
+        return {}
+
+    # Try to pull JD from embedded structured JSON first (faster, cleaner)
+    jd_bonus = ""
+    for pat in _JD_JSON_PATS:
+        m = re.search(pat, html_doc, re.I)
+        if m:
+            chunk = m.group(1)
+            try:
+                chunk = html.unescape(chunk)
+                chunk = chunk.encode("utf-8", "ignore").decode("unicode_escape", "ignore")
+            except Exception:
+                pass
+            # Sanity check: must contain Chinese or latin words, not just symbols
+            if re.search(r"[\u4e00-\u9fff]|[a-zA-Z]{4,}", chunk):
+                jd_bonus = chunk
+                break
+
+    text = html_to_text(html_doc)
+    if jd_bonus:
+        text = norm(jd_bonus + " " + text)
+
+    # Second captcha check on extracted text
+    if re.search(r"验证码|captcha|访问受限|请验证|人机验证|traceid", text[:800], re.I):
+        return {}
+
+    duties = extract_section(text, _DUTY_STARTS, _DUTY_ENDS)
+    reqs   = extract_section(text, _REQ_STARTS,  _REQ_ENDS)
+    skills = " ".join(sorted(set(re.findall(_SKILL_PAT, text, flags=re.I))))
+    return {
+        "完整职责":     duties,
+        "完整要求":     reqs,
+        "完整技能":     skills,
+        "截止日期":     extract_deadline(text),
+        "实习时长":     extract_duration(text),
+        "留用机会":     extract_retention(text),
+        "详情抓取文本": text[:3000],
+    }
+
+
+def fetch_detail_via_rpc(url: str) -> Tuple[Dict[str, str], str]:
+    """Fetch a job detail page via the RPC server's authenticated Playwright context.
+    The RPC browser already holds valid session cookies, so it bypasses WAF / captcha
+    that blocks bare requests.get() calls.  Returns (fields_dict, status_str)."""
+    try:
+        url_lower = url.lower()
+        if "51job.com" in url_lower:
+            platform = "job51"
+        elif "liepin.com" in url_lower:
+            platform = "liepin"
+        else:
+            return {}, "rpc_unsupported_platform"
+
+        resp = requests.post(
+            f"{RPC_BASE}/{platform}/fetch_detail",
+            json={"url": url},
+            timeout=RPC_DETAIL_TIMEOUT,
+        )
+        if resp.status_code != 200:
+            return {}, f"rpc_http_{resp.status_code}"
+
+        data = resp.json()
+        if data.get("status") != "success":
+            return {}, "rpc_business_error"
+
+        result = data.get("result") or {}
+        if result.get("blocked"):
+            return {}, "rpc_blocked_captcha"
+        if result.get("error"):
+            return {}, f"rpc_page_error"
+
+        html_doc = result.get("html", "")
+        if not html_doc or len(html_doc) < 300:
+            return {}, "rpc_empty_html"
+
+        fields = _parse_html_for_jd(url, html_doc)
+        if not fields:
+            return {}, "rpc_parse_failed_captcha"
+
+        return fields, "ok"
+
+    except requests.Timeout:
+        return {}, "rpc_timeout"
+    except Exception as e:
+        return {}, f"rpc_exception_{type(e).__name__}"
+
+
 def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
+    """Fetch job detail: try RPC browser (authenticated) first, fall back to
+    direct HTTP as a best-effort fallback.  The RPC path is the primary path
+    because it uses the logged-in Playwright context that bypasses WAF."""
+    # --- Primary: RPC browser context ---
+    fields, status = fetch_detail_via_rpc(url)
+    if status == "ok" and fields:
+        return fields, "ok"
+    rpc_fail_reason = status  # preserve for logging
+
+    # --- Fallback: direct HTTP with richer headers ---
+    is_51job = "51job.com" in url.lower()
+    referer = "https://we.51job.com/" if is_51job else "https://www.liepin.com/"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                      "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Referer": referer,
+        "Connection": "keep-alive",
     }
-    reason = ""
+    reason = rpc_fail_reason
     req_timeout = int(os.getenv("DETAIL_REQ_TIMEOUT", "30"))
     for attempt in range(max_retries + 1):
         try:
             r = requests.get(url, headers=headers, timeout=req_timeout, allow_redirects=True)
-            html_doc = r.text
-            raw_lower = html_doc.lower()
-            is_51job = "51job.com" in url.lower() or "51job.com" in raw_lower
-            if is_51job and re.search(r"captcha|traceid|访问验证|验证页面|security check|verify you are human", raw_lower, re.I):
-                reason = "captcha_or_waf"
-                time.sleep(1)
-                continue
-            # Try extract structured JD from embedded JSON first
-            jd_json_text = ""
-            for pat in [
-                r'"jobDescription"\s*:\s*"([\s\S]*?)"\s*,\s*"jobType"',
-                r'"description"\s*:\s*"([\s\S]*?)"\s*,\s*"employmentType"',
-            ]:
-                m = re.search(pat, html_doc, re.I)
-                if m:
-                    jd_json_text = m.group(1)
-                    break
-            if jd_json_text:
-                jd_json_text = html.unescape(jd_json_text)
-                jd_json_text = jd_json_text.encode("utf-8", "ignore").decode("unicode_escape", "ignore")
-            text = html_to_text(html_doc)
-            if jd_json_text:
-                text = norm(jd_json_text + " " + text)
-            if re.search("验证码|captcha|访问受限|请验证|人机验证|traceid", text, re.I):
-                reason = "blocked_or_captcha"
-                time.sleep(15)
-                continue
             if r.status_code >= 400:
                 reason = f"http_{r.status_code}"
                 time.sleep(1)
                 continue
-            duties = extract_section(
-                text,
-                ["岗位职责", "工作职责", "职位描述", "职位职责", "工作内容", "岗位描述"],
-                ["任职要求", "岗位要求", "职位要求", "我们希望", "任职资格"],
-            )
-            reqs = extract_section(
-                text,
-                ["任职要求", "岗位要求", "职位要求", "任职资格"],
-                ["投递方式", "工作地点", "薪资", "公司介绍", "岗位职责"],
-            )
-            skills = " ".join(sorted(set(re.findall(r"SQL|Python|Tableau|Power BI|SAS|R|Spark|Hadoop", text, flags=re.I))))
-            return (
-                {
-                    "完整职责": duties,
-                    "完整要求": reqs,
-                    "完整技能": skills,
-                    "截止日期": extract_deadline(text),
-                    "实习时长": extract_duration(text),
-                    "留用机会": extract_retention(text),
-                    "详情抓取文本": text[:3000],
-                },
-                "ok",
-            )
+            parsed = _parse_html_for_jd(url, r.text)
+            if not parsed:
+                reason = "direct_captcha_or_empty"
+                time.sleep(15)
+                continue
+            return parsed, "ok"
         except Exception as e:
-            reason = f"exception_{type(e).__name__}"
+            reason = f"direct_exception_{type(e).__name__}"
             time.sleep(1.5)
-    return ({}, reason or "unknown_error")
+    return {}, reason or "unknown_error"
 
 
 def get_latest_seed_candidates() -> pd.DataFrame:
@@ -501,17 +615,28 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
     job = it.get("job") if isinstance(it.get("job"), dict) else {}
     dq = job.get("dq") if isinstance(job.get("dq"), dict) else {}
     job_id = job.get("jobId") or it.get("jobId")
-    # dom_parsing fallback structure: {title, href, company, tags}
+    # DOM-parsing fallback structure (from RPC server): {title, href, company, tags}
     href = norm(it.get("href", ""))
     title_dom = norm(it.get("title", ""))
     company_dom = norm(it.get("company", ""))
-    tags_dom = " ".join(it.get("tags", [])) if isinstance(it.get("tags"), list) else norm(it.get("tags", ""))
     if href and not href.startswith("http"):
         href = "https://www.liepin.com" + href
     if not job_id and href:
         m = re.search(r"/job/(\d+)\.shtml", href)
         if m:
             job_id = m.group(1)
+    # Liepin list-page API does not include full JD text.
+    # Try all known field name variants; leave empty if not present —
+    # the JD will be fetched from the detail page via RPC in enrich_details_with_retry.
+    job_desc = (
+        job.get("jobDesc") or job.get("description") or job.get("jobDescription") or
+        it.get("jobDesc") or it.get("description") or ""
+    )
+    job_req = (
+        job.get("requireDesc") or job.get("require") or job.get("requireText") or
+        job.get("jobRequire") or job.get("jobRequirements") or
+        it.get("requireDesc") or it.get("require") or ""
+    )
     return {
         "platform": "liepin",
         "source": "liepin",
@@ -520,14 +645,14 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         "job_id": job_id,
         "job_name": job.get("title") or it.get("title") or title_dom,
         "company_name": comp.get("compName") or comp.get("name") or it.get("compName") or company_dom,
-        "location": dq.get("name") if isinstance(dq, dict) else "",
+        "location": dq.get("name") if isinstance(dq, dict) else (it.get("location") or ""),
         "salary_text": job.get("salary") or "",
         "education": job.get("requireEduLevel") or "",
         "experience": job.get("requireWorkYears") or "",
         "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else href,
         "publish_date": job.get("refreshTime") or "",
-        "job_description": job.get("description") or it.get("description") or tags_dom,
-        "job_requirement": job.get("require") or job.get("requireText") or tags_dom,
+        "job_description": job_desc,
+        "job_requirement": job_req,
     }
 
 
@@ -669,7 +794,7 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
                     fail_stats.append({"platform": "liepin", "keyword": kw, "page": page, "reason": f"rpc_fail_{type(e).__name__}"})
             if page % 10 == 0:
                 print(f"[crawl] keyword={kw} page={page} rows={len(rows)}")
-            time.sleep(0.08)
+            time.sleep(random.uniform(0.4, 1.0))  # was 0.08 — too fast, triggers WAF
         if job51_consecutive_fail >= 5:
             print(f"[crawl] keyword={kw} job51 circuit-breaker triggered, skipped remaining timeout-prone pages.")
         if liepin_consecutive_fail >= 8:
@@ -693,6 +818,8 @@ def build_jd_backfill_index() -> Dict[str, Dict[str, str]]:
             for r in rows:
                 if not isinstance(r, dict):
                     continue
+                # Populate JD from nested 'raw' field before indexing
+                r = _normalize_row_jd(r)
                 url = norm(r.get("url", ""))
                 job_id = norm(r.get("job_id", ""))
                 desc = norm(r.get("job_description", ""))
@@ -713,13 +840,18 @@ def enrich_details_with_retry(df: pd.DataFrame, jd_index: Dict[str, Dict[str, st
     if df.empty:
         return pd.DataFrame(), pd.DataFrame()
 
-    workers = max(1, int(os.getenv("DETAIL_WORKERS", "8")))
+    # Default 3 workers: RPC detail fetch is serialized by asyncio.Lock inside the
+    # server anyway, so high concurrency just queues up HTTP connections without
+    # speeding up browser navigations — and risks IP-level rate limiting.
+    workers = max(1, int(os.getenv("DETAIL_WORKERS", "3")))
     rows = [r.to_dict() for _, r in df.iterrows()]
     ok_rows: List[Dict] = []
     fail_rows: List[Dict] = []
 
     def process_one(row: Dict) -> Tuple[str, Dict]:
         url = norm(row.get("url", ""))
+        # Staggered start prevents burst requests to the same domain
+        time.sleep(random.uniform(0.5, 2.5))
         detail, status = fetch_detail(url, max_retries=2)
         if status == "ok":
             merged = {**row, **detail, "详情抓取状态": "成功"}
@@ -1007,7 +1139,8 @@ def main():
                 try:
                     data = json.load(open(f, "r", encoding="utf-8"))
                     if isinstance(data, list):
-                        rows.extend(data)
+                        # Lift JD from nested 'raw.jobDescribe' when top-level is empty
+                        rows.extend([_normalize_row_jd(r) for r in data if isinstance(r, dict)])
                 except Exception:
                     continue
             raw_df = pd.DataFrame(rows).fillna("")

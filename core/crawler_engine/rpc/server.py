@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 import time
 import asyncio
 import os
@@ -34,6 +35,8 @@ class PlaywrightContext:
         self.browser = None
         self.context = None
         self.pages: Dict[str, Any] = {}
+        self.detail_pages: Dict[str, Any] = {}  # dedicated pages for detail fetching
+        self._detail_lock: asyncio.Lock = None   # serializes browser navigations; init in start()
         self.ready = False
         self.startup_error = ""
 
@@ -54,6 +57,8 @@ class PlaywrightContext:
             await self._init_job51_page()
             # await self._init_boss_page()  # 已禁用
             await self._init_liepin_page()
+            self._detail_lock = asyncio.Lock()
+            await self._init_detail_pages()
             self.ready = True
             self.startup_error = ""
             logger.info("RPC Playwright context is ready")
@@ -413,7 +418,59 @@ class PlaywrightContext:
         self.pages["liepin"] = page
         logger.info("Liepin RPC page initialized")
 
+    async def _init_detail_pages(self):
+        """Create dedicated pages for fetching job detail pages.
+        These pages share the same authenticated browser context (cookies already set),
+        so they can access detail pages without triggering captcha."""
+        logger.info("Initializing detail fetch pages...")
+        for platform_key, seed_url in [
+            ("job51", "https://we.51job.com"),
+            ("liepin", "https://www.liepin.com"),
+        ]:
+            try:
+                page = await self.context.new_page()
+                await page.goto(seed_url, wait_until="domcontentloaded", timeout=20000)
+                await asyncio.sleep(1)
+                self.detail_pages[platform_key] = page
+                logger.info(f"Detail page initialized: {platform_key}")
+            except Exception as e:
+                logger.warning(f"Detail page init failed for {platform_key}: {e}")
+
+    async def fetch_detail_html(self, platform: str, url: str) -> dict:
+        """Navigate a detail page to the given URL and return its HTML.
+        Uses asyncio.Lock to serialize browser navigations — the lock prevents
+        concurrent Playwright page.goto() calls on the same page object."""
+        async with self._detail_lock:
+            page = self.detail_pages.get(platform)
+            if page is None:
+                # Lazy-create if init failed
+                try:
+                    page = await self.context.new_page()
+                    self.detail_pages[platform] = page
+                except Exception as e:
+                    return {"html": "", "blocked": False, "error": f"page_create_failed: {e}"}
+            try:
+                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                await asyncio.sleep(2)
+                html = await page.content()
+                title = await page.title()
+                blocked = bool(re.search(r"验证码|captcha|traceid|security.check|人机验证|安全中心", title, re.I))
+                if not blocked:
+                    # Also check page text for captcha signals
+                    snippet = html[:3000].lower()
+                    blocked = bool(re.search(r"captcha|traceid|_waf_is_mobile|请完成验证|访问受限", snippet))
+                return {"html": html if not blocked else "", "blocked": blocked, "title": title}
+            except Exception as e:
+                logger.error(f"fetch_detail_html {platform} {url}: {e}")
+                return {"html": "", "blocked": False, "error": str(e)}
+
     async def stop(self):
+        for page in self.detail_pages.values():
+            try:
+                await page.close()
+            except Exception:
+                pass
+        self.detail_pages.clear()
         for page in self.pages.values():
             await page.close()
         if self.context:
@@ -782,6 +839,15 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                     "error": str(e),
                     "error_type": "navigation_failed"
                 })
+
+        elif action == "fetch_detail":
+            # Fetch a single job detail page using the authenticated browser context.
+            # This avoids captcha because the browser already has valid session cookies.
+            url = payload.get("url", "")
+            if not url:
+                raise HTTPException(status_code=400, detail="url required for fetch_detail")
+            result = await pw_ctx.fetch_detail_html(platform, url)
+            return JSONResponse(content={"status": "success", "result": result})
 
         else:
             raise HTTPException(status_code=400, detail=f"Unsupported action {action} for {platform}")
