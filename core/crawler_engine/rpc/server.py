@@ -255,27 +255,65 @@ class PlaywrightContext:
 
     async def _init_liepin_page(self):
         """Initialize the Liepin search page.
-        Loads session cookies and navigates to homepage to warm up the session.
-        Actual search is done via network response interception in the endpoint handler —
-        no JS injection needed (the old DOM-parsing approach is removed)."""
+        Injects a fetch+XHR interceptor init script so that search API responses
+        are captured into window._liepin_search_resp on every navigation.
+        After page.goto(), search_jobs reads that variable via page.evaluate()."""
         logger.info("Initializing Liepin RPC page...")
         page = await self.context.new_page()
+
+        # Inject BEFORE any page JS runs — intercepts both fetch() and XHR.
+        # Runs on every navigation of this page object.
+        await page.add_init_script("""
+        (function() {
+            window._liepin_search_resp = null;
+
+            // ── fetch interceptor ─────────────────────────────────────────
+            var _orig_fetch = window.fetch;
+            window.fetch = async function() {
+                var args = Array.prototype.slice.call(arguments);
+                var resp = await _orig_fetch.apply(window, args);
+                var url = typeof args[0] === 'string' ? args[0]
+                        : (args[0] && args[0].url ? args[0].url : '');
+                if (url.indexOf('pc-search-job') !== -1 && url.indexOf('cond-init') === -1) {
+                    try { window._liepin_search_resp = await resp.clone().json(); } catch(e) {}
+                }
+                return resp;
+            };
+
+            // ── XHR interceptor ───────────────────────────────────────────
+            var _origOpen = XMLHttpRequest.prototype.open;
+            var _origSend = XMLHttpRequest.prototype.send;
+            XMLHttpRequest.prototype.open = function(method, url) {
+                this._lp_url = url;
+                return _origOpen.apply(this, arguments);
+            };
+            XMLHttpRequest.prototype.send = function(body) {
+                var self = this;
+                if (self._lp_url &&
+                    self._lp_url.indexOf('pc-search-job') !== -1 &&
+                    self._lp_url.indexOf('cond-init') === -1) {
+                    self.addEventListener('load', function() {
+                        try { window._liepin_search_resp = JSON.parse(self.responseText); } catch(e) {}
+                    });
+                }
+                return _origSend.apply(this, arguments);
+            };
+        })();
+        """)
 
         liepin_cookies = load_liepin_cookies()
         if liepin_cookies:
             logger.info(f"Loading {len(liepin_cookies)} Liepin cookies...")
             await self.context.add_cookies(liepin_cookies)
         else:
-            logger.warning("No Liepin cookies found. Searches may be rate-limited. Run liepin_login.py to fix.")
+            logger.warning("No Liepin cookies found. Searches may be rate-limited.")
 
         logger.info("Navigating to Liepin homepage to warm session...")
         await page.goto("https://www.liepin.com", wait_until="domcontentloaded", timeout=20000)
         await asyncio.sleep(2)
 
         self.pages["liepin"] = page
-        # DO NOT auto-save on startup — initial cookies are anonymous session cookies,
-        # not auth cookies. User must call POST /save_cookies after manual login.
-        logger.info("Liepin RPC page initialized (XHR-intercept mode)")
+        logger.info("Liepin RPC page initialized (fetch+XHR init-script mode)")
 
     async def _init_detail_pages(self):
         """Create dedicated pages for fetching job detail pages.
@@ -309,8 +347,8 @@ class PlaywrightContext:
                 except Exception as e:
                     return {"html": "", "blocked": False, "error": f"page_create_failed: {e}"}
             try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                await asyncio.sleep(2)
+                await page.goto(url, wait_until="networkidle", timeout=30000)
+                await asyncio.sleep(1)
                 html = await page.content()
                 title = await page.title()
                 blocked = bool(re.search(r"验证码|captcha|traceid|security.check|人机验证|安全中心", title, re.I))
@@ -559,59 +597,111 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                 f"?key={keyword}&dqs={city}&curPage={pageNum - 1}"
             )
 
-            # Serialize liepin searches so route handlers don't cross-pollinate
+            # Serialize liepin searches
             async with pw_ctx._liepin_search_lock:
                 captured: list = []
 
-                async def _handle_search_route(route):
-                    """Intercept Liepin search API calls, parse job list, forward response."""
-                    try:
-                        response = await route.fetch()
-                        try:
-                            data = await response.json()
-                            if isinstance(data, dict):
-                                job_list = (
-                                    (data.get("data") or {}).get("jobCardList")
-                                    or (data.get("data") or {}).get("jobList")
-                                    or data.get("jobCardList")
-                                    or data.get("jobList")
-                                    or []
-                                )
-                                if job_list:
-                                    captured.extend(job_list)
-                                    logger.info(
-                                        f"[Liepin route] captured {len(job_list)} jobs "
-                                        f"from {route.request.url[:100]}"
-                                    )
-                                else:
-                                    logger.debug(
-                                        f"[Liepin route] JSON but no jobCardList "
-                                        f"keys={list(data.keys())[:8]} url={route.request.url[:80]}"
-                                    )
-                        except Exception as exc:
-                            logger.debug(f"[Liepin route] parse error: {exc}")
-                        await route.fulfill(response=response)
-                    except Exception as exc:
-                        logger.warning(f"[Liepin route] fetch/fulfill error: {exc} — continuing")
-                        try:
-                            await route.continue_()
-                        except Exception:
-                            pass
+                def _extract_job_list(data):
+                    """Try every known nesting path for Liepin job lists."""
+                    if not isinstance(data, dict):
+                        return []
+                    d1 = data.get("data") or {}
+                    d2 = d1.get("data") or {}
+                    d_result = d1.get("result") or {}
+                    d_search = d1.get("searchResult") or d1.get("search") or {}
+                    candidates = [
+                        d1.get("jobCardList"),
+                        d1.get("jobList"),
+                        d2.get("jobCardList"),
+                        d2.get("jobList"),
+                        d_result.get("jobCardList"),
+                        d_result.get("jobList"),
+                        d_search.get("jobCardList"),
+                        d_search.get("jobList"),
+                        data.get("jobCardList"),
+                        data.get("jobList"),
+                    ]
+                    for c in candidates:
+                        if c:
+                            return c
+                    return []
 
-                # Match both pc-search-job and pc-search-job-cond-init
-                await page.route("**/pc-search-job**", _handle_search_route)
+                # ── Strategy 1: JS init-script intercept ─────────────────────
+                # The init script patches window.fetch + XHR before React loads,
+                # storing the pc-search-job response in window._liepin_search_resp.
                 try:
-                    await page.goto(
-                        search_url,
-                        wait_until="networkidle",
-                        timeout=30000,
-                    )
-                    await asyncio.sleep(2)
-                finally:
+                    await page.evaluate("() => { window._liepin_search_resp = null; }")
+                    await page.goto(search_url, wait_until="networkidle", timeout=35000)
+                    await asyncio.sleep(1)
+
+                    landed_url = page.url
+                    landed_title = await page.title()
+                    logger.info(f"[Liepin] landed url={landed_url[:80]} title={landed_title!r}")
+
+                    data = await page.evaluate("() => window._liepin_search_resp")
+                    if isinstance(data, dict):
+                        d1 = data.get("data") or {}
+                        logger.info(
+                            f"[Liepin JS-intercept] top={list(data.keys())[:8]} "
+                            f"data.keys={list(d1.keys())[:12] if isinstance(d1, dict) else type(d1).__name__} "
+                            f"flag={data.get('flag')!r}"
+                        )
+                        if isinstance(d1, dict):
+                            for k, v in d1.items():
+                                if isinstance(v, (list, dict)):
+                                    logger.info(f"[Liepin JS-intercept] data[{k!r}] type={type(v).__name__} "
+                                                f"len={len(v)} "
+                                                f"sample_keys={list(v.keys())[:6] if isinstance(v, dict) else (list(v[0].keys())[:6] if v and isinstance(v[0], dict) else '?')}")
+                    else:
+                        logger.info(f"[Liepin JS-intercept] _liepin_search_resp={data!r}")
+                    jobs = _extract_job_list(data)
+                    if jobs:
+                        captured.extend(jobs)
+                        logger.info(f"[Liepin JS-intercept] captured {len(jobs)} jobs")
+                except Exception as e:
+                    logger.warning(f"[Liepin JS-intercept] error: {e}")
+
+                # ── Strategy 2: capture real request body via expect_request,
+                #    then replay via page.evaluate(fetch) ────────────────────
+                if not captured:
+                    logger.info("[Liepin] trying strategy 2: expect_request + evaluate-replay")
                     try:
-                        await page.unroute("**/pc-search-job**", _handle_search_route)
-                    except Exception:
-                        pass
+                        await page.evaluate("() => { window._liepin_search_resp = null; }")
+                        async with page.expect_request(
+                            lambda r: "pc-search-job" in r.url and "cond-init" not in r.url,
+                            timeout=35000,
+                        ) as req_info:
+                            await page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+
+                        xhreq = await req_info.value
+                        req_body = xhreq.post_data or "{}"
+                        req_url  = xhreq.url
+                        logger.info(f"[Liepin req-capture] url={req_url[:80]} body={req_body[:300]}")
+
+                        # replay the identical request from within the page context
+                        result = await page.evaluate("""
+                        async (args) => {
+                            try {
+                                const resp = await fetch(args.url, {
+                                    method: 'POST',
+                                    credentials: 'include',
+                                    headers: {'Content-Type': 'application/json',
+                                              'Accept': 'application/json'},
+                                    body: args.body
+                                });
+                                if (!resp.ok) return {_err: 'http_' + resp.status};
+                                return await resp.json();
+                            } catch(e) { return {_err: String(e)}; }
+                        }
+                        """, {"url": req_url, "body": req_body})
+
+                        logger.info(f"[Liepin eval-replay] result keys={list(result.keys())[:8] if isinstance(result, dict) else result}")
+                        jobs = _extract_job_list(result)
+                        if jobs:
+                            captured.extend(jobs)
+                            logger.info(f"[Liepin eval-replay] captured {len(jobs)} jobs")
+                    except Exception as e:
+                        logger.warning(f"[Liepin strategy-2] error: {e}")
 
                 # ── Captcha / block detection ──────────────────────────────────
                 title = await page.title()
@@ -639,7 +729,7 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                             "() => { try { return JSON.stringify(window.__NEXT_DATA__ || null) } catch(e) { return null } }"
                         )
                         if next_data_str:
-                            nd = json.loads(next_data_str)
+                            nd = json.loads(next_data_str) or {}
                             props = (nd.get("props") or {}).get("pageProps") or {}
                             logger.info(
                                 f"[Liepin SSR] __NEXT_DATA__ pageProps keys={list(props.keys())[:10]}"

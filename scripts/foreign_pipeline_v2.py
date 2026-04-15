@@ -774,7 +774,7 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
     rows: List[Dict] = []
     only_liepin = os.getenv("ONLY_LIEPIN", "0") == "1"
     job51_timeout = int(os.getenv("JOB51_RPC_TIMEOUT", "8"))
-    liepin_timeout = int(os.getenv("LIEPIN_RPC_TIMEOUT", "20"))
+    liepin_timeout = int(os.getenv("LIEPIN_RPC_TIMEOUT", "50"))  # each call: networkidle + sleep ~35s
     fail_stats = []
     for kw in KEYWORDS:
         print(f"[crawl] keyword={kw}")
