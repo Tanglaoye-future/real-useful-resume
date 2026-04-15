@@ -1,6 +1,1205 @@
-﻿platform,source,company_name,job_name,location,salary_text,education,experience,url,publish_date,job_description,job_requirement
-network,websearch,依必安派特电机(上海)有限公司,数字化实习生/Digitalization Intern,上海,,本科,实习,https://m.liepin.com/job/1974570865.shtml,,,
-network,websearch,勘讯企业咨询服务(上海)有限公司,数据分析实习生-市场营销方向,上海,,本科,实习,https://m.liepin.com/job/1978673171.shtml,,,
-network,websearch,麦当劳中国,Strategy and Insights Intern,上海,,本科,实习,https://m.liepin.com/lptjob/73506939?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_73506939%3A1%3Agw.52e2e3c0-318993442,,,
-network,websearch,未知（海外运营方向）,数据策略实习生 Data Intern,上海,,本科,实习,https://m.liepin.com/lptjob/69374041?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_69374041%3A1%3Agw.e7d6e393-36186052,,,
-network,websearch,未知公司,数据分析实习生,上海,,本科,实习,https://m.liepin.com/job/1936252787.shtml,,,
+﻿platform,source,keyword_group,page,job_id,job_name,company_name,location,salary_text,education,experience,url,publish_date,job_description,job_requirement,company_industry,company_size,company_finance_stage,headcount,list_deadline
+51job,51job,实习,1.0,170547900,制剂分析实习生,辅必成（上海）医药科技有限公司,上海·浦东新区,150元/天,本科,无需经验,https://jobs.51job.com/shanghai-pdxq/170547900.html?s=sou_sou_soulb&t=0_0&req=p1_1_1776274725,2026-02-06 14:19:30,"【工作内容】
+- 协助完成药品制剂的理化性质及含量分析实验；
+- 按照标准操作流程进行样品处理和仪器操作；
+- 记录实验数据并整理分析结果，撰写实验报告；
+- 参与实验室日常管理和设备维护工作。
+【任职要求】
+- 化学、药学、分析化学等相关专业在校学生或应届毕业生；
+- 对药物分析、制剂工艺有一定了解，具备基础实验操作能力；
+- 工作认真细致，责任心强，具有良好的沟通能力和团队合作精神；
+- 无经验者可提供培训，欢迎有志于医药行业发展的同学加入。
+-至少可实习6个月",,,少于50人,,,
+liepin,liepin,实习,1.0,79326295,AI智能眼镜展厅运营实习,远景体育用品,,80-150元/天,,,https://www.liepin.com/job/79326295.shtml,20251223152544,,,,,,,
+51job,51job,实习,2.0,171406742,AI算法实习生（遥感应用方向）,上海蔚星科技有限公司,上海·闵行区,5千-1万,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171406742.html?s=sou_sou_soulb&t=0_0&req=p1_2_1776274729,2026-04-02 16:04:51,"核心岗位职责
+1.参与遥感影像智能解译算法研发（目标检测/语义分割/变化检测基础任务）
+2.配合完成模型API封装及业务接口调试，支撑应用集成
+3.负责遥感数据集构建、清洗、标注及基础数据增强
+4.编写实验文档及技术报告，协助算法工程化规范落地
+
+任职要求
+1.本科及以上学历，计算机、遥感、GIS、测绘等相关专业
+2.精通Python，熟练使用PyTorch/TensorFlow框架
+3.熟悉YOLO、U-Net等经典模型，有图像/遥感项目经验
+4.了解遥感影像基础处理（光学/红外基础特性）
+5.具备Git及Linux开发环境基础，英语CET-4",,,50-150人,,,
+51job,51job,实习,3.0,170381924,蛋白AI设计工程师（实习岗）,佰联智合（上海）医药有限公司,上海·浦东新区,1-2万·13薪,硕士,1年及以上,https://jobs.51job.com/shanghai-pdxq/170381924.html?s=sou_sou_soulb&t=0_0&req=p1_3_1776274734,2026-02-02 10:35:15,"岗位职责
+1、主导/参与大分子（蛋白、抗体）药物的AI辅助设计与优化项目，涵盖靶点深度调研、项目技术方案制定，运用分子建模、蛋白设计物理模型及AI大模型完成核心设计工作，并负责计算结果的系统整理与报告输出。
+2、负责蛋白、抗体设计相关计算流程的开发、整合与优化，重点攻克小蛋白设计、抗体分子设计与筛选、抗体亲和力优化改造、抗体可开发性分析等关键流程的技术升级。
+3、跟踪并深度调研AI辅助蛋白设计领域的前沿动态，包括CADD/AIDD工具、蛋白语言模型、生成式AI模型等前沿技术与方法，完成工具的测试评估与整理，将优质技术方案落地应用于实际项目。
+4、参与蛋白质结构计算平台的搭建与管理，协同研发团队推进蛋白质优化平台的开发迭代，为产品开发与技术优化提供核心思路与技术支撑。
+5、与跨职能团队（生物研发、药物研发等）紧密协作，精准对接项目需求，保障AI设计方案的有效落地与优化迭代。
+
+任职要求
+1、计算生物学、生物信息学、计算化学、结构生物学或相关专业，硕士及以上学历；博士学历优先，具备2-3年及以上蛋白/抗体计算设计相关项目经验者优先。（注：本科阶段为985，211院校）
+2、深入理解蛋白质结构与功能，熟悉分子模拟基本原理和设计手段，了解药物研发流程及计算机辅助药物设计（CADD/AIDD）相关知识。
+3、熟练掌握至少1类蛋白/抗体设计相关软件（如Pymol、Rosetta、MOE、Schrodinger等），具备丰富的实际操作与项目应用经验。
+4、精通蛋白AI设计相关模型的应用与实践，包括但不限于蛋白语言模型（如ESM模型）、结构预测模型（如AlphaFold）、生成式设计模型（如ProteinMPNN、RFDiffusion、RFantibody等）。
+5、具备扎实的编程基础，熟练使用Python、Linux，能够独立完成计算流程的开发、优化与整合工作。
+6、具备强烈的自我驱动力、学习创新能力和严谨细致的工作态度，拥有优秀的沟通表达能力和团队协作精神，能快速适应行业前沿技术的学习与应用。
+
+加分项
+1、有蛋白/抗体AI设计相关平台搭建或核心流程开发的成功案例。
+2、在国际核心期刊发表过蛋白结构预测、AI辅助蛋白设计相关研究成果。
+3、具备大分子药物研发全流程相关项目经验，熟悉抗体药物可开发性评价标准。",,,少于50人,,,
+51job,51job,实习,5.0,171136202,研发分析实习生,毕克助剂（上海）有限公司,上海·奉贤区,180元/天,硕士,无需经验,https://jobs.51job.com/shanghai-fxq/171136202.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274742,2026-03-25 10:13:22,"1.	在校研究生（硕士、博士均可）；
+2.	每周三天到岗，计划工作不少于5个月；
+3.	在校专业：分析化学、药物分析
+4.	熟练操作气相色谱、液相色谱。",,,150-500人,,,
+51job,51job,实习,6.0,169817737,大四实习生（企业级AI应用方向）,上海莱升信息科技有限公司,上海·黄浦区,3-6千,本科,无需经验,https://jobs.51job.com/shanghai-hpq/169817737.html?s=sou_sou_soulb&t=0_0&req=p1_6_1776274748,2025-12-15 13:26:18,"************态度及能力突出者可以直接留用********
+只招上海的大四学生！！！！
+***********只招上海就学的大四实习生***********
+***********态度能力达标，可以留用********************
+我司专业开发企业级人工智能，拥有自主知识产权应用系统，成立20多年，产品服务的客户多为跨国集团公司。入职后，公司统一提供专业培训，项目带教。
+1. 提供基础会计账务培训（系统做账，结算，报税等）
+2. 掌握公司自有系统操作流程（公司自主研发的财务系统）
+3. 为现有客户开发AI服务
+任职要求：
+1. 本科（含本科）以上学历，会计专业，计算机专业优先
+2. 具有良好的团队合作意识
+3. 很强的业务学习和AI钻研能力，有责任心，能承受相当工作压力
+4. 熟悉Office软件日常操作
+5. 熟悉财务知识者优先.
+*公司提供软件技术培训及财务知识培训
+待遇：面谈
+*态度及能力突出者可以直接留用
+待遇：100-200/天",,,少于50人,,,
+51job,51job,实习,6.0,171198051,AI漫剧制作人[兼职/实习],上海络川科技有限公司,上海·浦东新区,100元/天,大专,1年及以上,https://jobs.51job.com/shanghai-pdxq/171198051.html?s=sou_sou_soulb&t=0_0&req=p1_6_1776274748,2026-03-23 11:01:06,"我们是一家年轻的初创公司，不搞形式，拒绝按部就班。
+寻找有独立思考、敢探索、能扛事的伙伴，一起从零到一做事。
+没有安稳舒适，只有快速成长；没有条条框框，只有充分信任。
+入职提示：这里不适合只想躺平的人，只欢迎愿意并肩折腾、共同成长的你。
+ 
+【岗位要求】
+1.&nbsp;能独立思考，不盲从，有自己的判断
+2.&nbsp;有探索欲，愿意主动学习、尝试新事物
+3.&nbsp;执行力强，靠谱负责，不玻璃心
+4.&nbsp;能接受初创节奏，愿意和公司一起成长
+
+岗位职责
+1. 独立负责 AI 漫剧、AI 短剧从剧本拆解、AI 生成、素材筛选、后期剪辑到成片输出的全流程制作，保证内容稳定产出；
+2. 熟练使用主流文生图、文生视频、AI 配音、AI动画工具，能够根据剧情需求，高效完成人物、场景、分镜、动态视频的生成与优化；
+3. 把控单条作品的画面风格、镜头节奏、叙事流畅度，对人物一致性、画面质量、成片效果负责；
+4. 配合团队完成内容质量自检、交叉审核，及时优化生成效果与制作流程，提升整体出品效率；
+5. 持续关注AI生成工具迭代与行业爆款打法，主动探索更高效的制作方式，沉淀可复用的制作模板与工作SOP。
+任职要求
+1. 1年或以上 AI 短剧、AI漫剧、动态漫、短视频剧情类相关制作经验，能独立从头到尾做完一整集；
+2. 熟练使用至少2种以上AI文生图/视频工具，懂提示词、参数调节、画面优化，能稳定产出高质量素材；
+3. 具备基本审美、镜头感与叙事逻辑，了解短剧节奏，对人物崩坏、画面穿模、风格混乱有判断能力；
+4. 会基础剪辑（剪映即可），能独立完成剪辑、字幕、配乐、音效等后期工作；
+5. 做事认真、责任心强、能配合团队日更节奏，愿意主动解决问题，不推诿、不躺平；
+6. 对AI内容创作有热情，学习能力强，接受小团队一人多岗、高效协作模式，初创团队。
+薪酬福利
+-实习生薪资100-150/天，可开实习证明。
+-加班提供餐补。",,,少于50人,,,
+51job,51job,实习,9.0,171355140,AI产品应用实习生,科或（上海）电子有限公司,上海·闵行区,5-8千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171355140.html?s=sou_sou_soulb&t=0_0&req=p1_9_1776274761,2026-03-31 14:52:44,"岗位职责：
+1、需求转化与方案设计（核心能力）：
+深度业务诊断： 与各部门（如销售、客服、行政、生产）沟通，精准识别哪些流程、问答、审批、数据分析任务可通过Molilichaw智能体实现自动化或智能化。
+技术方案设计： 基于Molilichaw平台的功能模块（如对话引擎、知识库连接、流程编排、API桥接能力），设计出可行、高效、安全的智能体解决方案原型。他需要知道平台能做什么的极限。
+2、智能体开发与部署（核心工作）：
+平台熟练开发： 精通使用Molilichaw平台的开发者工具，包括：
+智能体编排： 设计对话逻辑、决策树和任务流。
+知识库治理： 将公司制度、产品手册、FAQ、历史数据等文档上传至平台，并进行清洗、标注和向量化，使智能体“学会”公司专属知识。
+插件与API集成： 开发或配置连接公司内部系统（如ERP、OA、CRM、数据库）的接口，让智能体不仅能“回答”，还能“操作”（如查询订单状态、提交表单）。平台熟练开发： 精通使用Molilichaw平台的开发者工具，包括：
+智能体编排： 设计对话逻辑、决策树和任务流。
+知识库治理： 将公司制度、产品手册、FAQ、历史数据等文档上传至平台，并进行清洗、标注和向量化，使智能体“学会”公司专属知识。
+插件与API集成： 开发或配置连接公司内部系统（如ERP、OA、CRM、数据库）的接口，让智能体不仅能“回答”，还能“操作”（如查询订单状态、提交表单）。
+3、运维、优化与赋能
+效果监控与分析： 跟踪智能体的使用数据（如问答准确率、任务完成率、用户满意度），持续迭代优化。
+内部推广与培训： 教会业务人员如何使用和与智能体协同工作，收集反馈。
+技术资产管理： 管理公司在Molilichaw平台上的所有智能体、知识库和API连接资产，确保安全合规。
+
+任职要求：
+1、计算机、电子信息、软件工程、数学或相关专业在校学生；
+2、喜欢AI，对AI 有一定的研究和浓厚兴趣；
+3、硬性要求：
+AI智能体使用经验是核心， 
+技术基础：
+熟悉Python/JavaScript，能进行简单的脚本开发和API调试。
+理解基本的网络协议和API调用原理。
+了解数据结构和算法基础。
+4、极强的沟通能力： 能将业务语言转化为技术配置，再将技术语言解释给业务人员听。
+5、产品与用户体验思维： 关注智能体是否真的好用、易用，而不仅仅是功能实现。
+6、项目管理能力： 能同时推进多个小型智能体应用的落地。",,,150-500人,,,
+51job,51job,实习,10.0,171172810,市场研发多媒体及数据处理实习生：,上海华东发展城建设计（集团）有限公司,上海·徐汇区,2-4千,大专,无需经验,https://jobs.51job.com/shanghai-xhq/171172810.html?s=sou_sou_soulb&t=0_0&req=p1_10_1776274766,2026-03-20 14:11:56,"岗位职责
+1、进行网络信息资料收集，并按要求整理相关资料；
+2、协助相关专业会议，利用设备跟踪处理会议音视频资料，并按要求完成各类资料的归档工作；
+3、协助完成公司公众号文稿的制作、编写工作。
+4、协助完成公司安排的其他工作。
+任职要求
+1、大专、本科在校生，应届生亦可，长三角学校或居住上海。
+2、有建筑、规划、室内设计、景观等设计专业背景者者优先。
+3、有多媒体制作、运维方面的经验，熟练运用办公软件、PS、剪影、秀米等工作软件，有志从事多媒体工作。
+4、兼职或全职。",,,150-500人,,,
+51job,51job,实习,10.0,170730930,HR Intern - Training & Development,喜利得（上海）有限公司,上海·闵行区,3.3-4.4千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/170730930.html?s=sou_sou_soulb&t=0_0&req=p1_10_1776274766,2026-02-27 17:02:24,"This role will support the Training &amp; Development function in daily operations, project coordination, and system management. The intern will gain hands‑on experience in training operations, performance management support, and global HR project exposure.
+
+Responsibilities:
+
+1. Training Operations Support
+
+Support the organization and coordination of training sessions (scheduling, logistics, communication).
+Maintain training attendance records, program lists, and reporting data.
+Assist with leadership and talent development workshop arrangements.
+Support post‑training follow‑up and participant tracking.
+
+2. Training Content &amp; Program Development
+
+Assist in preparing training materials and documentation.
+Support Training Needs Analysis and consolidate departmental learning needs.
+Help maintain existing training programs and support new course development.
+Coordinate internal trainer activities such as TTT workshops.
+
+3. Training Effectiveness Evaluation
+
+Collect participant feedback and assist with training evaluation.
+Help analyze training results and suggest areas for improvement.
+Support identifying key knowledge, skills, and behaviors (KSA) required for performance.
+
+4. Training &amp; Development Project Support
+
+Assist with corporate learning program rollout in collaboration with global training teams.
+Support GEOS (Global Employee Opinion Survey) execution, data consolidation, and action plan follow‑up.
+Provide general support for HR talent development initiatives and projects.
+
+Requirements:
+
+Bachelor’s degree in HR, Psychology, Business Administration, or related fields preferred.
+
+Strong communication and coordination skills.
+
+Detail‑oriented with strong organizational skills.
+
+Proficient in MS Office (Excel, PPT).
+
+Passion for learning, HR development, and people‑oriented projects.
+
+Able to commit at least 3–6 months preferred.",,,150-500人,,,
+51job,51job,数据分析,1.0,170679733,数据分析师（base人资团队）(J25016),上海旺旺食品集团有限公司,上海,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai/170679733.html?s=sou_sou_soulb&t=0_0&req=p1_1_1776274771,2026-03-09 10:17:05,"工作职责:
+1、 深入了解人力资源数据和业务数据，搭建集团人力资源数据报告体系和可视化数据看板，并对组织能力、人才等情况作出有效预测；
+2、 借助数据分析，能综合使用各类统计分析方法多角度分析组织及人力资本效能发现人力资源管理问题，提出改进意见，探索和研究提高人力ROI的方法，为人才规划和发展提供建议；
+3、 建立数据管理机制，数据规划化运营管理，不断提高人力资源数据质量；
+4、 与其他部门团队合作，提供数据支持和解决方案。
+
+任职资格:
+1、 本科及以上学历，人力资源管理、统计学、应用数学、信息管理等专业优先【本岗位接受2025、2026应届优秀毕业生，但需要面试后尽快全勤实习】；
+2、 较强的数据处理和分析能力，对数据敏感，熟悉结合人力资源战略规划及业务场景，输出人力资源管理指标体系，建立人力资源数据模型；
+3、 熟练掌握数据分析工具（比如 Excel、SQL、Python、Tableau、PowerBI等）和对Ai agent 有一定的了解；
+4、 具备良好的自驱力、用户导向，具备优秀的沟通协调能力和逻辑思维能力。",,,10000人以上,,,
+liepin,liepin,数据分析,1.0,80661505,数据分析实习生,康龙化成(成都)临床研究服务有限公司,,120-150元/天,,,https://www.liepin.com/job/80661505.shtml,20260305102621,,,,,,,
+liepin,liepin,数据分析,1.0,79319853,数字化实习生-数据分析,泰科电子（上海）有限公司,,180-200元/天,,,https://www.liepin.com/job/79319853.shtml,20251223132326,,,,10000人以上,,,
+liepin,liepin,数据分析,1.0,81417743,数据分析实习生,康龙化成(成都)临床研究服务有限公司,,150-200元/天,,,https://www.liepin.com/job/81417743.shtml,20260401133539,,,,,,,
+liepin,liepin,数据分析,1.0,73288613,数据分析实习生（国际物流）,美设国际物流集团股份有限公司,,150-180元/天,,,https://www.liepin.com/job/73288613.shtml,20250320172635,,,,1000-2000人,,,
+liepin,liepin,数据分析,1.0,73663833,大数据分析工程师（2026届实习）,携程集团,,薪资面议,,,https://www.liepin.com/job/73663833.shtml,20250408104215,,,,10000人以上,,,
+liepin,liepin,数据分析,1.0,80978055,技术步骤数据分析实习生  (MJ013320),特斯拉中国,,150-250元/天,,,https://www.liepin.com/job/80978055.shtml,20260316182307,,,,10000人以上,,,
+liepin,liepin,数据分析,1.0,77431499,数据分析实习生,易鑫,,150-200元/天,,,https://www.liepin.com/job/77431499.shtml,20250923151655,,,,2000-5000人,,,
+liepin,liepin,数据分析,1.0,72407083,数据分析实习生,布雷博(南京)制动系统有限公司,,150-180元/天,,,https://www.liepin.com/job/72407083.shtml,20250214160112,,,,1000-2000人,,,
+liepin,liepin,数据分析,1.0,69562869,数据分析实习生,中国太平洋人寿保险股份有限公司,,薪资面议,,,https://www.liepin.com/job/69562869.shtml,20240906150805,,,,10000人以上,,,
+liepin,liepin,数据分析,1.0,53888239,数据分析实习生 - 市场营销方向,勘讯企业咨询服务(上海)有限公司,,150-250元/天,,,https://www.liepin.com/job/53888239.shtml,20250124151421,,,,1-49人,,,
+liepin,liepin,数据分析,1.0,77634359,数据分析实习生（医疗器械方向）,医药魔方,,120-200元/天,,,https://www.liepin.com/job/77634359.shtml,20260331180511,,,,100-499人,,,
+liepin,liepin,数据分析,1.0,74907255,数据分析实习生,交银金科,,薪资面议,,,https://www.liepin.com/job/74907255.shtml,20260302113131,,,,100-499人,,,
+liepin,liepin,数据分析,1.0,81049395,数据分析实习生,上海姚记科技股份有限公司,,120-150元/天,,,https://www.liepin.com/job/81049395.shtml,20260318153306,,,,1000-2000人,,,
+liepin,liepin,数据分析,1.0,76469483,渠道管理部数据分析实习生,中宏人寿保险有限公司,,150元/天,,,https://www.liepin.com/job/76469483.shtml,20260304104834,,,,1000-2000人,,,
+51job,51job,数据分析,3.0,163011797,管理辅助岗 (信息化、数据分析）,国家核电技术有限公司,上海·黄浦区,13-20万/年,本科,无需经验,https://snptc.51job.com/about.html,2026-04-01 16:06:56,"注:此岗位与第三方人力资源公司签约，介意者慎投。
+
+学历及专业要求：
+本科及以上学历，管理类、社科类优先。
+
+岗位职责：
+1.负责人力资源信息化建设与管理，人员信息系统工具开发；
+2.协助进行公司各类人员信息录入、数据汇总和分析，填报人员信息报表；
+3.协助开展部门职能职责梳理、岗位说明书编制工作；
+4.负责对接成员单位，收集、分析相关人员数据；
+5.完成领导交办的其他任务。
+
+任职要求：
+1.具有人力资源、行政管理等工作或实习经验优先；
+2.具备扎实的专业知识；
+3.具备良好的逻辑分析、理解反应、沟通表达及文字综合能力；
+4.具备良好的英语应用能力；
+5.熟练应用办公软件，有基础数据分析能力；
+6.具备良好的职业素养，有较强的责任心和团队协作意识，踏实能干，服从安排；
+7.遵纪守法、品行端正、身心健康；
+8.年龄35周岁以下；
+9.中共党员优先。",,,50-150人,,,
+liepin,liepin,数据分析,4.0,63536479,数据分析实习生,滴滴,,250-300元/天,,,https://www.liepin.com/job/63536479.shtml,20231211173150,,,,5000-10000人,,,
+51job,51job,数据分析,5.0,169793593,业务数据副经理Assistant Business Analysis Manager,强生（上海）医疗器材有限公司,上海,2-4万·13薪,本科,5-7年,https://jobs.51job.com/shanghai/169793593.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274789,2025-12-12 14:52:08,"Location: Shanghai
+Objectives: 
+
+Lead BU sales analysis work, including incentive management and reporting systems. Be responsible for supporting key business processes such as sales planning and headcount management. Meanwhile, drive sales effectiveness and efficiency through various projects and identify opportunities for internal process excellence.
+
+Key Responsibilities: 
+1. Be in charge of incentive and award management.
+2. Be involved in key business processes such as sales planning and headcount management.
+3. Provide support on channel management including rebate calculations.
+4. Deliver compelling insights and recommendations from underlying data to clearly communicate value and opportunity to key stakeholders. And address current risk points and provide solution by providing insightful market information.
+5. Improve business effectiveness &amp; efficiency by internal process improvement opportunities
+6. Key project coordinator such as SFE
+
+Key Requirement: 
+1. Deeply understanding of Medical industry, 3-5years
+2. Strong data analysis skill, produce insightful analyses highlighting solutions
+3. Strong communication, presentation, and interpersonal skills
+4. Ability to collaborate with multiple internal stakeholder
+5. Excellent English level.
+6. Skilled in using MS office, esp. Excel, PowerPoint, Word,PBI
+
+您一旦申请强生职位，即表示您授权强生使用您的个人信息用于招聘相关的活动，并保存在强生的招聘系统或数据库中。 我们将根据强生全球隐私政策对您的个人信息予以负责任的管理、使用与保护。",,,,,,
+51job,51job,数据分析,5.0,171486011,Power BI战略专员（驻点福建泉州）,安通控股股份有限公司,上海·浦东新区,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai-pdxq/171486011.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274789,2026-04-08 16:10:16,"1.使用Power BI设计与开发公司级BI报表，实现班期动态、效益分析、客户画像等业务场景可视化。
+2.通过SQL进行多源数据提取、清洗与整合，搭建航运业务数据模型。
+3.参与数据需求沟通，协助数据质量监测。
+4.配合业务部门制定分析指标，提供数据洞察支持战略决策。
+5.定期维护和更新BI报告系统，确保数据的准确性与时效性。
+
+任职要求
+1.专业背景：
+（1）统招本科及以上学历，统计学、计算机、航运物流相关专业优先。
+（2） 应届毕业生需提供课程设计/实习相关项目案例。
+2.必备技能：
+（1）熟练使用Power BI完成数据建模、DAX语言开发及交互式仪表盘设计。
+（2）掌握SQL基础，能独立编写复杂查询语句及基础性能优化。
+（3）了解数据仓库基础概念。
+3.能力特质：
+（1）逻辑思维严谨，对数据敏感且具备业务解读能力。
+（2）具备团队协作意识与抗压能力。",,,1000-5000人,,,
+51job,51job,数据分析,5.0,171231212,Data & AI tech Manager,路易威登（中国）商业销售有限公司,上海·静安区,3.5-7万,本科,3-4年,https://jobs.51job.com/shanghai-jaq/171231212.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274789,2026-03-24 15:18:38,"Principal Responsibilities
+
+Data Management and Extraction
+
+· Maintain an inventory of data assets, including databases, data sources, and 
+formats, ensuring that all data is easily accessible and well-organized.
+
+· Design and implement processes for data extraction from various internal and 
+external sources, ensuring accurate and timely retrieval of information.
+
+
+
+Data Integration
+
+· Collaborate with other functions to design and implement system integration 
+solutions that ensure seamless data flow between various applications and 
+platforms.
+
+· Manage and optimize databases to ensure efficient data storage, retrieval, 
+and processing, supporting the organization’s data needs.
+
+
+
+Data Analytics and Tools
+
+· Collaborate with business units to gather data requirements, providing 
+support for data analysis via reporting tools, system integration, and AI 
+applications.
+
+· Work closely with various departments to understand their data needs and 
+provide support for data-related projects and initiatives.
+
+· Oversee the selection, implementation, and management of data analytical 
+tools and platforms (e.g., BI tools, data visualization software) to enhance 
+data analysis capabilities across the organization.
+
+
+
+Agentic Architecture &amp; System Design
+
+· Design Multi-Agent Systems: Architect scalable multi-agent orchestration 
+frameworks where specialized agents collaborate to solve complex, multi-step 
+business problems.
+
+· Build Advanced RAG Pipelines: Lead the development of next-gen 
+Retrieval-Augmented Generation (RAG) systems that go beyond simple vector 
+search, integrating Knowledge Graphs, hybrid search, and re-ranking models to 
+provide agents with precise, context-aware grounding.
+
+· Memory &amp; State Management: Design sophisticated long-term and short-term 
+memory mechanisms (using vector DBs, SQL, or key-value stores) to allow agents 
+to maintain context across long-running sessions and learn from past 
+interactions.
+
+Application Engineering &amp; Product Delivery
+
+· End-to-End Agent Lifecycle: Own the full software development lifecycle 
+(SDLC) for AI applications, from prototype to production, ensuring agents are 
+not just demos but reliable, latency-optimized products.
+
+· Human-in-the-Loop (HITL) Interfaces: Build intuitive UI/UX patterns for 
+human-agent collaboration, including approval gates, intervention points, and 
+feedback loops humans guide or correct agent actions before final execution.
+
+· Evaluation &amp; Testing Frameworks: Establish rigorous automated testing suits 
+for agents to measure success rates, task completion accuracy, hallucination 
+frequency, and tool invocation reliability.
+
+· Performance Optimization: Optimize application performance by implementing 
+caching strategies, prompt compression, model routing, and asynchronous 
+processing to reduce latency and token costs.
+
+Reliability, Safety &amp; Governance (Agent-Specific)
+
+· Guardrails &amp; Safety Layers: Implement advanced guardrail systems to prevent 
+agents from taking unauthorized actions, accessing sensitive data, or entering 
+infinite loops. This includes input/output filtering and constraint enforcement.
+
+· Deterministic Workflow Enforcement: Balance probabilistic LLM reasoning with 
+deterministic workflow engines to ensure critical business processes remain 
+predictable and auditable.
+
+· Observability &amp; Debugging: Deploy comprehensive observability stacks 
+specifically for agentic flows, tracing decision paths, tool calls, and 
+reasoning steps to rapidly debug failures in complex autonomous chains.
+
+· Cost &amp; Token Governance: Monitor and optimize token consumption and compute 
+costs associated with high-frequency agent operations, implementing budget 
+limits and efficiency protocols.
+
+Technical Leadership &amp; Innovation
+
+· Framework Selection &amp; Strategy: Evaluate and select the best open-source and 
+proprietary agent frameworks and define the team’s technical stack.
+
+· POC to Production Pipeline: Rapidly prototype new agent concepts and define 
+the clear criteria and engineering standards required to graduate them into 
+mission-critical production applications.
+
+· Cross-Functional Integration: Collaborate closely with product managers and 
+domain experts to translate vague business needs into structured agent 
+specifications and actionable user stories.
+
+· Team Upskilling: Mentor engineers on prompt engineering patterns, 
+chain-of-thought reasoning, few-shot learning, and the nuances of building 
+non-deterministic software systems.",,,1000-5000人,,,
+51job,51job,数据分析,6.0,171454767,供应链数据专员 Data Stewards,艾蒙斯特朗流体系统（上海）有限公司,上海·奉贤区,1.4-2.2万·13薪,本科,3年及以上,https://jobs.51job.com/shanghai-fxq/171454767.html?s=sou_sou_soulb&t=0_0&req=p1_6_1776274793,2026-04-15 09:07:51,"Imagine working at the forefront of innovation in fluid-flow technology, with over 1,400 colleagues across the globe, and contributing to a legacy of excellence that spans eight manufacturing facilities on four continents. Armstrong Fluid Technology is more than just a leader in our industry; we are a community of the brightest and most creative minds, driven by a shared mission to engineer the future and safeguard our planet.
+As part of our team, you'll be immersed in an environment that fosters growth, creativity, and collaboration. Here, you'll have the opportunity to push boundaries, tackle exciting challenges, and develop cutting-edge solutions that promote energy efficiency and reduce environmental impact. Every day offers the chance to make a meaningful contribution to a more sustainable future, driving innovations that help lower global carbon footprints. Together, we’re creating a legacy that goes beyond business—one that’s changing the world for the better.
+In this role, she or he is operational guardians of data quality and compliance, and will be fully involved into data governance program to step by step implement the daily activities on behalf of AFSS including identify inactive parts, enhance item details, improve new part creation process and workflow, implement robust data maintenance processes for site 9001, etc... This role will also cover the work as buyer to issue the purchasing order to UK suppliers for the items handed over from UK supply chain.
+
+Key Accountabilities
+[Data governance program]
+•	Maintain the highest standards of data accuracy, completeness, and consistency across all item and supplier master data sets.
+•	Monitor data quality metrics proactively, identify anomalies and root causes, and implement corrective actions to mitigate risks.
+•	Enforce data governance policies, naming conventions, and data standards to ensure organizational adherence and data reliability.
+•	Provide expert support and guidance to internal data users, empowering them to leverage data properly and in compliance with policies.
+•	Align data governance activities with business objectives, ensuring data assets effectively meet the needs of operations, procurement, and supply chain teams.
+[Supply Planning and Supplier Performance Management]
+•	Leverage ERP system-generated reports to track, analyze, and ensure supplier on-time delivery performance.
+•	Proactively review and address past-due deliveries by collaborating with suppliers, identifying bottlenecks, and driving resolution.
+•	Develop a deep, actionable understanding of supplier capacity, production constraints, and potential supply chain disruptions.
+•	Contribute to the development and refinement of supplier performance scorecards, providing data-driven insights for performance reviews.
+•	Ensure suppliers comply with contractually agreed consignment and vendor-managed inventory (VMI) programs.
+•	Investigate and resolve supplier quality issues, collaborating with cross-functional teams (e.g., quality, operations) to implement preventive measures.
+•	Participate in supplier scorecard reviews and Quarterly Business Reviews (QBRs), providing input to strengthen supplier relationships and performance.
+•	Communicate supplier performance and delivery issues transparently to all key stakeholders, ensuring alignment and timely decision-making.
+•	Engage actively in material planning reviews to support demand forecasting and inventory optimization.
+[Supplier Master Data]
+•	Coordinate changes to ordering parameters within the ERP system, ensuring compliance with governance protocols set by the Supply Chain Manager and Inventory Planner.
+•	Review, validate, and update supplier master data (including lead times, contact information, and performance attributes) in the ERP system, adhering to governance guidelines.
+[Purchase Order Management]
+•	Ensure the integrity of purchase orders (POs) by verifying accuracy of item details, pricing, terms, and supplier information prior to issuance.
+•	Update and communicate PO revisions to suppliers in a timely manner, minimizing delays and ensuring alignment on order requirements.
+•	Monitor supplier compliance with all terms and conditions outlined in POs, addressing non-compliance issues proactively.
+
+What We’re Looking For
+To thrive in this role, you should bring:
+Education and Experience
+•	College Degree in supply chain management, business administration, or a related field.
+•	3 years of demonstrated experience in sourcing and procurement functions, ideally in an industrial/automotive/aerospace manufacturing environment.
+•	Strong analytical skills with proficiency in data analysis.
+•	Excellent understanding of materials planning and inventory management principles. 
+Technical Skills
+•	Must have prior enterprise resource planning (ERP) systems, ideally LN or similar such as SAP, CMS etc.
+•	Must be proficient with Microsoft Office with advance data organization and analytics capabilities in Excel. 
+Soft Skills
+•	Excellent communication and collaboration skills to work effectively with diverse stakeholders.
+•	Detail-oriented with strong organizational and problem-solving abilities.
+•	Ability to work in a fast-paced environment and handle multiple priorities simultaneously.
+Why Armstrong Fluid Technology?
+By joining us, you’ll become part of a global community dedicated to pushing the boundaries of fluid-flow technology while upholding Armstrong's commitment to sustainability. You’ll have endless opportunities to learn, grow, and make a significant impact on the world. Together, we'll build tomorrow’s solutions today.",,,50-150人,,,
+51job,51job,数据分析,7.0,170527979,高级行业数据分析&数据验证专员,固特异轮胎管理（上海）有限公司,上海·徐汇区,1.6-3.1万·13薪,本科,3年及以上,https://jobs.51job.com/shanghai-xhq/170527979.html?s=sou_sou_soulb&t=0_0&req=p1_7_1776274798,2026-02-04 18:27:28,"This position is primarily responsible for industry analytics (including new car sales, carparc data, tire industry trends). Forecasting tire industry at a granular tire size level is a key component of this role. This role requires working through multiple data streams, creating statistical models, and developing BI/analytics dashboards to support business decision-making and sales effectiveness.
+
+The role will support both, Consumer and Commercial organizations. At this stage we expect 90% of the time to be spent on Consumer business. Any change to this will be communicated in future.
+
+Accountable for INDUSTRY ANALYTICS: This includes analyzing multiple data streams (e.g. new car sales, carparc, retail sales trends etc) to forecast tire industry trends at a granular tire size level
+•	Ensure forecasts are backed with logical explanations linking the numbers with the business/industry realities
+•	Regularly update forecasts as business environment changes due to internal / external dynamics
+•	Work closely with the business analytics and product analytics colleagues by providing timely industry updates
+•	Create statistical models as and when needed, to forecast industry trends, predict detailed geographic opportunity sizes, etc.
+ 
+•	Work with cross functional teams to understand DATA VISUALIZATION requirements. create powerful BI and analytics dashboards to help democratize data and drive ease and speed of of decision making
+•	enable sales effectiveness by equipping the sales team with powerful data tools/dashboards that they can use to identify business opportunities (e.g. selecting the right store (via Geomarketing), right assortment fit for the carparc in a certain geography
+•	Adapt the current APAC industry methodologies to the new standarized global data sets and methodologies. Support the scale up and synchronization with global team
+•	Segment the carparc and industry into product segments as defined by the Global product team
+Ensure data accuracy and clear data availability for various data sets such as carparc, new car sales, Replacement Industry, OE Industry
+ 
+We are looking for: 
+At least 5 years experience in market research and analytics. At least 2 years in manufacturer/client side roles
+•	Preferred: experience in creating and deploying industry / business forecast models
+•	At least 2 years experience in deploying data visualization / BI systems
+Thorough understanding of retail audit data and analysis.
+•	Expert in Excel and hands on experience with at least one of the BI tools (Power BI, Tableau, etc.). 
+•	Experience in building AI based visualization and data analytics systems will be an advantage.
+•	Strong communication skills and experience presenting and interacting with senior leadership
+•	Statistical analysis experience will be an advantage",,,1000-5000人,,,
+51job,51job,数据分析,8.0,163341775,数据分析实习生 Data Analysis Intern,喜利得（上海）有限公司,上海·闵行区,3.3-4.4千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/163341775.html?s=sou_sou_soulb&t=0_0&req=p1_8_1776274802,2026-04-14 15:07:51,"Purpose of position 
+职位目的
+
+You can contribute to develop new analysis methods to continuously improve our products and services. You will be working on new data analysis approaches and collaborate with the global quality experts and cross functional teams. You will have the opportunity to broaden your knowledge and implement applications in practice.
+
+Minimum Experience &amp; Qualifications
+岗位要求
+
+1.	Master student in mechanical or electrical engineering, data science, mathematics or similar
+2.	Good knowledge and prior experience in statistic and/or data science
+3.	Technical affinity
+4.	Experience in data merging 
+5.	Good communication skills, with fluency in English and Chinese
+
+Responsibilities 
+职位职责
+
+1.	Develop analysis concepts and methods to the next level with data from different sources, for continuously controlling and improvements of product quality
+2.	Develop and evaluate comprehensive repair analyses combining repair and market data or develop an approach to continuously monitoring product reliability
+3.	Develop reporting page based on data analysis result",,,150-500人,,,
+51job,51job,数据分析,8.0,171416174,GCA China Analytics Innovation Lead,辉瑞亚太财务共享中心,上海·静安区,90-120万/年,本科,10年及以上,https://jobs.51job.com/shanghai-jaq/171416174.html?s=sou_sou_soulb&t=0_0&req=p1_8_1776274802,2026-04-03 09:47:51,"GCA China Analytics Innovation lead
+
+ROLE SUMMARY
+The Global Commercial Analytics (GCA) team within the Chief Marketing Office (CMO) organization is dedicated to transforming data into actionable intelligence, enabling the business to remain competitive and innovative in a data-driven world. We play a pivotal role in extracting insights from large and complex datasets, dynamic market situations to drive strategic decision-making. Collaborating closely with various subject matter experts across various fields, our team leverages primary market research, advanced statistical analysis, machine learning techniques, and data visualization tools to generate insights, uncover patterns, trends, and correlations within the data to support business decision making. Additionally, we are dedicated to delivering new, innovative capabilities by deploying cutting-edge Machine learning algorithms and artificial intelligence techniques to solve complex problems and create value.
+
+As a director, Analytics Innovation Lead in China analytics team, you will proactively accelerate analytics-driven innovation across Pfizer China organization. This role will partner closely with Therapeutic Area GCA IIS Leads (Integrated Insights &amp; Strategy, Business Partners) and cross-functional stakeholders to deeply understand business unmet needs, and the “moments that matter” in commercial decision-making, then shape solutions, and move from discovery to proof-of-concept, pilot, scaling, to business impact realization.
+In addition, this role will actively champion AI tool adoption within the GCA team, elevate analytical capability, efficiency and creativity through reusable toolkits, best practices, and capability building, unlocking new levels of insights generation.
+The successful candidate will bring a combination of deep analytical expertise, strong technical (AI) capability, strategic thinking, innovation mindset, and strong stakeholder influence to help drive Pfizer China’s analytics innovation agenda.
+
+ROLE RESPONSIBILITIES
+Role definition and Key Accountability include, but are not limited to:
+Drive Analytics Innovation Strategy
+
+ ● 
+Partner with GCA leadership to develop and execute a roadmap for analytics innovation aligned with Pfizer’s commercial priorities
+ ● 
+Identify and shape analytics innovation opportunities across Pfizer China’s commercial organization, with a strong focus on AI-driven and advanced analytics solutions
+ ● 
+Partner with GCA IIS TA lead, conduct TA deep dive to identify opportunities, collaborate to drive the incubation, development, and implementation of prioritized analytics innovation initiatives
+ ● 
+Partner with data science, digital, external vendors as needed to apply advanced analytics methodologies including AI/ML to address complex business questions
+ ● 
+Connect with global and international teams (GCA Data science, strategy and innovation), promote synergy and proactively promote innovations from global/international to China, and the other way around
+ ● 
+Align with the Analytics Innovation Acceleration &amp; Enablement Lead and Innovation and Impact Team (Business Transformation) to accelerate innovation delivery and quantify business impact.
+ ● 
+This alignment also supports the International AI transformation by localizing global analytics capabilities, scaling proven use cases, and feeding China innovations back into the international roadmap and vice versa.
+ ● 
+Act as a thought leader to shape “what good looks like” for AI and analytics innovations in commercial contexts, aligning stakeholders around outcome-driven innovation
+ ● 
+Project management: Translate approved business cases into roadmaps with clear scope, milestones, dependencies, and KPIs; ensure disciplined delivery
+ ● 
+Establish and operationalize measurement frameworks (leading/lagging indicators) to evaluate experiments and quantify business impact, track adoption and outcomes
+
+Champion AI Adoption and Capability Enablement
+
+ ● 
+Proactively explore and promote the use of AI tools and emerging analytics technologies to enhance the productivity, creativity, and analytical capabilities of the GCA team
+ ● 
+Identify opportunities where AI-enabled tools can improve analytical workflows, automate processes, and accelerate insight generation
+ ● 
+Build reusable playbooks, templates, and internal “how-to” assets
+ ● 
+Role-model hands-on problem solving while building confidence and maturity in AI/analytics tool usage
+ ● 
+Foster a culture of experimentation and learning to help the analytics community adopt innovative tools and approaches
+
+PROFESIONAL EXPERIENCE AND EDUCATIONAL REQUIREMENTS
+
+ ● 
+Strong problem-solving capability with a structured and hypothesis-driven analytical approach
+ ● 
+Demonstrated experience applying advanced analytics, AI, machine learning, or data science to solve complex business problems
+ ● 
+Solid programming and analytical tooling capability (e.g., Python/R/SQL or equivalent) would be a plus
+ ● 
+Strong curiosity and passion for emerging technologies, particularly Artificial Intelligence and analytics innovation
+ ● 
+Leadership and delivery - “Player-coach” leadership: can both guide teams and contribute hands-on when needed to unblock delivery or raise solution quality.
+ ● 
+Highly proactive with a strong drive to explore new ideas and translate them into practical business applications
+ ● 
+Excellent interpersonal communication and influencing skills, with the ability to work effectively with cross-functional stakeholders
+ ● 
+Proven track record of being an indispensable thought partner to senior leaders and influencing without authority Fluent in English (written and spoken)
+ ● 
+Proven ability to act as a strategic partner with the capacity to quickly establish relationships of trust, credibility, and be seen as a driving partner to commercial clients and cross-functional stakeholders
+ ● 
+Previously demonstrated Business / Financial acumen
+
+ ● 
+10+ years of professional experience, with 7+ years in analytic or consulting roles; Healthcare and Pharmaceuticals highly preferred
+ ● 
+Demonstrated significant professional experience of strategy and/or research/analytics/innovation interacting with senior stakeholders to effectively communicate insights.
+ ● 
+Bachelor’s degree required. Advanced degree strongly preferred (e.g. MBA or MS/PhD) in a quantitative discipline such as Statistics, Data Science, Artificial Intelligence, Computer Science, Engineering, or related fields.
+
+Work Location Assignment: On Premise
+
+Pfizer is an equal opportunity employer and complies with all applicable equal employment opportunity legislation in each jurisdiction in which it operates.
+
+Marketing and Market Research",,,500-1000人,,,
+51job,51job,数据分析,9.0,171381610,棉花期货分析员,上海嘉新实业有限公司,上海·静安区,15-20万/年,本科,2年,https://jobs.51job.com/shanghai-jaq/171381610.html?s=sou_sou_soulb&t=0_0&req=p1_9_1776274807,2026-04-01 15:56:05,"【工作内容】
+1、棉纺产业链研究工作，建立相关品种数据库，对市场供需、宏观等方面做出分析，关注市场变化，每周、每月总结市场并形成分析报告。紧跟市场动向，及时汇报市场最新消息，根据市场变化出具独立分析报告（产量、种植面积、消费市场调研、供需平衡表等）；
+2、棉花业务数据管理工作，对合同成交、点价、结算数据进行数据分析，同时并对工厂棉花库存进行分析，日常跟踪统计并形成周度分析和月结机制；
+3、研究判断期货市场走势，提出建仓或套保的操作建议，并提供期货、期权交易策略。提供原料、产成品库存管理支持，结合棉花库存和销售接单情况，对棉花、棉纱可能出现的敞口进行对冲保护；
+4、棉花业务部门的部分跟单工作，棉花采购的日常开发与维护工作，主要是供应商开发、合同跟单、点价结算、账务处理等，可以独立操作棉花采购合同的全部执行流程；
+5、提供培训及行情咨询服务，协助提升棉花业务部门的期现业务能力。
+
+【任职要求】
+1、本科及以上学历，金融、经济、贸易等相关专业优先；
+2、对棉花期货市场有一定了解，具备良好的数据分析能力；
+3、具备较强的学习能力和责任心，能适应快节奏工作环境；
+4、有相关实习或研究经历者优先考虑。",,,1000-5000人,,,
+51job,51job,数据分析,10.0,171589429,ADAS/AD Big Data (MJ005806),大众酷翼（北京）科技有限公司,上海·闵行区,1.2-2.4万,,3-5年,https://campus.51job.com/vgc/jobinfo.html?jobid=171589429,2026-04-14 14:51:08,"岗位描述/Department Mission
+
+The purpose and objective of TF-2 is to develop functions, systems and technology (System) within the domain of ADAP Big Data/ Extended Service/ VME/ ADAS/AD Driver Interaction for the Chinese market. This position assures that this technology is competitive, compliant with Chinese laws, standards &amp; regulations.
+C｜TF-2 is responsible for planning and overseeing pre-development and series development activities of IT Data/ FuSa/ Extended Services/ VME/ ADAS/AD interaction functions for different E/E architectures of E3 1.1/ E3 1.2 used within the whole Volkswagen Group in China and is responsible for implementation. The objective is the development, integration, application, validation and release of these systems for the cars of the Volkswagen brands in China, related to both FBU and CKD vehicles.
+C｜TF-2 is responsible to manage and develop technical requirements or technical specification of IT Data/ FuSa/ Extended Services/ VME/ ADAS/AD Interaction functions of E3 1.1/ E3 1.2. Establish and ensure efficient processes and standards to meet VW Group standards. Strategical responsibility for IT Data/ FuSa/ Extended Services/ VME of E3 1.1/ E3 1.2 in overall decision-making processes.
+C｜TF-2 is responsible for managing strategic projects as well as implementation and maintenance of Technical Standards &amp; Regulations, as well as Processes and Quality for sustainable and compliant function development in the region for MQB/ MLBevo/ E3 1.1/ E3 1.2 platforms.
+C｜TF-2 is as strong interface and representative of German HQ to JVs FAW-VW, SVW, VWA and NEV Co. According to the Volkswagen Group strategy, C｜TF-2 gains an essential contribution for both brands (Audi, VW, Porsche) in Volkswagen Group as well as CARIAD SE. This position leads the strategic collaboration with new Chinese technology suppliers (BATH). The success in the development of ADAP is essential for the success of the whole Volkswagen Group in China (competitiveness, premium demand, compliance to standards/regulations, etc.).
+
+&nbsp;
+主要职责/Your Responsibilities:
+This position holds the responsibility for the described tasks for the VW Group and the brands (Audi, VW and Porsche), CARIAD SE, JVs for the Chinese market. This position has to serve a large amount of interfaces within Volkswagen Group China, Headquarters in Germany as well as international suppliers in respective field of technology development of ADAS / ADAP Big Data/ VME Architecture.
+
+Responsible for integration in vehicles, application and function release of IT Data of E3 1.1/ E3 1.2 for the Volkswagen Group brands in the Chinese market.
+Responsible for system, function quality and project quality.
+Specify and derive requirements of Big data solutions designed for the Chinese and global market.
+Use case planning based on project objectives and competitive analysis for data acquisition from the car, data analysis and product improvement in the Cloud.
+Cascade targets and performance requirements to supplier/s and partner/s and work to integrate them in vehicle systems.
+Monitor and steer the implementation of the solution design and compliance validation requirements, together with supplier/s and partner/s, and work to integrate them in vehicle systems.
+Responsible to ensure compliance of Big Data solutions.
+Communication with leaders, suppliers, and interface partners.
+
+岗位要求/Required Qualification:
+
+Education: This position requires a Master/ Bachelor degree related to IT / software development, electrical, computer engineering or respective field.
+Work Experience: 5 years of professional working experience. Experience in cloud development on AZURE and coding is required.
+Special Skills:
+Profound knowledge in Big Data and cloud environments, especially AZURE
+Good understanding of architecture design and workflow automation in cloud environments
+Coding skills in Python and C++
+Knowledge of use case analysis and design
+Knowledge of sensor set, electronic modules (ECUs), vehicle communication architectures, software components for automated driving
+
+Excellent business English skills (written and spoken), German and Chinese language skills are beneficial.",,,10000人以上,,,
+51job,51job,数据分析,10.0,170613410,Data Specialist (VDS) 数据专员 （汽车车型信息）,泰案联信息技术（上海）有限公司,上海·徐汇区,7千-1.2万·13薪,本科,2年及以上,https://jobs.51job.com/shanghai-xhq/170613410.html?s=sou_sou_soulb&t=0_0&req=p1_10_1776274812,2026-04-15 09:53:40,"Job Tasks
+•	Research and process Vehicle data according to defined standards.
+根据既定标准研究并处理车型数据。
+•	Extract and record researched Vehicle data into internal databases and systems.
+将调研获得的车型数据提取并录入内部数据库及系统。
+•	Responsible for preprocessing, matching, and analyzing vehicle-related data
+负责车型相关数据预处理,匹配及分析。
+•	Collaborate with internal QA, content, and engineering teams to validate data and maintain publishing standards.
+与内部质控、数据内容及工程团队协作，验证数据并维持发布标准。
+•	Support continuous process improvement and cross-departmental knowledge sharing.
+支持持续流程改进和跨部门知识共享。
+Job Qualifications 
+•	Interested in vehicles and have some understanding.
+对车辆感兴趣并有一定的了解；
+•	Experience in data entry and documentation tools.
+具备数据录入和文档工具的使用经验；
+•	Familiarity with big data processing and programming languages (e.g. Python, SQL, MySQL);
+熟悉大数据处理及编程语言（如Python, SQL, MySQL）；
+•	Good English ability is preferred , if have Korean ability is even better
+英语能力佳者优先，如有韩语基础更好
+•	Able to interpret documentation and communicate with cross-functional teams.
+•	能够理解英文技术文档并与跨职能团队进行基础沟通；
+
+泰案联求职者隐私政策
+
+版本更新日期：2025年 01 月 01 日
+版本生效日期：2025年 01 月 01 日
+
+引言
+非常感谢您对我们的关注。
+
+本隐私政策针对的是，为了寻求泰案联信息技术（上海）有限公司（以下简称“泰案联”或“我们”）工作机会而向我们提供个人信息的个人（简称“求职者”）。
+
+泰案联非常重视求职者（以下简称“您”）的个人信息保护。我们将严格遵守法律法规，竭力保障您的个人信息安全。
+
+通过本隐私政策，我们希望向您说明我们如何处理（包括但不限于收集、使用、存储、提供、删除）您的个人信息。此外，通过本隐私政策，您将了解作为个人信息主体所享有的权利。
+
+本隐私政策适用于以下情形：
+61	求职者通过电子渠道或在线简历投递渠道提交，以及
+61	求职者通过第三方来源（如第三方招聘网站）提交，以及
+61	求职者线下渠道提交，以及
+61	在某些情况下，现有员工可以对潜在申请人进行推荐。此类员工会添加有关潜在申请人的个人数据。在这种情况下，根据本隐私政策，潜在申请人被视为求职者，并将被告知处理情况。
+
+本隐私政策不适用于第三方来源（如第三方招聘网站）等向您提供的服务。建议您阅读该第三方发布的隐私政策。
+
+在您进行职位申请或向我们提交个人信息前，请务必仔细阅读本隐私声明。若您点击同意本隐私声明或主动提交简历，即视为您知悉并同意我们收集您的个人信息，并在法律规定及本隐私声明约定的范围内进行处理。如有问题，您可以通过本隐私声明标注的方式与我们联系。
+
+本隐私政策将帮助您了解以下内容：
+一. 定义
+二. 我们如何收集，处理您的个人信息
+三. 我们如何委托处理、共享、转让、公开披露您的个人信息
+四. 我们如何存储和跨境传输您的个人信息
+五. 您的个人信息主体权利
+六. 我们如何保护您的个人信息 
+七. 隐私政策的更新
+八. 如何联系我们
+
+
+一．定义
+泰案联该隐私保护政策是基于现行《网络安全法》《数据安全法》《个人信息保护法》等相关法律法规使用的术语。我们的隐私政策对于求职者来说应该是易于阅读和理解的。为了确保这一点，我们需要事先解释一下所使用的术语。
+
+我们在本隐私政策中使用了以下术语：
+
+(1) 【个人信息】
+个人信息是指以电子或者其他方式记录的能够单独或者与其他信息结合识别自然个人身份的各种信息，包括但不限于自然人的姓名，出生日期，身份证件号码，个人生物识别信息，住址，电话号码等，但不包括匿名化处理后的信息。
+
+(2) 【敏感个人信息】
+敏感个人信息是指一旦泄露或者非法使用，容易导致自然人的人格尊严受到侵害或者人身、财产安全受到危害的个人信息，包括生物识别、宗教信仰、特定身份、医疗健康、金融账户、行踪轨迹等信息，以及不满十四周岁未成年人的个人信息。
+
+(3) 【处理】
+处理是指借助程序或者手动进行的与个人信息有关的任何操作或一系列操作，如收集、记录、组织、分类、储存、改编或更改、检索、咨询、使用、通过传输、传播或以其他方式提供的披露、调整或关联、限定、删除或销毁。
+
+二．我们如何收集，处理您的个人信息
+涉及敏感个人信息的内容，我们已加粗予以显著注明。
+
+
+1. 个人信息的收集
+基于职位招聘的目的并遵守相关法律法规的要求，泰案联需要处理您申请我们公司工作岗位时提交的个人信息。泰案联将收集您以下个人信息，详情以您提交的求职信息为准。
+
+61	个人基本信息： 您的姓名、生日、性别、国籍、出生地、居住地、住址、个人电话号码、电子邮件地址。
+61	个人身份信息：您的身份证件信息
+61	个人教育工作信息：您的教育背景，包括学校，就读时间，专业，学历，学位，社会活动经验
+；您的就业经历，专业领域，语言能力及相关持有的专业和其他相关的证书，包括您此前就业/实习的单位名称，职位名称，起始时间，工作职责，薪酬信息，是否与前雇主有劳动纠纷等；您的求职意向
+61	其他信息：您在简历相关文件提交中主动选择提供的任何其他信息，如您的民族，证件照，宗教信仰，健康信息，婚姻家庭信息；在您接受录用后，为办理各项入职手续提交的各项信息，包括银行账户信息，***性质（农业/非农业）
+
+为确保能准确评估您的求职信息和求职职位的适配，请您确保您所提供的个人信息真实，完整，不具误导性。提交不真实，不准确，不完整，有误导性的信息，可能会导致您职位申请失败，或被立即解雇等后果。您提交的信息如涉及第三方个人信息(如紧急联系人，背调联系人，推荐人等)，请您务必确保已获得必要的授权和同意，不侵犯第三方的隐私，商业秘密等合法权益。
+
+2. 个人信息的来源
+一般情况下，我们直接从您那里收集您的个人信息，例如当您亲自通过邮件或其他在线方式，或纸质文件主动提交您的简历/求职信等给我们。
+
+我们还可能通过您授意或授权的第三方来源获取您的个人信息，包括其他推荐人或其他授权方（如招聘网站）。
+
+出于对您申请职位相关的合法背景调查的目的并获得您的授权，泰案联还可能会从其他合法渠道获取您的个人信息及其他信息，如通过第三方服务供应商及其合作伙伴。
+
+此外，如果您使用我们的网站，我们可能会通过使用Cookie等技术从您的计算机或其他设备收集信息。有关Cookie及其他数据收集方式的详细信息，请阅读您访问的网站中的隐私政策。
+
+3. 个人信息的处理
+我们将依据泰案联招聘，管理和规划相关目的和/或遵守相关法律法规的要求，处理您申请我们工作岗位时提交的个人信息。详情如下所示：
+
+a.依据签合同前采取措施：
+i.为职位申请管理的目的：
+-- 处理您的求职申请
+-- 联系您
+-- 评估您的个人信息，与您所申请的岗位是否匹配
+-- 安排面试
+-- 一旦您接收入职邀请函，管理入职并创建员工档案 
+ii.为录用前的筛选和背景审查得目的：
+-- 审查您的背景及您在应聘中提交的其他信息，可能包括获取额外的就业和教育背景信息及犯罪记录信息（法律允许的前提下）
+-- 准备入职邀请函及在我们招聘过程中（入职前）使用的各项文件
+
+b. 依据泰案联补充自身人才库的合法权益， 为将您加入到泰案联求职人才库的目的：
+-- 维护我们的求职人才库
+-- 考虑您作为泰案联未来的空缺职位的人选
+c. 依据泰案联应承担的法定和监管义务，为履行法律和监管义务：
+-- 履行法律和监管义务
+-- 处理您行使自身权利的请求
+d. 依据泰案联的合法权益或泰案联应承担的法定和监管义务：
+-- 用于人事管理及其他业务目的，如员工合同管理，人事资料存档，报告和法律合规而采取的必要措施等
+
+如果您被录用，我们所收集的与您职位申请有关的个人信息将成为员工档案的一部分。额外的使用处理将在入职时提供给您的《员工个人信息处理同意书》中详细说明。
+
+4. 其他规则
+若您提供的信息中含有其他用户的个人信息，在向我们提供这些个人信息之前，您需要确保您已经取得合法的授权。
+
+另外，根据相关法律法规及国家标准，以下情形中，我们可能会处理您的相关个人信息而无需征求您的授权同意：
+
+(1) 为个人信息处理者履行法定义务或法定职责所必需；
+(2) 为订立、履行您作为一方当事人的合同所必需；
+(3) 为应对突发公共卫生事件，或者紧急情况下为保护自然人的生命健康和财产安全所必需；
+(4) 依法在合理的范围内处理您自行公开或者其他已经合法公开的个人信息；
+(5) 法律、行政法规规定的其他情形。
+
+三. 我们如何委托处理、共享、转让、公开披露您的个人信息
+
+1. 委托处理
+基于本隐私政策所述的目的，我们可能会委托第三方服务提供商帮助我们开展相关的运营和服务。对我们委托处理个人信息的公司、组织和个人，我们会与其签署严格的保密协定，要求他们按照我们的要求以及其他任何相关的保密和安全措施来处理个人信息。服务提供商包括的类型有：人力资源服务提供商，技术支持服务提供商等。
+
+2. 共享
+我们不会与本公司以外的任何公司、组织和个人分享您的个人信息，除非获得您的明确单独同意。我们共享的信息类型，共享目的和我们采取的合同措施取决于第三方的作用。
+
+
+接收方：泰案联德国总部TecAlliance GmbH
+目的：为了满足本隐私政策中称述的目的，实施招聘流程以及全球人事管理的需要。
+
+接收方：行政监管或司法机构或机关
+目的：为了履行法律法规规定或按政府主管部门的强制性要求；或被指违反法律或监管规定的情况
+
+接收方：顾问，包括第三方审计师，律师及类似方
+目的：为了管理可能的争议和其他适当的法律事务
+
+3. 转让
+我们不会将您的个人信息转让给任何公司、组织和个人，但以下情形除外：
+(1)在获取明确同意的情况下转让：获得您的明确同意后，我们会向其他方转让您的个人信息：
+(2)在涉及合并、收购或破产清算时，如涉及到个人信息转让，我们会在要求新的持有您个人信息的公司、组织继续受此隐私政策的约束，否则我们将要求该公司、组织重新向您征求授权同意。
+
+4. 公开披露
+我们仅会在以下情形下，公开披露您的个人信息：
+(1)获得您明确同意后；
+(2)基于法律的披露：在法律、法律程序、诉讼或政府主管部门强制性要求的情况下，我们可能会公开披露您的个人信息。
+
+四. 我们如何存储和跨境传输您的个人信息
+
+1. 存储期限
+我们存储您个人信息的期限为实现本隐私政策中所规定目的所必需的时间，除非因相关法律法规义务的要求需要更长时间的存储您的个人信息。
+泰案联将保留通过职位申请收集到的个人信息以供将来职位招聘和申请使用。如果您想删除自己的信息，请通过第八条列明的联系方式联系我们。如果依据相关法律法规的要求或为维护我们的合法权利进行抗辩或***时，我们也可能保留某些职位申请信息。
+
+2. 跨境传输
+基于泰案联全球人力资源管理的目的，在符合相关法律法规的前提下，泰案联上海需要向泰案联德国总部TecAlliance GmbH跨境传输员工的个人信息。详情将在入职时提供给您的《员工个人信息处理同意书》
+
+中详细说明。前述信息将存储在欧洲。境外接收方将参照前款所述存储您的个人信息。您也可以联系境外接收方或行使个人信息权利。
+
+五. 您的个人信息主体权利
+依据相关法律法规，您依法享有查阅，更正，补充，复制，转移，删除，限制处理您提交的个人信息等权利。
+
+1. 查阅，更正，补充权
+您可以查询自身个人信息，但相关法律规定的例外情况除外。当您认为有关您的个人信息不正确或不完整的情况下可以更正或更新您的信息。
+
+2. 获得您个人信息的副本
+您有权获得您个人信息的副本。您可以随时和我们联系，在遵守相关法律法规和技术可行性内，我们将提供给您一份您的个人信息副本。
+
+3. 删除个人信息
+在某些情况下，您可能有权要求我们删除您的个人信息。
+
+4.撤回同意，限制或拒绝
+您有权撤回同意，限制或拒绝我们对您个人信息的处理。一旦您撤回同意，限制或拒绝我们使用您的个人信息，将影响相关的招聘流程或我们双方未来的劳动关系。我们将按照您的要求不再处理相关的个人信息。但该撤回同意，限制或拒绝不会影响此前我们基于您的同意或授权进行的个人信息处理操作的合法性。
+
+5.响应您的请求
+为保障安全，我们可能会先要求验证您的身份（要求您提供必要的书面资料或其他方式），然后再处理您的上述请求。我们将在收到相关请求后15个工作日内或法律法规规定的期限内响应您的请求。
+
+6. 我们无法回应您的请求的情况
+· 与国家安全有关。
+· 与公众和人民的安全有关。
+· 与刑事调查、***和追踪有关。
+· 如果您滥用权利。
+· 如果它将影响其他组织或对任何其他个人造成负面的影响。
+
+六． 我们如何保护您的个人信息
+泰案联作为个人信息处理者，我们采用一系列合理的安全措施来保护您的个人信息，以防止处理的个人信息数据被攻击、破坏、丢失、被使用，免受未经授权的访问、公开披露和其他负面情况的影响。
+
+
+尽管我们使用的是合理的物理、技术或管理防护设施来保护您的个人信息不被非授权访问、公开披露、篡改或毁坏，但我们不能保证其绝对安全。您在决定传输，发送或以其他方式提交给我们信息时应格外小心。
+
+七. 隐私政策的更新
+为顺应泰案联未来发展或法律要求的变化，我们保留随时修改本隐私政策的权利。
+我们将在本隐私政策顶部注明最新一次的更新日期。
+
+八. 如何联系我们
+如果您对本隐私政策或个人信息保护相关事宜有任何疑问或投诉、建议时，您可以拨打公司电话联系我们。",,,50-150人,,,
+51job,51job,商业分析,1.0,170679733,数据分析师（base人资团队）(J25016),上海旺旺食品集团有限公司,上海,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai/170679733.html?s=sou_sou_soulb&t=0_0&req=p1_1_1776274816,2026-03-09 10:17:05,"工作职责:
+1、 深入了解人力资源数据和业务数据，搭建集团人力资源数据报告体系和可视化数据看板，并对组织能力、人才等情况作出有效预测；
+2、 借助数据分析，能综合使用各类统计分析方法多角度分析组织及人力资本效能发现人力资源管理问题，提出改进意见，探索和研究提高人力ROI的方法，为人才规划和发展提供建议；
+3、 建立数据管理机制，数据规划化运营管理，不断提高人力资源数据质量；
+4、 与其他部门团队合作，提供数据支持和解决方案。
+
+任职资格:
+1、 本科及以上学历，人力资源管理、统计学、应用数学、信息管理等专业优先【本岗位接受2025、2026应届优秀毕业生，但需要面试后尽快全勤实习】；
+2、 较强的数据处理和分析能力，对数据敏感，熟悉结合人力资源战略规划及业务场景，输出人力资源管理指标体系，建立人力资源数据模型；
+3、 熟练掌握数据分析工具（比如 Excel、SQL、Python、Tableau、PowerBI等）和对Ai agent 有一定的了解；
+4、 具备良好的自驱力、用户导向，具备优秀的沟通协调能力和逻辑思维能力。",,,10000人以上,,,
+liepin,liepin,商业分析,1.0,81193131,商业分析实习生(J11329),艾兰得,,120-150元/天,,,https://www.liepin.com/job/81193131.shtml,20260403093523,,,,2000-5000人,,,
+liepin,liepin,商业分析,1.0,76922121,Business Analyst Intern商业分析实习生,上海港意诺管理顾问有限公司,,150元/天,,,https://www.liepin.com/job/76922121.shtml,20250902155723,,,,1-49人,,,
+liepin,liepin,商业分析,1.0,75366675,商业分析实习生（墨西哥业务）,信也科技,,200-250元/天,,,https://www.liepin.com/job/75366675.shtml,20250625163728,,,,5000-10000人,,,
+liepin,liepin,商业分析,1.0,74784415,商业分析实习生（印尼业务）,信也科技,,薪资面议,,,https://www.liepin.com/job/74784415.shtml,20250528202524,,,,5000-10000人,,,
+liepin,liepin,商业分析,1.0,75555701,商业分析实习生（消费场景业务）,信也科技,,200-250元/天,,,https://www.liepin.com/job/75555701.shtml,20250704112954,,,,5000-10000人,,,
+liepin,liepin,商业分析,1.0,77604561,商业分析实习生,TEA EXPLORER PTE. LTD.,,150元/天,,,https://www.liepin.com/job/77604561.shtml,20251127133528,,,,100-499人,,,
+liepin,liepin,商业分析,1.0,75515915,Global Market Intelligence & Strategy Intern,复星医药集团,,120-200元/天,,,https://www.liepin.com/job/75515915.shtml,20260318104813,,,,10000人以上,,,
+liepin,liepin,商业分析,1.0,81433481,数据运营实习生,芬欧汇川(中国)有限公司,,200元/天,,,https://www.liepin.com/job/81433481.shtml,20260401173840,,,,1000-2000人,,,
+liepin,liepin,商业分析,1.0,80516579,AI产品实习生,上海途鸽数据科技有限公司,,200-250元/天,,,https://www.liepin.com/job/80516579.shtml,20260303154111,,,,100-499人,,,
+51job,51job,商业分析,2.0,171569280,投资分析师(J10105),上海优宁维生物科技股份有限公司,上海·浦东新区,1-1.5万,硕士,无需经验,https://jobs.51job.com/shanghai-pdxq/171569280.html?s=sou_sou_soulb&t=0_0&req=p1_2_1776274821,2026-04-13 16:20:55,"工作职责:
+1. 持续跟踪生物医药及相关领域的技术进展、市场趋势及监管动态，开展细分赛道研究，形成对重点方向的判断，并基于研究结果挖掘潜在投资及合作机会。
+2. 参与投资项目全流程工作，包括项目筛选、信息收集与分析、商业尽调、协调第三方尽调、交易结构讨论、协议条款沟通及投资执行等。
+3. 协助对接国内外生物医药企业、投资机构及中介机构，参与项目沟通及初步交流，支持拓展潜在合作及投资机会来源。
+4. 参与已投项目的投后跟踪与管理，定期收集并整理公司经营、研发及业务进展信息，协助识别并推动解决项目执行中的关键问题。
+5. 协同公司研发、产品、销售等相关部门，参与项目评估及落地推进，支持投资及合作项目与公司现有业务体系的对接与协同。
+6. 按照生物医药行业监管要求及公司内部合规制度开展相关工作，确保投资及合作流程规范推进。
+
+任职资格:
+1. 国内外知名院校本科或硕士学历，专业不限。
+2. 有PE/VC、战投、投行、咨询等相关实习经历者优先。
+3. 对股权投资基本流程及常见交易结构有一定了解，具备良好的信息收集、整理及分析能力，能够基于公开信息形成初步判断；对生命科学、生物医药领域有浓厚的兴趣。
+4. 具备良好的沟通与协作能力，能够在多方参与的项目中高效配合并推进具体工作。
+5. 熟练使用 Word、PowerPoint、Excel 等工具，具备基础的数据分析及财务建模能力，能够支持完成行业研究、投资分析及相关材料的撰写。
+6. 具备较强的责任心与执行力，认同公司企业文化，能够适应项目节奏较快、信息不完全情况下的工作环境，并接受一定频率的出差及弹性工作安排。
+7. 具备良好的英文书面及口头沟通能力，能够在英文工作环境中进行日常交流及基础商务沟通。",,,500-1000人,,,
+51job,51job,商业分析,2.0,169451331,食品饮料&新消费分析师,太平洋证券股份有限公司,上海·浦东新区,8千-1.5万,硕士,1年及以上,https://jobs.51job.com/shanghai-pdxq/169451331.html?s=sou_sou_soulb&t=0_0&req=p1_2_1776274821,2026-04-15 08:41:25,"岗位职责:
+1.开展食品饮料（大众品&amp;饮料）以及商贸美护其中部分细分行业及公司的调研、研究，需要之前覆盖过食品饮料中的大众品板块，和上市公司关系维护较好，对行业和公司有深度紧密的研究和跟踪。要求具备较强的挖票能力，对产业趋势和大的方向脉络把握能力强。可以延伸覆盖板块拓展能力圈，共同挖掘新消费中潜在的投资机会。
+2.对于所覆盖的细分行业、上市公司进行调研和跟踪，搭建财务模型、业务分拆及盈利预测，并撰写深度和前瞻的研究报告；
+3.建立、维护行业数据库，对行业动态进行日常跟踪；
+4.与销售团队配合，对机构客户提供专业的投资咨询服务，实现研究成果转化；
+5.完成公司内部其他部门的研究支持需求。
+任职要求:
+1.硕士及以上学历；
+2.具备1.5年及以上食品饮料行业研究工作经验，之前覆盖过食品饮料行业中的大众品板块，零食、速冻、调味品和饮料细分领域，对重点上市公司具备深度研究和紧密的跟踪，有券商工作、实习经验者优先；
+3.具有良好的财务分析能力，对行业研究有热情；对公司和行业紧密跟踪，和产业和公司关系维护较好；
+4.具有良好的沟通能力、团队协作意识，看重自驱力，勤奋热爱思考；
+5.具备行业从业资格，或已通过行业从业资格考试。",,,1000-5000人,,,
+51job,51job,商业分析,2.0,170813667,Senior Data Analyst,卡尔蔡司（上海）管理有限公司,上海·浦东新区,2-2.5万,本科,无需经验,https://ideal.51job.com/zeiss/jobdetail.html?jobid=170813667&ctmid=112725,2026-03-03 17:08:12,"Position Summary
+The Senior Data Analyst is essential as a core executional position in RMS China’s data ecosystem construction and ""data-to-revenue"" strategy implementation. By delivering efficient data processing, analysis, dashboards and insights, the analyst will support business decisions and accelerate the translation of data value into commercial growth. Core responsibilities include optimizing data infrastructure, iterating data products/reports, fulfilling cross-functional data requests, and supporting the market intelligence data modules, exploring AI applications in analytics.
+Main Tasks
+	Understand and manage various data sources across RMS (sources including but not limited to key business system SAP, Salesforce, and peripheral system such as sCRM, in-house dev applitcaions etc.)
+	Provides insights through internal ad-hoc reporting and dashboards from both data and business perspectives on daily/weekly/monthly basis, automate data workflows and pipelines for scalability
+	Identify and develop data-driven business opportunities that bring (new) revenue from new data solutions/models. Partner with various internal departments. 
+	Stay updated on the latest trends in artificial intelligence use cases for data and experiment with new techniques and technologies to improve outcomes.
+	Develop new data workflow and dashboards by analyzing business processes and understanding requirements, collaboraring with GC and Regional BI team.
+	Improve data literacy and data integrity internally 
+Requirements
+Education 
+Bachelor's Degree in Computer Science, Statistics, Mathematics, Economics, Information Management or Quantitative Business disciplines 
+Experience 
+	Proven work experience as Data Analyst or Business Data Analyst (5-year experience preferred)
+	Database knowledge and experience with SQL and programming skills with Python is preferred
+	Proficient with Microsoft Excel for data cleansing and data processing
+	Familiar with at least one of the mainstream BI tools (Power BI, Tableau etc.)
+	Strong business acumen, communication skills, and data-driven mindset as a problem solver 
+	Knowledge and experience with ETL and data engineering is preferred
+	Reponsible and pay cloase attention to details
+Other skills
+	Data science with modeling background is preferred
+	Marketing and Design knowledge is strongly preferred 
+	AI knowledge and exposure to new technologies 
+	Knowledge of SAP ERP &amp; CRM / Salesforce is preferred
+	Team player with excellent interpersonal skills
+	Excellence in written and verbal communication of both English and Chinese",,,1000-5000人,,,
+51job,51job,商业分析,3.0,169480224,医药行业分析师,太平洋证券股份有限公司,上海·浦东新区,1-1.5万,硕士,1年及以上,https://jobs.51job.com/shanghai-pdxq/169480224.html?s=sou_sou_soulb&t=0_0&req=p1_3_1776274825,2026-04-15 08:41:19,"【岗位职责】
+1. 开展生物医药部分细分行业及公司的调研、研究，对行业的政策和基本面进行紧密跟踪。善于挖掘投资机会、及时发现风险。
+2. 对于所覆盖的细分行业、上市公司进行调研和跟踪，搭建财务模型，并撰写深度和前瞻的研究报告；
+3. 与销售团队配合，对机构客户提供专业的投资咨询服务，实现研究成果转化；
+4. 完成公司内部其他部门的研究支持需求。
+【任职要求】
+1. 硕士及以上学历，生物工程、药物化学、临床医学等医药相关专业。
+2. 具备1年及以上二级医药投研经验，有券商工作经验者优先；或2026年及之后毕业、且实习经验丰富且表现突出的应届生；
+3. 具有良好的财务分析能力，对行业研究有热情；逻辑清晰，责任心强团队合作意识较强，可承受高强度的工作压力；
+4. 具有良好的沟通能力、团队协作意识、自我驱动力，逻辑清晰，责任心强，热爱思考；
+5. 具备行业从业资格，或已通过行业从业资格考试。",,,1000-5000人,,,
+51job,51job,商业分析,4.0,170585210,"Manager, Data Excellence Analytics ID203215",勃林格殷格翰（中国）投资有限公司,上海,,本科,4年及以上,http://campus.51job.com/BI/recruit_article_detail3.html?jobId=170585210,2026-02-11 11:40:36,"Job Responsibilities:
+- The Master Data Management (MDM) Manager creates, implements, and maintains MDM business process and IT systems. Use knowledge of end-to-end data processes to analyze, clean, and enrich master data elements, and ensure that data flows efficiently and consistently between users and systems.
+- Being an MDM Manager who provides data governance and ensures data integrity by coordinating data management efforts across the organization. Troubleshoot issues related to master data management and identifies opportunities for improving data management processes.
+- (S)he is effective liaison between the global MDM officer/lead and China, and ensure the smooth implementation of global platforms and governance model in China.
+- As a key player, lead the charge in meeting our dynamic business needs and play a pivotal role in equipping data/digital use cases with the necessary insights.
+- In the E2E distribution sales data process, (S)he is experienced in handling, processing, analyzing, reporting, and monitoring to support business tracking. 
+ 
+Job Requirements:
+- Bachelor’s degree/Master’s degree in quantitative fields (e.g., computer system, computer science, data management)
+- Excellent know-how of data governance with more than 4 years’ experience in leading and managing data quality related project through the whole project lifecycle from strategy definition, scoping and planning, requirements gathering, design, development, testing and implementation.
+- Good knowledge in data management (master data, metadata, data architecture, data governance, data quality) and with data governance / quality tools (e.g. Informatica, TIBCO, Semarch, SAP MDM, Reltio)
+- Experience in leading large scope projects which require integrating with cross functional stakeholders.
+- Knowledge in pharmaceutical industry, especially HCO, HCP and Product master data management areas.
+- Experience in distribution sales data process including data acquisition, handling, processing, and reporting.
+- Ability to work in an international environment.
+- Ability to supervise scientific/technical work.
+- Ability to work effectively in a cross-functional team environment.
+- Experience in managing multiple stakeholders in a changing and flexible business environment
+- High level of culture awareness and ability to adapt
+- Understand how to translate global direction into local business activities and initiatives
+- Language: Fluency in oral and written English",,,10000人以上,,,
+51job,51job,商业分析,4.0,170735979,"Manager, CFE Advanced Analytics ID203851",勃林格殷格翰（中国）投资有限公司,上海,,本科,4年及以上,http://campus.51job.com/BI/recruit_article_detail3.html?jobId=170735979,2026-02-28 08:19:55,"About Human Pharmaceutical Business
+With global presence, Boehringer Ingelheim has industry-leading expertise in medicine research and development. We are constantly developing the next generation of medical breakthroughs and successfully delivering innovations to meet the medical needs of the patients we serve in the following key areas of interest: cardiovascular, respiratory, metabolic diseases, immunology, oncology and central nervous system. In the future, we will accelerate the launch of more than 10 innovative medicines to meet the demand of Chinese 
+
+Job Responsibilities:
+1) Advanced Analytics &amp; Insights Generation
+- Perform in-depth analysis of sales force performance, customer engagement, and market trends to identify opportunities for improvement.
+- Develop and maintain advanced analytics models to predict sales outcomes and optimize resource allocation.
+- Present findings and recommendations to stakeholders in a clear and concise manner.
+2) Support Sales Force Effectiveness (SFE) Initiatives
+- Collaborate with the SFE BP Manager to design and implement initiatives that enhance the efficiency and effectiveness of the sales force.
+- Monitor and evaluate the impact of SFE initiatives, providing regular updates to stakeholders.
+- Support the development of KPIs and dashboards to track sales force performance and ensure alignment with business objectives.
+3) Data Management &amp; Reporting
+- Ensure the accuracy and integrity of sales data by working with internal systems and tools.
+- Develop and maintain automated reporting solutions to provide real-time insights to stakeholders.
+- Identify and resolve data quality issues in collaboration with IT and other teams.
+4) Sales Process Support:
+- Collaborate with sales teams to streamline workflows and reduce administrative burdens.
+- Ensure alignment of sales processes with compliance standards and organizational policies.
+
+Job Requirements:
+- Bachelor's degree in Life Sciences, Business or a related field. Master's degree or MBA preferred.
+- Proven experience (4+ years) in pharmaceutical industry and 2+ years’ related roles including target setting, territory alignment and business diagnosis.
+- Exceptional analytics skills, with the ability to provide comprehensive analysis and diagnosis for business.
+- Analytic skills and business driven.
+- Language: Fluency in in English is required; additional languages are a plus.",,,10000人以上,,,
+51job,51job,商业分析,5.0,171486011,Power BI战略专员（驻点福建泉州）,安通控股股份有限公司,上海·浦东新区,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai-pdxq/171486011.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274835,2026-04-08 16:10:16,"1.使用Power BI设计与开发公司级BI报表，实现班期动态、效益分析、客户画像等业务场景可视化。
+2.通过SQL进行多源数据提取、清洗与整合，搭建航运业务数据模型。
+3.参与数据需求沟通，协助数据质量监测。
+4.配合业务部门制定分析指标，提供数据洞察支持战略决策。
+5.定期维护和更新BI报告系统，确保数据的准确性与时效性。
+
+任职要求
+1.专业背景：
+（1）统招本科及以上学历，统计学、计算机、航运物流相关专业优先。
+（2） 应届毕业生需提供课程设计/实习相关项目案例。
+2.必备技能：
+（1）熟练使用Power BI完成数据建模、DAX语言开发及交互式仪表盘设计。
+（2）掌握SQL基础，能独立编写复杂查询语句及基础性能优化。
+（3）了解数据仓库基础概念。
+3.能力特质：
+（1）逻辑思维严谨，对数据敏感且具备业务解读能力。
+（2）具备团队协作意识与抗压能力。",,,1000-5000人,,,
+51job,51job,商业分析,7.0,171531481,Digital Strategy & Transformation Sr. Analyst,上海浩耀企业管理咨询有限公司,上海·静安区,1.4-2万,本科,2-5年,https://jobs.51job.com/shanghai-jaq/171531481.html?s=sou_sou_soulb&t=0_0&req=p1_7_1776274844,2026-04-10 14:51:00,"数码战略与转型高级分析师 
+Key Responsibilities
+1.	Digital Initiatives’ Processes, Management and Governance 
+	Assist in analysing and identifying areas of improvements in our digital initiatives’ processes, management and governance.
+	Collaborate with IT and business to design and implement new management methodology, new governance framework and new processes to enable better product-market-fit, timely delivery, higher adoption, and realisation of KPIs.
+2.	Digital and Innovation Capability Building
+	Assist in designing and implementing change management strategies to support the adoption of digital tools and enable process change. 
+	Contribute to the development and rollout of digital training curricula and innovation programmes.
+	Coordinate workshops and internal campaigns to foster a digital-*** culture.
+3.	AI Adoption and Literacy
+	Support programmes that promote AI literacy across the organisation.
+	Assist in identifying AI use cases and tracking adoption progress.
+	Help design training content and engagement campaigns for AI awareness.
+4.	Business Analysis for Digital Projects
+	Gather, document and prioritise business requirements for digital initiatives, including but not limited to BI projects.
+	Collaborate with IT and business teams to ensure successful delivery and adoption of digital solutions, applying agile methodologies and change management practices accordingly.
+5.	Process Optimisation and Improvements
+	Conduct process analyses and identify digitalisation and automation opportunities, applying frameworks such as Lean Six Sigma and using technologies such as process/ task mining and automation tools. 
+	Collaborate with IT and business teams to ensure successful implementation and adoption of new processes and tools, applying change management practices accordingly.
+岗位职责
+
+1. 数字化项目的流程、管理与治理
+协助分析并识别数字化项目在流程、管理及治理方面的改进空间。
+与 IT 及业务团队协作，设计并落地新的管理方法、治理框架及相关流程，以提升产品与市场匹配度、加快交付进度、提高用户采用率并实现关键绩效指标（KPI）。
+2. 数字化与创新能力建设
+协助设计和实施变革管理策略，以支持数字化工具的推广应用及流程变革。
+参与数字化培训课程体系及创新项目的开发与推广。
+协调开展工作坊及内部宣传活动，推动数字优先（Digital-***）的企业文化。
+3. AI 应用与素养提升
+支持推动全公司范围内提升 AI 认知与应用能力的相关项目。
+协助识别 AI 应用场景，并跟踪应用进展与落地情况。
+协助设计 AI 相关的培训内容及宣传推广活动，提升员工的 AI 认知与意识。
+4. 数字化项目的业务分析
+收集、整理并优先级排序数字化项目的业务需求，包括但不限于 BI（商业智能）相关项目。
+与 IT 及业务团队紧密协作，确保数字化解决方案的成功交付与落地应用，并相应采用敏捷方法及变革管理实践。
+5. 流程优化与改进
+开展流程分析，识别数字化及自动化机会，运用精益六西格玛（Lean Six Sigma）等方法论，并使用流程/任务挖掘及自动化工具等技术手段。
+与 IT 及业务团队合作，确保新流程和工具的顺利实施与有效采用，并配合相应的变革管理工作。
+Qualifications &amp; Skills
+1	Bachelor’s degree in Business, Information Technology, Data Analytics, or related field.
+2	2–4 years of experience in business analysis or digital transformation projects; experience in agile methodologies, Lean Six Sigma, and change management is a plus.
+3	Strong analytical and problem-solving skills; proficiency in BI tools is a plus.
+4	Familiarity with AI concepts and digital technologies; proficiency in AI, process/ task mining and automation tools is a plus.
+5	Excellent communication and stakeholder management skills in English and Chinese (written and spoken).
+6	Ability to work in a fast-paced, evolving environment and manage multiple priorities.
+7 Structured thinking, as well as strong PowerPoint presentation skills.&nbsp;
+任职资格与技能
+1 本科及以上学历，专业不限于工商管理、信息技术、数据分析或相关领域。
+2 具备 2–4 年业务分析或数字化转型项目相关经验；具备敏捷方法论、精益六西格玛（Lean Six Sigma）及变革管理经验者优先。
+3 具备较强的分析与问题解决能力；熟悉 BI 工具者优先。
+4 了解 AI 基本概念及数字化技术；具备 AI、流程/任务挖掘及自动化工具使用经验者优先。
+5 具备良好的中英文沟通能力与利益相关者管理能力（书面及口头）。
+6 能够适应快节奏、不断变化的工作环境，并有效管理多项工作任务。
+7 具备结构化思维能力，以及出色的 PowerPoint 演示技能",,,150-500人,,,
+51job,51job,商业分析,7.0,169226166,195870 业务分析员 ID197124,Bureau Veritas 必维船级社（中国）有限公司,上海,8-8.5千,本科,1年及以上,https://jobs.51job.com/shanghai/169226166.html?s=sou_sou_soulb&t=0_0&req=p1_7_1776274844,2026-03-24 11:35:34,"Main Responsibilities:
+-Industry &amp; Regulatory Intelligence
+- Track and analyze developments from IMO and other regulators on climate, safety, and sustainability (e.g., net-zero frameworks, regional policies, carbon pricing).
+- Monitor shipping industry responses, strategic adjustments, and adoption of low- and zero-carbon fuels and technologies.
+- Track the global trade policies and monitor implications. 
+-Energy &amp; Market Analysis
+- Collect and analyze data on marine-related energy markets (LNG, methanol, ammonia, hydrogen, biofuels, electro fuels etc).
+- Assess supply chains, infrastructure readiness, and cost/availability implications for shipping.
+- Collect and analyze forecasts and scenario analysis from reliable sources to understand market shifts affecting the industry.
+-Support to Strategic Projects
+- Contribute research and analysis for green shipping corridor initiatives, mapping stakeholders (shipowners, ports, fuel suppliers, cargo owners) and assessing feasibility.
+- Support engagement with external stakeholders by preparing data-driven insights, briefing materials, and presentations.
+- Assist in identifying opportunities and risks related to decarbonization, digitalization, and alternative fuels.
+-Knowledge Management &amp; Reporting
+- Build and maintain structured databases of maritime and energy transition intelligence.
+- Prepare concise reports and presentations for internal and external use.
+- Synthesize large volumes of information into actionable insights for decision-making and stakeholder engagement.
+-Team Administration Activities
+- Share the administrative activities in the team where required.
+
+Requirements:
+-Bachelor's or Master's degree in Economics, Business, Maritime Studies or related field.
+-Knowledge or experience in energy or shipping industry will be a plus.
+-Strong data analysis and visualization skills (Excel, Power BI or similar).
+-Excellent communication skills and team work spirit; able to turn complex information into clear insights.
+-Interest in decarbonisation, international regulations, and collaborative industry initiatives.
+-Comfortable working in a fast-moving, international environment with multiple stakeholders.",,,150-500人,,,
+51job,51job,商业分析,8.0,170460999,投资分析师,上海临港数科私募基金管理有限公司,上海·松江区,8千-1.6万,本科,1年及以上,https://jobs.51job.com/shanghai-sjq/170460999.html?s=sou_sou_soulb&t=0_0&req=p1_8_1776274848,2026-01-29 11:20:59,"岗位职责
+1. 行业与技术研究：围绕硬科技核心赛道（如半导体、人工智能、新能源等），开展深度行业研究、技术路线分析及商业模式拆解，输出高质量研究报告
+2. 项目挖掘与资料整理：协助投资团队开展拟投项目的Sourcing工作，系统整理项目资料，构建项目数据库，支撑投资标的筛选
+3. 尽调与上会支持：协助参与项目尽职调查，包括财务、技术、市场等维度的数据收集与分析，支持投资决策委员会材料的撰写与整理
+4. 投研流程优化：参与团队投研方法论建设，协助优化研究模板、数据采集标准及分析框架，提升团队整体工作效率
+
+任职资格
+1、本科以上学历，半年以上相关实习工作经验，理工科背景相关的优秀应届生也可；
+2、对金融、证券行业了解，具备一定的金融基础知识以及持续学习能力；有金融专业或财务类专业背景优先考虑；
+3、具有较强的数理分析能力，擅长调查报告撰写；
+4、熟悉行业相关政策法规以及行业的发展状况与竞争趋势；
+5、诚实守信、责任心强，具有较强的学习能力和团队合作精神。
+6、有行业从业资格证的优先。",,,少于50人,,,
+51job,51job,商业分析,9.0,166874882,（高级）咨询分析师,上海华彬立成科技有限公司,上海·浦东新区,1-2万·14薪,本科,1年及以上,https://jobs.51job.com/shanghai-pdxq/166874882.html?s=sou_sou_soulb&t=0_0&req=p1_9_1776274853,2026-03-10 11:27:57,"1.参与创新药潜力评估、管线规划、新领域进入机会分析等医药咨询项目；
+2.与团队成员合作完成项目需求分析及拆解，明确客户需求和分析方向；
+3.熟练使用文献检索、数据库、专家访谈等多种工作方式，解决关键问题，按要求完报告撰写；
+4.参与和客户对接与汇报，协助项目经理完成高质量的交付；
+5.不断学习巩固自己的行业基础知识，对于行业趋势有独到见解，并进行分享。
+
+1.统招本科及以上学历，药学、生物学、医学、公卫等相关专业优先，应届生需具备有咨询、医药相关实习经验；
+2.1-3年医药相关行业工作经验，甲/乙方背景优先；
+3.有较强的学习能力、自驱力和逻辑思维能力，具备长期主义精神；
+4.较强的中英文沟通和书写能力；
+5.具备综合分析及创新能力，可以熟练使用AI工具、案头检索、excel数据分析、ppt应用等。",,,150-500人,,,
+51job,51job,数据科学,1.0,170679733,数据分析师（base人资团队）(J25016),上海旺旺食品集团有限公司,上海,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai/170679733.html?s=sou_sou_soulb&t=0_0&req=p1_1_1776274862,2026-03-09 10:17:05,"工作职责:
+1、 深入了解人力资源数据和业务数据，搭建集团人力资源数据报告体系和可视化数据看板，并对组织能力、人才等情况作出有效预测；
+2、 借助数据分析，能综合使用各类统计分析方法多角度分析组织及人力资本效能发现人力资源管理问题，提出改进意见，探索和研究提高人力ROI的方法，为人才规划和发展提供建议；
+3、 建立数据管理机制，数据规划化运营管理，不断提高人力资源数据质量；
+4、 与其他部门团队合作，提供数据支持和解决方案。
+
+任职资格:
+1、 本科及以上学历，人力资源管理、统计学、应用数学、信息管理等专业优先【本岗位接受2025、2026应届优秀毕业生，但需要面试后尽快全勤实习】；
+2、 较强的数据处理和分析能力，对数据敏感，熟悉结合人力资源战略规划及业务场景，输出人力资源管理指标体系，建立人力资源数据模型；
+3、 熟练掌握数据分析工具（比如 Excel、SQL、Python、Tableau、PowerBI等）和对Ai agent 有一定的了解；
+4、 具备良好的自驱力、用户导向，具备优秀的沟通协调能力和逻辑思维能力。",,,10000人以上,,,
+liepin,liepin,数据科学,1.0,80705137,在库实习生（数据科学方向）(J15283),优衣库,,200-250元/天,,,https://www.liepin.com/job/80705137.shtml,20260415140436,,,,10000人以上,,,
+liepin,liepin,数据科学,1.0,80061163,数据科学-2026校招,际络科技(上海)有限公司,,20-30k·15薪,,,https://www.liepin.com/job/80061163.shtml,20260128170718,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,80672133,数据科学-2026校招,际络科技(上海)有限公司,,15-25k·15薪,,,https://www.liepin.com/job/80672133.shtml,20260414091029,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,62109817,数据科学家实习生,千居智,,500-1000元/天,,,https://www.liepin.com/job/62109817.shtml,20250729130134,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,64218339,数据科学家实习生,千居智,,500-1000元/天,,,https://www.liepin.com/job/64218339.shtml,20250513115416,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,75480731,数据智能工程师（实习）,理想汽车,,200元/天,,,https://www.liepin.com/job/75480731.shtml,20251212114150,,,,10000人以上,,,
+liepin,liepin,数据科学,1.0,56585955,数据分析实习,上海立坤企业管理咨询有限公司,,200-300元/天,,,https://www.liepin.com/job/56585955.shtml,20230921162531,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,76650669,AI大模型数据工程师（实习生）,喆塔科技,,200-250元/天,,,https://www.liepin.com/job/76650669.shtml,20260313141011,,,,100-499人,,,
+liepin,liepin,数据科学,1.0,73153505,量化数据分析实习生（实习）,喜岳投资,,200-300元/天,,,https://www.liepin.com/job/73153505.shtml,20260412140408,,,,1-49人,,,
+liepin,liepin,数据科学,1.0,78989985,AI实习生,映恩生物科技(上海)有限公司,,200-300元/天,,,https://www.liepin.com/job/78989985.shtml,20251208155758,,,,100-499人,,,
+liepin,liepin,数据科学,1.0,69854041,AI算法实习生,健交科技,,200-300元/天,,,https://www.liepin.com/job/69854041.shtml,20260121160601,,,,1-49人,,,
+51job,51job,数据科学,3.0,171486011,Power BI战略专员（驻点福建泉州）,安通控股股份有限公司,上海·浦东新区,1-1.5万,本科,1年及以上,https://jobs.51job.com/shanghai-pdxq/171486011.html?s=sou_sou_soulb&t=0_0&req=p1_3_1776274870,2026-04-08 16:10:16,"1.使用Power BI设计与开发公司级BI报表，实现班期动态、效益分析、客户画像等业务场景可视化。
+2.通过SQL进行多源数据提取、清洗与整合，搭建航运业务数据模型。
+3.参与数据需求沟通，协助数据质量监测。
+4.配合业务部门制定分析指标，提供数据洞察支持战略决策。
+5.定期维护和更新BI报告系统，确保数据的准确性与时效性。
+
+任职要求
+1.专业背景：
+（1）统招本科及以上学历，统计学、计算机、航运物流相关专业优先。
+（2） 应届毕业生需提供课程设计/实习相关项目案例。
+2.必备技能：
+（1）熟练使用Power BI完成数据建模、DAX语言开发及交互式仪表盘设计。
+（2）掌握SQL基础，能独立编写复杂查询语句及基础性能优化。
+（3）了解数据仓库基础概念。
+3.能力特质：
+（1）逻辑思维严谨，对数据敏感且具备业务解读能力。
+（2）具备团队协作意识与抗压能力。",,,1000-5000人,,,
+51job,51job,数据科学,3.0,170412771,AI智能体开发工程师,上海第九行星信息技术有限公司,上海·黄浦区,1.5-2.5万·13薪,本科,2年及以上,https://jobs.51job.com/shanghai-hpq/170412771.html?s=sou_sou_soulb&t=0_0&req=p1_3_1776274870,2026-01-26 10:37:48,"岗位职责：
+1.AI智能体开发： 参与AI智能体开发设计与核心模块研发，重点打造业界领先的智能体（Agent）平台。
+2.赋能业务产品智能化： 紧密协同产品与业务部门，深入理解金融业务场景，提供专业的AI解决方案，支持并推动AI技术在交易、风控、产业等核心业务产品中的成功落地与应用。
+3.提升内部生产力： 探索和实践AI技术在公司内部的应用，如AI辅助开发、智能运维、知识管理等，设计并实施相应方案，以AI驱动组织整体的研发与运营效率提升。
+4.模型部署与安全架构： 负责AI模型的部署、推理加速、监控，确保模型服务的高性能、高可用性和可扩展性；同时，主导设计和建设AI模型的安全架构，保障模型、数据及AI应用全链路的安全性、合规性和隐私保护。
+5.项目管理与驻场支持： 在部分AI项目中担任项目经理，负责项目全生命周期管理，确保项目按时高质量交付；并能够支持在大型金融机构的驻场工作，提供现场技术指导和支持。
+
+任职要求
+1.学历与经验： 计算机科学、人工智能、软件工程等相关专业本科及以上学历，2年以上AI相关领域工作经验。
+2.技术广度与深度：
+a.对大语言模型（LLM）、生成式AI（AIGC）、AI Agent、RAG等前沿技术有深入的理解和丰富的实践经验。
+b.精通或熟悉AI提效工具和方法论，擅长使用AI编码工具（如Cursor、通义灵码等），并具备在研发流程中落地AI提效方案的经验。
+c.了解强化学习（RL）算法（如PPO、DQN）或框架(Ray/RLLib)
+d.具备扎实的编程基础，精通Python，并熟悉 Java / Go 任一；
+e.熟悉 Agent Framework（LangChain / LlamaIndex / CrewAI） 及 RAG、工具调用链设计
+f.熟悉 LLM 微调、推理加速（量化 / 蒸馏）
+g.熟练掌握 PyTorch / TensorFlow / JAX 等主流深度学习框架
+3.工程与部署能力：
+a.精通模型部署、微服务架构、容器化（Docker, Kubernetes）等相关技术。
+b.熟悉AI安全领域的相关技术和挑战，对数据隐私、模型安全、对抗性攻击等有一定认知和实践。
+4.软性技能：
+a.出色的技术前瞻性和战略思维，能够从全局视角思考问题。
+b.优秀的沟通协调能力和团队合作精神，能够有效推动跨部门协作。
+c.强烈的责任心和自我驱动力，乐于探索，善于分析和解决复杂的技术难题。
+d.具备项目管理经验，有PMP或相关证书者优先，能够适应大型金融机构的驻场工作环境。
+
+加分项
+●有证券/期货/银行场景 AI 落地经验者优先。
+●参与开源社区 / 撰写技术博客或论文
+●传统算法底蕴:2年以上搜索推荐/知识图谱等领域实战
+
+注：该岗位也欢迎实习生的投递~",,,50-150人,,,
+51job,51job,数据科学,5.0,171562269,AI数字化应用实习生,丹纳赫（上海）企业管理有限公司,上海,2-4千,本科,无需经验,https://jobs.51job.com/shanghai/171562269.html?s=sou_sou_soulb&t=0_0&req=p1_5_1776274879,2026-04-14 13:43:47,"我们希望你：
+- 本科或硕士在读，计算机科学、信息管理、自动化、工商管理或相关专业，预计2027年7月1日前毕业
+- 对AI赋能业务流程优化有强烈兴趣
+- 了解或愿意学习低代码开发工具（如Power Platform）
+- 具备基础数据分析能力，有Python、VBA、RPA经验者加分
+- 每周至少出勤3天
+你将参与：
+- 协助维护AI及数字化项目漏斗，跟踪创新创意推进进度
+- 支持数字化工具开发，如KPI Dashboard、流程自动化应用
+- 参与跨部门沟通，收集业务团队的数字化需求
+- 探索AI在数据分析、业务流程自动化中的应用场景
+你将收获：
+- 深度参与企业真实数字化转型项目
+- 系统提升AI工具应用、低代码开发与流程优化能力
+- 与业务、技术、运营团队紧密协作，积累跨部门项目经验
+- 表现优异者有机会获得Bamboo Program全职offer",,,5000-10000人,,,
+51job,51job,数据科学,6.0,171355140,AI产品应用实习生,科或（上海）电子有限公司,上海·闵行区,5-8千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171355140.html?s=sou_sou_soulb&t=0_0&req=p1_6_1776274884,2026-03-31 14:52:44,"岗位职责：
+1、需求转化与方案设计（核心能力）：
+深度业务诊断： 与各部门（如销售、客服、行政、生产）沟通，精准识别哪些流程、问答、审批、数据分析任务可通过Molilichaw智能体实现自动化或智能化。
+技术方案设计： 基于Molilichaw平台的功能模块（如对话引擎、知识库连接、流程编排、API桥接能力），设计出可行、高效、安全的智能体解决方案原型。他需要知道平台能做什么的极限。
+2、智能体开发与部署（核心工作）：
+平台熟练开发： 精通使用Molilichaw平台的开发者工具，包括：
+智能体编排： 设计对话逻辑、决策树和任务流。
+知识库治理： 将公司制度、产品手册、FAQ、历史数据等文档上传至平台，并进行清洗、标注和向量化，使智能体“学会”公司专属知识。
+插件与API集成： 开发或配置连接公司内部系统（如ERP、OA、CRM、数据库）的接口，让智能体不仅能“回答”，还能“操作”（如查询订单状态、提交表单）。平台熟练开发： 精通使用Molilichaw平台的开发者工具，包括：
+智能体编排： 设计对话逻辑、决策树和任务流。
+知识库治理： 将公司制度、产品手册、FAQ、历史数据等文档上传至平台，并进行清洗、标注和向量化，使智能体“学会”公司专属知识。
+插件与API集成： 开发或配置连接公司内部系统（如ERP、OA、CRM、数据库）的接口，让智能体不仅能“回答”，还能“操作”（如查询订单状态、提交表单）。
+3、运维、优化与赋能
+效果监控与分析： 跟踪智能体的使用数据（如问答准确率、任务完成率、用户满意度），持续迭代优化。
+内部推广与培训： 教会业务人员如何使用和与智能体协同工作，收集反馈。
+技术资产管理： 管理公司在Molilichaw平台上的所有智能体、知识库和API连接资产，确保安全合规。
+
+任职要求：
+1、计算机、电子信息、软件工程、数学或相关专业在校学生；
+2、喜欢AI，对AI 有一定的研究和浓厚兴趣；
+3、硬性要求：
+AI智能体使用经验是核心， 
+技术基础：
+熟悉Python/JavaScript，能进行简单的脚本开发和API调试。
+理解基本的网络协议和API调用原理。
+了解数据结构和算法基础。
+4、极强的沟通能力： 能将业务语言转化为技术配置，再将技术语言解释给业务人员听。
+5、产品与用户体验思维： 关注智能体是否真的好用、易用，而不仅仅是功能实现。
+6、项目管理能力： 能同时推进多个小型智能体应用的落地。",,,150-500人,,,
+51job,51job,数据科学,6.0,170736018,数字化专员,上海浒新实业有限公司,上海·松江区,149元/天,大专,无需经验,https://jobs.51job.com/shanghai-sjq/170736018.html?s=sou_sou_soulb&t=0_0&req=p1_6_1776274884,2026-02-28 08:24:34,"岗位职责:
+ 档案的数字化处理，包括扫描录入质检，确保电子档案的安全性和可检索性。
+岗位要求：
+1.大专学历。
+2.熟练使用办公自动化工具，具备良好的计算机操作能力。
+3.具备细致的工作态度，能够高效处理大量档案数据。
+欢迎在校大学生实习",,,,,,
+liepin,liepin,BI,1.0,74061761,数字化转型咨询与BI项目实习生（非程序员岗）,AMT企源,,150元/天,,,https://www.liepin.com/job/74061761.shtml,20260415091847,,,,1000-2000人,,,
+liepin,liepin,BI,1.0,76786583,财务数据分析实习生,怡凡得电子包装(上海)有限公司,,4-6k,,,https://www.liepin.com/job/76786583.shtml,20250902090459,,,,100-499人,,,
+liepin,liepin,BI,1.0,73398459,Finance Data Analytics Intern,怡凡得电子包装(上海)有限公司,,200-400元/天,,,https://www.liepin.com/job/73398459.shtml,20250714094225,,,,100-499人,,,
+liepin,liepin,BI,1.0,61465237,Strategy & Consulting Intern,朗高投资咨询(上海)有限公司,,150元/天,,,https://www.liepin.com/job/61465237.shtml,20250423094233,,,,100-499人,,,
+liepin,liepin,BI,1.0,79884045,Internship in Strategy & Data Science,易启捷思(上海)数据科技有限公司,,150元/天,,,https://www.liepin.com/job/79884045.shtml,20260120163344,,,,1-49人,,,
+liepin,liepin,Data Analyst,1.0,79689063,Data Analyst Intern,布雷博(南京)制动系统有限公司,,150元/天,,,https://www.liepin.com/job/79689063.shtml,20260404175321,,,,1000-2000人,,,
+liepin,liepin,Data Analyst,1.0,81720269,数据分析实习生（Data Analyst Intern）,上海埃尔瓦贸易有限公司,,300-400元/天,,,https://www.liepin.com/job/81720269.shtml,20260413173245,,,,1000-2000人,,,
+liepin,liepin,Data Analyst,1.0,53885375,数据分析师实习生,上海墨非信息技术有限公司,,100-200元/天,,,https://www.liepin.com/job/53885375.shtml,20221114150341,,,,50-99人,,,
+liepin,liepin,Data Analyst,1.0,58954649,风险数据分析师（实习可留用）,算话信息科技(上海)有限公司,,150-200元/天,,,https://www.liepin.com/job/58954649.shtml,20231103104248,,,,1-49人,,,
+liepin,liepin,Data Analyst,1.0,80646179,数据分析师（技术方向）（2027届实习）(MJ033354),携程集团,,薪资面议,,,https://www.liepin.com/job/80646179.shtml,20260304170436,,,,10000人以上,,,
+liepin,liepin,Data Analyst,1.0,75947537,26校招-数据分析师,拼多多集团-PDD,,20-40k·16薪,,,https://www.liepin.com/job/75947537.shtml,20260414194357,,,,10000人以上,,,
+liepin,liepin,Data Analyst,1.0,80332309,校招-数据分析师,拼多多集团-PDD,,20-35k·16薪,,,https://www.liepin.com/job/80332309.shtml,20260320133334,,,,10000人以上,,,
+liepin,liepin,Data Analyst,1.0,79921813,【2026校招】数据分析师,拼多多集团-PDD,,20-35k·16薪,,,https://www.liepin.com/job/79921813.shtml,20260320133334,,,,10000人以上,,,
+liepin,liepin,Data Analyst,1.0,72692843,数据分析师（校招）,拼多多集团-PDD,,25-30k·18薪,,,https://www.liepin.com/job/72692843.shtml,20250721140536,,,,10000人以上,,,
+liepin,liepin,Data Analyst,1.0,78118199,【26届校招】数据分析师,拼多多集团-PDD,,20-40k·18薪,,,https://www.liepin.com/job/78118199.shtml,20260322143338,,,,10000人以上,,,
+liepin,liepin,Business Analyst,1.0,80169999,业务分析师（校招）,北京中软融鑫计算机系统工程有限公司,,9-14k,,,https://www.liepin.com/job/80169999.shtml,20260320173924,,,,500-999人,,,
+liepin,liepin,西门子 实习,1.0,76301385,智能驾驶数据产品实习生,德赛西威,,150-300元/天,,,https://www.liepin.com/job/76301385.shtml,20250806152727,,,,10000人以上,,,
+51job,51job,,,,环境分析实习生--27届,华测检测认证集团股份有限公司,上海·闵行区,3千及以下,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171581675.html?s=sou_sou_soulb&t=0_0&req=audit51_2,2026-04-14 10:44:29,,,,,,,
+51job,51job,,,,AI算法实习生（遥感应用方向）,上海蔚星科技有限公司,上海·闵行区,5千-1万,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171406742.html?s=sou_sou_soulb&t=0_0&req=audit51_3,2026-04-02 16:04:51,,,,,,,
+51job,51job,,,,AI产品应用实习生,科或（上海）电子有限公司,上海·闵行区,5-8千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/171355140.html?s=sou_sou_soulb&t=0_0&req=audit51_3,2026-03-31 14:52:44,,,,,,,
+51job,51job,,,,蛋白AI设计工程师（实习岗）,佰联智合（上海）医药有限公司,上海·浦东新区,1-2万·13薪,硕士,1年及以上,https://jobs.51job.com/shanghai-pdxq/170381924.html?s=sou_sou_soulb&t=0_0&req=audit51_3,2026-02-02 10:35:15,,,,,,,
+51job,51job,,,,研发分析实习生,毕克助剂（上海）有限公司,上海·奉贤区,180元/天,硕士,无需经验,https://jobs.51job.com/shanghai-fxq/171136202.html?s=sou_sou_soulb&t=0_0&req=audit51_5,2026-03-25 10:13:22,,,,,,,
+51job,51job,,,,大四实习生（企业级AI应用方向）,上海莱升信息科技有限公司,上海·黄浦区,3-6千,本科,无需经验,https://jobs.51job.com/shanghai-hpq/169817737.html?s=sou_sou_soulb&t=0_0&req=audit51_6,2025-12-15 13:26:18,,,,,,,
+51job,51job,,,,AI漫剧制作人[兼职/实习],上海络川科技有限公司,上海·浦东新区,100元/天,大专,1年及以上,https://jobs.51job.com/shanghai-pdxq/171198051.html?s=sou_sou_soulb&t=0_0&req=audit51_6,2026-03-23 11:01:06,,,,,,,
+51job,51job,,,,数字化实习生-AI方向,泰科电子（上海）有限公司,上海·徐汇区,170元/天,本科,无需经验,http://te.51job.com/show_job_detail.html?jobid=169459511,2026-04-14 13:47:41,,,,,,,
+51job,51job,,,,数据工程师（实习生）,上海必盈特软件系统有限公司,上海·普陀区,4-5.5千,本科,无需经验,https://jobs.51job.com/shanghai-ptq/159978384.html?s=sou_sou_soulb&t=0_0&req=audit51_8,2026-04-09 09:50:00,,,,,,,
+51job,51job,,,,数字化档案管理实习生,上海兰台信息技术有限公司,上海·黄浦区,3-3.5千,中技/中专,无需经验,https://jobs.51job.com/shanghai-hpq/146151038.html?s=sou_sou_soulb&t=0_0&req=audit51_12,2026-01-20 14:51:51,,,,,,,
+51job,51job,,,,数据分析实习生 Data Analysis Intern,喜利得（上海）有限公司,上海·闵行区,3.3-4.4千,本科,无需经验,https://jobs.51job.com/shanghai-mhq/163341775.html?s=sou_sou_soulb&t=0_0&req=audit51_15,2026-04-14 15:07:51,,,,,,,
+51job,51job,,,,蛋白AI设计工程师（实习岗）,佰联智合（上海）医药有限公司,上海·浦东新区,1-2万·13薪,硕士,1年及以上,https://jobs.51job.com/shanghai-pdxq/170381924.html?s=sou_sou_soulb&t=0_0&req=audit51_13,2026-02-02 10:35:15,,,,,,,
+network,websearch,,,,数字化实习生/Digitalization Intern,依必安派特电机(上海)有限公司,上海,,本科,实习,https://m.liepin.com/job/1974570865.shtml,,,,,,,,
+network,websearch,,,,数据分析实习生-市场营销方向,勘讯企业咨询服务(上海)有限公司,上海,,本科,实习,https://m.liepin.com/job/1978673171.shtml,,,,,,,,
+network,websearch,,,,Strategy and Insights Intern,麦当劳中国,上海,,本科,实习,https://m.liepin.com/lptjob/73506939?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_73506939%3A1%3Agw.52e2e3c0-318993442,,,,,,,,
+network,websearch,,,,数据策略实习生 Data Intern,未知（海外运营方向）,上海,,本科,实习,https://m.liepin.com/lptjob/69374041?pgRef=c_h5_company_page%3Ac_h5_company_job_listcard%406_69374041%3A1%3Agw.e7d6e393-36186052,,,,,,,,
+network,websearch,,,,数据分析实习生,未知公司,上海,,本科,实习,https://m.liepin.com/job/1936252787.shtml,,,,,,,,

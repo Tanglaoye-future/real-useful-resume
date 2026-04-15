@@ -42,10 +42,11 @@ def run_one_cycle(cycle: int):
     env["USE_ALL_LOCAL_RAW"] = "1"    # aggregate all historical snapshots for coarse filter
     env["USE_MERGED_POOL"] = "1"
     env["PROCESS_RETRY_ONLY"] = "0"
+    env["USE_CDP"] = "1"              # Enable CDP bypass for Liepin details
     env["PAGES_PER_SOURCE"] = str(random.choice([10, 15, 20]))  # ~10-20 pages/keyword
     env["RETRY_BATCH_SIZE"] = str(random.choice([50, 80, 100]))
     env["DETAIL_REQ_TIMEOUT"] = str(random.choice([10, 12, 15]))
-    env["DETAIL_WORKERS"] = str(random.choice([2, 3]))
+    env["DETAIL_WORKERS"] = "1"  # 降并发为单线程，最大程度降低封控概率
     env["JOB51_RPC_TIMEOUT"] = "8"
     env["LIEPIN_RPC_TIMEOUT"] = "30"  # XHR interception needs time for page load + networkidle
     env["RPC_DETAIL_TIMEOUT"] = "45"
@@ -57,12 +58,14 @@ def run_one_cycle(cycle: int):
     cmd = [sys.executable, str(ROOT / "scripts" / "foreign_pipeline_v2.py")]
     # shorter cycle timeout for visible progress
     cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "2400"))  # 40 min: list crawl + detail fetch
-    proc = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=cycle_timeout)
-    tail = "\n".join((proc.stdout or "").splitlines()[-14:])
-    log(f"cycle={cycle} exit={proc.returncode}\n{tail}")
-    if proc.stderr:
-        err_tail = "\n".join(proc.stderr.splitlines()[-12:])
-        log(f"cycle={cycle} stderr_tail:\n{err_tail}")
+    
+    # 移除 capture_output=True, 让子进程直接输出到终端，让用户看到实时进度
+    try:
+        proc = subprocess.run(cmd, cwd=str(ROOT), env=env, timeout=cycle_timeout)
+        log(f"cycle={cycle} exit={proc.returncode}")
+    except subprocess.TimeoutExpired:
+        log(f"cycle={cycle} timeout_expired")
+        raise
 
 
 def main():
@@ -87,10 +90,10 @@ def main():
         after = read_master_stats()
         log(f"after stats={after}")
         cycle += 1
-        # jitter sleep to reduce anti-bot risk
-        sleep_s = random.randint(25, 75)
-        log(f"sleep {sleep_s}s")
-        time.sleep(sleep_s)
+        # Sleep between cycles to avoid ban
+        sleep_sec = random.uniform(60, 180)  # 延长大批次之间的休息时间 1-3分钟
+        log(f"sleep {sleep_sec:.1f}s")
+        time.sleep(sleep_sec)
     log("overnight done")
 
 
