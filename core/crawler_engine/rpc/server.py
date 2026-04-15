@@ -15,19 +15,51 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("RpcServer")
 
 
-def load_liepin_cookies():
-    """加载猎聘 Cookie"""
-    cookie_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "cookies", "liepin_cookies.json")
-    if not os.path.exists(cookie_path):
+COOKIES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "cookies")
+
+_PLATFORM_DOMAINS = {
+    "liepin": [".liepin.com", "www.liepin.com", "liepin.com"],
+    "job51":  [".51job.com", "we.51job.com", "51job.com", ".51job.com"],
+}
+
+
+def _cookie_path(platform: str) -> str:
+    os.makedirs(COOKIES_DIR, exist_ok=True)
+    return os.path.join(COOKIES_DIR, f"{platform}_cookies.json")
+
+
+def load_cookies(platform: str) -> list:
+    path = _cookie_path(platform)
+    if not os.path.exists(path):
         return []
-    
     try:
-        with open(cookie_path, "r", encoding="utf-8") as f:
-            cookies = json.load(f)
-        return cookies
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
     except Exception as e:
-        logger.error(f"Failed to load Liepin cookies: {e}")
+        logger.error(f"Failed to load {platform} cookies: {e}")
         return []
+
+
+def load_liepin_cookies():
+    return load_cookies("liepin")
+
+
+async def save_cookies(context, platform: str):
+    """Extract cookies matching the platform's domains and write to disk."""
+    try:
+        all_cookies = await context.cookies()
+        domains = _PLATFORM_DOMAINS.get(platform, [])
+        filtered = [c for c in all_cookies if any(d in c.get("domain", "") for d in domains)]
+        if not filtered:
+            logger.warning(f"save_cookies({platform}): no matching cookies found")
+            return 0
+        with open(_cookie_path(platform), "w", encoding="utf-8") as f:
+            json.dump(filtered, f, ensure_ascii=False, indent=2)
+        logger.info(f"save_cookies({platform}): saved {len(filtered)} cookies")
+        return len(filtered)
+    except Exception as e:
+        logger.error(f"save_cookies({platform}) failed: {e}")
+        return 0
 
 class PlaywrightContext:
     def __init__(self):
@@ -182,6 +214,9 @@ class PlaywrightContext:
         if not available:
             raise RuntimeError("window.rpc_job51_search_jobs injection failed")
         self.pages["job51"] = page
+        # Only auto-save for 51job if we already have saved cookies — means user was previously logged in
+        if os.path.exists(_cookie_path("job51")):
+            await save_cookies(self.context, "job51")
         logger.info("51job RPC page initialized")
 
     async def _init_boss_page(self):
@@ -238,6 +273,8 @@ class PlaywrightContext:
         await asyncio.sleep(2)
 
         self.pages["liepin"] = page
+        # DO NOT auto-save on startup — initial cookies are anonymous session cookies,
+        # not auth cookies. User must call POST /save_cookies after manual login.
         logger.info("Liepin RPC page initialized (XHR-intercept mode)")
 
     async def _init_detail_pages(self):
@@ -371,6 +408,27 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Crawler RPC Engine", lifespan=lifespan)
 
+@app.post("/save_cookies/{platform}")
+async def save_cookies_endpoint(platform: str):
+    """Call this once after manually logging in to persist the session cookies to disk.
+    Subsequent RPC restarts will load them automatically."""
+    if not pw_ctx.ready:
+        raise HTTPException(status_code=503, detail="RPC not ready")
+    n = await save_cookies(pw_ctx.context, platform)
+    return JSONResponse(content={"saved": n, "platform": platform, "path": _cookie_path(platform)})
+
+
+@app.post("/save_cookies")
+async def save_all_cookies_endpoint():
+    """Save cookies for all initialized platforms at once."""
+    if not pw_ctx.ready:
+        raise HTTPException(status_code=503, detail="RPC not ready")
+    results = {}
+    for plat in ["job51", "liepin"]:
+        results[plat] = await save_cookies(pw_ctx.context, plat)
+    return JSONResponse(content={"saved": results})
+
+
 @app.get("/health")
 async def health():
     return JSONResponse(content={
@@ -443,6 +501,11 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                 await asyncio.sleep(poll_interval_seconds)
             
         elif platform == "job51" and action == "search_jobs":
+            # Auto-recover if page was closed
+            page = pw_ctx.pages.get("job51")
+            if not page or page.is_closed():
+                logger.warning("[51job] page is closed — recreating...")
+                await pw_ctx._init_job51_page()
             cookie_str = payload.get("cookie", "")
             await pw_ctx.set_job51_cookies(cookie_str)
             request_payload = {
@@ -470,18 +533,24 @@ async def invoke_rpc(platform: str, action: str, request: Request):
             return JSONResponse(content={"status": "success", "result": json.loads(result)})
             
         elif platform == "liepin" and action == "search_jobs":
-            # ── XHR Network-Interception approach ──────────────────────────────
-            # Liepin is a React SPA whose CSS class names are hashed at build time,
-            # making DOM selectors unreliable.  Instead we register a Playwright
-            # response listener BEFORE navigating to the search page; the browser
-            # makes a fetch/XHR call to the Liepin search API which we capture and
-            # return as structured JSON — no DOM parsing at all.
+            # ── page.route() interception approach ────────────────────────────
+            # page.route() is more reliable than page.on("response"):
+            #   • runs an async handler that MUST complete before the page proceeds
+            #   • no event-loop scheduling race (async handlers guaranteed to run)
+            #   • route.fetch() returns a fully-materialized Response with body
+            # We intercept all requests to Liepin's search API, parse the JSON body,
+            # then forward the request unchanged via route.fulfill(response=...).
             keyword = payload.get("keyword", "实习")
             pageNum = int(payload.get("pageNum", 1))
             city = payload.get("city", "020")
             pageSize = int(payload.get("pageSize", 20))
 
             page = pw_ctx.pages.get("liepin")
+            # Auto-recover if the page was closed (e.g. user closed the tab manually)
+            if not page or page.is_closed():
+                logger.warning("[Liepin] page is closed — recreating...")
+                await pw_ctx._init_liepin_page()
+                page = pw_ctx.pages.get("liepin")
             if not page:
                 raise HTTPException(status_code=404, detail="Liepin page not found")
 
@@ -490,60 +559,65 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                 f"?key={keyword}&dqs={city}&curPage={pageNum - 1}"
             )
 
-            # Serialize liepin searches so response listeners don't cross-pollinate
+            # Serialize liepin searches so route handlers don't cross-pollinate
             async with pw_ctx._liepin_search_lock:
                 captured: list = []
 
-                # Known Liepin search API URL fragments (cast a wide net)
-                _LIEPIN_API_FRAGMENTS = [
-                    "pc-search-job", "searchfront", "search-job",
-                    "zhaopin/api", "danche/recruit", "api/search",
-                ]
-
-                async def _on_liepin_response(response):
+                async def _handle_search_route(route):
+                    """Intercept Liepin search API calls, parse job list, forward response."""
                     try:
-                        url_lower = response.url.lower()
-                        if not any(frag in url_lower for frag in _LIEPIN_API_FRAGMENTS):
-                            return
-                        # Only JSON responses
-                        ct = response.headers.get("content-type", "")
-                        if "json" not in ct:
-                            return
-                        data = await response.json()
-                        # Try all known response envelope shapes
-                        job_list = (
-                            (data.get("data") or {}).get("jobCardList")
-                            or (data.get("data") or {}).get("jobList")
-                            or data.get("jobCardList")
-                            or data.get("jobList")
-                            or []
-                        )
-                        if job_list:
-                            captured.extend(job_list)
-                            logger.info(
-                                f"[Liepin XHR] captured {len(job_list)} jobs "
-                                f"from {response.url[:80]}"
-                            )
+                        response = await route.fetch()
+                        try:
+                            data = await response.json()
+                            if isinstance(data, dict):
+                                job_list = (
+                                    (data.get("data") or {}).get("jobCardList")
+                                    or (data.get("data") or {}).get("jobList")
+                                    or data.get("jobCardList")
+                                    or data.get("jobList")
+                                    or []
+                                )
+                                if job_list:
+                                    captured.extend(job_list)
+                                    logger.info(
+                                        f"[Liepin route] captured {len(job_list)} jobs "
+                                        f"from {route.request.url[:100]}"
+                                    )
+                                else:
+                                    logger.debug(
+                                        f"[Liepin route] JSON but no jobCardList "
+                                        f"keys={list(data.keys())[:8]} url={route.request.url[:80]}"
+                                    )
+                        except Exception as exc:
+                            logger.debug(f"[Liepin route] parse error: {exc}")
+                        await route.fulfill(response=response)
                     except Exception as exc:
-                        logger.debug(f"[Liepin XHR] response handler error: {exc}")
+                        logger.warning(f"[Liepin route] fetch/fulfill error: {exc} — continuing")
+                        try:
+                            await route.continue_()
+                        except Exception:
+                            pass
 
-                page.on("response", _on_liepin_response)
+                # Match both pc-search-job and pc-search-job-cond-init
+                await page.route("**/pc-search-job**", _handle_search_route)
                 try:
                     await page.goto(
                         search_url,
                         wait_until="networkidle",
                         timeout=30000,
                     )
-                    # Give lazy-loaded XHR requests extra time
-                    await asyncio.sleep(3)
+                    await asyncio.sleep(2)
                 finally:
-                    page.remove_listener("response", _on_liepin_response)
+                    try:
+                        await page.unroute("**/pc-search-job**", _handle_search_route)
+                    except Exception:
+                        pass
 
                 # ── Captcha / block detection ──────────────────────────────────
                 title = await page.title()
                 current_url = page.url
                 if re.search(r"验证|安全中心|captcha", title, re.I) or "captcha" in current_url.lower():
-                    logger.warning(f"[Liepin XHR] blocked: title={title!r}")
+                    logger.warning(f"[Liepin] blocked: title={title!r}")
                     return JSONResponse(content={
                         "status": "success",
                         "result": {
@@ -554,18 +628,159 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                         }
                     })
 
+                # ── SSR fallback: try window.__NEXT_DATA__ if route captured nothing ──
                 if not captured:
                     logger.warning(
-                        f"[Liepin XHR] no jobs captured for keyword={keyword!r} "
-                        f"page={pageNum}; title={title!r}"
+                        f"[Liepin] route captured 0 jobs — trying SSR fallback "
+                        f"keyword={keyword!r} page={pageNum} title={title!r}"
                     )
+                    try:
+                        next_data_str = await page.evaluate(
+                            "() => { try { return JSON.stringify(window.__NEXT_DATA__ || null) } catch(e) { return null } }"
+                        )
+                        if next_data_str:
+                            nd = json.loads(next_data_str)
+                            props = (nd.get("props") or {}).get("pageProps") or {}
+                            logger.info(
+                                f"[Liepin SSR] __NEXT_DATA__ pageProps keys={list(props.keys())[:10]}"
+                            )
+                            ssr_jobs = (
+                                props.get("jobCardList")
+                                or props.get("jobList")
+                                or (props.get("data") or {}).get("jobCardList")
+                                or (props.get("data") or {}).get("jobList")
+                                or (props.get("searchResult") or {}).get("jobCardList")
+                                or (props.get("result") or {}).get("jobCardList")
+                                or []
+                            )
+                            if ssr_jobs:
+                                captured.extend(ssr_jobs)
+                                logger.info(
+                                    f"[Liepin SSR] captured {len(ssr_jobs)} jobs from __NEXT_DATA__"
+                                )
+                            else:
+                                logger.warning(
+                                    f"[Liepin SSR] __NEXT_DATA__ found but no jobCardList; "
+                                    f"pageProps keys={list(props.keys())[:10]}"
+                                )
+                        else:
+                            logger.warning("[Liepin SSR] window.__NEXT_DATA__ is null/undefined")
+                    except Exception as e:
+                        logger.warning(f"[Liepin SSR] extraction failed: {e}")
 
                 return JSONResponse(content={
                     "status": "success",
                     "result": {
                         "data": {"jobCardList": captured[:pageSize]},
                         "total_count": len(captured),
-                        "method": "xhr_intercept",
+                        "method": "route_intercept" if captured else "empty",
+                    }
+                })
+
+        elif platform == "liepin" and action == "scan_page_state":
+            # Diagnostic: navigate to a search page and scan all window globals + script tags
+            # to find where Liepin embeds job data (SSR state variable discovery).
+            keyword = payload.get("keyword", "实习")
+            pageNum = int(payload.get("pageNum", 1))
+            city = payload.get("city", "020")
+            search_url = (
+                f"https://www.liepin.com/zhaopin/"
+                f"?key={keyword}&dqs={city}&curPage={pageNum - 1}"
+            )
+            page = pw_ctx.pages.get("liepin")
+            if not page or page.is_closed():
+                await pw_ctx._init_liepin_page()
+                page = pw_ctx.pages.get("liepin")
+            async with pw_ctx._liepin_search_lock:
+                # Capture ALL network request URLs during page load
+                request_urls: list = []
+                json_responses: list = []
+
+                def _on_req(req):
+                    request_urls.append(f"{req.method} {req.resource_type} {req.url[:120]}")
+
+                async def _on_resp(resp):
+                    try:
+                        ct = resp.headers.get("content-type", "")
+                        if "liepin.com" in resp.url and ("json" in ct or "javascript" in ct):
+                            try:
+                                body = await resp.text()
+                                if "jobCardList" in body or "compName" in body:
+                                    json_responses.append({"url": resp.url[:120], "body_preview": body[:400]})
+                            except Exception:
+                                pass
+                    except Exception:
+                        pass
+
+                page.on("request", _on_req)
+                page.on("response", _on_resp)
+                try:
+                    await page.goto(search_url, wait_until="networkidle", timeout=30000)
+                    await asyncio.sleep(5)
+                finally:
+                    page.remove_listener("request", _on_req)
+                    page.remove_listener("response", _on_resp)
+
+                # Also get HTML snippet to look for embedded JSON
+                html = await page.content()
+                html_job_snippet = ""
+                import re as _re
+                m = _re.search(r'(jobCardList.{0,800})', html)
+                if m:
+                    html_job_snippet = m.group(1)[:500]
+
+                scan_result = await page.evaluate("""() => {
+                    const candidates = [
+                        '__INITIAL_STATE__','__STATE__','__APP_STATE__','__SS_PROPS__',
+                        '__PRELOADED_STATE__','_data','pageState','__DATA__',
+                        'window_data','__NUXT__','serverData','__REDUX_STATE__',
+                        '__store__','store'
+                    ];
+                    for (const name of candidates) {
+                        try {
+                            const val = window[name];
+                            if (val && typeof val === 'object') {
+                                const s = JSON.stringify(val);
+                                if (s && s.length > 100) {
+                                    return {source: 'window.' + name, preview: s.slice(0, 600)};
+                                }
+                            }
+                        } catch(e) {}
+                    }
+                    // Scan all window props for job-related data
+                    for (const key of Object.keys(window)) {
+                        try {
+                            const val = window[key];
+                            if (val && typeof val === 'object' && key !== 'document' && key !== 'window') {
+                                const s = JSON.stringify(val);
+                                if (s && (s.includes('jobCardList') || s.includes('compName') || s.includes('salary') || s.includes('jobName'))) {
+                                    return {source: 'window.' + key, preview: s.slice(0, 600)};
+                                }
+                            }
+                        } catch(e) {}
+                    }
+                    // Check script tags
+                    const scripts = document.querySelectorAll('script');
+                    for (const s of scripts) {
+                        const text = s.textContent || '';
+                        if (text.length > 200 && (text.includes('jobCardList') || text.includes('compName'))) {
+                            return {source: 'script_tag', preview: text.slice(0, 600)};
+                        }
+                    }
+                    // Return window key list for manual inspection
+                    const allKeys = Object.keys(window).filter(k => !['document','window','location','history','navigator','screen','performance','console'].includes(k));
+                    return {source: 'not_found', title: document.title, window_keys: allKeys.slice(0, 40)};
+                }""")
+                # Log network summary to server log
+                logger.info(f"[Scan] {len(request_urls)} requests, {len(json_responses)} json_with_jobs")
+                liepin_reqs = [u for u in request_urls if "liepin.com" in u][:30]
+                return JSONResponse(content={
+                    "status": "success",
+                    "result": {
+                        **scan_result,
+                        "network_liepin_requests": liepin_reqs,
+                        "json_with_jobs": json_responses[:3],
+                        "html_job_snippet": html_job_snippet,
                     }
                 })
 
