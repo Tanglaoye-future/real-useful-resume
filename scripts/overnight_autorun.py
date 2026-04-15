@@ -38,11 +38,14 @@ def read_master_stats():
 def run_one_cycle(cycle: int):
     env = os.environ.copy()
     env["ONLY_LIEPIN"] = "1"  # safer against 51job captcha
-    env["USE_EXISTING_RAW"] = "0"  # keep crawling new pages each cycle
+    env["USE_EXISTING_RAW"] = "1"  # avoid full crawl timeout; focus backlog processing
     env["USE_ALL_LOCAL_RAW"] = "1"
     env["USE_MERGED_POOL"] = "1"
-    env["PAGES_PER_SOURCE"] = str(random.choice([6, 8, 10]))
-    env["RETRY_BATCH_SIZE"] = str(random.choice([120, 150, 180]))
+    env["PROCESS_RETRY_ONLY"] = "1"
+    env["PAGES_PER_SOURCE"] = str(random.choice([2, 3]))
+    env["RETRY_BATCH_SIZE"] = str(random.choice([35, 45, 60]))
+    env["DETAIL_REQ_TIMEOUT"] = str(random.choice([8, 10, 12]))
+    env["DETAIL_WORKERS"] = str(random.choice([10, 12, 14]))
     env["JOB51_RPC_TIMEOUT"] = "6"
     env["LIEPIN_RPC_TIMEOUT"] = "10"
 
@@ -52,7 +55,7 @@ def run_one_cycle(cycle: int):
     )
     cmd = [sys.executable, str(ROOT / "scripts" / "foreign_pipeline_v2.py")]
     # shorter cycle timeout for visible progress
-    cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "1200"))
+    cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "600"))
     proc = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=cycle_timeout)
     tail = "\n".join((proc.stdout or "").splitlines()[-14:])
     log(f"cycle={cycle} exit={proc.returncode}\n{tail}")
@@ -84,7 +87,7 @@ def main():
         log(f"after stats={after}")
         cycle += 1
         # jitter sleep to reduce anti-bot risk
-        sleep_s = random.randint(90, 240)
+        sleep_s = random.randint(25, 75)
         log(f"sleep {sleep_s}s")
         time.sleep(sleep_s)
     log("overnight done")

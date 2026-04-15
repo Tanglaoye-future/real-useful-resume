@@ -1,4 +1,5 @@
 import asyncio
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import datetime as dt
 import glob
 import html
@@ -709,14 +710,22 @@ def build_jd_backfill_index() -> Dict[str, Dict[str, str]]:
 
 
 def enrich_details_with_retry(df: pd.DataFrame, jd_index: Dict[str, Dict[str, str]]) -> Tuple[pd.DataFrame, pd.DataFrame]:
-    ok_rows = []
-    fail_rows = []
-    for _, row in df.iterrows():
+    if df.empty:
+        return pd.DataFrame(), pd.DataFrame()
+
+    workers = max(1, int(os.getenv("DETAIL_WORKERS", "8")))
+    rows = [r.to_dict() for _, r in df.iterrows()]
+    ok_rows: List[Dict] = []
+    fail_rows: List[Dict] = []
+
+    def process_one(row: Dict) -> Tuple[str, Dict]:
         url = norm(row.get("url", ""))
         detail, status = fetch_detail(url, max_retries=2)
         if status == "ok":
-            merged = {**row.to_dict(), **detail, "详情抓取状态": "成功"}
-            d, r = parse_jd_fields(f"{norm(merged.get('详情抓取文本',''))} {norm(merged.get('job_description',''))} {norm(merged.get('job_requirement',''))}")
+            merged = {**row, **detail, "详情抓取状态": "成功"}
+            d, r = parse_jd_fields(
+                f"{norm(merged.get('详情抓取文本',''))} {norm(merged.get('job_description',''))} {norm(merged.get('job_requirement',''))}"
+            )
             if not norm(merged.get("完整职责", "")):
                 merged["完整职责"] = d
             if not norm(merged.get("完整要求", "")):
@@ -728,34 +737,42 @@ def enrich_details_with_retry(df: pd.DataFrame, jd_index: Dict[str, Dict[str, st
             )
             merged["JD可见性"] = "清晰可见" if jd_visible else "不清晰"
             merged["JD可见性原因"] = "" if jd_visible else f"duty_cnt={duty_cnt},req_cnt={req_cnt}"
-            ok_rows.append(merged)
-        else:
-            # fallback with list JD so pipeline does not lose JD candidates
-            d, r = parse_jd_fields(f"{norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}")
-            if not (d or r):
-                key_url = norm(row.get("url", ""))
-                key_id = norm(row.get("job_id", ""))
-                bf = jd_index.get(key_url) or jd_index.get(key_id) or {}
-                d = d or norm(bf.get("desc", ""))
-                r = r or norm(bf.get("req", ""))
-            if d or r:
-                ok_rows.append(
-                    {
-                        **row.to_dict(),
-                        "详情抓取状态": "失败-列表回填",
-                        "失败原因": status,
-                        "完整职责": d if d else norm(row.get("job_description", "")),
-                        "完整要求": r if r else norm(row.get("job_requirement", "")),
-                        "完整技能": " ".join(
-                            sorted(set(re.findall(r"SQL|Python|Tableau|Power BI|SAS|R|Spark|Hadoop", f"{d} {r}", flags=re.I)))
-                        ),
-                        "详情抓取文本": norm(row.get("job_description", ""))[:3000],
-                        "JD可见性": "不清晰",
-                        "JD可见性原因": f"detail_fetch_failed:{status}",
-                    }
-                )
+            return "ok", merged
+
+        d, r = parse_jd_fields(f"{norm(row.get('job_description',''))} {norm(row.get('job_requirement',''))}")
+        if not (d or r):
+            key_url = norm(row.get("url", ""))
+            key_id = norm(row.get("job_id", ""))
+            bf = jd_index.get(key_url) or jd_index.get(key_id) or {}
+            d = d or norm(bf.get("desc", ""))
+            r = r or norm(bf.get("req", ""))
+        if d or r:
+            fallback = {
+                **row,
+                "详情抓取状态": "失败-列表回填",
+                "失败原因": status,
+                "完整职责": d if d else norm(row.get("job_description", "")),
+                "完整要求": r if r else norm(row.get("job_requirement", "")),
+                "完整技能": " ".join(
+                    sorted(set(re.findall(r"SQL|Python|Tableau|Power BI|SAS|R|Spark|Hadoop", f"{d} {r}", flags=re.I)))
+                ),
+                "详情抓取文本": norm(row.get("job_description", ""))[:3000],
+                "JD可见性": "不清晰",
+                "JD可见性原因": f"detail_fetch_failed:{status}",
+            }
+            return "ok", fallback
+
+        return "fail", {**row, "详情抓取状态": "失败", "失败原因": status}
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures = [ex.submit(process_one, r) for r in rows]
+        for fut in as_completed(futures):
+            kind, payload = fut.result()
+            if kind == "ok":
+                ok_rows.append(payload)
             else:
-                fail_rows.append({**row.to_dict(), "详情抓取状态": "失败", "失败原因": status})
+                fail_rows.append(payload)
+
     return pd.DataFrame(ok_rows).fillna(""), pd.DataFrame(fail_rows).fillna("")
 
 
