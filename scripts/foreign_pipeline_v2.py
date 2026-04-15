@@ -613,7 +613,11 @@ def parse_job51_item(it: Dict, keyword: str, page: int) -> Dict:
 def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
     comp = it.get("comp") if isinstance(it.get("comp"), dict) else {}
     job = it.get("job") if isinstance(it.get("job"), dict) else {}
-    dq = job.get("dq") if isinstance(job.get("dq"), dict) else {}
+    # XHR API: dq is at the item top level {"job": {...}, "comp": {...}, "dq": {"name": "上海"}}
+    # DOM fallback: sometimes nested inside job. Try top level first.
+    dq = it.get("dq") if isinstance(it.get("dq"), dict) else (
+        job.get("dq") if isinstance(job.get("dq"), dict) else {}
+    )
     job_id = job.get("jobId") or it.get("jobId")
     # DOM-parsing fallback structure (from RPC server): {title, href, company, tags}
     href = norm(it.get("href", ""))
@@ -645,7 +649,7 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         "job_id": job_id,
         "job_name": job.get("title") or it.get("title") or title_dom,
         "company_name": comp.get("compName") or comp.get("name") or it.get("compName") or company_dom,
-        "location": dq.get("name") if isinstance(dq, dict) else (it.get("location") or ""),
+        "location": dq.get("name") or it.get("location") or "",
         "salary_text": job.get("salary") or "",
         "education": job.get("requireEduLevel") or "",
         "experience": job.get("requireWorkYears") or "",

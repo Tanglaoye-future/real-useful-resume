@@ -36,7 +36,8 @@ class PlaywrightContext:
         self.context = None
         self.pages: Dict[str, Any] = {}
         self.detail_pages: Dict[str, Any] = {}  # dedicated pages for detail fetching
-        self._detail_lock: asyncio.Lock = None   # serializes browser navigations; init in start()
+        self._detail_lock: asyncio.Lock = None        # serializes detail-page navigations; init in start()
+        self._liepin_search_lock: asyncio.Lock = None # serializes liepin search navigations; init in start()
         self.ready = False
         self.startup_error = ""
 
@@ -58,6 +59,7 @@ class PlaywrightContext:
             # await self._init_boss_page()  # 已禁用
             await self._init_liepin_page()
             self._detail_lock = asyncio.Lock()
+            self._liepin_search_lock = asyncio.Lock()
             await self._init_detail_pages()
             self.ready = True
             self.startup_error = ""
@@ -217,206 +219,26 @@ class PlaywrightContext:
         logger.info("Boss RPC page initialized")
 
     async def _init_liepin_page(self):
+        """Initialize the Liepin search page.
+        Loads session cookies and navigates to homepage to warm up the session.
+        Actual search is done via network response interception in the endpoint handler —
+        no JS injection needed (the old DOM-parsing approach is removed)."""
         logger.info("Initializing Liepin RPC page...")
         page = await self.context.new_page()
-        
-        # 加载保存的 Cookie
+
         liepin_cookies = load_liepin_cookies()
         if liepin_cookies:
             logger.info(f"Loading {len(liepin_cookies)} Liepin cookies...")
             await self.context.add_cookies(liepin_cookies)
         else:
-            logger.warning("No Liepin cookies found. Please run liepin_login.py first.")
-        
-        # 注入猎聘页面解析函数 - 使用页面导航和DOM解析
-        init_js = """
-            window.rpc_liepin_search_jobs = async function(payload) {
-                const keyword = payload.keyword || '实习';
-                const pageNum = parseInt(payload.pageNum || 1);
-                const city = payload.city || '020';
-                const pageSize = parseInt(payload.pageSize || 20);
-                
-                // 构建搜索URL
-                const url = `https://www.liepin.com/zhaopin/?key=${encodeURIComponent(keyword)}&dqs=${city}&curPage=${pageNum - 1}`;
-                
-                try {
-                    // 导航到搜索页面
-                    window.location.href = url;
-                    
-                    // 等待页面加载完成
-                    await new Promise(resolve => setTimeout(resolve, 3000));
-                    
-                    // 等待职位列表加载
-                    let retries = 0;
-                    let jobCards = [];
-                    
-                    while (retries < 10 && jobCards.length === 0) {
-                        await new Promise(resolve => setTimeout(resolve, 1000));
-                        
-                        // 尝试多种选择器
-                        const selectors = [
-                            '.job-card-pc-container',
-                            '.sojob-item-main',
-                            '.job-list-item',
-                            '[data-selector="job-card"]',
-                            '.job-card',
-                            'li[data-jobid]'
-                        ];
-                        
-                        for (const selector of selectors) {
-                            jobCards = document.querySelectorAll(selector);
-                            if (jobCards.length > 0) {
-                                break;
-                            }
-                        }
-                        
-                        retries++;
-                    }
-                    
-                    if (jobCards.length === 0) {
-                        // 检查是否被拦截
-                        const title = document.title || '';
-                        const currentUrl = window.location.href;
-                        
-                        if (title.includes('验证') || title.includes('安全') || currentUrl.includes('captcha')) {
-                            return {
-                                blocked: true,
-                                block_type: 'captcha',
-                                message: '需要验证码',
-                                title: title,
-                                url: currentUrl
-                            };
-                        }
-                        
-                        // 尝试使用JavaScript提取数据
-                        const jobs = await window._extractJobsFromPage();
-                        if (jobs && jobs.length > 0) {
-                            return {
-                                status: 'success',
-                                result: {
-                                    data: {
-                                        jobCardList: jobs
-                                    }
-                                },
-                                total_count: jobs.length,
-                                method: 'js_extraction'
-                            };
-                        }
-                        
-                        return {
-                            status: 'success',
-                            result: {
-                                data: {
-                                    jobCardList: []
-                                }
-                            },
-                            total_count: 0,
-                            message: 'No job cards found'
-                        };
-                    }
-                    
-                    // 解析职位卡片
-                    const jobs = [];
-                    jobCards.forEach((card, index) => {
-                        try {
-                            const job = {};
-                            
-                            // 标题
-                            const titleElem = card.querySelector('.job-title, .title, h3, a, .job-name');
-                            job.title = titleElem ? titleElem.textContent.trim() : '';
-                            
-                            // 链接
-                            const linkElem = card.querySelector('a[href*="job"]') || card.querySelector('a');
-                            job.href = linkElem ? linkElem.href : '';
-                            if (job.href && job.href.includes('/job/')) {
-                                job.job_id = job.href.match(/\/job\/(\d+)/)?.[1] || '';
-                            }
-                            
-                            // 公司
-                            const compElem = card.querySelector('.company-name, .comp-name, [class*="company"]');
-                            job.company = compElem ? compElem.textContent.trim() : '';
-                            
-                            // 薪资
-                            const salaryElem = card.querySelector('.salary, [class*="salary"]');
-                            job.salary = salaryElem ? salaryElem.textContent.trim() : '';
-                            
-                            // 地点
-                            const locElem = card.querySelector('.job-location, .location, [class*="location"]');
-                            job.location = locElem ? locElem.textContent.trim() : '上海';
-                            
-                            // 经验要求
-                            const expElem = card.querySelector('.job-exp, .exp, [class*="exp"]');
-                            job.experience = expElem ? expElem.textContent.trim() : '';
-                            
-                            // 学历
-                            const eduElem = card.querySelector('.job-edu, .edu, [class*="edu"]');
-                            job.education = eduElem ? eduElem.textContent.trim() : '';
-                            
-                            // 标签
-                            const tagElems = card.querySelectorAll('.job-tag, .tag, [class*="tag"]');
-                            job.tags = Array.from(tagElems).map(t => t.textContent.trim()).filter(t => t);
-                            
-                            if (job.title) {
-                                jobs.push(job);
-                            }
-                        } catch (e) {
-                            console.error('Error parsing job card:', e);
-                        }
-                    });
-                    
-                    return {
-                        status: 'success',
-                        result: {
-                            data: {
-                                jobCardList: jobs
-                            }
-                        },
-                        total_count: jobs.length,
-                        method: 'dom_parsing'
-                    };
-                    
-                } catch (err) {
-                    return {
-                        status: 'error',
-                        error: String(err),
-                        error_type: 'navigation_failed'
-                    };
-                }
-            };
-            
-            // 备用：从页面提取数据的函数
-            window._extractJobsFromPage = async function() {
-                const jobs = [];
-                
-                // 尝试从页面脚本中提取数据
-                const scripts = document.querySelectorAll('script');
-                for (const script of scripts) {
-                    const text = script.textContent;
-                    if (text.includes('jobCardList') || text.includes('jobList')) {
-                        try {
-                            const match = text.match(/jobCardList\s*:\s*(\[.*?\])/);
-                            if (match) {
-                                return JSON.parse(match[1]);
-                            }
-                        } catch (e) {
-                            // 忽略解析错误
-                        }
-                    }
-                }
-                
-                return jobs;
-            };
-        """
-        await page.add_init_script(init_js)
-        logger.info("Navigating to Liepin homepage...")
-        await page.goto("https://www.liepin.com", wait_until="domcontentloaded")
+            logger.warning("No Liepin cookies found. Searches may be rate-limited. Run liepin_login.py to fix.")
+
+        logger.info("Navigating to Liepin homepage to warm session...")
+        await page.goto("https://www.liepin.com", wait_until="domcontentloaded", timeout=20000)
         await asyncio.sleep(2)
-        
-        available = await page.evaluate("() => typeof window.rpc_liepin_search_jobs === 'function'")
-        if not available:
-            raise RuntimeError("window.rpc_liepin_search_jobs injection failed")
+
         self.pages["liepin"] = page
-        logger.info("Liepin RPC page initialized")
+        logger.info("Liepin RPC page initialized (XHR-intercept mode)")
 
     async def _init_detail_pages(self):
         """Create dedicated pages for fetching job detail pages.
@@ -648,196 +470,103 @@ async def invoke_rpc(platform: str, action: str, request: Request):
             return JSONResponse(content={"status": "success", "result": json.loads(result)})
             
         elif platform == "liepin" and action == "search_jobs":
+            # ── XHR Network-Interception approach ──────────────────────────────
+            # Liepin is a React SPA whose CSS class names are hashed at build time,
+            # making DOM selectors unreliable.  Instead we register a Playwright
+            # response listener BEFORE navigating to the search page; the browser
+            # makes a fetch/XHR call to the Liepin search API which we capture and
+            # return as structured JSON — no DOM parsing at all.
             keyword = payload.get("keyword", "实习")
-            pageNum = payload.get("pageNum", 1)
+            pageNum = int(payload.get("pageNum", 1))
             city = payload.get("city", "020")
-            pageSize = payload.get("pageSize", 20)
-            
-            # 构建搜索URL
-            url = f"https://www.liepin.com/zhaopin/?key={keyword}&dqs={city}&curPage={pageNum - 1}"
-            
-            # 获取猎聘页面
+            pageSize = int(payload.get("pageSize", 20))
+
             page = pw_ctx.pages.get("liepin")
             if not page:
                 raise HTTPException(status_code=404, detail="Liepin page not found")
-            
-            try:
-                # 导航到搜索页面
-                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                await asyncio.sleep(3)  # 等待页面加载
-                
-                # 等待职位列表加载
-                retries = 0
-                job_cards = []
-                
-                while retries < 10 and len(job_cards) == 0:
-                    await asyncio.sleep(1)
-                    
-                    # 尝试多种选择器
-                    selectors = [
-                        '.job-card-pc-container',
-                        '.sojob-item-main',
-                        '.job-list-item',
-                        '[data-selector="job-card"]',
-                        '.job-card',
-                        'li[data-jobid]'
-                    ]
-                    
-                    for selector in selectors:
-                        try:
-                            job_cards = await page.query_selector_all(selector)
-                            if len(job_cards) > 0:
-                                break
-                        except:
-                            continue
-                    
-                    retries += 1
-                
-                if len(job_cards) == 0:
-                    # 检查是否被拦截
-                    title = await page.title()
-                    current_url = page.url
-                    
-                    if "验证" in title or "安全" in title or "captcha" in current_url.lower():
-                        return JSONResponse(content={
-                            "status": "success",
-                            "result": {
-                                "blocked": True,
-                                "block_type": "captcha",
-                                "message": "需要验证码",
-                                "title": title,
-                                "url": current_url
-                            }
-                        })
-                    
-                    # 尝试使用JavaScript提取数据
-                    jobs = await page.evaluate("""() => {
-                        const jobs = [];
-                        
-                        // 尝试从页面脚本中提取数据
-                        const scripts = document.querySelectorAll('script');
-                        for (const script of scripts) {
-                            const text = script.textContent;
-                            if (text.includes('jobCardList') || text.includes('jobList')) {
-                                try {
-                                    const match = text.match(/jobCardList\\s*:\\s*(\\[.*?\\])/);
-                                    if (match) {
-                                        return JSON.parse(match[1]);
-                                    }
-                                } catch (e) {
-                                    // 忽略解析错误
-                                }
-                            }
-                        }
-                        
-                        return jobs;
-                    }""")
-                    
-                    if jobs and len(jobs) > 0:
-                        return JSONResponse(content={
-                            "status": "success",
-                            "result": {
-                                "data": {
-                                    "jobCardList": jobs
-                                },
-                                "total_count": len(jobs),
-                                "method": "js_extraction"
-                            }
-                        })
-                    
+
+            search_url = (
+                f"https://www.liepin.com/zhaopin/"
+                f"?key={keyword}&dqs={city}&curPage={pageNum - 1}"
+            )
+
+            # Serialize liepin searches so response listeners don't cross-pollinate
+            async with pw_ctx._liepin_search_lock:
+                captured: list = []
+
+                # Known Liepin search API URL fragments (cast a wide net)
+                _LIEPIN_API_FRAGMENTS = [
+                    "pc-search-job", "searchfront", "search-job",
+                    "zhaopin/api", "danche/recruit", "api/search",
+                ]
+
+                async def _on_liepin_response(response):
+                    try:
+                        url_lower = response.url.lower()
+                        if not any(frag in url_lower for frag in _LIEPIN_API_FRAGMENTS):
+                            return
+                        # Only JSON responses
+                        ct = response.headers.get("content-type", "")
+                        if "json" not in ct:
+                            return
+                        data = await response.json()
+                        # Try all known response envelope shapes
+                        job_list = (
+                            (data.get("data") or {}).get("jobCardList")
+                            or (data.get("data") or {}).get("jobList")
+                            or data.get("jobCardList")
+                            or data.get("jobList")
+                            or []
+                        )
+                        if job_list:
+                            captured.extend(job_list)
+                            logger.info(
+                                f"[Liepin XHR] captured {len(job_list)} jobs "
+                                f"from {response.url[:80]}"
+                            )
+                    except Exception as exc:
+                        logger.debug(f"[Liepin XHR] response handler error: {exc}")
+
+                page.on("response", _on_liepin_response)
+                try:
+                    await page.goto(
+                        search_url,
+                        wait_until="networkidle",
+                        timeout=30000,
+                    )
+                    # Give lazy-loaded XHR requests extra time
+                    await asyncio.sleep(3)
+                finally:
+                    page.remove_listener("response", _on_liepin_response)
+
+                # ── Captcha / block detection ──────────────────────────────────
+                title = await page.title()
+                current_url = page.url
+                if re.search(r"验证|安全中心|captcha", title, re.I) or "captcha" in current_url.lower():
+                    logger.warning(f"[Liepin XHR] blocked: title={title!r}")
                     return JSONResponse(content={
                         "status": "success",
                         "result": {
-                            "data": {
-                                "jobCardList": []
-                            },
-                            "total_count": 0,
-                            "message": "No job cards found"
+                            "blocked": True,
+                            "message": "需要验证码",
+                            "title": title,
+                            "url": current_url,
                         }
                     })
-                
-                # 解析职位卡片
-                jobs = []
-                for card in job_cards[:pageSize]:
-                    try:
-                        job = {}
-                        
-                        # 标题
-                        title_elem = await card.query_selector('.job-title, .title, h3, a, .job-name')
-                        if title_elem:
-                            job['title'] = await title_elem.text_content() or ''
-                            job['title'] = job['title'].strip()
-                        
-                        # 链接
-                        link_elem = await card.query_selector('a[href*="job"]') or await card.query_selector('a')
-                        if link_elem:
-                            href = await link_elem.get_attribute('href') or ''
-                            job['href'] = href
-                            if href and '/job/' in href:
-                                import re
-                                match = re.search(r'/job/(\\d+)', href)
-                                if match:
-                                    job['job_id'] = match.group(1)
-                        
-                        # 公司
-                        comp_elem = await card.query_selector('.company-name, .comp-name, [class*="company"]')
-                        if comp_elem:
-                            job['company'] = await comp_elem.text_content() or ''
-                            job['company'] = job['company'].strip()
-                        
-                        # 薪资
-                        salary_elem = await card.query_selector('.salary, [class*="salary"]')
-                        if salary_elem:
-                            job['salary'] = await salary_elem.text_content() or ''
-                            job['salary'] = job['salary'].strip()
-                        
-                        # 地点
-                        loc_elem = await card.query_selector('.job-location, .location, [class*="location"]')
-                        if loc_elem:
-                            job['location'] = await loc_elem.text_content() or '上海'
-                            job['location'] = job['location'].strip()
-                        
-                        # 经验要求
-                        exp_elem = await card.query_selector('.job-exp, .exp, [class*="exp"]')
-                        if exp_elem:
-                            job['experience'] = await exp_elem.text_content() or ''
-                            job['experience'] = job['experience'].strip()
-                        
-                        # 学历
-                        edu_elem = await card.query_selector('.job-edu, .edu, [class*="edu"]')
-                        if edu_elem:
-                            job['education'] = await edu_elem.text_content() or ''
-                            job['education'] = job['education'].strip()
-                        
-                        # 标签
-                        tag_elems = await card.query_selector_all('.job-tag, .tag, [class*="tag"]')
-                        job['tags'] = []
-                        for tag_elem in tag_elems:
-                            tag_text = await tag_elem.text_content()
-                            if tag_text:
-                                job['tags'].append(tag_text.strip())
-                        
-                        if job.get('title'):
-                            jobs.append(job)
-                    except Exception as e:
-                        continue
-                
+
+                if not captured:
+                    logger.warning(
+                        f"[Liepin XHR] no jobs captured for keyword={keyword!r} "
+                        f"page={pageNum}; title={title!r}"
+                    )
+
                 return JSONResponse(content={
                     "status": "success",
                     "result": {
-                        "data": {
-                            "jobCardList": jobs
-                        },
-                        "total_count": len(jobs),
-                        "method": "dom_parsing"
+                        "data": {"jobCardList": captured[:pageSize]},
+                        "total_count": len(captured),
+                        "method": "xhr_intercept",
                     }
-                })
-                
-            except Exception as e:
-                return JSONResponse(content={
-                    "status": "error",
-                    "error": str(e),
-                    "error_type": "navigation_failed"
                 })
 
         elif action == "fetch_detail":
