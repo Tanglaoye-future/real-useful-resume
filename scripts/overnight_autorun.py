@@ -37,23 +37,18 @@ def read_master_stats():
 
 def run_one_cycle(cycle: int):
     env = os.environ.copy()
-    env["ONLY_LIEPIN"] = "1"          # safer against 51job captcha during overnight
-    env["USE_EXISTING_RAW"] = "1"     # reuse raw JSON files; avoids long crawl timeouts
-    env["USE_ALL_LOCAL_RAW"] = "1"    # aggregate all historical snapshots
+    env["ONLY_LIEPIN"] = "0"           # crawl both 51job + liepin (RPC handles captcha)
+    env["USE_EXISTING_RAW"] = "0"     # actually crawl fresh pages each cycle
+    env["USE_ALL_LOCAL_RAW"] = "1"    # aggregate all historical snapshots for coarse filter
     env["USE_MERGED_POOL"] = "1"
-    # FIX: was "1" — that locked the loop into retrying the same 390 failed
-    # jobs with a bare requests.get that always fails captcha.  Now set to "0"
-    # so each cycle processes both new coarse-filtered rows AND the retry queue.
     env["PROCESS_RETRY_ONLY"] = "0"
-    env["PAGES_PER_SOURCE"] = str(random.choice([5, 8, 10]))   # was 2-3, too few
-    env["RETRY_BATCH_SIZE"] = str(random.choice([50, 80, 100]))  # was 35-60
+    env["PAGES_PER_SOURCE"] = str(random.choice([10, 15, 20]))  # ~10-20 pages/keyword
+    env["RETRY_BATCH_SIZE"] = str(random.choice([50, 80, 100]))
     env["DETAIL_REQ_TIMEOUT"] = str(random.choice([10, 12, 15]))
-    # FIX: was 10-14 — concurrent browser navigations are serialized by RPC lock,
-    # high worker count only floods the HTTP queue and triggers IP-level bans.
     env["DETAIL_WORKERS"] = str(random.choice([2, 3]))
-    env["JOB51_RPC_TIMEOUT"] = "6"
-    env["LIEPIN_RPC_TIMEOUT"] = "10"
-    env["RPC_DETAIL_TIMEOUT"] = "45"  # NEW: timeout for detail-page RPC fetch
+    env["JOB51_RPC_TIMEOUT"] = "8"
+    env["LIEPIN_RPC_TIMEOUT"] = "30"  # XHR interception needs time for page load + networkidle
+    env["RPC_DETAIL_TIMEOUT"] = "45"
 
     log(
         f"cycle={cycle} start "
@@ -61,7 +56,7 @@ def run_one_cycle(cycle: int):
     )
     cmd = [sys.executable, str(ROOT / "scripts" / "foreign_pipeline_v2.py")]
     # shorter cycle timeout for visible progress
-    cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "600"))
+    cycle_timeout = int(os.getenv("CYCLE_TIMEOUT_SEC", "2400"))  # 40 min: list crawl + detail fetch
     proc = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=cycle_timeout)
     tail = "\n".join((proc.stdout or "").splitlines()[-14:])
     log(f"cycle={cycle} exit={proc.returncode}\n{tail}")
