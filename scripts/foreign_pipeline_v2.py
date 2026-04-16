@@ -1271,9 +1271,8 @@ def main():
             print(f"use_merged_pool=1 merged_rows={len(mdf)} total_rows={len(raw_df)}")
 
     if only_liepin and not raw_df.empty:
-        src = raw_df.get("source", pd.Series([""] * len(raw_df))).astype(str).str.lower()
-        platform = raw_df.get("platform", pd.Series([""] * len(raw_df))).astype(str).str.lower()
-        mask = src.str.contains("liepin|websearch|network", na=False) | platform.str.contains("liepin|network", na=False)
+        url_col = raw_df.get("url", pd.Series([""] * len(raw_df))).astype(str).str.lower()
+        mask = url_col.str.contains("liepin.com", na=False)
         before = len(raw_df)
         raw_df = raw_df[mask].copy()
         print(f"only_liepin=1 rows {before}->{len(raw_df)}")
@@ -1310,6 +1309,10 @@ def main():
         print(f"retry_batch_enabled=1 batch={len(rq)} processing_rows={len(processing_df)}")
     if process_retry_only and retry_path.exists():
         rq = pd.read_csv(retry_path).fillna("")
+        if only_liepin:
+            url_col = rq.get("url", pd.Series([""] * len(rq))).astype(str).str.lower()
+            mask = url_col.str.contains("liepin.com", na=False)
+            rq = rq[mask].copy()
         if "retry_needed" in rq.columns:
             rq = rq[rq["retry_needed"] == True].copy()
         if "detail_status" in rq.columns:
@@ -1345,11 +1348,28 @@ def main():
     jd_unclear_path = OUT_DIR / "foreign_jd_unclear_quarantine_v2.csv"
     jd_unclear_df.to_csv(jd_unclear_path, index=False, encoding="utf-8-sig")
 
-    strict_df = strict_filter_and_score(jd_clear_df)
+    full_data_mode = os.getenv("FULL_DATA_MODE", "0") == "1"
+    if full_data_mode:
+        # Full-data mode: bypass strict filter gates and keep all enriched rows.
+        strict_df = ok_df.copy()
+        if "严格过滤通过" not in strict_df.columns:
+            strict_df["严格过滤通过"] = True
+        else:
+            strict_df["严格过滤通过"] = True
+        if "严格过滤失败原因" not in strict_df.columns:
+            strict_df["严格过滤失败原因"] = ""
+        if "总分" not in strict_df.columns:
+            strict_df["总分"] = 60
+        if "投递优先级" not in strict_df.columns:
+            strict_df["投递优先级"] = "待筛选"
+    else:
+        strict_df = strict_filter_and_score(jd_clear_df)
     strict_path = OUT_DIR / "foreign_strict_shanghai_filtered_v2.csv"
     strict_df.to_csv(strict_path, index=False, encoding="utf-8-sig")
 
-    if "严格过滤通过" in strict_df.columns and "总分" in strict_df.columns:
+    if full_data_mode:
+        top50 = strict_df.head(50).copy()
+    elif "严格过滤通过" in strict_df.columns and "总分" in strict_df.columns:
         top50 = strict_df[(strict_df["严格过滤通过"] == True) & (strict_df["总分"] >= 70)].head(50).copy()
     else:
         top50 = pd.DataFrame()

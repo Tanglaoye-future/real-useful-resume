@@ -37,15 +37,15 @@ def read_master_stats():
 
 def run_one_cycle(cycle: int):
     env = os.environ.copy()
-    env["ONLY_LIEPIN"] = "0"           # crawl both 51job + liepin (RPC handles captcha)
-    env["USE_EXISTING_RAW"] = "0"     # actually crawl fresh pages each cycle
-    env["USE_ALL_LOCAL_RAW"] = "1"    # aggregate all historical snapshots for coarse filter
-    env["USE_MERGED_POOL"] = "1"
-    env["PROCESS_RETRY_ONLY"] = "0"
-    env["USE_CDP"] = "1"              # Enable CDP bypass for Liepin details
-    env["PAGES_PER_SOURCE"] = str(random.choice([10, 15, 20]))  # ~10-20 pages/keyword
-    env["RETRY_BATCH_SIZE"] = str(random.choice([50, 80, 100]))
-    env["DETAIL_REQ_TIMEOUT"] = str(random.choice([10, 12, 15]))
+    env["ONLY_LIEPIN"] = os.getenv("ONLY_LIEPIN", "0")  # crawl both 51job + liepin by default
+    env["USE_EXISTING_RAW"] = os.getenv("USE_EXISTING_RAW", "0")  # actually crawl fresh pages each cycle
+    env["USE_ALL_LOCAL_RAW"] = os.getenv("USE_ALL_LOCAL_RAW", "1")  # aggregate historical snapshots
+    env["USE_MERGED_POOL"] = os.getenv("USE_MERGED_POOL", "1")
+    env["PROCESS_RETRY_ONLY"] = os.getenv("PROCESS_RETRY_ONLY", "0")
+    env["USE_CDP"] = os.getenv("USE_CDP", "1")  # Enable CDP bypass for Liepin details
+    env["PAGES_PER_SOURCE"] = os.getenv("PAGES_PER_SOURCE", str(random.choice([10, 15, 20])))
+    env["RETRY_BATCH_SIZE"] = os.getenv("RETRY_BATCH_SIZE", str(random.choice([50, 80, 100])))
+    env["DETAIL_REQ_TIMEOUT"] = os.getenv("DETAIL_REQ_TIMEOUT", str(random.choice([10, 12, 15])))
     env["DETAIL_WORKERS"] = "1"  # 降并发为单线程，最大程度降低封控概率
     env["JOB51_RPC_TIMEOUT"] = "8"
     env["LIEPIN_RPC_TIMEOUT"] = "30"  # XHR interception needs time for page load + networkidle
