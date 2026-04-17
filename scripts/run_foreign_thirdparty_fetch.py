@@ -101,7 +101,7 @@ def fetch_job51(max_pages: int = 15):
 def fetch_liepin(max_pages: int = 15):
     rows = []
     for page in range(1, max_pages + 1):
-        payload = {"keyword": "实习", "pageNum": page, "city": "020", "pageSize": 20}
+        payload = {"keyword": "实习", "pageNum": page, "city": "020", "pageSize": 20, "jobKind": "2"}
         try:
             obj = requests.post(
                 f"{RPC_BASE}/liepin/search_jobs",

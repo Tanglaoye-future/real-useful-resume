@@ -582,6 +582,7 @@ async def invoke_rpc(platform: str, action: str, request: Request):
             pageNum = int(payload.get("pageNum", 1))
             city = payload.get("city", "020")
             pageSize = int(payload.get("pageSize", 20))
+            jobKind = payload.get("jobKind", "2")  # 默认2为实习岗
 
             page = pw_ctx.pages.get("liepin")
             # Auto-recover if the page was closed (e.g. user closed the tab manually)
@@ -594,7 +595,7 @@ async def invoke_rpc(platform: str, action: str, request: Request):
 
             search_url = (
                 f"https://www.liepin.com/zhaopin/"
-                f"?key={keyword}&dqs={city}&curPage={pageNum - 1}"
+                f"?key={keyword}&dqs={city}&jobKind={jobKind}&curPage={pageNum - 1}"
             )
 
             # Serialize liepin searches

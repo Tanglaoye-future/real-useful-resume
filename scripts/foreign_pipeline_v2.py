@@ -23,32 +23,25 @@ RPC_DETAIL_TIMEOUT = int(os.getenv("RPC_DETAIL_TIMEOUT", "45"))
 # Reuse existing URL checker
 import sys
 
-sys.path.insert(0, str(ROOT.parent))
+sys.path.insert(0, str(ROOT))
 from utils.link_checker import check_links_batch  # type: ignore
 
 
-# 用短关键词提高平台召回，行业和外企属性在过滤与评分阶段识别
-KEYWORDS = [
-    "实习",
-    "数据分析",
-    "商业分析",
-    "数据科学",
-    "BI",
-    "Data Analyst",
-    "Business Analyst",
-    "巴斯夫 实习",
-    "西门子 实习",
-    "博世 实习",
-    "壳牌 实习",
-    "辉瑞 实习",
-    "罗氏 实习",
+# 用积木式组合构建长尾关键词矩阵，实现大基数被动全量搜索
+_BASE_TERMS = [
+    "医药", "医疗", "化工", "汽车", "机械", "半导体", "快消", "零售", 
+    "咨询", "金融", "新能源", "数据", "分析", "商业分析", "BI", 
+    "运营", "产品", "市场", "战略", "增长", "供应链", "财务", "人事", 
+    "测试", "算法", "前端", "后端", "外企", "500强", "英语"
 ]
+KEYWORDS = [f"{term} 实习" for term in _BASE_TERMS]
 
 BIG_TECH_BAN_RE = (
     "字节|腾讯|快手|小红书|美团|阿里|京东|哔哩|"
     "bilibili|bytedance|tencent|kuaishou|xiaohongshu|meituan|alibaba|jingdong|jd\\.com"
 )
 OUTSOURCE_RE = "外包|驻场|中介|代招|人力资源|劳务派遣|服务外包|猎头"
+ANONYMOUS_RE = "未知|保密|某知名|某大型"
 EN_RE = "english|英语|英文|cet-6|tem-4|fluent"
 DATA_ROLE_RE = "数据分析|商业分析|数据科学|bi|data analyst|business analyst|data scientist"
 SKILL_RE = "sql|python|tableau|power\\s?bi|pbi|spark|hadoop|sas|r语言|r "
@@ -131,6 +124,13 @@ def company_score(company_name: str) -> Tuple[int, str, str]:
     if re.search(FOREIGN_INCLUDE_RE, name, re.I):
         return 20, "其他正规外资", "基础档"
     return 0, "非目标公司", "剔除"
+
+def company_score_with_text(company_name: str, text: str) -> Tuple[int, str, str]:
+    c_score, c_type, c_rank = company_score(company_name)
+    if c_score == 0 and re.search(OUTSOURCE_RE, company_name, re.I) and re.search(FOREIGN_INCLUDE_RE, text, re.I):
+        # 针对被豁免的优质外包，赋予基础档分数，否则总分会偏低
+        return 20, "优质外包外企", "外包基础档"
+    return c_score, c_type, c_rank
 
 
 def role_score(job_name: str) -> int:
@@ -352,6 +352,10 @@ _JD_JSON_PATS = [
     r'"description"\s*:\s*"([\s\S]{50,4000}?)"(?:\s*,\s*"(?:jobType|salary|location|requireEdu))',
     r'"jobDescription"\s*:\s*"([\s\S]{50,4000}?)"(?:\s*,|\s*})',
     r'jobDescribe["\']?\s*:\s*["\']([^"\']{50,})["\']',
+    # Liepin React SSR patterns
+    r'"jobDesc"\s*:\s*"([\s\S]{50,4000}?)"(?:\s*,|\s*})',
+    r'"requireDesc"\s*:\s*"([\s\S]{10,2000}?)"(?:\s*,|\s*})',
+    r'"jobRequirements"\s*:\s*"([\s\S]{10,2000}?)"(?:\s*,|\s*})',
 ]
 
 
@@ -676,6 +680,15 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         m = re.search(r"/job/(\d+)\.shtml", href)
         if m:
             job_id = m.group(1)
+            
+    # Normalize URL: strip trailing commas/garbage and force PC domain
+    final_url = ""
+    if job_id:
+        final_url = f"https://www.liepin.com/job/{job_id}.shtml"
+    elif href:
+        final_url = href.split(",")[0].strip()
+        final_url = final_url.replace("m.liepin.com", "www.liepin.com")
+        
     # Liepin list-page API does not include full JD text.
     # Try all known field name variants; leave empty if not present —
     # the JD will be fetched from the detail page via RPC in enrich_details_with_retry.
@@ -688,6 +701,15 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         job.get("jobRequire") or job.get("jobRequirements") or
         it.get("requireDesc") or it.get("require") or ""
     )
+    
+    job_name = job.get("title") or it.get("title") or title_dom
+    
+    # [Pre-filter] 猎聘的推荐引擎可能会返回不带"实习"字眼的社招岗，前置拦截
+    if not re.search("实习|intern|校招", str(job_name), re.I):
+        if not re.search("实习|intern|校招", job_desc + job_req, re.I):
+            # 如果标题和能看到的简短JD都没有实习字眼，直接抛弃（返回一个标志让外层跳过）
+            return {"_skip": True}
+            
     return {
         "platform": "liepin",
         "source": "liepin",
@@ -700,7 +722,7 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         "salary_text": job.get("salary") or "",
         "education": job.get("requireEduLevel") or "",
         "experience": job.get("requireWorkYears") or "",
-        "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else href,
+        "url": final_url,
         "publish_date": job.get("refreshTime") or job.get("createTime") or job.get("publishTime") or "",
         "job_description": job_desc,
         "job_requirement": job_req,
@@ -719,7 +741,7 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     work = df.copy().fillna("")
     # hard keep
     work = work[~work["company_name"].astype(str).str.contains(BIG_TECH_BAN_RE, regex=True, na=False, case=False)]
-    work = work[~work["company_name"].astype(str).str.contains(OUTSOURCE_RE, regex=True, na=False, case=False)]
+    work = work[~work["company_name"].astype(str).str.contains(ANONYMOUS_RE, regex=True, na=False, case=False)]
     
     # E2E 测试放开所有的搜索限制，直接原样返回搜索到的那条记录
     if os.getenv("USE_CDP") == "1" and os.getenv("PAGES_PER_SOURCE") == "1":
@@ -787,15 +809,22 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
         # if not re.search(SKILL_RE, text, re.I):
         #     fail.append("无硬技能关键词")
         if not re.search(FOREIGN_INCLUDE_RE, company, re.I):
-            fail.append("非严格外企")
-        if re.search(OUTSOURCE_RE, company, re.I):
+            # 如果是外包公司，但JD中包含外企关键词，则不判为"非严格外企"和"外包中介"
+            if re.search(OUTSOURCE_RE, company, re.I) and re.search(FOREIGN_INCLUDE_RE, text, re.I):
+                pass # 豁免优质外包
+            else:
+                fail.append("非严格外企")
+                
+        if re.search(OUTSOURCE_RE, company, re.I) and not re.search(FOREIGN_INCLUDE_RE, text, re.I):
             fail.append("外包中介")
         
         # 将测试中经常遇到的 UNKNOWN 或其他非报错状态放宽，只要不是 Timeout 或 404 就行
-        # if row.get("链接状态", "") != "OK":
-        #     fail.append("链接不可访问")
+        link_status = str(row.get("链接状态", ""))
+        link_reason = str(row.get("链接原因", ""))
+        if "404" in link_status or "404" in link_reason or "ERROR" in link_status:
+            fail.append("链接已失效")
 
-        c_score, c_type, c_rank = company_score(company)
+        c_score, c_type, c_rank = company_score_with_text(company, text)
         r_score = role_score(name)
         e_score = english_score(text)
         g_score = growth_score(text)
@@ -847,13 +876,21 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
                     fail_stats.append({"platform": "51job", "keyword": kw, "page": page, "reason": f"rpc_fail_{type(e).__name__}"})
             # liepin
             if liepin_consecutive_fail < 8:
-                p2 = {"keyword": kw, "pageNum": page, "city": "020", "pageSize": 20}
+                # 传入 jobKind="2" 强制猎聘后端只返回实习岗，防止推荐引擎泛化注水
+                p2 = {"keyword": kw, "pageNum": page, "city": "020", "pageSize": 20, "jobKind": "2"}
                 try:
                     obj = requests.post(f"{RPC_BASE}/liepin/search_jobs", json=p2, timeout=liepin_timeout).json()
                     res = obj.get("result") or {}
                     data = res.get("data") or {}
                     items = data.get("jobCardList") or []
-                    rows.extend([parse_liepin_item(x, kw, page) for x in items])
+                    
+                    parsed_items = []
+                    for x in items:
+                        parsed = parse_liepin_item(x, kw, page)
+                        if not parsed.get("_skip"):
+                            parsed_items.append(parsed)
+                            
+                    rows.extend(parsed_items)
                     liepin_consecutive_fail = 0
                 except Exception as e:
                     liepin_consecutive_fail += 1
@@ -1243,6 +1280,9 @@ def main():
                 except Exception:
                     continue
             raw_df = pd.DataFrame(rows).fillna("")
+            # Normalize legacy field names from early mock/test data
+            _legacy_rename = {"position_name": "job_name", "job_requirements": "job_requirement"}
+            raw_df = raw_df.rename(columns={k: v for k, v in _legacy_rename.items() if k in raw_df.columns})
             print(f"use_existing_raw=1 use_all_local_raw=1 files={len(f51)+len(flp)} rows={len(raw_df)}")
         else:
             latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
@@ -1252,6 +1292,7 @@ def main():
             else:
                 raw_df = pd.DataFrame()
     else:
+        max_pages = int(os.getenv("MAX_PAGES", "50"))
         raw_df = crawl_keyword_pages(max_pages_per_source=max_pages)
         ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
         f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
@@ -1364,6 +1405,11 @@ def main():
             strict_df["投递优先级"] = "待筛选"
     else:
         strict_df = strict_filter_and_score(jd_clear_df)
+        
+    # [Fix] The strict CSV should ONLY contain rows that actually passed the strict filter
+    if not full_data_mode and "严格过滤通过" in strict_df.columns:
+        strict_df = strict_df[strict_df["严格过滤通过"] == True].copy()
+        
     strict_path = OUT_DIR / "foreign_strict_shanghai_filtered_v2.csv"
     strict_df.to_csv(strict_path, index=False, encoding="utf-8-sig")
 
