@@ -1,1 +1,1 @@
-﻿company_name,job_name,严格过滤通过,严格过滤失败原因,总分,投递优先级
+﻿platform,source,keyword_group,page,job_id,job_name,company_name,location,salary_text,education,experience,url,publish_date,job_description,job_requirement,company_industry,company_size,company_finance_stage,headcount,list_deadline,ingest_time,detail_status,jd_visibility,jd_visibility_reason,link_status,link_reason,retry_needed,截止日期,实习时长,留用机会,完整职责,完整要求,完整技能,详情抓取文本,详情抓取状态,JD可见性,JD可见性原因,失败原因,链接状态,链接原因,公司类型,公司行业排名,公司梯队分,岗位核心度分,英语使用度分,成长潜力分,总分,投递优先级,严格过滤失败原因,严格过滤通过

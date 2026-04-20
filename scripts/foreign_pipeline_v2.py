@@ -417,6 +417,9 @@ def fetch_detail_via_rpc(url: str) -> Tuple[Dict[str, str], str]:
             platform = "liepin"
         else:
             return {}, "rpc_unsupported_platform"
+            
+        # 安全防线：每次抓取详情页前加入随机休眠，防并发 WAF 拦截
+        time.sleep(random.uniform(2.5, 4.5))
 
         resp = requests.post(
             f"{RPC_BASE}/{platform}/fetch_detail",
@@ -457,8 +460,11 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
     direct HTTP as a best-effort fallback.  The RPC path is the primary path
     because it uses the logged-in Playwright context that bypasses WAF."""
     
-    # 检查是否处于全局 WAF 封禁期
-    if getattr(fetch_detail, "waf_blocked_until", 0) > time.time():
+    domain = "51job" if "51job.com" in url.lower() else "liepin"
+    
+    # 检查是否处于特定平台的 WAF 封禁期
+    waf_blocks = getattr(fetch_detail, "waf_blocked_until", {})
+    if waf_blocks.get(domain, 0) > time.time():
         print(f"!!! WAF 封锁冷却期中，跳过抓取: {url} !!!")
         return {}, "cdp_waf_blocked"
         
@@ -477,12 +483,13 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
             if html_doc == "JOB_OFFLINE":
                 return {}, "job_offline"
             elif html_doc == "WAF_BLOCKED":
-                # 触发全局封锁冷却，设置 15 分钟内所有请求直接返回被封锁状态
-                fetch_detail.waf_blocked_until = time.time() + 15 * 60
+                # 触发平台级封锁冷却，设置 15 分钟内该平台所有请求直接返回被封锁状态
+                if not hasattr(fetch_detail, "waf_blocked_until"):
+                    fetch_detail.waf_blocked_until = {}
+                fetch_detail.waf_blocked_until[domain] = time.time() + 15 * 60
                 print("\n" + "="*60)
-                print("!!! 严重警告: 您的 IP 已被 51job WAF 封禁 !!!")
-                print("!!! 已触发保护机制，接下来的 15 分钟内将停止对 51job 的强行请求 !!!")
-                print("!!! 请立即切换您的网络 IP (如更换手机热点)，然后重启脚本 !!!")
+                print(f"!!! 严重警告: 您的 IP 已被 {domain} WAF 封禁 !!!")
+                print(f"!!! 已触发保护机制，接下来的 15 分钟内将停止对 {domain} 的强行请求 !!!")
                 print("="*60 + "\n")
                 return {}, "cdp_waf_blocked"
             elif html_doc:
@@ -683,11 +690,13 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
             
     # Normalize URL: strip trailing commas/garbage and force PC domain
     final_url = ""
-    if job_id:
+    # Use explicit link from the API if available
+    raw_link = job.get("link") or it.get("link") or href
+    if raw_link and "liepin.com" in raw_link:
+        clean_href = raw_link.split(",")[0].split("?")[0].strip()
+        final_url = clean_href.replace("m.liepin.com", "www.liepin.com")
+    elif job_id:
         final_url = f"https://www.liepin.com/job/{job_id}.shtml"
-    elif href:
-        final_url = href.split(",")[0].strip()
-        final_url = final_url.replace("m.liepin.com", "www.liepin.com")
         
     # Liepin list-page API does not include full JD text.
     # Try all known field name variants; leave empty if not present —
@@ -710,6 +719,11 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
             # 如果标题和能看到的简短JD都没有实习字眼，直接抛弃（返回一个标志让外层跳过）
             return {"_skip": True}
             
+    # [Pre-filter] 拦截未知马甲或保密公司
+    company_name = comp.get("compName") or comp.get("name") or it.get("compName") or company_dom
+    if re.search(ANONYMOUS_RE, str(company_name), re.I):
+        return {"_skip": True}
+            
     return {
         "platform": "liepin",
         "source": "liepin",
@@ -717,7 +731,7 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
         "page": page,
         "job_id": job_id,
         "job_name": job.get("title") or it.get("title") or title_dom,
-        "company_name": comp.get("compName") or comp.get("name") or it.get("compName") or company_dom,
+        "company_name": company_name,
         "location": dq.get("name") or it.get("location") or "",
         "salary_text": job.get("salary") or "",
         "education": job.get("requireEduLevel") or "",
@@ -897,11 +911,18 @@ def crawl_keyword_pages(max_pages_per_source: int = 50) -> pd.DataFrame:
                     fail_stats.append({"platform": "liepin", "keyword": kw, "page": page, "reason": f"rpc_fail_{type(e).__name__}"})
             if page % 10 == 0:
                 print(f"[crawl] keyword={kw} page={page} rows={len(rows)}")
-            time.sleep(random.uniform(0.4, 1.0))  # was 0.08 — too fast, triggers WAF
+            # 安全第一：每次列表页请求后，增加拟人化休眠，防止被猎聘 WAF 直接掐断
+            time.sleep(random.uniform(2.5, 4.5)) 
         if job51_consecutive_fail >= 5:
             print(f"[crawl] keyword={kw} job51 circuit-breaker triggered, skipped remaining timeout-prone pages.")
         if liepin_consecutive_fail >= 8:
             print(f"[crawl] keyword={kw} liepin circuit-breaker triggered, skipped remaining timeout-prone pages.")
+            
+        # [测试模式强制截断] 如果开启了强制小规模测试，控制原始抓取量不超过 100 条
+        if os.getenv("TEST_MAX_ROWS") and len(rows) >= int(os.getenv("TEST_MAX_ROWS")):
+            print(f"[crawl] TEST_MAX_ROWS 限制触发，已抓取 {len(rows)} 条，提前结束爬虫！")
+            break
+            
     raw = pd.DataFrame(rows).fillna("")
     if fail_stats:
         pd.DataFrame(fail_stats).to_csv(OUT_DIR / "rpc_page_failures_v2.csv", index=False, encoding="utf-8-sig")
@@ -1132,13 +1153,25 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
     retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
 
     # 1) load existing master
+    # 辅助函数：深度清理 URL 尾部脏字符
+    def _clean_url(u: str) -> str:
+        if not u: return ""
+        u = str(u).strip()
+        while u.endswith(","):
+            u = u[:-1]
+        return u
+
     if master_path.exists():
         master = pd.read_csv(master_path).fillna("")
+        if "url" in master.columns:
+            master["url"] = master["url"].astype(str).apply(_clean_url)
     else:
         master = pd.DataFrame(columns=base_cols + detail_cols + ["ingest_time", "detail_status", "jd_visibility", "jd_visibility_reason", "link_status", "link_reason", "retry_needed"])
 
     # 2) upsert new raw links but do not overwrite historical processed status
     b = raw_df.copy().fillna("")
+    if "url" in b.columns:
+        b["url"] = b["url"].astype(str).apply(_clean_url)
     for c in base_cols + detail_cols:
         if c not in b.columns:
             b[c] = ""
@@ -1159,12 +1192,13 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
 
     # 3) build status + detail updates for processed urls
     updates = []
+
     if not ok_df.empty:
         o = ok_df.copy().fillna("")
         for _, r in o.iterrows():
             updates.append(
                 {
-                    "url": str(r.get("url", "")),
+                    "url": _clean_url(r.get("url", "")),
                     "detail_status": r.get("详情抓取状态", "成功"),
                     "jd_visibility": r.get("JD可见性", "未知"),
                     "jd_visibility_reason": r.get("JD可见性原因", ""),
@@ -1185,7 +1219,7 @@ def build_master_and_retry(raw_df: pd.DataFrame, ok_df: pd.DataFrame, fail_df: p
         for _, r in f.iterrows():
             updates.append(
                 {
-                    "url": str(r.get("url", "")),
+                    "url": _clean_url(r.get("url", "")),
                     "detail_status": "失败",
                     "jd_visibility": "未知",
                     "jd_visibility_reason": f"detail_fetch_failed:{r.get('失败原因', '')}",
@@ -1329,6 +1363,10 @@ def main():
     retry_path = OUT_DIR / "foreign_retry_queue_v2.csv"
     if retry_batch_size > 0 and retry_path.exists():
         rq = pd.read_csv(retry_path).fillna("")
+        
+        # [Bugfix] 重试队列中的旧数据可能没有经过新的 ANONYMOUS_RE 过滤，这里强制二次清洗
+        rq = rq[~rq["company_name"].astype(str).str.contains(ANONYMOUS_RE, regex=True, na=False, case=False)]
+        
         if "retry_needed" in rq.columns:
             rq = rq[rq["retry_needed"] == True].copy()
         # 优先处理未处理链接，其次失败链接，再处理不清晰回填链接
@@ -1411,6 +1449,23 @@ def main():
         strict_df = strict_df[strict_df["严格过滤通过"] == True].copy()
         
     strict_path = OUT_DIR / "foreign_strict_shanghai_filtered_v2.csv"
+    
+    # [Fix] 根据要求，将 URL 字段移动到 experience（实习）字段之后
+    if "url" in strict_df.columns and "experience" in strict_df.columns:
+        cols = [c for c in strict_df.columns if c != "url"]
+        exp_idx = cols.index("experience")
+        cols.insert(exp_idx + 1, "url")
+        strict_df = strict_df[cols]
+        # 在每个 URL 后面强制加一个空格，利用空格隔断 URL 和后续的逗号
+        strict_df["url"] = strict_df["url"].astype(str) + " "
+    elif "url" in strict_df.columns:
+        cols = ["url"] + [c for c in strict_df.columns if c != "url"]
+        strict_df = strict_df[cols]
+        strict_df["url"] = strict_df["url"].astype(str) + " "
+        
+    # 填充所有的缺失值（NaN 和空字符串）为 "-"
+    strict_df = strict_df.replace(r'^\s*$', '-', regex=True).fillna('-')
+        
     strict_df.to_csv(strict_path, index=False, encoding="utf-8-sig")
 
     if full_data_mode:

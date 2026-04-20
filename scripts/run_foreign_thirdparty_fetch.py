@@ -126,7 +126,7 @@ def fetch_liepin(max_pages: int = 15):
                         "salary_text": job.get("salary") or "",
                         "education": job.get("requireEduLevel") or "",
                         "experience": job.get("requireWorkYears") or "",
-                        "url": f"https://www.liepin.com/job/{job_id}.shtml" if job_id else "",
+                        "url": job.get("link") or it.get("link") or (f"https://www.liepin.com/job/{job_id}.shtml" if job_id else ""),
                         "publish_date": job.get("refreshTime") or "",
                         "job_description": job.get("description") or it.get("description") or "",
                         "job_requirement": job.get("require") or job.get("requireText") or "",

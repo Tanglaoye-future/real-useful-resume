@@ -597,6 +597,10 @@ async def invoke_rpc(platform: str, action: str, request: Request):
                 f"https://www.liepin.com/zhaopin/"
                 f"?key={keyword}&dqs={city}&jobKind={jobKind}&curPage={pageNum - 1}"
             )
+            
+            import random
+            # 安全策略：在加载前模拟拟人化随机等待
+            await asyncio.sleep(random.uniform(1.5, 3.5))
 
             # Serialize liepin searches
             async with pw_ctx._liepin_search_lock:
