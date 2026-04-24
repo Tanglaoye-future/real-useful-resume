@@ -18,8 +18,9 @@ logger = logging.getLogger("RpcServer")
 COOKIES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "cookies")
 
 _PLATFORM_DOMAINS = {
-    "liepin": [".liepin.com", "www.liepin.com", "liepin.com"],
-    "job51":  [".51job.com", "we.51job.com", "51job.com", ".51job.com"],
+    "liepin":    [".liepin.com", "www.liepin.com", "liepin.com"],
+    "job51":     [".51job.com", "we.51job.com", "51job.com", ".51job.com"],
+    "shixiseng": [".shixiseng.com", "www.shixiseng.com", "shixiseng.com"],
 }
 
 
@@ -320,9 +321,15 @@ class PlaywrightContext:
         These pages share the same authenticated browser context (cookies already set),
         so they can access detail pages without triggering captcha."""
         logger.info("Initializing detail fetch pages...")
+        # Load Shixiseng cookies if available
+        sxs_cookies = load_cookies("shixiseng")
+        if sxs_cookies:
+            logger.info(f"Loading {len(sxs_cookies)} Shixiseng cookies...")
+            await self.context.add_cookies(sxs_cookies)
         for platform_key, seed_url in [
-            ("job51", "https://we.51job.com"),
-            ("liepin", "https://www.liepin.com"),
+            ("job51",     "https://we.51job.com"),
+            ("liepin",    "https://www.liepin.com"),
+            ("shixiseng", "https://www.shixiseng.com/interns"),
         ]:
             try:
                 page = await self.context.new_page()
@@ -480,7 +487,9 @@ async def health():
 async def invoke_rpc(platform: str, action: str, request: Request):
     if not pw_ctx.ready:
         raise HTTPException(status_code=503, detail=f"RPC context not ready: {pw_ctx.startup_error or 'starting'}")
-    if platform not in pw_ctx.pages:
+    # fetch_detail uses detail_pages (not the search pages dict), so allow it
+    # for any platform that has a detail_pages entry or can lazy-create one.
+    if action != "fetch_detail" and platform not in pw_ctx.pages:
         raise HTTPException(status_code=404, detail=f"Platform {platform} not initialized in RPC server")
         
     try:

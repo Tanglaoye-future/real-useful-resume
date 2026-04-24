@@ -1,8 +1,9 @@
 import json
 import logging
 import os
-from resuminer.core.crawler_engine.base_spider import BaseSpider
-from resuminer.core.crypto_engine.platforms.shixiseng import ShixisengCrypto
+import re
+from core.crawler_engine.base_spider import BaseSpider
+from core.crypto_engine.platforms.shixiseng import ShixisengCrypto
 from playwright.sync_api import sync_playwright
 
 logger = logging.getLogger(__name__)
@@ -12,7 +13,7 @@ class ShixisengSpiderV2(BaseSpider):
         super().__init__("实习僧", scheduler, base_cookie)
         self.crypto = ShixisengCrypto()
         self.api_url = "https://www.shixiseng.com/api/interns/search"
-        self.page_count = int(os.getenv("SHIXISENG_MAX_PAGES", "2"))
+        self.page_count = int(os.getenv("SHIXISENG_MAX_PAGES", "20"))
         self.keyword = os.getenv("SHIXISENG_KEYWORD", "实习")
         self.city_query = os.getenv("SHIXISENG_CITY_QUERY", "上海")
         self.use_playwright = os.getenv("SHIXISENG_USE_PLAYWRIGHT", "1") == "1"
@@ -74,27 +75,40 @@ class ShixisengSpiderV2(BaseSpider):
                     page.wait_for_timeout(2000)
                     cards = page.eval_on_selector_all(
                         "a[href*='/intern/inn_']",
-                        """els => els.map(a => {
-                            const card = a.closest('.intern-wrap, .intern-item, li, .intern-item-wrap') || a.parentElement;
-                            const text = (card ? card.innerText : a.innerText) || '';
-                            return {href: a.href, text};
-                        })"""
+                        """els => {
+                            const seen = new Set();
+                            return els.flatMap(a => {
+                                const card = a.closest('.intern-wrap') || a.parentElement;
+                                if (!card) return [];
+                                const id = card.getAttribute('data-intern-id') || a.href;
+                                if (seen.has(id)) return [];
+                                seen.add(id);
+                                const jobDiv  = card.querySelector('.intern-detail__job');
+                                const compDiv = card.querySelector('.intern-detail__company');
+                                const get = (el, sel) => { const e = el && el.querySelector(sel); return e ? e.innerText.trim() : ''; };
+                                return [{
+                                    href:         a.href,
+                                    job_name:     get(jobDiv,  'a.title') || a.innerText.trim(),
+                                    company_name: get(compDiv, 'a.title'),
+                                    salary:       get(jobDiv,  '.day'),
+                                    location:     get(jobDiv,  '.city'),
+                                    text:         card.innerText || ''
+                                }];
+                            });
+                        }"""
                     )
                     for card in cards:
                         jd_url = (card or {}).get("href", "")
                         if not jd_url:
                             continue
-                        text = (card or {}).get("text", "")
-                        lines = [x.strip() for x in text.split("\n") if x and x.strip()]
-                        job_name = lines[0] if lines else ""
-                        company_name = lines[1] if len(lines) > 1 else ""
-                        salary = ""
-                        location = "上海"
-                        for ln in lines:
-                            if "/天" in ln or "/月" in ln:
-                                salary = ln
-                            if "上海" in ln:
-                                location = ln
+                        job_name     = (card.get("job_name") or "").strip()
+                        company_name = (card.get("company_name") or "").strip()
+                        salary       = (card.get("salary") or "").strip()
+                        location     = (card.get("location") or "").strip() or "上海"
+
+                        # Strip salary leaking into job_name (e.g. "岗位名称 200/天")
+                        job_name = re.sub(r"\s*\d*[-~]\d*/[天月].*$", "", job_name).strip()
+
                         parsed = self.format_data(
                             job_name=job_name,
                             company_name=company_name,

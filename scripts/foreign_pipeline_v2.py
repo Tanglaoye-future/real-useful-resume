@@ -17,6 +17,7 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "release_data"
 RAW_DIR = ROOT / "data" / "raw"
+RAW_DIR_SXS = RAW_DIR / "shixiseng"
 RPC_BASE = "http://127.0.0.1:5600/invoke"
 RPC_DETAIL_TIMEOUT = int(os.getenv("RPC_DETAIL_TIMEOUT", "45"))
 
@@ -123,7 +124,7 @@ def company_score(company_name: str) -> Tuple[int, str, str]:
         return 25, "二线外企/四大", "保底档"
     if re.search(FOREIGN_INCLUDE_RE, name, re.I):
         return 20, "其他正规外资", "基础档"
-    return 0, "非目标公司", "剔除"
+    return 8, "国内非大厂", "国内可投"
 
 def company_score_with_text(company_name: str, text: str) -> Tuple[int, str, str]:
     c_score, c_type, c_rank = company_score(company_name)
@@ -177,6 +178,8 @@ def priority(total: int) -> str:
         return "优质目标"
     if total >= 60:
         return "保底目标"
+    if total >= 40:
+        return "国内可投"
     return "过滤"
 
 
@@ -415,6 +418,8 @@ def fetch_detail_via_rpc(url: str) -> Tuple[Dict[str, str], str]:
             platform = "job51"
         elif "liepin.com" in url_lower:
             platform = "liepin"
+        elif "shixiseng.com" in url_lower:
+            platform = "shixiseng"
         else:
             return {}, "rpc_unsupported_platform"
             
@@ -460,7 +465,8 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
     direct HTTP as a best-effort fallback.  The RPC path is the primary path
     because it uses the logged-in Playwright context that bypasses WAF."""
     
-    domain = "51job" if "51job.com" in url.lower() else "liepin"
+    url_lower_d = url.lower()
+    domain = "51job" if "51job.com" in url_lower_d else "shixiseng" if "shixiseng.com" in url_lower_d else "liepin"
     
     # 检查是否处于特定平台的 WAF 封禁期
     waf_blocks = getattr(fetch_detail, "waf_blocked_until", {})
@@ -512,7 +518,10 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
 
     # --- Fallback: direct HTTP with richer headers ---
     is_51job = "51job.com" in url.lower()
-    referer = "https://we.51job.com/" if is_51job else "https://www.liepin.com/"
+    is_shixiseng = "shixiseng.com" in url.lower()
+    referer = ("https://we.51job.com/" if is_51job
+               else "https://www.shixiseng.com/interns" if is_shixiseng
+               else "https://www.liepin.com/")
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -749,6 +758,71 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
     }
 
 
+def parse_shixiseng_item(item: Dict, keyword: str = "") -> Dict:
+    return {
+        "platform": "shixiseng",
+        "source": "shixiseng",
+        "keyword_group": keyword,
+        "page": 0,
+        "job_id": item.get("source_job_id", ""),
+        "job_name": item.get("job_name", ""),
+        "company_name": item.get("company_name", ""),
+        "location": item.get("location", "上海"),
+        "salary_text": item.get("salary", ""),
+        "education": "",
+        "experience": "",
+        "url": item.get("jd_url", ""),
+        "publish_date": item.get("publish_date", ""),
+        "job_description": item.get("jd_content", ""),
+        "job_requirement": "",
+        "company_industry": item.get("company_industry", ""),
+        "company_size": item.get("company_size", ""),
+        "company_finance_stage": item.get("company_stage", ""),
+        "headcount": "",
+        "list_deadline": "",
+    }
+
+
+def crawl_shixiseng_direct(keywords: List[str]) -> List[Dict]:
+    """Run the Shixiseng Playwright spider directly (not via RPC).
+    Uses a minimal scheduler stub since run_with_playwright() doesn't call throttle().
+    """
+    class _SimpleScheduler:
+        def throttle(self, domain: str, delay: float):
+            time.sleep(delay)
+        def get_proxy(self):
+            return None
+
+    try:
+        sys.path.insert(0, str(ROOT))
+        from core.crawler_engine.spiders.shixiseng_v2 import ShixisengSpiderV2
+    except ImportError as e:
+        print(f"[shixiseng] import failed: {e}")
+        return []
+
+    rows: List[Dict] = []
+    for kw in keywords:
+        try:
+            spider = ShixisengSpiderV2(scheduler=_SimpleScheduler())
+            spider.keyword = kw
+            spider.city_query = "上海"
+            jobs = spider.run_with_playwright()
+            parsed = [parse_shixiseng_item(j, keyword=kw) for j in (jobs or [])]
+            rows.extend(parsed)
+            print(f"[shixiseng] keyword={kw} jobs={len(parsed)}")
+        except Exception as e:
+            print(f"[shixiseng] keyword={kw} failed: {e}")
+
+    seen: set = set()
+    out: List[Dict] = []
+    for r in rows:
+        u = r.get("url", "")
+        if u and u not in seen:
+            seen.add(u)
+            out.append(r)
+    return out
+
+
 def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
@@ -777,8 +851,13 @@ def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:
         | full_text.str.contains("实习|intern|校招", regex=True, na=False, case=False)
     ]
     # 召回优先：岗位关键词放宽，英语要求下沉到严格过滤评分阶段
+    # Shixiseng: keep ALL intern job types — role filter applied only to other sources
     broad_role_re = r"数据|分析|bi|ai|analytics|analyst|strategy|商业智能|数字化"
-    work = work[work["job_name"].astype(str).str.contains(broad_role_re, regex=True, na=False, case=False)]
+    sxs_mask = work["platform"].astype(str).str.lower() == "shixiseng"
+    sxs_only = work[sxs_mask].copy()
+    non_sxs = work[~sxs_mask]
+    non_sxs = non_sxs[non_sxs["job_name"].astype(str).str.contains(broad_role_re, regex=True, na=False, case=False)]
+    work = pd.concat([non_sxs, sxs_only], ignore_index=True)
     work = work.drop_duplicates(subset=["url"], keep="first")
     return work
 
@@ -822,13 +901,6 @@ def strict_filter_and_score(df: pd.DataFrame) -> pd.DataFrame:
         # 放宽技能要求限制，如果没写技能但是是目标外企，依然保留
         # if not re.search(SKILL_RE, text, re.I):
         #     fail.append("无硬技能关键词")
-        if not re.search(FOREIGN_INCLUDE_RE, company, re.I):
-            # 如果是外包公司，但JD中包含外企关键词，则不判为"非严格外企"和"外包中介"
-            if re.search(OUTSOURCE_RE, company, re.I) and re.search(FOREIGN_INCLUDE_RE, text, re.I):
-                pass # 豁免优质外包
-            else:
-                fail.append("非严格外企")
-                
         if re.search(OUTSOURCE_RE, company, re.I) and not re.search(FOREIGN_INCLUDE_RE, text, re.I):
             fail.append("外包中介")
         
@@ -1288,6 +1360,7 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (RAW_DIR / "51job").mkdir(parents=True, exist_ok=True)
     (RAW_DIR / "liepin").mkdir(parents=True, exist_ok=True)
+    RAW_DIR_SXS.mkdir(parents=True, exist_ok=True)
 
     # P0: 11 details + re-score
     p0_df = p0_detail_enrich()
@@ -1331,6 +1404,19 @@ def main():
         ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
         f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
         f_all.write_text(raw_df.to_json(orient="records", force_ascii=False), encoding="utf-8")
+
+    # Shixiseng — direct Playwright crawl (not via RPC, independent of ONLY_LIEPIN flag)
+    if not use_existing_raw:
+        sxs_keywords = ["实习", "数据分析", "商业分析", "市场分析", "运营", "产品", "财务", "战略"]
+        sxs_rows = crawl_shixiseng_direct(sxs_keywords)
+        if sxs_rows:
+            ts_sxs = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+            sxs_path = RAW_DIR_SXS / f"jobs_shixiseng_{ts_sxs}.json"
+            sxs_path.write_text(json.dumps(sxs_rows, ensure_ascii=False), encoding="utf-8")
+            sxs_df = pd.DataFrame(sxs_rows).fillna("")
+            raw_df = pd.concat([raw_df, sxs_df], ignore_index=True).fillna("")
+            raw_df = raw_df.drop_duplicates(subset=["url"], keep="first")
+            print(f"[shixiseng] added {len(sxs_rows)} rows, total raw={len(raw_df)}")
 
     if use_merged_pool:
         merged_pool = OUT_DIR / "foreign_strict_shanghai_candidate_pool_merged_v2.csv"
