@@ -475,8 +475,9 @@ def fetch_detail(url: str, max_retries: int = 2) -> Tuple[Dict[str, str], str]:
         return {}, "cdp_waf_blocked"
         
     # --- CDP Bypass for strong WAF (Liepin/51job) ---
+    # Skip CDP for Shixiseng — cdp_fetcher has no Shixiseng support, go straight to RPC
     use_cdp = os.getenv("USE_CDP", "1") == "1"
-    if use_cdp:
+    if use_cdp and domain != "shixiseng":
         try:
             import sys
             from pathlib import Path
@@ -759,6 +760,9 @@ def parse_liepin_item(it: Dict, keyword: str, page: int) -> Dict:
 
 
 def parse_shixiseng_item(item: Dict, keyword: str = "") -> Dict:
+    # format_data in base spider splits jd_content into job_description + job_requirement
+    jd_desc = item.get("job_description", "") or item.get("jd_content", "")
+    jd_req = item.get("job_requirement", "")
     return {
         "platform": "shixiseng",
         "source": "shixiseng",
@@ -773,8 +777,8 @@ def parse_shixiseng_item(item: Dict, keyword: str = "") -> Dict:
         "experience": "",
         "url": item.get("jd_url", ""),
         "publish_date": item.get("publish_date", ""),
-        "job_description": item.get("jd_content", ""),
-        "job_requirement": "",
+        "job_description": jd_desc,
+        "job_requirement": jd_req,
         "company_industry": item.get("company_industry", ""),
         "company_size": item.get("company_size", ""),
         "company_finance_stage": item.get("company_stage", ""),
