@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0",
+  "scope": {
+    "city": "上海",
+    "industries": [
+      "internet",
+      "fmcg",
+      "hedge_fund"
+    ]
+  },
+  "defaults": {
+    "city_keywords": [
+      "上海",
+      "Shanghai"
+    ],
+    "request_policy": {
+      "concurrency": 3,
+      "timeout_sec": 30,
+      "retry": 2,
+      "min_delay_sec": 1.0,
+      "max_delay_sec": 3.0
+    }
+  },
+  "seeds": [
+    {
+      "company": "Google",
+      "industry": "internet",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.google.com/about/careers/applications/jobs/results?location=Shanghai%2C%20China"
+      ],
+      "allow_domains": [
+        "www.google.com",
+        "careers.google.com"
+      ],
+      "notes": "自家站点，支持 location=Shanghai 过滤"
+    },
+    {
+      "company": "Microsoft",
+      "industry": "internet",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.careers.microsoft.com/global/en/search?q=&l=Shanghai%2C%20China"
+      ],
+      "allow_domains": [
+        "jobs.careers.microsoft.com"
+      ],
+      "notes": "自家站点，支持 location=Shanghai 过滤"
+    },
+    {
+      "company": "Amazon / AWS",
+      "industry": "internet",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.amazon.jobs/en/search?base_query=&loc_query=Shanghai%2C%20China"
+      ],
+      "allow_domains": [
+        "www.amazon.jobs",
+        "amazon.jobs"
+      ],
+      "notes": "自家站点，支持 location=Shanghai 过滤"
+    },
+    {
+      "company": "Apple",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.apple.com/en-cn/search?location=shanghai-SHH"
+      ],
+      "allow_domains": [
+        "jobs.apple.com"
+      ],
+      "notes": "自家站点"
+    },
+    {
+      "company": "SAP",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.sap.com/search/?q=&locationsearch=Shanghai"
+      ],
+      "allow_domains": [
+        "jobs.sap.com"
+      ],
+      "notes": "自家站点"
+    },
+    {
+      "company": "Cisco",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.cisco.com/jobs/SearchJobs/?location=Shanghai"
+      ],
+      "allow_domains": [
+        "jobs.cisco.com"
+      ],
+      "notes": "自家站点"
+    },
+    {
+      "company": "Oracle",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.oracle.com/jobs/#en/sites/jobsearch/"
+      ],
+      "allow_domains": [
+        "careers.oracle.com"
+      ],
+      "notes": "自家站点（需要在站内按 Shanghai 过滤/或在详情页做 city keyword 判断）"
+    },
+    {
+      "company": "Intel",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.intel.com/en/search-jobs"
+      ],
+      "allow_domains": [
+        "jobs.intel.com"
+      ],
+      "notes": "自家站点（需要在站内按 Shanghai 过滤）"
+    },
+    {
+      "company": "NVIDIA",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "workday",
+      "start_urls": [
+        "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"
+      ],
+      "allow_domains": [
+        "nvidia.wd5.myworkdayjobs.com"
+      ],
+      "notes": "Workday 站点特征"
+    },
+    {
+      "company": "Adobe",
+      "industry": "internet",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.adobe.com/us/en/search-results"
+      ],
+      "allow_domains": [
+        "careers.adobe.com"
+      ],
+      "notes": "自家站点（需要在站内按 Shanghai 过滤）"
+    },
+    {
+      "company": "P&G",
+      "industry": "fmcg",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.pgcareers.com/global/en/greater-china",
+        "https://careers.pg.com.cn/"
+      ],
+      "allow_domains": [
+        "www.pgcareers.com",
+        "www.pgcareers.com.cn",
+        "careers.pg.com.cn"
+      ],
+      "notes": "官方站点（中国区入口 + 全球站点），需要按 Shanghai 过滤/或在详情页做 city keyword 判断"
+    },
+    {
+      "company": "Unilever",
+      "industry": "fmcg",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.unilever.com/location/shanghai-jobs/34155/1814991-1796231-1796236/4"
+      ],
+      "allow_domains": [
+        "careers.unilever.com",
+        "careers.unilever.com.cn"
+      ],
+      "notes": "上海聚合页（可能出现 0 openings 的时段，但站点结构稳定）"
+    },
+    {
+      "company": "L'Oréal",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.loreal.com/en_US/content/China"
+      ],
+      "allow_domains": [
+        "careers.loreal.com"
+      ],
+      "notes": "中国区入口，建议站内按 Shanghai 过滤"
+    },
+    {
+      "company": "Nestlé",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.nestlejobs.com/"
+      ],
+      "allow_domains": [
+        "www.nestlejobs.com",
+        "nestlejobs.com"
+      ],
+      "notes": "官方站点（需要按 Shanghai 过滤/或在详情页做 city keyword 判断）"
+    },
+    {
+      "company": "PepsiCo",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.pepsicojobs.com/main/"
+      ],
+      "allow_domains": [
+        "www.pepsicojobs.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Mondelez",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.mondelezinternational.com/"
+      ],
+      "allow_domains": [
+        "jobs.mondelezinternational.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Colgate-Palmolive",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.colgate.com/"
+      ],
+      "allow_domains": [
+        "jobs.colgate.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Estée Lauder Companies",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://jobs.elcompanies.com/"
+      ],
+      "allow_domains": [
+        "jobs.elcompanies.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Johnson & Johnson",
+      "industry": "fmcg",
+      "priority": "P1",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.jnj.com/"
+      ],
+      "allow_domains": [
+        "careers.jnj.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Citadel",
+      "industry": "hedge_fund",
+      "priority": "P0",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.citadel.com/careers/",
+        "https://www.citadelsecurities.com/careers/"
+      ],
+      "allow_domains": [
+        "www.citadel.com",
+        "www.citadelsecurities.com"
+      ],
+      "notes": "官方站点（可能有上海相关职位），建议同时支持两站点"
+    },
+    {
+      "company": "Jane Street",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.janestreet.com/join-jane-street/open-roles/"
+      ],
+      "allow_domains": [
+        "www.janestreet.com"
+      ],
+      "notes": "官方站点（需按 Shanghai 过滤或在详情页做 city keyword 判断）"
+    },
+    {
+      "company": "Two Sigma",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.twosigma.com/careers"
+      ],
+      "allow_domains": [
+        "careers.twosigma.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Point72",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://careers.point72.com/"
+      ],
+      "allow_domains": [
+        "careers.point72.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Millennium",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.mlp.com/careers/"
+      ],
+      "allow_domains": [
+        "www.mlp.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "D. E. Shaw",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.deshaw.com/careers"
+      ],
+      "allow_domains": [
+        "www.deshaw.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "AQR",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.aqr.com/About-Us/Careers"
+      ],
+      "allow_domains": [
+        "www.aqr.com"
+      ],
+      "notes": "官方站点"
+    },
+    {
+      "company": "Man Group",
+      "industry": "hedge_fund",
+      "priority": "P2",
+      "ats_type": "inhouse",
+      "start_urls": [
+        "https://www.man.com/careers"
+      ],
+      "allow_domains": [
+        "www.man.com"
+      ],
+      "notes": "官方站点"
+    }
+  ]
+}
