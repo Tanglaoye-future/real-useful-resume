@@ -1,7 +1,7 @@
 import logging
 import os
 
-from resuminer.core.crawler_engine.base_spider import BaseSpider
+from core.crawler_engine.base_spider import BaseSpider
 from playwright.sync_api import sync_playwright
 
 logger = logging.getLogger(__name__)

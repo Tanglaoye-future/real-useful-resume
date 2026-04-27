@@ -78,3 +78,9 @@ test_*.py
 tmp/
 temp/
 *.tmp
+
+# Local agent / IDE artifacts
+.claude/
+
+# Local test run outputs (generated)
+tests/outputs/

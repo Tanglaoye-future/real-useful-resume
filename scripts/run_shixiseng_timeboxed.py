@@ -23,6 +23,16 @@ sys.path.insert(0, str(ROOT))
 
 import pandas as pd
 
+# Windows terminals may default to cp1252; ensure logs/prints don't crash on Chinese.
+os.environ.setdefault("PYTHONUTF8", "1")
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 # 39-keyword sweep targeting the full Shanghai internship inventory:
 # generalist roles + tech + major industries (incl. FMCG).
 DEFAULT_KEYWORDS = [
@@ -48,10 +58,10 @@ os.environ.setdefault("SHIXISENG_MAX_PAGES", "50")
 OUT_DIR = ROOT / "data" / "raw" / "shixiseng"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 TS = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
-JSONL_PATH = OUT_DIR / f"shixiseng_overnight_{TS}.jsonl"
-CSV_PATH = OUT_DIR / f"shixiseng_overnight_{TS}.csv"
-SUMMARY_PATH = OUT_DIR / f"shixiseng_overnight_{TS}_summary.txt"
-LOG_PATH = OUT_DIR / f"shixiseng_overnight_{TS}.log"
+JSONL_PATH = OUT_DIR / "shixiseng_latest.jsonl"
+CSV_PATH = OUT_DIR / "shixiseng_latest.csv"
+SUMMARY_PATH = OUT_DIR / "shixiseng_latest_summary.txt"
+LOG_PATH = OUT_DIR / "shixiseng_latest.log"
 
 
 def _log(msg: str, log_fh) -> None:
@@ -142,7 +152,7 @@ def main() -> int:
         _log(f"csv export failed: {e}", log_fh)
 
     lines = []
-    lines.append(f"Shixiseng overnight crawl @ {TS}")
+    lines.append(f"Shixiseng crawl @ {TS}")
     lines.append(f"budget={BUDGET_SEC}s  elapsed={elapsed_total:.1f}s  pages_per_kw={os.environ['SHIXISENG_MAX_PAGES']}")
     lines.append(f"total unique jobs kept: {total_kept}")
     lines.append("")
@@ -158,6 +168,22 @@ def main() -> int:
     _log(f"artifacts: csv={CSV_PATH}", log_fh)
     _log(f"artifacts: summary={SUMMARY_PATH}", log_fh)
     log_fh.close()
+
+    # Keep only latest artifacts for this source
+    try:
+        from scripts.output_latest import prune_directory
+        prune_directory(
+            OUT_DIR,
+            keep_paths=[JSONL_PATH, CSV_PATH, SUMMARY_PATH, LOG_PATH],
+            allow_globs=[
+                "shixiseng_overnight_*.jsonl",
+                "shixiseng_overnight_*.csv",
+                "shixiseng_overnight_*_summary.txt",
+                "shixiseng_overnight_*.log",
+            ],
+        )
+    except Exception:
+        pass
     return 0
 
 

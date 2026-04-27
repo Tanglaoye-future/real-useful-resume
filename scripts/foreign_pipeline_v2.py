@@ -1396,7 +1396,13 @@ def main():
             raw_df = raw_df.rename(columns={k: v for k, v in _legacy_rename.items() if k in raw_df.columns})
             print(f"use_existing_raw=1 use_all_local_raw=1 files={len(f51)+len(flp)} rows={len(raw_df)}")
         else:
-            latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
+            # Prefer latest fixed-name snapshot; fall back to legacy timestamped files.
+            latest = []
+            fixed = RAW_DIR / "foreign_candidate_raw_latest.json"
+            if fixed.exists():
+                latest = [str(fixed)]
+            else:
+                latest = sorted(glob.glob(str(RAW_DIR / "foreign_candidate_raw_*.json")), key=os.path.getmtime, reverse=True)
             if latest:
                 raw_df = pd.DataFrame(json.load(open(latest[0], "r", encoding="utf-8"))).fillna("")
                 print(f"use_existing_raw=1 source={latest[0]} rows={len(raw_df)}")
@@ -1405,9 +1411,18 @@ def main():
     else:
         max_pages = int(os.getenv("MAX_PAGES", "50"))
         raw_df = crawl_keyword_pages(max_pages_per_source=max_pages)
-        ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
-        f_all = RAW_DIR / f"foreign_candidate_raw_{ts}.json"
+        # Keep only the latest snapshot (overwrite + prune old timestamped files)
+        f_all = RAW_DIR / "foreign_candidate_raw_latest.json"
         f_all.write_text(raw_df.to_json(orient="records", force_ascii=False), encoding="utf-8")
+        try:
+            from scripts.output_latest import prune_directory
+            prune_directory(
+                RAW_DIR,
+                keep_paths=[f_all],
+                allow_globs=["foreign_candidate_raw_*.json"],
+            )
+        except Exception:
+            pass
 
     # Shixiseng — direct Playwright crawl (not via RPC, independent of ONLY_LIEPIN flag)
     if not use_existing_raw:

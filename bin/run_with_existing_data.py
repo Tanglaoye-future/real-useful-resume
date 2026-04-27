@@ -271,14 +271,25 @@ def merge_and_deduplicate(jobs1: List[Dict], jobs2: List[Dict]) -> List[Dict]:
 def save_raw_data(jobs: List[Dict], output_dir: Path):
     """保存原始数据"""
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    output_file = output_dir / f'integrated_jobs_{timestamp}.json'
+
+    # Keep only latest snapshot (overwrite old)
+    output_file = output_dir / 'integrated_jobs_latest.json'
     
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(jobs, f, ensure_ascii=False, indent=2)
     
     logger.info(f"💾 原始数据已保存: {output_file}")
+
+    # Prune legacy timestamped snapshots
+    try:
+        from scripts.output_latest import prune_directory
+        prune_directory(
+            output_dir,
+            keep_paths=[output_file],
+            allow_globs=["integrated_jobs_*.json"],
+        )
+    except Exception:
+        pass
     return output_file
 
 
