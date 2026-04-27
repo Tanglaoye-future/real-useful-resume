@@ -1,1 +1,1 @@
-# Matcher module
+"""ResuMiner matcher: resume -> JD scoring & recommendation."""

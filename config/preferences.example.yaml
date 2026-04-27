@@ -1,0 +1,97 @@
+# ResuMiner — Stage 2 matching preferences (example)
+#
+# Copy this file to `config/preferences.yaml` and edit it.
+# `preferences.yaml` is .gitignored (you keep your own); this example is checked in.
+#
+# Every field below has exactly one consumer in code. If you add a field
+# that nothing reads, remove it — design rule (CLAUDE.md): no decorative config.
+#
+# CONSUMER MAP (who reads what)
+# ---------------------------------------------------------------------------
+#   field                      consumer (code)                  effect when wrong
+#   resume.path                scripts/recommend_jobs.py        crash: file not found
+#   resume.parse_min_chars     matcher/resume_loader.py         resume rejected as empty
+#
+#   filters.target_cities      matcher/score.py:apply_filters   row dropped if city not in list
+#   filters.target_job_types   matcher/score.py:apply_filters   row dropped if job_type mismatch
+#   filters.exclude_keywords   matcher/score.py:apply_filters   row dropped if any keyword in title+jd
+#   filters.min_jd_chars       matcher/score.py:apply_filters   row dropped if jd_text too short
+#   filters.exclude_companies  matcher/score.py:apply_filters   row dropped by company name
+#
+#   scoring.weights.*          matcher/score.py:final_score     change ranking; must sum to ~1.0
+#   scoring.target_titles      matcher/score.py:title_match     fuzzy boost for title hits
+#   scoring.must_have_keywords matcher/score.py:keyword_overlap each hit adds to keyword score
+#   scoring.nice_to_have_keywords  same                         lower-weighted hits
+#   scoring.big_tech_companies     matcher/score.py:is_big_tech mark a row as 'big tech'
+#   scoring.big_tech_penalty       matcher/score.py:final_score multiplier on big-tech rows (0..1)
+#
+#   output.top_n               scripts/recommend_jobs.py        how many rows in CSV/MD/HTML
+#   output.formats             matcher/render.py                which renderers run
+# ---------------------------------------------------------------------------
+
+resume:
+  path: "data/resumes/example_resume.md"
+  parse_min_chars: 100
+
+filters:
+  target_cities: ["上海"]
+  target_job_types: ["fulltime", "internship", "campus"]
+  exclude_keywords: ["销售", "电话销售", "保险代理", "兼职刷单"]
+  exclude_companies: []
+  # 兜底剔除占位符 / 抓取失败行；不要太激进。
+  # liepin 列表页 JD 通常 80~150 字符；设 200 会把整批实习全刷掉。
+  min_jd_chars: 100
+
+scoring:
+  weights:
+    semantic: 0.60
+    keyword: 0.20
+    title: 0.10
+    location: 0.05
+    job_type: 0.05
+
+  target_titles: ["数据分析", "数据科学", "算法工程师", "研究员", "AI"]
+  must_have_keywords: ["Python", "SQL"]
+  nice_to_have_keywords: ["机器学习", "深度学习", "PyTorch", "Pandas", "NumPy"]
+
+  # 互联网八大厂软降权：让推荐池里出现更多中小企
+  # final_score *= big_tech_penalty 当公司命中下面任一别名（substring 匹配）。
+  # penalty=1.0 关闭，0.0 完全屏蔽。0.3 把大厂从 Top-N 推到中后段但仍可见。
+  big_tech_penalty: 0.3
+  big_tech_companies:
+    # 百度
+    - "百度"
+    - "Baidu"
+    # 阿里巴巴系（含淘宝、天猫、阿里云、蚂蚁、支付宝）
+    - "阿里巴巴"
+    - "Alibaba"
+    - "淘宝"
+    - "天猫"
+    - "阿里云"
+    - "蚂蚁集团"
+    - "蚂蚁金服"
+    - "支付宝"
+    # 腾讯系
+    - "腾讯"
+    - "Tencent"
+    - "微信"
+    # 字节跳动系
+    - "字节跳动"
+    - "ByteDance"
+    - "抖音"
+    - "TikTok"
+    # 美团
+    - "美团"
+    - "Meituan"
+    # 滴滴
+    - "滴滴"
+    - "Didi"
+    # 京东
+    - "京东"
+    # 网易
+    - "网易"
+    - "NetEase"
+
+output:
+  top_n: 20
+  formats: ["csv", "markdown", "html"]
