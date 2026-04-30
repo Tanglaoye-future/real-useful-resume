@@ -84,6 +84,8 @@ class Job(BaseModel):
     )
     skills: list[str] = Field(default_factory=list)
 
+    publish_date: str = Field("", description="Date job was published (ISO string preferred). Empty when unavailable.")
+
     raw_path: str = Field("", description="Source file this record came from (relative to project root).")
     ingest_time: str = Field(
         default_factory=lambda: datetime.utcnow().isoformat(timespec="seconds") + "Z"

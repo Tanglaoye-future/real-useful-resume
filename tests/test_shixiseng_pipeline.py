@@ -41,7 +41,7 @@ def test_imports():
         priority,
         strict_filter_and_score,
     )
-    from core.crawler_engine.spiders.shixiseng_v2 import ShixisengSpiderV2
+    # ShixisengSpiderV2 removed — see crawlers/adapters/shixiseng.py
     print(f"{PASS} All imports OK")
     return True
 

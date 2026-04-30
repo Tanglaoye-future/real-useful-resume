@@ -1,0 +1,6 @@
+# Browser automation (optional, LinkedIn capture pipeline)
+playwright>=1.44.0
+
+# Image handling (optional; used for screenshot bookkeeping only)
+pillow>=10.0.0
+

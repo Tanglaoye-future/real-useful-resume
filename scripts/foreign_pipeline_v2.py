@@ -788,43 +788,21 @@ def parse_shixiseng_item(item: Dict, keyword: str = "") -> Dict:
 
 
 def crawl_shixiseng_direct(keywords: List[str]) -> List[Dict]:
-    """Run the Shixiseng Playwright spider directly (not via RPC).
-    Uses a minimal scheduler stub since run_with_playwright() doesn't call throttle().
+    """Deprecated — use the unified CLI instead:
+
+        py scripts/crawl.py --site shixiseng [--pages N]
+
+    The ShixisengSpiderV2 (Playwright-based) this function used to call has
+    been removed as part of the core/crawler_engine cleanup.  The replacement
+    adapter lives in crawlers/adapters/shixiseng.py and is driven by
+    scripts/crawl.py.  This stub returns [] so that callers (smoke tests etc.)
+    continue to run without errors.
     """
-    class _SimpleScheduler:
-        def throttle(self, domain: str, delay: float):
-            time.sleep(delay)
-        def get_proxy(self):
-            return None
-
-    try:
-        sys.path.insert(0, str(ROOT))
-        from core.crawler_engine.spiders.shixiseng_v2 import ShixisengSpiderV2
-    except ImportError as e:
-        print(f"[shixiseng] import failed: {e}")
-        return []
-
-    rows: List[Dict] = []
-    for kw in keywords:
-        try:
-            spider = ShixisengSpiderV2(scheduler=_SimpleScheduler())
-            spider.keyword = kw
-            spider.city_query = "上海"
-            jobs = spider.run_with_playwright()
-            parsed = [parse_shixiseng_item(j, keyword=kw) for j in (jobs or [])]
-            rows.extend(parsed)
-            print(f"[shixiseng] keyword={kw} jobs={len(parsed)}")
-        except Exception as e:
-            print(f"[shixiseng] keyword={kw} failed: {e}")
-
-    seen: set = set()
-    out: List[Dict] = []
-    for r in rows:
-        u = r.get("url", "")
-        if u and u not in seen:
-            seen.add(u)
-            out.append(r)
-    return out
+    print(
+        "[shixiseng] crawl_shixiseng_direct() is deprecated. "
+        "Use: py scripts/crawl.py --site shixiseng"
+    )
+    return []
 
 
 def coarse_filter(df: pd.DataFrame) -> pd.DataFrame:

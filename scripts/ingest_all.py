@@ -47,29 +47,76 @@ from pipeline.schema import Job
 def discover_raw_files(root: Path) -> list[Path]:
     """Return concrete files our adapters know how to read.
 
-    Convention-based — see normalize.detect_source. We deliberately skip:
-      - data/raw/merged/*.json     (legacy snapshots, superseded)
-      - release_data/*.csv         (already-curated v2 workflow)
-      - *.log, *.csv summary files
+    Convention-based — see normalize.detect_source.
+
+    Included:
+      data/raw/yingjiesheng/*.jsonl         -> yingjiesheng (enriched preferred)
+      data/raw/shixiseng/*.jsonl + *.json   -> shixiseng
+      data/raw/smartshanghai/*.jsonl        -> smartshanghai
+      data/raw/liepin/*.json                -> liepin
+      data/raw/merged/integrated_jobs_*.json -> integrated_jobs (latest only)
+      outputs/raw/foreign_*_official_raw.csv -> foreign_official
+
+    Skipped:
+      data/raw/merged/foreign_candidate_raw_*.json  (same data as integrated_jobs)
+      data/raw/merged/all_jobs_*.json               (old v1 snapshots)
+      *.log, *_summary.*, *.csv (non-data)
     """
     candidates: list[Path] = []
     raw_dir = root / "data" / "raw"
-    for sub in ("yingjiesheng", "shixiseng", "smartshanghai"):
-        d = raw_dir / sub
-        if not d.exists():
-            continue
-        candidates.extend(p for p in d.glob("*.jsonl"))
 
-    liepin_dir = raw_dir / "liepin"
-    if liepin_dir.exists():
-        candidates.extend(p for p in liepin_dir.glob("*.json")
+    # yingjiesheng: prefer enriched file; skip plain if enriched exists
+    ys_dir = raw_dir / "yingjiesheng"
+    if ys_dir.exists():
+        enriched = list(ys_dir.glob("*_enriched.jsonl"))
+        if enriched:
+            candidates.extend(enriched)
+        else:
+            candidates.extend(p for p in ys_dir.glob("*.jsonl")
+                              if "_enriched" not in p.name)
+
+    # shixiseng: both .jsonl and .json
+    sxs_dir = raw_dir / "shixiseng"
+    if sxs_dir.exists():
+        candidates.extend(p for p in sxs_dir.glob("*.jsonl"))
+        candidates.extend(p for p in sxs_dir.glob("*.json")
                           if not p.name.startswith("."))
 
+    # smartshanghai
+    ss_dir = raw_dir / "smartshanghai"
+    if ss_dir.exists():
+        candidates.extend(p for p in ss_dir.glob("*.jsonl"))
+
+    # liepin — legacy crawls write .json; new LiepinAdapter writes .jsonl
+    liepin_dir = raw_dir / "liepin"
+    if liepin_dir.exists():
+        for pat in ("*.json", "*.jsonl"):
+            candidates.extend(p for p in liepin_dir.glob(pat)
+                              if not p.name.startswith("."))
+
+    # linkedin — browser-assisted capture writes .jsonl
+    linkedin_dir = raw_dir / "linkedin"
+    if linkedin_dir.exists():
+        candidates.extend(p for p in linkedin_dir.glob("*.jsonl")
+                          if not p.name.startswith("."))
+
+    # integrated_jobs: pick the single largest file to avoid re-ingesting
+    # earlier snapshots (they are strict subsets of the latest)
+    merged_dir = raw_dir / "merged"
+    if merged_dir.exists():
+        ig_files = sorted(
+            [p for p in merged_dir.glob("integrated_jobs_*.json") if p.stat().st_size > 1_000_000],
+            key=lambda p: p.name,
+        )
+        if ig_files:
+            candidates.append(ig_files[-1])  # latest snapshot only
+
+    # foreign_official CSV
     foreign_dir = root / "outputs" / "raw"
     if foreign_dir.exists():
         candidates.extend(p for p in foreign_dir.glob("foreign_*_official_raw.csv"))
 
-    return sorted(candidates)
+    return sorted(set(candidates))
 
 
 # ---------------------------------------------------------------------------

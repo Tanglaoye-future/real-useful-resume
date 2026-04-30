@@ -1,0 +1,26 @@
+# LinkedIn Jobs selectors (best-effort, may drift).
+#
+# If capture yields empty fields, copy this file to `selectors.yaml` and tweak.
+#
+# Tips:
+# - Use DevTools to inspect elements.
+# - Prefer stable attributes (aria-label, data-*) over deep class chains.
+
+# Left-side results list
+job_card: "li.jobs-search-results__list-item"
+job_card_link: "a.job-card-list__title"
+job_card_title: "a.job-card-list__title"
+job_card_company: "span.job-card-container__primary-description"
+job_card_location: "li.job-card-container__metadata-item"
+
+# Right-side details panel
+detail_panel: "div.jobs-search__job-details"
+detail_title: "h2"
+detail_company: "a.jobs-unified-top-card__company-name"
+detail_location: "span.jobs-unified-top-card__bullet"
+detail_posted_at: "span.jobs-unified-top-card__posted-date"
+detail_description: "div.jobs-description__content"
+
+# Some pages hide full description behind a "see more" button
+see_more_button: "button[aria-label*='more'], button[aria-label*='More'], button[aria-expanded='false']"
+
